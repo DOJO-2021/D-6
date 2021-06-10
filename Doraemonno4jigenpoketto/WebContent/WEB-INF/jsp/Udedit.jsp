@@ -6,6 +6,7 @@
 <meta charset="UTF-8">
 <title>DOJO Q&amp;A集</title>
 <script src="script.js"></script>
+<script src="udedit.js"></script>
 </head>
 <body>
 											<!--h1は左より-->
