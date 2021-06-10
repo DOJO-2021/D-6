@@ -42,7 +42,7 @@ public class CategoryDao {
 			else {
 				pStmt.setInt(1, 6);
 			}
-			if (param.getQuestion2() != 0) {
+			if (param.getUnit_id() != 0) {
 				pStmt.setInt(2, param.getUnit_id());
 			}
 			else {
@@ -53,7 +53,7 @@ public class CategoryDao {
 
 			// 結果表をコレクションにコピーする
 			while (rs.next()) {
-				Qa card = new Category(
+				Category card = new Category(
 				rs.getInt("COURSE_ID"),
 				rs.getInt("UNIT_ID"),
 				rs.getInt("CATEGORY_ID"),
@@ -86,5 +86,5 @@ public class CategoryDao {
 		// 結果を返す
 		return cardList;
 	}
-
+}
 

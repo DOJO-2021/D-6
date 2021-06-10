@@ -1,6 +1,7 @@
 package dao;
 
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -90,12 +91,12 @@ public class QaDao {
 			while (rs.next()) {
 				Qa card = new Qa(
 				rs.getInt("QUESTION_ID"),
-				rs.getString("DATE"),
+				rs.getDate("DATE"),
 				rs.getString("ANSWERER"),
-				rs.getString("CATEGORY_ID"),
+				rs.getInt("CATEGORY_ID"),
 				rs.getString("QUESTION"),
 				rs.getString("ANSWER"),
-				rs.getString("PAGEVIEW"),
+				rs.getInt("PAGEVIEW"),
 				rs.getString("REGISTANT")
 				);
 				cardList.add(card);
@@ -150,7 +151,7 @@ public class QaDao {
 
 			pStmt.setInt(1, 0);
 			if (card.getDate() != null) {
-				pStmt.setDate(2, card.getDate());
+				pStmt.setDate(2, (Date) card.getDate());
 			}
 			else {
 				pStmt.setDate(2, null);
@@ -232,7 +233,7 @@ public class QaDao {
 
 			// SQL文を完成させる
 			if (card.getDate() != null) {
-				pStmt.setDate(1, card.getDate());
+				pStmt.setDate(1, (Date) card.getDate());
 			}
 			else {
 				pStmt.setDate(1, null);
