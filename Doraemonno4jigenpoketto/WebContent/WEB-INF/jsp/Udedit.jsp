@@ -6,13 +6,15 @@
 <meta charset="UTF-8">
 <title>DOJO Q&amp;A集</title>
 <script src="script.js"></script>
+<script src="udedit.js"></script>
 </head>
 <body>
 											<!--h1は左より-->
-<h1>DOJO Q&amp;A集</h1>
+<h1><a href="/Doraemonno4jigenpoketto/MenuServlet">DOJO Q&amp;A集</a></h1>
 <p><a href="Login.jsp">ログアウト</a></p>	<!--ログアウト右上-->
 <h2>更新・削除</h2>  	                    <!--h2は中央-->
 <!--閲覧数・回答者・質問した年月日・登録者についての更新・削除-->
+
 <c:forEach var="e" items="${qa}">
 	  <form method="POST" action="DetailServlet.java">
 	  質問文<input type="text" name="QUESTION" value="${e.question}"><br>    <!--質問文-->
@@ -69,54 +71,5 @@
     </form>
 </c:forEach>
 
-<script>
-'use strict'
-
-
-document.getElementById('form'). onsubmit = function(event) {
-   /*　回答者以外が未入力なら、デフォルトの動作を行わず、
-　　WEB上にエラーと表示する */
-    const guestion = document.getElementById('form').QUESTION.value;
-    const answer = document.getElementById('form').ANSWER.value;
-    const pageview = document.getElementById('form').PAGEVIEW.value;
-    const date = document.getElementById('form').DATE.value;
-    const ragestant = document.getElementById('form').RAGESTANT.value;
-
-    if (question === "" || answer === "" || pageview === "" || date === "" || ragestant === "") {
-    event.preventDefault();
-    /* 「エラー」をWEBページ上に表示する */
-    document.getElementById('output').textContent =('エラー');
-    }
-};
-
-  /*　更新ボタンを押すと更新しますかという表示*/
-document.myform.btn.addEventListener('UPDATE', function()) {
-    if (window.confirm('更新しますか？')){
-        console.log('はい')//「true」の処理
-        window.confirm('更新しました。')
-    }
-
-    else {
-
-    	console.log('いいえ') //「false」の処理
-
-    }
-}
-
-/*　削除ボタンを押すと更新しますかという表示*/
-document.myform.btn.addEventListener('DELETE', function()) {
-    if (window.confirm('削除しますか？')){
-        console.log('はい')//「true」の処理
-        window.confirm('削除しました。')
-    }
-
-    else {
-
-    	console.log('いいえ') //「false」の処理
-
-    }
-}
-
-</script>
 </body>
 </html>
