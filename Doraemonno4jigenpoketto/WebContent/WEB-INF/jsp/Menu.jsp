@@ -12,9 +12,9 @@
 <body>
 
 <hr><!--リンク先注意-->
-<p><a href="Menu.jsp">DOJO Q &nbsp; A集</a>
-   <a href="Edit.jsp">編集(事務局用)</a>
-   <a href="Search.jsp">検索</a></p>
+<p><a href="Menu.jsp">DOJO Q &nbsp; A集</a></p>
+<p><a href="Edit.jsp">編集(事務局用)</a></p>
+<p><a href="Search.jsp">検索</a></p>
 
 <h1>使い方</h1>
 
