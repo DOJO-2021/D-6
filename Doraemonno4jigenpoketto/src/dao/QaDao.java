@@ -28,7 +28,7 @@ public class QaDao {
 
 			// SQL文を準備する
 			String sql = "select Q.QUESTION_ID, Q.DATE, Q.ANSWERER,  Q.CATEGORY_ID, CO.COURSE, U.UNIT, CA.CATEGORY_ITEM,"
-					+ " U.TEXTBOOK, Q.QUESTION, Q.ANSWER, Q.PAGEVIEW, Q.REGISTANT from\r\n"
+					+ " U.TEXTBOOK, Q.QUESTION, Q.ANSWER, Q.PAGEVIEW, Q.REGISTRANT from\r\n"
 					+ " ((QA as Q inner join CATEGORY as CA on Q.CATEGORY_ID=CA.CATEGORY_ID) \r\n"
 					+ "inner join UNIT as U on CA.COURSE_ID=U.COURSE_ID and CA.UNIT_ID=U.UNIT_ID) \r\n"
 					+ "inner join COURSE as CO on CA.COURSE_ID=CO.COURSE_ID "
@@ -39,7 +39,7 @@ public class QaDao {
 					+ "(CASE WHEN U.TEXTBOOK IS NULL THEN '' ELSE U.TEXTBOOK END), "
 					+ "(CASE WHEN Q.QUESTION IS NULL THEN '' ELSE Q.QUESTION END), "
 					+ "(CASE WHEN Q.ANSWER IS NULL THEN '' ELSE Q.ANSWER END), "
-					+ "(CASE WHEN Q.REGISTANT IS NULL THEN '' ELSE Q.REGISTANT END)) LIKE ?"
+					+ "(CASE WHEN Q.REGISTRANT IS NULL THEN '' ELSE Q.REGISTRANT END)) LIKE ?"
 					+ "AND CONCAT((CASE WHEN Q.ANSWERER IS NULL THEN '' ELSE Q.ANSWERER END),  "
 					+ "(CASE WHEN CO.COURSE IS NULL THEN '' ELSE CO.COURSE END), "
 					+ "(CASE WHEN U.UNIT IS NULL THEN '' ELSE U.UNIT END), "
@@ -47,7 +47,7 @@ public class QaDao {
 					+ "(CASE WHEN U.TEXTBOOK IS NULL THEN '' ELSE U.TEXTBOOK END), "
 					+ "(CASE WHEN Q.QUESTION IS NULL THEN '' ELSE Q.QUESTION END), "
 					+ "(CASE WHEN Q.ANSWER IS NULL THEN '' ELSE Q.ANSWER END), "
-					+ "(CASE WHEN Q.REGISTANT IS NULL THEN '' ELSE Q.REGISTANT END)) LIKE ?"
+					+ "(CASE WHEN Q.REGISTRANT IS NULL THEN '' ELSE Q.REGISTRANT END)) LIKE ?"
 					+ "AND CONCAT((CASE WHEN Q.ANSWERER IS NULL THEN '' ELSE Q.ANSWERER END),  "
 					+ "(CASE WHEN CO.COURSE IS NULL THEN '' ELSE CO.COURSE END), "
 					+ "(CASE WHEN U.UNIT IS NULL THEN '' ELSE U.UNIT END), "
@@ -55,7 +55,7 @@ public class QaDao {
 					+ "(CASE WHEN U.TEXTBOOK IS NULL THEN '' ELSE U.TEXTBOOK END), "
 					+ "(CASE WHEN Q.QUESTION IS NULL THEN '' ELSE Q.QUESTION END), "
 					+ "(CASE WHEN Q.ANSWER IS NULL THEN '' ELSE Q.ANSWER END), "
-					+ "(CASE WHEN Q.REGISTANT IS NULL THEN '' ELSE Q.REGISTANT END)) LIKE ?"
+					+ "(CASE WHEN Q.REGISTRANT IS NULL THEN '' ELSE Q.REGISTRANT END)) LIKE ?"
 					+ "ORDER BY Q.PAGEVIEW";
 			PreparedStatement pStmt = conn.prepareStatement(sql);
 
@@ -97,7 +97,7 @@ public class QaDao {
 				rs.getString("QUESTION"),
 				rs.getString("ANSWER"),
 				rs.getInt("PAGEVIEW"),
-				rs.getString("REGISTANT")
+				rs.getString("REGISTRANT")
 				);
 				cardList.add(card);
 			}
@@ -143,7 +143,7 @@ public class QaDao {
 
 			// SQL文を準備する
 			String sql = "insert into QA (question_id, date, answerer, category_id, "
-					+ " question, answer, pageview, registant)"
+					+ " question, answer, pageview, registrant)"
 					+ " values (?, ?, ?, ?, ?, ?, 0, ?)";
 			PreparedStatement pStmt = conn.prepareStatement(sql);
 
@@ -180,8 +180,8 @@ public class QaDao {
 			else {
 				pStmt.setString(6, null);
 			}
-			if (card.getRegistant() != null && card.getRegistant() != "") {
-				pStmt.setString(7, card.getRegistant());
+			if (card.getRegistrant() != null && card.getRegistrant() != "") {
+				pStmt.setString(7, card.getRegistrant());
 			}
 			else {
 				pStmt.setString(7, null);
@@ -228,7 +228,7 @@ public class QaDao {
 			// データベースに接続する
 			conn = DriverManager.getConnection("jdbc:h2:file:C:/pleiades/workspace/D-6/Doraemonno4jigenpoketto/database", "sa", "sa");
 			// SQL文を準備する
-			String sql = "update QA set DATE=?, ANSWERER=?, CATEGORY_ID=?, QUESTION=?, ANSWER=?, REGISTANT=? where QUESTION_ID=?";
+			String sql = "update QA set DATE=?, ANSWERER=?, CATEGORY_ID=?, QUESTION=?, ANSWER=?, REGISTRANT=? where QUESTION_ID=?";
 			PreparedStatement pStmt = conn.prepareStatement(sql);
 
 			// SQL文を完成させる
@@ -262,8 +262,8 @@ public class QaDao {
 			else {
 				pStmt.setString(5, null);
 			}
-			if (card.getRegistant() != null) {
-				pStmt.setString(6, card.getRegistant());
+			if (card.getRegistrant() != null) {
+				pStmt.setString(6, card.getRegistrant());
 			}
 			else {
 				pStmt.setString(6, null);

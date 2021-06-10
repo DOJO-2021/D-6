@@ -11,7 +11,7 @@ public class Qa implements Serializable {
   private String question; //質問内容
   private String answer;   //回答内容
   private int pageview;   //閲覧数
-  private String registant;//登録者
+  private String registrant;//登録者
 
   //引数のないQaのコンストラクタ
   public Qa() {
@@ -23,10 +23,10 @@ public class Qa implements Serializable {
 	  this.question="";
 	  this.answer="";
 	  this.pageview=0;
-	  this.registant="";
+	  this.registrant="";
   }
   //引数のあるQaのコンストラクタ
-  public Qa(int question_id,Date date,String answerer,int category_id,String question,String answer,int pageview,String registant) {
+  public Qa(int question_id,Date date,String answerer,int category_id,String question,String answer,int pageview,String registrant) {
 	  super();
 	  this.question_id=question_id;
 	  this.date=date;
@@ -35,7 +35,7 @@ public class Qa implements Serializable {
 	  this.question=question;
 	  this.answer=answer;
 	  this.pageview=pageview;
-	  this.registant=registant;
+	  this.registrant=registrant;
   }
 
   //getterとsetterの設定
@@ -82,11 +82,11 @@ public int getPageview() {
 public void setPageview(int pageview) {
 	this.pageview = pageview;
 }
-public String getRegistant() {
-	return registant;
+public String getRegistrant() {
+	return registrant;
 }
-public void setRegistant(String registant) {
-	this.registant = registant;
+public void setRegistrant(String registrant) {
+	this.registrant = registrant;
 }
 
 
