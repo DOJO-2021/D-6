@@ -11,9 +11,9 @@
 <body>
 											<!--h1は左より-->
 <h1><a href="/Doraemonno4jigenpoketto/MenuServlet">DOJO Q&amp;A集</a></h1>
-<p><a href="Login.jsp">ログアウト</a></p>	<!--ログアウト右上-->
+<p><a href="/Doraemonno4jigenpoketto/LoginServlet">ログアウト</a></p>	<!--ログアウト右上-->
 <h2>更新・削除</h2>  	                    <!--h2は中央-->
-<!--閲覧数・回答者・質問した年月日・登録者についての更新・削除-->
+<!--閲覧数・質問日・回答者・質問した年月日・登録者についての更新・削除-->
 
 <c:forEach var="e" items="${qa}">
 	  <form method="POST" action="DetailServlet.java">
