@@ -35,7 +35,18 @@
 
     <tr>
      <td>
+<<<<<<< HEAD
 	  回答者<input type="text" name="answerer" value="${e.answerer}">
+=======
+	<select name="ANSWER" id="answerer">
+        <option value="">回答者を選択してください</option>
+        <option value="0">向後海</option>
+		    <option value="1">小林茉乃</option>
+        <option value="2">奥戸楓</option>
+        <option value="3">山嵜佳昭</option>
+		    <option value="4">森下佳亮</option>
+     </select>
+>>>>>>> f231b0ae4119a52b6cd71a56bb5922daa3477bca
       </td>
     </tr>
 
