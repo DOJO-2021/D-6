@@ -14,6 +14,7 @@ import model.Qaplus;
 import model.Qas;
 
 public class QaDao {
+	//今回は使わない予定
 	// 引数paramで検索項目を指定し、検索結果のリストを返す
 	public List<Qa> select(Qas param) {
 		Connection conn = null;
@@ -245,6 +246,7 @@ public class QaDao {
 		}
 
 
+		//事務局用検索
 		// 引数paramで検索項目を指定し、検索結果のリストを返す
 		public List<Qaplus> select2(Qa param) {
 			Connection conn = null;
@@ -363,7 +365,7 @@ public class QaDao {
 		}
 
 
-
+		//遷移用検索
 		// 引数paramで検索項目を指定し、検索結果のリストを返す
 		public List<Qaplus> select3(Qa param) {
 			Connection conn = null;
@@ -432,6 +434,7 @@ public class QaDao {
 			// 結果を返す
 			return cardListplus;
 		}
+
 
 
 
