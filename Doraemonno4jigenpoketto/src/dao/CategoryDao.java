@@ -26,7 +26,7 @@ public class CategoryDao {
 
 			// SQL文を準備する
 			String sql = "select COURSE_ID, UNIT_ID, CATEGORY_ID, CATEGORY_ITEM from CATEGORY "
-					+ "where COURSE_ID=? and UNIT_ID=?;";
+					+ "where CATEGORY_ID=? ;";
 			PreparedStatement pStmt = conn.prepareStatement(sql);
 
 			// SQL文を完成させる
@@ -36,17 +36,11 @@ public class CategoryDao {
 			else {
 				pStmt.setString(1, "%");
 			}*/
-			if (param.getCourse_id() !=0) {
-				pStmt.setInt(1,  param.getCourse_id());
+			if (param.getCategory_id() !=0) {
+				pStmt.setInt(1,  param.getCategory_id());
 			}
 			else {
 				pStmt.setInt(1, 6);
-			}
-			if (param.getUnit_id() != 0) {
-				pStmt.setInt(2, param.getUnit_id());
-			}
-			else {
-				pStmt.setInt(2, 1);
 			}
 			// SQL文を実行し、結果表を取得する
 			ResultSet rs = pStmt.executeQuery();

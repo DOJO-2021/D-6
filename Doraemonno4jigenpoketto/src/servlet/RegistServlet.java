@@ -1,11 +1,19 @@
 package servlet;
 
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import dao.QaDao;
+import model.Qa;
 
 /**
  * Servlet implementation class RegistServlet
@@ -18,16 +26,56 @@ public class RegistServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
-	}
+		// もしもログインしていなかったらログインサーブレットにリダイレクトする
+				HttpSession session = request.getSession();
+				if (session.getAttribute("id") == null) {
+					response.sendRedirect("/simpleBC/LoginServlet");
+					return;
+				}
 
+				// 登録ページにフォワードする
+				RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/regist.jsp");
+				dispatcher.forward(request, response);
+			}
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
-	}
+		// もしもログインしていなかったらログインサーブレットにリダイレクトする
+				HttpSession session = request.getSession();
+				if (session.getAttribute("id") == null) {
+					response.sendRedirect("/simpleBC/LoginServlet");
+					return;
+				}
+
+				// リクエストパラメータを取得する
+				request.setCharacterEncoding("UTF-8");
+				int number=0;
+				SimpleDateFormat sdFormat = new SimpleDateFormat("yyyy/MM/dd");
+	            Date date = sdFormat.parse(request.getParameter("DATE"));
+				String answerer= request.getParameter("ANSWERER");
+				int category_id=Integer.parseInt(request.getParameter("category"));
+				String question=request.getParameter("QUESTION");
+				String answer=request.getParameter("ANSWER");
+				String registrant=request.getParameter("REGISTRANTT");
+
+				QaDao qDao=new QaDao();
+
+				if(qDao.insert(new Qa(0, date, answerer,  category_id, question, answer, 0, registrant))) {
+					String result;
+					result="success";
+					request.setAttribute("result",new Result(result));}
+					else {
+						// 登録失敗
+						String result;
+						result="false";
+						request.setAttribute("result",
+						new Result(result));
+					}
+
+				// 結果ページにフォワードする
+				RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/regist.jsp");
+				dispatcher.forward(request, response);
+			}
 
 }
