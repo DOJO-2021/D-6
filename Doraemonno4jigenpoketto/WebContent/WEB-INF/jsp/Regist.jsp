@@ -47,7 +47,7 @@
 						<option value="13">品質管理</option>
 						<option value="14">セキュリティ</option>
 					</optgroup>
-						<optgroup label="Web開発演習コース">
+						<optgroup label="Webアプリ開発演習コース">
 						<option value="15">導入</option>
 						<option value="16">要件定義</option>
 						<option value="17">外部設計</option>
@@ -199,10 +199,15 @@
 							<option value="0304003">Webアプリの脆弱性と対策</option>
 							<option value="0304004">その他</option>
 						</optgroup>
-						<!--Web開発演習コース-->
+						<!--Webアプリ開発演習コース-->
 						<optgroup label="導入">
+<<<<<<< HEAD
 							<option value="0401001">webアプリケーションの構成要素</option>
 							<option value="0401002">webアプリケーションフレームワーク</option>
+=======
+							<option value="0401001">Webアプリケーションの構成要素</option>
+							<option value="0401002">Webアプリケーションフレームワーク</option>
+>>>>>>> c818827ffa4ce53ab08734f93eedec39032d59a8
 							<option value="0401003">構成管理</option>
 							<option value="0401004">進め方について</option>
 							<option value="0401005">その他</option>
