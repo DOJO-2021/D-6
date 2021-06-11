@@ -33,7 +33,7 @@
 
     <tr>
      <td>
-	<select name="ANSWER" id="answer">
+	<select name="ANSWER" id="answerer">
         <option value="">回答者を選択してください</option>
         <option value="0">向後海</option>
 		    <option value="1">小林茉乃</option>
