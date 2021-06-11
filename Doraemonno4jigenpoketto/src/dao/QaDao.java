@@ -245,7 +245,6 @@ public class QaDao {
 		}
 
 
-		//事務局用検索
 		// 引数paramで検索項目を指定し、検索結果のリストを返す
 		public List<Qaplus> select2(Qa param) {
 			Connection conn = null;
@@ -363,6 +362,76 @@ public class QaDao {
 			return cardListplus;
 		}
 
+
+
+		// 引数paramで検索項目を指定し、検索結果のリストを返す
+		public List<Qaplus> select3(Qa param) {
+			Connection conn = null;
+			List<Qaplus> cardListplus = new ArrayList<Qaplus>();
+
+			try {
+				// JDBCドライバを読み込む
+				Class.forName("org.h2.Driver");
+
+				// データベースに接続する
+				conn = DriverManager.getConnection("jdbc:h2:file:C:/pleiades/workspace/D-6/Doraemonno4jigenpoketto/database", "sa", "sa");
+
+				// SQL文を準備する
+				String sql = "select Q.QUESTION_ID, Q.DATE, Q.ANSWERER,  Q.CATEGORY_ID, CO.COURSE, U.UNIT, \r\n"
+						+ "CA.CATEGORY_ITEM, U.TEXTBOOK, Q.QUESTION, Q.ANSWER, Q.PAGEVIEW, Q.REGISTANT from \r\n"
+						+ "((QA as Q inner join CATEGORY as CA on Q.CATEGORY_ID=CA.CATEGORY_ID) \r\n"
+						+ "inner join UNIT as U on CA.COURSE_ID=U.COURSE_ID and CA.UNIT_ID=U.UNIT_ID) \r\n"
+						+ "inner join COURSE as CO on CA.COURSE_ID=CO.COURSE_ID \r\n"
+						+ "WHERE Q.CATEGORY_ID = ? ORDER BY Q.PAGEVIEW;\r\n";
+				PreparedStatement pStmt = conn.prepareStatement(sql);
+
+				// SQL文を完成させる
+					pStmt.setInt(1, param.getCategory_id());
+				// SQL文を実行し、結果表を取得する
+				ResultSet rs = pStmt.executeQuery();
+
+				// 結果表をコレクションにコピーする
+				while (rs.next()) {
+					Qaplus card = new Qaplus(
+					rs.getInt("QUESTION_ID"),
+					rs.getDate("DATE"),
+					rs.getString("ANSWERER"),
+					rs.getString("COURSE"),
+					rs.getString("UNIT"),
+					rs.getString("CATEGORY_ITEM"),
+					rs.getString("textbook"),
+					rs.getString("QUESTION"),
+					rs.getString("ANSWER"),
+					rs.getInt("PAGEVIEW"),
+					rs.getString("REGISTRANT")
+					);
+					cardListplus.add(card);
+				}
+			}
+			catch (SQLException e) {
+				e.printStackTrace();
+				cardListplus = null;
+			}
+			catch (ClassNotFoundException e) {
+				e.printStackTrace();
+				cardListplus = null;
+			}
+			finally {
+				// データベースを切断
+				if (conn != null) {
+					try {
+						conn.close();
+					}
+					catch (SQLException e) {
+						e.printStackTrace();
+						cardListplus = null;
+					}
+				}
+			}
+
+			// 結果を返す
+			return cardListplus;
+		}
 
 
 
