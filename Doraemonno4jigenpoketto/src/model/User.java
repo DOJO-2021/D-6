@@ -11,6 +11,14 @@ public class User implements Serializable {
 			 this.id="";
 			 this.pass="";
 	    }
+
+//引数のあるUserのコンストラクタ
+		public User(String id ) {
+			this.id=id;
+
+		}
+
+//getterとsetterの設定
 		public String getId() {
 			return id;
 		}
