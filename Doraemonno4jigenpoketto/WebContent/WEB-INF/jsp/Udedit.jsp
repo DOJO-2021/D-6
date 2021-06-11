@@ -41,12 +41,6 @@
 
     <tr>
      <td>
-        <input type="DATE" name="calendar" max="9999-12-31">
-     </td>
-    </tr>
-
-    <tr>
-     <td>
 	  登録者<input type="text" name="registrant" value="${e.registrant}">
       </td>
      </tr>
