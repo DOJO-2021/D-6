@@ -17,25 +17,25 @@
 
 <c:forEach var="e" items="${qa}">
 	  <form method="POST" action="DetailServlet.java">
-	  質問文<input type="text" name="QUESTION" value="${e.question}"><br>    <!--質問文-->
-	  回答<input type="text" name="ANSWER" value="${e.answer}"><br>    <!--回答-->
+	  質問文<input type="text" name="question" value="${e.question}"><br>    <!--質問文-->
+	  回答<input type="text" name="answer" value="${e.answer}"><br>    <!--回答-->
 
  	<table>
     <tr>
       <td>
-       閲覧数<input type="text" name="PAGEVIEW" value="${e.pageview}"><br>
+       閲覧数<input type="text" name="pageview" value="${e.pageview}"><br>
      </td>
     </tr>
 
     <tr>
       <td>
-      質問日<input type="text" name="DATE" value="${e.date}"><br>
+      質問日<input type="text" name="date" value="${e.date}"><br>
      </td>
     </tr>
 
     <tr>
      <td>
-	  回答者<input type="text" name="ANSWERER" value="${e.answerer}">
+	  回答者<input type="text" name="answerer" value="${e.answerer}">
       </td>
     </tr>
 
@@ -47,13 +47,13 @@
 
     <tr>
      <td>
-	  登録者<input type="text" name="REGISTRANT" value="${e.registrant}">
+	  登録者<input type="text" name="registrant" value="${e.registrant}">
       </td>
      </tr>
 
  	</table>
-        <input type="submit" name="UPDATE" value="更新">
-        <input type="submit" name="DELETE" value="削除">
+        <input type="submit" name="submit" value="更新">
+        <input type="submit" name="submit" value="削除">
     </form>
 </c:forEach>
 
