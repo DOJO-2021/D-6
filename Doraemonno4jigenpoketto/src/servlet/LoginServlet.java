@@ -8,6 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import dao.UserDao;
 import model.User;
@@ -39,25 +40,24 @@ public class LoginServlet extends HttpServlet {
 				String pass = request.getParameter("PW");
 
 		//ログイン処理を行う
-		UserDAO iDao =new UserDAO() {
+		UserDao iDao =new UserDao() ;
 		if (iDao.isLoginOK(id,pass)) { //ログイン成功
 			//セッションスコープにIDを格納する
 			HttpSession session = request.getSession();
-			session.setAttribute("id", new LoginUser(id));
+			session.setAttribute("id", new User(id));
 
 			// 編集サーブレットにリダイレクトする
 			response.sendRedirect("/Doraemonno4jigenpoketto/EditServlet");
 		}
 		else {// ログイン失敗
 			// リクエストスコープに、タイトル、メッセージ、戻り先を格納する
-			request.setAttribute("result",
-			new Result("ログイン失敗！", "IDまたはPWに間違いがあります。", "/Doraemonno4jigenpoketto/LoginServlet"));
+			request.setAttribute("result",new User(id));
 
-			// 結果ページにフォワードする
+
+			// ログイン画面にフォワードする
 			RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/login.jsp");
 			dispatcher.forward(request, response);
 		}
 
 	}
-}
 }

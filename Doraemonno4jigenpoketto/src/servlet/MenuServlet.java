@@ -21,7 +21,7 @@ public class MenuServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	 //メニュー画面にフォワードする
-		RequestDispatcher dispatcher=request.getRequestDispatcher("/WEB-INF/jsp/menu.jsp");
+		RequestDispatcher dispatcher=request.getRequestDispatcher("/WEB-INF/jsp/Menu.jsp");
 		dispatcher.forward(request, response);
 
 	}
