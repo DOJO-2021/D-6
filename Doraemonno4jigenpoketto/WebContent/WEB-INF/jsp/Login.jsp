@@ -19,14 +19,11 @@
 <h1>ログイン</h1>
 
 <!--リンク先注意-->
-<form method="GET" action="Edit.jsp" id="form">
-</form>
-
-<input type="text"placeholder="ID" name="ID"> <br>
-<input type="password"placeholder="Password" name="PW"> <br><br>
-
+<form method="GET" action="//Doraemonno4jigenpoketto/LoginServlet" id="form">
+<input type="text"placeholder="ID" name="ID" required> <br>
+<input type="password"placeholder="Password" name="PW" required> <br><br>
 <!--name="LOGIN"-->
 <input type="submit" name="LOGIN" value="ログイン">
-
+</form>
 </body>
 </html>
