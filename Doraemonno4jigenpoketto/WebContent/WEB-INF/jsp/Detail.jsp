@@ -10,7 +10,7 @@
 <body>
 
 <h1><a href="/Doraemonno4jigenpoketto/MenuServlet">DOJO Q&amp;A集</a></h1> <!--h1は左より-->
-<p><a href="Login.jsp">ログアウト</a></p>	<!--ログアウト右上-->
+<p><a href="/Doraemonno4jigenpoketto/LoginServlet">ログアウト</a></p>	<!--ログアウト右上-->
 <h2>質問と回答</h2>  	                    <!--h2は中央-->
 
 <a href="/Doraemonno4jigenpoketto/EditServlet">編集</a>
