@@ -35,14 +35,7 @@
 
     <tr>
      <td>
-	<select name="ANSWER" id="answer">
-        <option value="">回答者を選択してください</option>
-        <option value="0">向後海</option>
-		    <option value="1">小林茉乃</option>
-        <option value="2">奥戸楓</option>
-        <option value="3">山嵜佳昭</option>
-		    <option value="4">森下佳亮</option>
-     </select>
+	  回答者<input type="text" name="ANSWERER" value="${e.answerer}">
       </td>
     </tr>
 
@@ -54,14 +47,7 @@
 
     <tr>
      <td>
-	<select name="REGESTANT" id="regestant">
-        <option value="">登録者を選択してください</option>
-		    <option value="0">向後海</option>
-		    <option value="1">小林茉乃</option>
-        <option value="2">奥戸楓</option>
-        <option value="3">山嵜佳昭</option>
-		    <option value="4">森下佳亮</option>
-     </select>
+	  登録者<input type="text" name="REGISTRANT" value="${e.registrant}">
       </td>
      </tr>
 
