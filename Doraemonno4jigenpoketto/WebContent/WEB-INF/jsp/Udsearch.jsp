@@ -9,14 +9,14 @@
 </head>
 <body>
 								<!--h1は左より-->
-<h1><a href="Result.jsp">DOJO Q&amp;A集</a></h1>
+<h1><a href="ResultServlet">DOJO Q&amp;A集</a></h1>
 											<!--h2は中央揃え-->
 <form name="ログアウト" method="POST" action="">
  <input type="submit" value="ログアウト">
 </form>
 <h2>編集内容検索</h2>
 <!--カテゴリ選択・回答者・質問した年月日・登録者についての登録-->
-<form method="GET" action="Udresult.jsp">
+<form method="GET" action="/Doraemonno4jigenpoketto/UdresultServlet">
  	<table>
     <tr>
       <td>						<!--単元選択-->
@@ -63,38 +63,31 @@
         </optgroup>
       </select>
      </td>
-     <td>							<!--回答者選択-->
-		   <select name="answer" id="answer">
-        <option value="">回答者を選択してください</option>
-        <option value="0">向後海</option>
-		    <option value="1">小林茉乃</option>
-        <option value="2">奥戸楓</option>
-        <option value="3">山嵜佳昭</option>
-		    <option value="4">森下佳亮</option>
-       </select>
+     <td>
+     	 <select name="category_item" id="category_item">
+           <option value="0">単元項目を選択してください</option>
+		   <option value="1">ビジネスメール・ビジネス文章</option>
+           <option value="2">Word</option>
+           <option value="3">Excel</option>
+     </td>
+     <td>							<!--回答者選択-- input typeに変更-->
+		<input type="text" name="answerer">
      </td>
   </tr>
   <tr>
      <td>							<!--年月日選択-->
         <input type="date" name="calendar" max="9999-12-31">
      </td>
-     <td>							<!--登録者選択-->
-		   <select name="regestant" id="regestant">
-        <option value="">登録者を選択してください</option>
-		    <option value="0">向後海</option>
-		    <option value="1">小林茉乃</option>
-        <option value="2">奥戸楓</option>
-        <option value="3">山嵜佳昭</option>
-		    <option value="4">森下佳亮</option>
-       </select>
+     <td>							<!--登録者選択--input typeに変更-->
+        <input type="text" name="registant">
      </td>
   </tr>
   <tr>
      <td>
-       <textarea name="remarks">質問文</textarea>
+       <textarea name="question">質問文</textarea>
      </td>
      <td>
-       <textarea name="remarks">回答文</textarea>
+       <textarea name="answer">回答文</textarea>
      </td>
   </tr>
  	</table>

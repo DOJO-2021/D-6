@@ -201,8 +201,13 @@
 						</optgroup>
 						<!--Webアプリ開発演習コース-->
 						<optgroup label="導入">
+<<<<<<< HEAD
+							<option value="0401001">webアプリケーションの構成要素</option>
+							<option value="0401002">webアプリケーションフレームワーク</option>
+=======
 							<option value="0401001">Webアプリケーションの構成要素</option>
 							<option value="0401002">Webアプリケーションフレームワーク</option>
+>>>>>>> c818827ffa4ce53ab08734f93eedec39032d59a8
 							<option value="0401003">構成管理</option>
 							<option value="0401004">進め方について</option>
 							<option value="0401005">その他</option>
