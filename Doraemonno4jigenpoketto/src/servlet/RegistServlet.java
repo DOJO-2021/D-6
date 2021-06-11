@@ -1,6 +1,7 @@
 package servlet;
 
 import java.io.IOException;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -14,6 +15,8 @@ import javax.servlet.http.HttpSession;
 
 import dao.QaDao;
 import model.Qa;
+import model.Result;
+
 
 /**
  * Servlet implementation class RegistServlet
@@ -25,15 +28,19 @@ public class RegistServlet extends HttpServlet {
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
+
+	String result;
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// もしもログインしていなかったらログインサーブレットにリダイレクトする
 				HttpSession session = request.getSession();
 				if (session.getAttribute("id") == null) {
-					response.sendRedirect("/simpleBC/LoginServlet");
+					response.sendRedirect("/Doraemonno4jigenpoketto/LoginServlet");
 					return;
 				}
 
 				// 登録ページにフォワードする
+				result="start";
+				request.setAttribute("result",new Result(result));
 				RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/regist.jsp");
 				dispatcher.forward(request, response);
 			}
@@ -44,15 +51,20 @@ public class RegistServlet extends HttpServlet {
 		// もしもログインしていなかったらログインサーブレットにリダイレクトする
 				HttpSession session = request.getSession();
 				if (session.getAttribute("id") == null) {
-					response.sendRedirect("/simpleBC/LoginServlet");
+					response.sendRedirect("/Doraemonno4jigenpoketto/LoginServlet");
 					return;
 				}
 
 				// リクエストパラメータを取得する
 				request.setCharacterEncoding("UTF-8");
-				int number=0;
 				SimpleDateFormat sdFormat = new SimpleDateFormat("yyyy/MM/dd");
-	            Date date = sdFormat.parse(request.getParameter("DATE"));
+	            Date date;
+				try {
+					date = sdFormat.parse(request.getParameter("DATE"));
+				} catch (ParseException e) {
+					date=null;
+					e.printStackTrace();
+				}
 				String answerer= request.getParameter("ANSWERER");
 				int category_id=Integer.parseInt(request.getParameter("category"));
 				String question=request.getParameter("QUESTION");
@@ -62,12 +74,10 @@ public class RegistServlet extends HttpServlet {
 				QaDao qDao=new QaDao();
 
 				if(qDao.insert(new Qa(0, date, answerer,  category_id, question, answer, 0, registrant))) {
-					String result;
 					result="success";
 					request.setAttribute("result",new Result(result));}
 					else {
 						// 登録失敗
-						String result;
 						result="false";
 						request.setAttribute("result",
 						new Result(result));
