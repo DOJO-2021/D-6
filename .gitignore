@@ -1,0 +1,4 @@
+/.metadata/
+build
+database.mv.db
+*.db
