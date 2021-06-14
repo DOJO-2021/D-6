@@ -54,5 +54,4 @@ this.category_item=category_item;
 		this.category_item = category_item;
 	}
 
-
 }
