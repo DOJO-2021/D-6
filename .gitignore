@@ -1,3 +1,5 @@
-database.mv.db
-database.trace.db
 /.metadata/
+/Doraemonno4jigenpoketto/build
+database.mv.db
+*.db
+/Servers
