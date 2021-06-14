@@ -41,7 +41,7 @@ public class RegistServlet extends HttpServlet {
 				// 登録ページにフォワードする
 				result="start";
 				request.setAttribute("result",new Result(result));
-				RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/regist.jsp");
+				RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/Regist.jsp");
 				dispatcher.forward(request, response);
 			}
 	/**
