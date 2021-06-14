@@ -9,9 +9,9 @@
 <body>
 
 <hr><!--リンク先注意-->
-<p><a href="Result.servlet">DOJO Q &nbsp; A集</a></p>
-<p><a href="Login.servlet">編集(事務局用)</a></p>
-<p><a href="Search.servlet">検索</a></p>
+<p><a href="/Doraemonno4jigenpoketto/MenuServlet">DOJO Q &nbsp; A集</a></p>
+<p><a href="/Doraemonno4jigenpoketto/LoginServlet">編集(事務局用)</a></p>
+<p><a href="/Doraemonno4jigenpoketto/SearchServlet">検索</a></p>
 
 <h1>検索</h1>
 
