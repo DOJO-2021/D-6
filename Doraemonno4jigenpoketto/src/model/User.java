@@ -15,7 +15,6 @@ public class User implements Serializable {
 //引数のあるUserのコンストラクタ
 		public User(String id ) {
 			this.id=id;
-
 		}
 
 //getterとsetterの設定
