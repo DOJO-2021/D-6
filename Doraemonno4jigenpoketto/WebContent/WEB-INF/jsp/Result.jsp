@@ -18,11 +18,17 @@
 "e"件ヒットしました。</p>
 
 <!--質問文-->
-	<c:forEach var="e" items="${qa}">
-		<form method="POST" action="/Doraemonno4jigenpoketto/DetailServlet">
+	<c:forEach var="e" items="${cardList}">
+		<form method="GET" action="/Doraemonno4jigenpoketto/DetailServlet">
 		<ul>
 			<li>
-				<input type="submit" name="question" value=${e.question}"閲覧数："${e.pageview}>
+				<input type="hidden" name="QUESTION_ID" value="${e.question_id}">
+				<input type="hidden" name="QUESTION" value="${e.question}">
+				<div>
+				質問文：value="${e.question}"
+				閲覧数：value="${e.pageview}"
+				</div>
+				<input type="submit" name="SUBMIT" value=詳細検索>
 			</li>
 
 		</ul>
