@@ -1,13 +1,8 @@
-/**
- *
- */
-
-
 window.onload = function() {
 
-  //
+  // 単元項目の選択肢
 
-  unit = document.getElementById("unit");
+  category_item = document.getElementById("category_item");
 
   // ジャンルの選択肢が変更された際の動作
 
@@ -17,9 +12,7 @@ window.onload = function() {
 
 }
 
-
-
-// ジャンルの選択肢が変更された際の動作 course→unit→category
+// ジャンルの選択肢が変更された際の動作
 
 function changeUnit() {
 
@@ -27,210 +20,205 @@ function changeUnit() {
 
   var changedUnit = unit.value;
 
-  if (changedunit == "0") {
+  if (changedUnit == "0") {
 
     // カテゴリにビジネス・コミュニケーションが選択された場合
 
-    setBCommuUnits();
+     setBCommuUnits();
 
-
-  } else if (changedCategory == "1") {
+  } else if (changedUnit == "1") {
 
     // カテゴリにビジネスメール・ビジネス文章が選択された場合
 
-    setBMailUnits();
+     setBMailUnits();
 
-
-  } else if (changedCategory == "2") {
+  } else if (changedUnit == "2") {
 
     // カテゴリにWordが選択された場合
 
     setWordUnits();
-
-
-  } else if (changedCategory == "3") {
+   }else if (changedUnit == "3") {
 
     // カテゴリにExcelが選択された場合
 
     setExcelUnits();
 
 
-  } else if (changedCategory == "4") {
+  } else if (changedUnit == "4") {
 
     // カテゴリにプログラミング(Programing)が選択された場合
 
     setProUnits();
 
 
-  } else if (changedCategory == "5") {
+  } else if (changedUnit == "5") {
 
     // カテゴリにアルゴリズムが選択された場合
 
     setAlgorithmUnits();
 
 
-  } else if (changedCategory == "6") {
+  } else if (changedUnit == "6") {
 
     // カテゴリにネットワークが選択された場合
 
     setNetworkUnits();
 
 
-  } else if (changedCategory == "7") {
+  } else if (changedUnit == "7") {
 
     // カテゴリにHTMLが選択された場合
 
     setHtmlUnits();
 
 
-  } else if (changedCategory == "8") {
+  }else if (changedUnit == "8") {
 
     // カテゴリにCSSが選択された場合
 
     setCssUnits();
 
 
-  } else if (changedCategory == "9") {
+  } else if (changedUnit == "9") {
 
     // カテゴリにJavaScriptが選択された場合
 
     setJSUnits();
 
 
-  } else if (changedCategory == "10") {
+  } else if (changedUnit == "10") {
 
     // カテゴリにデータベース（SQL）(DataBase)が選択された場合
 
     setDBUnits();
 
 
-  } else if (changedCategory == "11") {
+  } else if (changedUnit == "11") {
 
     // カテゴリにJavaプログラミング(JavaPrograming)が選択された場合
 
     setJavaProUnits();
 
 
-  } else if (changedCategory == "12") {
+  } else if (changedUnit == "12") {
 
     // カテゴリにサーバサイドJava(ServersideJava)が選択された場合
 
     setSSJavaUnits();
 
 
-  } else if (changedCategory == "13") {
+  } else if (changedUnit == "13") {
 
     // カテゴリに品質管理が選択された場合
 
     setQualityUnits();
 
 
-  } else if (changedCategory == "14") {
+  } else if (changedUnit== "14") {
 
     // カテゴリにセキュリティが選択された場合
 
     setSecurityUnits();
 
 
-  } else if (changedCategory == "15") {
+  } else if (changedUnit == "15") {
 
     // カテゴリに導入(Introduction)が選択された場合
 
     setIntroUnits();
 
 
-  } else if (changedCategory == "16") {
+  } else if (changedUnit == "16") {
 
     // カテゴリに要件定義（requirement definition）が選択された場合
 
     setRDUnits();
 
 
-  } else if (changedCategory == "17") {
+  } else if (changedUnit == "17") {
 
     // カテゴリに外部設計（External design）が選択された場合
 
     setEDUnits();
 
 
-  } else if (changedCategory == "18") {
+  } else if (changedUnit == "18") {
 
     // カテゴリに内部設計（Internal design）が選択された場合
 
     setIDUnits();
 
 
-  } else if (changedCategory == "19") {
+  } else if (changedUnit == "19") {
 
     // カテゴリに実装（implementation）が選択された場合
 
     setImpleUnits();
 
 
-  } else if (changedCategory == "20") {
+  } else if (changedUnit== "20") {
 
     // カテゴリにテスト（test）が選択された場合
 
     setTestUnits();
 
 
-  } else if (changedCategory == "21") {
+  } else if (changedUnit == "21") {
 
     // カテゴリにプレゼン作成（）が選択された場合
 
     setPresentationUnits();
 
 
-  } else if (changedCategory == "22") {
+  } else if (changedUnit == "22") {
 
     // カテゴリに発表（announcement）が選択された場合
 
     setAnnnounceUnits();
 
 
-  } else if (changedCategory == "23") {
+  } else if (changedUnit == "23") {
 
     // カテゴリにアルゴリズムドリルが選択された場合
 
     setAlgorithmDUnits();
 
 
-  } else if (changedCategory == "24") {
+  } else if (changedUnit == "24") {
 
     // カテゴリにSQLドリルが選択された場合
 
     setSqlDUnits();
 
 
-  } else if (changedCategory == "25") {
+  } else if (changedUnit == "25") {
 
     // カテゴリにJavadドリルが選択された場合
 
     setJavaDUnits();
 
 
-  } else /*(changedCategory == "26")*/ {
+  } else if (changedUnit == "26") {
 
     // カテゴリにその他が選択された場合
 
     setOthersUnits();
-
-
   }
 
 }
 
-// ビジネスマナー・コミュニケーションの選択肢を設定する
+// ビジネス・コミュニケーションの選択肢を設定する
 
 function setBCommuUnits() {
 
   // 単元項目の選択肢を空にする
 
-  category.textContent = null;
+  category_item.textContent = null;
 
-  // ビジネスマナー・コミュニケーションの選択肢
+  // 和食の選択肢
 
   var BCommuUnits = [
+
 
     {cd:"", label:"選択して下さい"},
 
@@ -247,6 +235,7 @@ function setBCommuUnits() {
     {cd:"5", label:"顧客先への訪問時と顧客の来社時のマナー"},
 
     {cd:"6", label:"その他"}
+
   ];
 
   BCommuUnits.forEach(function(value) {
@@ -257,19 +246,19 @@ function setBCommuUnits() {
 
     op.text = value.label;
 
-    units.appendChild(op);
+    category_item.appendChild(op);
 
   });
 
 }
 
-
 // ビジネスメール・ビジネス文章の選択肢を設定する
+
 function setBMailUnits() {
 
   // 単元項目の選択肢を空にする
 
-  category.textContent = null;
+  category_item.textContent = null;
 
   // ビジネスメール・ビジネス文章の選択肢
 
@@ -285,7 +274,8 @@ function setBMailUnits() {
 
     {cd:"10", label:"報告書を書く時の注意点"},
 
-    {cd:"11", label:"その他"},
+    {cd:"11", label:"その他"}
+
   ];
 
   BMailUnits.forEach(function(value) {
@@ -296,30 +286,30 @@ function setBMailUnits() {
 
     op.text = value.label;
 
-    units.appendChild(op);
+   category_item.appendChild(op);
 
   });
 
 }
-
-
 // Wordの選択肢を設定する
+
 function setWordUnits() {
 
   // 単元項目の選択肢を空にする
 
-  category.textContent = null;
+  category_item.textContent = null;
 
-  // Wordの選択肢
+  // ビジネスメール・ビジネス文章の選択肢
 
   var WordUnits = [
 
     {cd:"", label:"選択して下さい"},
 
-    {cd:"12", label:"Word"},
+    {cd:"12", label:"Word"}
+
   ];
 
-  WordUnits.forEach(function(value) {
+   WordUnits.forEach(function(value) {
 
     var op = document.createElement("option");
 
@@ -327,30 +317,30 @@ function setWordUnits() {
 
     op.text = value.label;
 
-    units.appendChild(op);
+   category_item.appendChild(op);
 
   });
 
 }
-
-
 // Excelの選択肢を設定する
+
 function setExcelUnits() {
 
   // 単元項目の選択肢を空にする
 
-  category.textContent = null;
+  category_item.textContent = null;
 
-  // Excelの選択肢
+  // ビジネスメール・ビジネス文章の選択肢
 
   var ExcelUnits = [
 
     {cd:"", label:"選択して下さい"},
 
-    {cd:"13", label:"Excel"},
+    {cd:"13", label:"Excel"}
+
   ];
 
-  ExcelUnits.forEach(function(value) {
+   ExcelUnits.forEach(function(value) {
 
     var op = document.createElement("option");
 
@@ -358,23 +348,22 @@ function setExcelUnits() {
 
     op.text = value.label;
 
-    units.appendChild(op);
+   category_item.appendChild(op);
 
   });
 
 }
-
-
 // プログラミングの選択肢を設定する
+
 function setProUnits() {
 
   // 単元項目の選択肢を空にする
 
-  category.textContent = null;
+  category_item.textContent = null;
 
-  // プログラミングの選択肢
+  // ビジネスメール・ビジネス文章の選択肢
 
-  var ProUnits = [
+  var  ProUnits = [
 
     {cd:"", label:"選択して下さい"},
 
@@ -388,11 +377,11 @@ function setProUnits() {
 
     {cd:"18", label:"論理演算とプログラミング"},
 
-    {cd:"19", label:"その他"},
+    {cd:"19", label:"その他"}
 
   ];
 
-  ProUnits.forEach(function(value) {
+   ProUnits.forEach(function(value) {
 
     var op = document.createElement("option");
 
@@ -400,31 +389,30 @@ function setProUnits() {
 
     op.text = value.label;
 
-    units.appendChild(op);
+   category_item.appendChild(op);
 
   });
 
 }
-
-
 // アルゴリズムの選択肢を設定する
+
 function setAlgorithmUnits() {
 
   // 単元項目の選択肢を空にする
 
-  category.textContent = null;
+  category_item.textContent = null;
 
-  // アルゴリズムの選択肢
+  // ビジネスメール・ビジネス文章の選択肢
 
-  var AlgorithmUnits = [
+  var  AlgorithmUnits = [
 
-    {cd:"", label:"選択して下さい"},
+   {cd:"", label:"選択して下さい"},
 
     {cd:"20", label:"アルゴリズム"},
 
     {cd:"21", label:"データ構造"},
 
-    {cd:"22", label:"その他"},
+    {cd:"22", label:"その他"}
 
   ];
 
@@ -436,23 +424,23 @@ function setAlgorithmUnits() {
 
     op.text = value.label;
 
-    units.appendChild(op);
+   category_item.appendChild(op);
 
   });
 
 }
 
-
 // ネットワークの選択肢を設定する
+
 function setNetworkUnits() {
 
   // 単元項目の選択肢を空にする
 
-  category.textContent = null;
+  category_item.textContent = null;
 
-  // ネットワークの選択肢
+  // ビジネスメール・ビジネス文章の選択肢
 
-  var NetworkUnits = [
+  var  NetworkUnits= [
 
     {cd:"", label:"選択して下さい"},
 
@@ -470,8 +458,7 @@ function setNetworkUnits() {
 
     {cd:"29", label:"Windowsとファイアウォール"},
 
-    {cd:"30", label:"その他"},
-
+    {cd:"30", label:"その他"}
   ];
 
   NetworkUnits.forEach(function(value) {
@@ -482,33 +469,33 @@ function setNetworkUnits() {
 
     op.text = value.label;
 
-    units.appendChild(op);
+   category_item.appendChild(op);
 
   });
 
 }
 
-
 // HTMLの選択肢を設定する
+
 function setHtmlUnits() {
 
   // 単元項目の選択肢を空にする
 
-  category.textContent = null;
+  category_item.textContent = null;
 
-  // HTMLの選択肢
+  // ビジネスメール・ビジネス文章の選択肢
 
-  var HtmlUnits = [
+  var  HtmlUnits = [
 
     {cd:"", label:"選択して下さい"},
 
     {cd:"31", label:"2ページ目意向を効率的に作成する"},
 
-    {cd:"32", label:"その他"},
+    {cd:"32", label:"その他"}
 
   ];
 
-  HtmlUnits.forEach(function(value) {
+    HtmlUnits.forEach(function(value) {
 
     var op = document.createElement("option");
 
@@ -516,33 +503,32 @@ function setHtmlUnits() {
 
     op.text = value.label;
 
-    units.appendChild(op);
+   category_item.appendChild(op);
 
   });
 
 }
-
-
 // CSSの選択肢を設定する
+
 function setCssUnits() {
 
   // 単元項目の選択肢を空にする
 
-  category.textContent = null;
+  category_item.textContent = null;
 
-  // CSSの選択肢
+  // ビジネスメール・ビジネス文章の選択肢
 
-  var CssUnits = [
+  var  CssUnits = [
 
     {cd:"", label:"選択して下さい"},
 
-    {cd:"33", label:"フォームの作成"},
+    {cd:"31", label:"2ページ目意向を効率的に作成する"},
 
-    {cd:"34", label:"その他"},
+    {cd:"32", label:"その他"}
 
   ];
 
-  CssUnits.forEach(function(value) {
+    CssUnits.forEach(function(value) {
 
     var op = document.createElement("option");
 
@@ -550,23 +536,22 @@ function setCssUnits() {
 
     op.text = value.label;
 
-    units.appendChild(op);
+   category_item.appendChild(op);
 
   });
 
 }
+//JavaScriptの選択肢を設定する
 
-
-// JavaScriptの選択肢を設定する
-function setJSUnits() {
+function setJSUnits(){
 
   // 単元項目の選択肢を空にする
 
-  category.textContent = null;
+  category_item.textContent = null;
 
-  // JavaScriptの選択肢
+  // ビジネスメール・ビジネス文章の選択肢
 
-  var JSUnits = [
+  var  JSUnits = [
 
     {cd:"", label:"選択して下さい"},
 
@@ -580,11 +565,11 @@ function setJSUnits() {
 
     {cd:"39", label:"WebページにJavascriptを追加"},
 
-    {cd:"40", label:"その他"},
+    {cd:"40", label:"その他"}
 
   ];
 
-  JSUnits.forEach(function(value) {
+   JSUnits.forEach(function(value) {
 
     var op = document.createElement("option");
 
@@ -592,23 +577,23 @@ function setJSUnits() {
 
     op.text = value.label;
 
-    units.appendChild(op);
+   category_item.appendChild(op);
 
   });
 
 }
-
-
 // データベース（SQL）の選択肢を設定する
-function setDBUnits() {
+
+function setDBUnits(){
 
   // 単元項目の選択肢を空にする
 
-  category.textContent = null;
+  category_item.textContent = null;
 
-  // データベース（SQL）の選択肢
+  // ビジネスメール・ビジネス文章の選択肢
 
-  var DBUnits = [
+  var  DBUnits = [
+
 
     {cd:"", label:"選択して下さい"},
 
@@ -628,11 +613,11 @@ function setDBUnits() {
 
     {cd:"48", label:"バックアップとリカバリー"},
 
-    {cd:"49", label:"その他"},
+    {cd:"49", label:"その他"}
 
   ];
 
-  DBUnits.forEach(function(value) {
+    DBUnits.forEach(function(value) {
 
     var op = document.createElement("option");
 
@@ -640,25 +625,25 @@ function setDBUnits() {
 
     op.text = value.label;
 
-    units.appendChild(op);
+   category_item.appendChild(op);
 
   });
 
 }
-
-
 // Javaプログラミングの選択肢を設定する
-function setJavaProUnits() {
+
+function setJavaProUnits(){
 
   // 単元項目の選択肢を空にする
 
-  category.textContent = null;
+  category_item.textContent = null;
 
-  // Javaプログラミングの選択肢
+  // ビジネスメール・ビジネス文章の選択肢
 
-  var JavaProUnits = [
+  var JavaProUnits= [
 
-    {cd:"", label:"選択して下さい"},
+
+ 		{cd:"", label:"選択して下さい"},
 
     {cd:"50", label:"Javaプログラムの書き方"},
 
@@ -686,11 +671,11 @@ function setJavaProUnits() {
 
     {cd:"62", label:"コレクションを提供するAPI"},
 
-    {cd:"63", label:"その他"},
+    {cd:"63", label:"その他"}
 
   ];
 
-  JavaProUnits.forEach(function(value) {
+    JavaProUnits.forEach(function(value) {
 
     var op = document.createElement("option");
 
@@ -698,23 +683,23 @@ function setJavaProUnits() {
 
     op.text = value.label;
 
-    units.appendChild(op);
+   category_item.appendChild(op);
 
   });
 
 }
+//サーバサイドJavaの選択肢を設定する
 
-
-// サーバサイドJavaの選択肢を設定する
-function setSSJavaUnits() {
+function setSSJavaUnits(){
 
   // 単元項目の選択肢を空にする
 
-  category.textContent = null;
+  category_item.textContent = null;
 
-  // サーバサイドJavaの選択肢
+  // ビジネスメール・ビジネス文章の選択肢
 
-  var SSJavaUnits = [
+  var   SSJavaUnits = [
+
 
     {cd:"", label:"選択して下さい"},
 
@@ -746,7 +731,7 @@ function setSSJavaUnits() {
 
     {cd:"77", label:"JSTL"},
 
-    {cd:"78", label:"その他"},
+    {cd:"78", label:"その他"}
 
   ];
 
@@ -758,25 +743,24 @@ function setSSJavaUnits() {
 
     op.text = value.label;
 
-    units.appendChild(op);
+   category_item.appendChild(op);
 
   });
 
 }
+//品質管理の選択肢を設定する
 
-
-// 品質管理の選択肢を設定する
-function setQualityUnits() {
+function setQualityUnits(){
 
   // 単元項目の選択肢を空にする
 
-  category.textContent = null;
+  category_item.textContent = null;
 
-  // 品質管理の選択肢
+  // ビジネスメール・ビジネス文章の選択肢
 
-  var QualityUnits = [
+  var  QualityUnits = [
 
-    {cd:"", label:"選択して下さい"},
+   {cd:"", label:"選択して下さい"},
 
     {cd:"79", label:"品質管理の基礎知識"},
 
@@ -786,11 +770,11 @@ function setQualityUnits() {
 
     {cd:"82", label:"単体テスト・結合テスト・システムテスト"},
 
-    {cd:"83", label:"その他"},
+    {cd:"83", label:"その他"}
 
   ];
 
-  QualityUnits.forEach(function(value) {
+   QualityUnits.forEach(function(value) {
 
     var op = document.createElement("option");
 
@@ -798,25 +782,24 @@ function setQualityUnits() {
 
     op.text = value.label;
 
-    units.appendChild(op);
+   category_item.appendChild(op);
 
   });
 
 }
+//セキュリティの選択肢を設定する
 
-
-// セキュリティの選択肢を設定する
-function setSecurityUnits() {
+function setQualityUnits(){
 
   // 単元項目の選択肢を空にする
 
-  category.textContent = null;
+  category_item.textContent = null;
 
   // セキュリティの選択肢
 
-  var SecurityUnits = [
+  var   SecurityUnits = [
 
-    {cd:"", label:"選択して下さい"},
+ 		{cd:"", label:"選択して下さい"},
 
     {cd:"84", label:"脅威の存在を知る"},
 
@@ -824,11 +807,10 @@ function setSecurityUnits() {
 
     {cd:"86", label:"Webアプリの脆弱性と対策"},
 
-    {cd:"87", label:"その他"},
-
+    {cd:"87", label:"その他"}
   ];
 
-  SecurityUnits.forEach(function(value) {
+   SecurityUnits.forEach(function(value) {
 
     var op = document.createElement("option");
 
@@ -836,25 +818,24 @@ function setSecurityUnits() {
 
     op.text = value.label;
 
-    units.appendChild(op);
+   category_item.appendChild(op);
 
   });
 
 }
+//導入の選択肢を設定する
 
-
-// 導入の選択肢を設定する
-function setIntroUnits() {
+function setIntroUnits(){
 
   // 単元項目の選択肢を空にする
 
-  category.textContent = null;
+  category_item.textContent = null;
 
-  // 導入の選択肢
+  // セキュリティの選択肢
 
-  var IntroUnits = [
+  var  IntroUnits = [
 
-    {cd:"", label:"選択して下さい"},
+ 	  {cd:"", label:"選択して下さい"},
 
     {cd:"88", label:"Webアプリケーションの構成要素"},
 
@@ -864,8 +845,7 @@ function setIntroUnits() {
 
     {cd:"91", label:"進め方について"},
 
-    {cd:"92", label:"その他"},
-
+    {cd:"92", label:"その他"}
   ];
 
   IntroUnits.forEach(function(value) {
@@ -876,25 +856,24 @@ function setIntroUnits() {
 
     op.text = value.label;
 
-    units.appendChild(op);
+   category_item.appendChild(op);
 
   });
 
 }
+//要件定義の選択肢を設定する
 
-
-// 要件定義の選択肢を設定する
-function setRDUnits() {
+function  setRDUnits(){
 
   // 単元項目の選択肢を空にする
 
-  category.textContent = null;
+  category_item.textContent = null;
 
-  // 要件定義の選択肢
+  // セキュリティの選択肢
 
-  var RDUnits = [
+  var  RDUnits = [
 
-    {cd:"", label:"選択して下さい"},
+ 	 {cd:"", label:"選択して下さい"},
 
     {cd:"93", label:"プロジェクトについて"},
 
@@ -908,11 +887,10 @@ function setRDUnits() {
 
     {cd:"98", label:"スケジュール策定"},
 
-    {cd:"99", label:"その他"},
-
+    {cd:"99", label:"その他"}
   ];
 
-  RDUnits.forEach(function(value) {
+ RDUnits.forEach(function(value) {
 
     var op = document.createElement("option");
 
@@ -920,31 +898,29 @@ function setRDUnits() {
 
     op.text = value.label;
 
-    units.appendChild(op);
+   category_item.appendChild(op);
 
   });
 
 }
+//外部設計の選択肢を設定する
 
-
-// 外部設計の選択肢を設定する
-function setEDUnits() {
+function  setEDUnits(){
 
   // 単元項目の選択肢を空にする
 
-  category.textContent = null;
+  category_item.textContent = null;
 
-  // 外部設計の選択肢
+  // セキュリティの選択肢
 
-  var EDUnits = [
+  var EDUnits= [
 
-    {cd:"", label:"選択して下さい"},
+ 	 {cd:"", label:"選択して下さい"},
 
-    {cd:"100", label:"外部設計書"},
-
+    {cd:"100", label:"外部設計書"}
   ];
 
-  EDUnits.forEach(function(value) {
+ EDUnits.forEach(function(value) {
 
     var op = document.createElement("option");
 
@@ -952,31 +928,30 @@ function setEDUnits() {
 
     op.text = value.label;
 
-    units.appendChild(op);
+   category_item.appendChild(op);
 
   });
 
 }
+//内部設計の選択肢を設定する
 
-
-// 内部設計の選択肢を設定する
-function setIDUnits() {
+function  setIDUnits() {
 
   // 単元項目の選択肢を空にする
 
-  category.textContent = null;
+  category_item.textContent = null;
 
-  // 内部設計の選択肢
+  // セキュリティの選択肢
 
   var IDUnits = [
 
+
     {cd:"", label:"選択して下さい"},
 
-    {cd:"101", label:"内部設計書"},
-
+    {cd:"101", label:"内部設計書"}
   ];
 
-  IDUnits.forEach(function(value) {
+IDUnits .forEach(function(value) {
 
     var op = document.createElement("option");
 
@@ -984,34 +959,34 @@ function setIDUnits() {
 
     op.text = value.label;
 
-    units.appendChild(op);
+   category_item.appendChild(op);
 
   });
 
 }
+//実装の選択肢を設定する
 
-
-// 実装の選択肢を設定する
 function setImpleUnits() {
 
   // 単元項目の選択肢を空にする
 
-  category.textContent = null;
+  category_item.textContent = null;
 
-  // 実装の選択肢
+  // セキュリティの選択肢
 
-  var ImpleUnits = [
+  var ImpleUnits= [
 
-    {cd:"", label:"選択して下さい"},
+
+   {cd:"", label:"選択して下さい"},
 
     {cd:"102", label:"コーディング規約"},
 
     {cd:"103", label:"命名規則"},
 
-    {cd:"104", label:"その他"},
+    {cd:"104", label:"その他"}
   ];
 
-  ImpleUnits.forEach(function(value) {
+ImpleUnits.forEach(function(value) {
 
     var op = document.createElement("option");
 
@@ -1019,25 +994,25 @@ function setImpleUnits() {
 
     op.text = value.label;
 
-    units.appendChild(op);
+   category_item.appendChild(op);
 
   });
 
 }
+//テストの選択肢を設定する
 
-
-// テストの選択肢を設定する
-function setTestUnits() {
+function setTestUnits(){
 
   // 単元項目の選択肢を空にする
 
-  category.textContent = null;
+  category_item.textContent = null;
 
-  // テストの選択肢
+  // セキュリティの選択肢
 
-  var TestUnits = [
+  var TestUnits= [
 
-    {cd:"", label:"選択して下さい"},
+
+     {cd:"", label:"選択して下さい"},
 
     {cd:"105", label:"テストの工程"},
 
@@ -1049,10 +1024,10 @@ function setTestUnits() {
 
     {cd:"109", label:"テスト仕様書"},
 
-    {cd:"110", label:"その他"},
+    {cd:"110", label:"その他"}
   ];
 
-  ImpleUnits.forEach(function(value) {
+TestUnits.forEach(function(value) {
 
     var op = document.createElement("option");
 
@@ -1060,34 +1035,35 @@ function setTestUnits() {
 
     op.text = value.label;
 
-    units.appendChild(op);
+   category_item.appendChild(op);
 
   });
 
 }
 
+//プレゼン作成の選択肢を設定する
 
-// プレゼン作成の選択肢を設定する
 function setPresentationUnits() {
 
   // 単元項目の選択肢を空にする
 
-  category.textContent = null;
+  category_item.textContent = null;
 
-  // プレゼン作成の選択肢
+  // セキュリティの選択肢
 
-  var PresentationUnits = [
+  var  PresentationUnits= [
 
-    {cd:"", label:"選択して下さい"},
+
+   {cd:"", label:"選択して下さい"},
 
     {cd:"111", label:"プレゼンの基礎"},
 
     {cd:"112", label:"パワーポイント基礎"},
 
-    {cd:"113", label:"その他"},
+    {cd:"113", label:"その他"}
   ];
 
-  PresentationUnits.forEach(function(value) {
+ PresentationUnits.forEach(function(value) {
 
     var op = document.createElement("option");
 
@@ -1095,27 +1071,27 @@ function setPresentationUnits() {
 
     op.text = value.label;
 
-    units.appendChild(op);
+   category_item.appendChild(op);
 
   });
 
 }
+//発表の選択肢を設定する
 
-
-// 発表の選択肢を設定する
-function setAnnnounceUnits() {
+function  setAnnnounceUnits() {
 
   // 単元項目の選択肢を空にする
 
-  category.textContent = null;
+  category_item.textContent = null;
 
-  // 発表の選択肢
+  // セキュリティの選択肢
 
-  var AnnnounceUnits = [
+  var  AnnnounceUnits= [
 
-    {cd:"", label:"選択して下さい"},
 
-    {cd:"114", label:"発表"},
+   {cd:"", label:"選択して下さい"},
+
+    {cd:"114", label:"発表"}
   ];
 
   AnnnounceUnits.forEach(function(value) {
@@ -1126,27 +1102,27 @@ function setAnnnounceUnits() {
 
     op.text = value.label;
 
-    units.appendChild(op);
+   category_item.appendChild(op);
 
   });
 
 }
+//アルゴリズムドリルの選択肢を設定する
 
-
-// アルゴリズムドリルの選択肢を設定する
-function setAlgorithmDUnits() {
+function   setAlgorithmDUnits() {
 
   // 単元項目の選択肢を空にする
 
-  category.textContent = null;
+  category_item.textContent = null;
 
-  // アルゴリズムドリルの選択肢
+  // セキュリティの選択肢
 
-  var AlgorithmDUnits = [
+  var  AlgorithmDUnits= [
 
-    {cd:"", label:"選択して下さい"},
 
-    {cd:"115", label:"アルゴリズムドリル"},
+  {cd:"", label:"選択して下さい"},
+
+    {cd:"115", label:"アルゴリズムドリル"}
   ];
 
   AlgorithmDUnits.forEach(function(value) {
@@ -1157,27 +1133,27 @@ function setAlgorithmDUnits() {
 
     op.text = value.label;
 
-    units.appendChild(op);
+   category_item.appendChild(op);
 
   });
 
 }
+//SOLドリルの選択肢を設定する
 
-
-// SOLドリルの選択肢を設定する
-function setSqlDUnits() {
+function   setSqlDUnits() {
 
   // 単元項目の選択肢を空にする
 
-  category.textContent = null;
+  category_item.textContent = null;
 
-  // SOLドリルの選択肢
+  // セキュリティの選択肢
 
-  var SqlDUnits = [
+  var   SqlDUnits= [
 
-    {cd:"", label:"選択して下さい"},
 
-    {cd:"116", label:"SQLドリル"},
+   {cd:"", label:"選択して下さい"},
+
+       {cd:"116", label:"SQLドリル"}
   ];
 
   SqlDUnits.forEach(function(value) {
@@ -1188,27 +1164,27 @@ function setSqlDUnits() {
 
     op.text = value.label;
 
-    units.appendChild(op);
+   category_item.appendChild(op);
 
   });
 
 }
-
-
 // Javaドリルの選択肢を設定する
-function setJavaDUnits() {
+
+function   setJavaDUnits() {
 
   // 単元項目の選択肢を空にする
 
-  category.textContent = null;
+  category_item.textContent = null;
 
-  // Javaドリルの選択肢
+  // セキュリティの選択肢
 
-  var JavaDUnits = [
+  var  JavaDUnits= [
 
-    {cd:"", label:"選択して下さい"},
 
-    {cd:"117", label:"Javaドリル"},
+   {cd:"", label:"選択して下さい"},
+
+   {cd:"117", label:"Javaドリル"}
   ];
 
   JavaDUnits.forEach(function(value) {
@@ -1219,27 +1195,27 @@ function setJavaDUnits() {
 
     op.text = value.label;
 
-    units.appendChild(op);
+   category_item.appendChild(op);
 
   });
 
 }
-
-
 // その他の選択肢を設定する
-function setOtherUnits() {
+
+function  setOtherUnits()  {
 
   // 単元項目の選択肢を空にする
 
-  category.textContent = null;
+  category_item.textContent = null;
 
-  // その他の選択肢
+  // セキュリティの選択肢
 
-  var OtherUnits = [
+  var  OtherUnits= [
 
-    {cd:"", label:"選択して下さい"},
 
-    {cd:"118", label:"その他"},
+   {cd:"", label:"選択して下さい"},
+
+   {cd:"118", label:"その他"}
   ];
 
   OtherUnits.forEach(function(value) {
@@ -1250,10 +1226,8 @@ function setOtherUnits() {
 
     op.text = value.label;
 
-    units.appendChild(op);
+   category_item.appendChild(op);
 
   });
 
 }
-
-

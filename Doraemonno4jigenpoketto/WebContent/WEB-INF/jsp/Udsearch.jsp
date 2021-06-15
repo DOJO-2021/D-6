@@ -58,16 +58,13 @@
          <option value="25">Javaドリル</option>
         </optgroup>
          <optgroup label="その他">
-		     <option value="27">その他</option>
+		     <option value="26">その他</option>
         </optgroup>
       </select>
      </td>
      <td>
-     	 <select name="CATEGORY_ITEM" id="category_item">
-           <option value="0">単元項目を選択してください</option>
-		   <option value="1">ビジネスメール・ビジネス文章</option>
-           <option value="2">Word</option>
-           <option value="3">Excel</option>
+     	 <select name="category_item" id="category_item">
+     	 </select>
      </td>
      <td>							<!--回答者選択-- input typeに変更-->
 		<input type="text" name="ANSWERER">
