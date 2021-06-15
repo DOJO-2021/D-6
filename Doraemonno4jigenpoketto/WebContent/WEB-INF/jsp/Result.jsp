@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+     <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,7 +10,7 @@
 <body>
 
 	<h1>DOJO Q&amp;A集</h1>
-		<p><a href="Login.jsp">ログアウト</a></p>
+		<p><a href="/Doraemonno4jigenpoketto/LoginServlet">ログアウト</a></p>
 
 	<h2>検索結果画面</h2>
 
@@ -18,7 +19,7 @@
 
 <!--質問文-->
 	<c:forEach var="e" items="${qa}">
-		<form method="POST" action="DetailServlet.java">
+		<form method="POST" action="/Doraemonno4jigenpoketto/DetailServlet">
 		<ul>
 			<li>
 				<input type="submit" name="question" value=${e.question}"閲覧数："${e.pageview}>

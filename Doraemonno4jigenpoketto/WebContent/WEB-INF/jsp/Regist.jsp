@@ -16,10 +16,10 @@
 		<form method="POST" action="/Doraemonno4jigenpoketto/RegistServlet">
 		<table>
 			<tr>
-				<th>質問文</th><td><textarea name="question"></textarea></td>
+				<th>質問文</th><td><textarea name="QUESTION"></textarea></td>
 			</tr>
 			<tr>
-				<th>回答文</th><td><textarea name="answer"></textarea></td>
+				<th>回答文</th><td><textarea name="ANSWER"></textarea></td>
 			</tr>
 
 			<tr>
@@ -270,15 +270,15 @@
 				</div>
 			-->
 			<tr>
-				<td><input type="date" name="calendar" max="9999-12-31"></td>
+				<td><input type="date" name="CALENDAR" max="9999-12-31"></td>
 			</tr>
 			<tr>
-			    <input type="text" name="answerer" id="answerer">
+			    <input type="text" name="ANSWERER" id="answerer">
 			</tr>
 			<tr>
-			    <input type="text" name="registant" id="registant">
+			    <input type="text" name="REGISTRANT" id="registant">
 			</tr>
-			<input type="submit" name="regist" value="登録"><br>
+			<input type="submit" name="REGIST" value="登録"><br>
 		</table>
 		</form>
 	</nav>

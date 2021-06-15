@@ -451,9 +451,7 @@ public class QaDao {
 			conn = DriverManager.getConnection("jdbc:h2:file:C:/pleiades/workspace/D-6/Doraemonno4jigenpoketto/database", "sa", "sa");
 
 			// SQL文を準備する
-			String sql = "insert into QA (question_id, date, answerer, category_id, "
-					+ " question, answer, pageview, registrant)"
-					+ " values (null, ?, ?, ?, ?, ?, 0, ?)";
+			String sql = "insert into QA values (null, ?, ?, ?, ?, ?, 0, ?)";
 			PreparedStatement pStmt = conn.prepareStatement(sql);
 
 			// SQL文を完成させる

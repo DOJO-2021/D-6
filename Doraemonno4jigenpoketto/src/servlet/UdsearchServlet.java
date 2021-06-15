@@ -57,16 +57,16 @@ public class UdsearchServlet extends HttpServlet {
 		SimpleDateFormat sdFormat = new SimpleDateFormat("yyyy/MM/dd");
         Date date;
 		try {
-			date = sdFormat.parse(request.getParameter("DATE"));
+			date = sdFormat.parse(request.getParameter("CALENDAR"));
 		} catch (ParseException e) {
 			date=null;
 			e.printStackTrace();
 		}
 		String answerer= request.getParameter("ANSWERER");
-		int category_id=Integer.parseInt(request.getParameter("category"));
+		int category_id=Integer.parseInt(request.getParameter("CATEGORY_ITEM"));
 		String question=request.getParameter("QUESTION");
 		String answer=request.getParameter("ANSWER");
-		String registrant=request.getParameter("REGISTRANTT");
+		String registrant=request.getParameter("REGISTRANT");
 		QaDao qDao=new QaDao();
 
 		// 検索処理を行う

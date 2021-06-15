@@ -1,6 +1,9 @@
 package servlet;
 
 import java.io.IOException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -12,6 +15,7 @@ import javax.servlet.http.HttpSession;
 
 import dao.QaDao;
 import model.Qa;
+import model.Result;
 
 									//更新と削除用の編集画面用
 /**
@@ -35,7 +39,15 @@ public class UdeditServlet extends HttpServlet {
 		// リクエストパラメータを取得
 		request.setCharacterEncoding("UTF-8");
 		int question_id=Integer.parseInt(request.getParameter("QUESTION_ID"));//質問ID
-		String date=request.getParameter("DATE");//質問日
+		//質問日（49行まで）
+		SimpleDateFormat sdFormat = new SimpleDateFormat("yyyy/MM/dd");
+        Date date;
+		try {
+			date = sdFormat.parse(request.getParameter("DATE"));
+		} catch (ParseException e) {
+			date=null;
+			e.printStackTrace();
+		}
 		String answerer=request.getParameter("ANSWERER");//回答者
 		int category_id=Integer.parseInt(request.getParameter("CATEGORY_ID"));//単元項目ID
 		String question=request.getParameter("QUESTION");//質問内容

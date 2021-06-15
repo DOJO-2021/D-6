@@ -8,7 +8,7 @@
 </head>
 <body>
 	<h1>DOJO Q&amp;A集</h1>
-		<p><a href="Login.jsp">ログアウト</a></p>
+		<p><a href="/Doraemonno4jigenpoketto/LoginServlet"">ログアウト</a></p>
 
 	<h2>更新・削除用検索結果画面</h2>
 
@@ -17,10 +17,16 @@
 
 <!--質問文-->
 	<c:forEach var="e" items="${qa}">
-		<form method="POST" action="UdeditServlet.java">
+		<form method="POST" action="/Doraemonno4jigenpoketto/UdresultServlet">
 		<ul>
 			<li>
-				<input type="submit" name="question" value=${e.question}"閲覧数："${e.pageview}>
+				<input type="hidden" name="QUESTION_ID" value="${e.question_id}">
+				<input type="hidden" name="QUESTION" value="${e.question}">
+				<div>
+				質問文：value="${e.question}"
+				閲覧数：value="${e.pageview}"
+				</div>
+				<input type="submit" name="SUBMIT" value=更新・削除>
 			</li>
 
 		</ul>

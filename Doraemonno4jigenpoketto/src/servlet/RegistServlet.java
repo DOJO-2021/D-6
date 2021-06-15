@@ -60,7 +60,7 @@ public class RegistServlet extends HttpServlet {
 				SimpleDateFormat sdFormat = new SimpleDateFormat("yyyy/MM/dd");
 	            Date date;
 				try {
-					date = sdFormat.parse(request.getParameter("DATE"));
+					date = sdFormat.parse(request.getParameter("CALENDAR"));
 				} catch (ParseException e) {
 					date=null;
 					e.printStackTrace();
@@ -69,7 +69,7 @@ public class RegistServlet extends HttpServlet {
 				int category_id=Integer.parseInt(request.getParameter("category"));
 				String question=request.getParameter("QUESTION");
 				String answer=request.getParameter("ANSWER");
-				String registrant=request.getParameter("REGISTRANTT");
+				String registrant=request.getParameter("REGISTRANT");
 
 				QaDao qDao=new QaDao();
 
@@ -84,7 +84,7 @@ public class RegistServlet extends HttpServlet {
 					}
 
 				// 結果ページにフォワードする
-				RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/regist.jsp");
+				RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/Regist.jsp");
 				dispatcher.forward(request, response);
 			}
 

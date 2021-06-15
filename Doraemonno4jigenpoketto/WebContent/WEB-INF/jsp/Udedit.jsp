@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+   <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,8 +16,8 @@
 <h2>更新・削除</h2>  	                    <!--h2は中央-->
 <!--閲覧数・質問日・回答者・質問した年月日・登録者についての更新・削除-->
 
-<c:forEach var="e" items="${qa}">
-	  <form method="POST" action="DetailServlet.java">
+<c:forEach var="e" items="${result}">
+	  <form method="POST" action="/Doraemonno4jigenpoketto/UdeditServlet">
 	  質問文<input type="text" name="question" value="${e.question}"><br>    <!--質問文-->
 	  回答<input type="text" name="answer" value="${e.answer}"><br>    <!--回答-->
 
@@ -35,9 +36,7 @@
 
     <tr>
      <td>
-<<<<<<< HEAD
 	  回答者<input type="text" name="answerer" value="${e.answerer}">
-=======
 	<select name="ANSWER" id="answerer">
         <option value="">回答者を選択してください</option>
         <option value="0">向後海</option>
@@ -46,7 +45,6 @@
         <option value="3">山嵜佳昭</option>
 		    <option value="4">森下佳亮</option>
      </select>
->>>>>>> f231b0ae4119a52b6cd71a56bb5922daa3477bca
       </td>
     </tr>
 
