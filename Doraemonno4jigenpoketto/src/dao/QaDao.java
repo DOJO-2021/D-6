@@ -380,15 +380,15 @@ public class QaDao {
 
 				// SQL文を準備する
 				String sql = "select Q.QUESTION_ID, Q.DATE, Q.ANSWERER,  Q.CATEGORY_ID, CO.COURSE, U.UNIT, \r\n"
-						+ "CA.CATEGORY_ITEM, U.TEXTBOOK, Q.QUESTION, Q.ANSWER, Q.PAGEVIEW, Q.REGISTANT from \r\n"
+						+ "CA.CATEGORY_ITEM, U.TEXTBOOK, Q.QUESTION, Q.ANSWER, Q.PAGEVIEW, Q.REGISTRANT from \r\n"
 						+ "((QA as Q inner join CATEGORY as CA on Q.CATEGORY_ID=CA.CATEGORY_ID) \r\n"
 						+ "inner join UNIT as U on CA.COURSE_ID=U.COURSE_ID and CA.UNIT_ID=U.UNIT_ID) \r\n"
 						+ "inner join COURSE as CO on CA.COURSE_ID=CO.COURSE_ID \r\n"
-						+ "WHERE Q.CATEGORY_ID = ? ORDER BY Q.PAGEVIEW;\r\n";
+						+ "WHERE Q.QUESTION_ID = ? ORDER BY Q.PAGEVIEW;\r\n";
 				PreparedStatement pStmt = conn.prepareStatement(sql);
 
 				// SQL文を完成させる
-					pStmt.setInt(1, param.getCategory_id());
+					pStmt.setInt(1, param.getQuestion_id());
 				// SQL文を実行し、結果表を取得する
 				ResultSet rs = pStmt.executeQuery();
 

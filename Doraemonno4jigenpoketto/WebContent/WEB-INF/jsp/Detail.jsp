@@ -16,10 +16,10 @@
 
 <a href="/Doraemonno4jigenpoketto/EditServlet">編集</a>
 <a href="/Doraemonno4jigenpoketto/SearchServlet">検索</a>
-	<c:forEach var="e" items="${qa}">
-閲覧数<input type="text" name="pageview" value="${e.pageview}">
-質問<input type="text" name="question" value="${e.question}"> 質問日<input type="text" name="date" value="${e.date}"><br>
-回答<input type="text" name="answer" value="${e.answer}"> 回答者<input type="text" name="answerer" value="${e.answerer}"><br>
+<c:forEach var="e" items="${cardList1}">
+閲覧数:${e.pageview}
+質問:${e.question} 質問日:${e.date}<br>
+回答:${e.answer} 回答者:${e.answerer}<br>
 </c:forEach>
 </body>
 </html>
