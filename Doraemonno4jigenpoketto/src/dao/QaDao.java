@@ -271,8 +271,7 @@ public class QaDao {
 						+ "      (CASE WHEN Q.QUESTION IS NULL THEN '' ELSE Q.QUESTION END) LIKE ? AND \r\n"
 						+ "      (CASE WHEN Q.ANSWER IS NULL THEN '' ELSE Q.ANSWER END) LIKE ? AND \r\n"
 						+ "      (CASE WHEN Q.REGISTRANT IS NULL THEN '' ELSE Q.REGISTRANT END) LIKE ? \r\n"
-						+ "      ORDER BY Q.PAGEVIEW;\r\n"
-						+ "";
+						+ "      ORDER BY Q.PAGEVIEW;\r\n";
 				PreparedStatement pStmt = conn.prepareStatement(sql);
 
 				// SQL文を完成させる

@@ -65,7 +65,7 @@ public class daotest {
 		Qa insRec = new Qa(8, null, "女性",103001,"あれは何","何だろう",0,"男性");
 		if (dao.insert(insRec)) {
 			System.out.println("登録成功！");
-			List<Qaplus> cardList4= dao.select2(insRec);
+			List<Qaplus> cardList4= dao.select2(new Qa(8, null, "女性",103001,"あれは何","何だろう",0,"男性"));
 			for (Qaplus card : cardList4) {
 			System.out.println("NUMBER：" + card.getQuestion_id());
 			System.out.println("名前：" + card.getDate());
