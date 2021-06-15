@@ -1,11 +1,5 @@
-<<<<<<< HEAD
-database.mv.db
-database.trace.db
-/.metadata/
-=======
 /.metadata/
 /Doraemonno4jigenpoketto/build
 database.mv.db
 *.db
 /Servers
->>>>>>> 089388403c8e4796da9910decaedf043ebba2dd7
