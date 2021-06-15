@@ -13,7 +13,7 @@ public class daotest {
 
 		// select()のテスト
 		System.out.println("---------- select()のテスト ----------");
-		List<Category> cardList2_1 = dao1.select(new Category(1,1,0,""));
+		List<Category> cardList2_1 = dao1.select(new Category(1,1,103001,""));
 		for (Category card : cardList2_1) {
 			System.out.println("NUMBER：" + card.getCourse_id());
 			System.out.println("名前：" + card.getUnit_id());

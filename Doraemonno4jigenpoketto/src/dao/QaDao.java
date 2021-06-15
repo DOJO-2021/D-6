@@ -260,18 +260,18 @@ public class QaDao {
 				conn = DriverManager.getConnection("jdbc:h2:file:C:/pleiades/workspace/D-6/Doraemonno4jigenpoketto/database", "sa", "sa");
 
 				// SQL文を準備する
-				String sql = "select Q.QUESTION_ID, Q.DATE, Q.ANSWERER,  Q.CATEGORY_ID, CO.COURSE, U.UNIT, \r\n"
-						+ "CA.CATEGORY_ITEM, U.TEXTBOOK, Q.QUESTION, Q.ANSWER, Q.PAGEVIEW, Q.REGISTRANT from \r\n"
-						+ "((QA as Q inner join CATEGORY as CA on Q.CATEGORY_ID=CA.CATEGORY_ID) \r\n"
-						+ "inner join UNIT as U on CA.COURSE_ID=U.COURSE_ID and CA.UNIT_ID=U.UNIT_ID) \r\n"
-						+ "inner join COURSE as CO on CA.COURSE_ID=CO.COURSE_ID \r\n"
-						+ "WHERE (CASE WHEN Q.DATE IS NULL THEN 10001010 ELSE Q.DATE END) LIKE ? AND \r\n"
-						+ "      (CASE WHEN Q.ANSWERER IS NULL THEN '' ELSE Q.ANSWERER END) LIKE ? AND \r\n"
-						+ "      CAST((CASE WHEN Q.CATEGORY_ID IS NULL THEN '' ELSE Q.CATEGORY_ID END) AS VARCHAR) LIKE ? AND \r\n"
-						+ "      (CASE WHEN Q.QUESTION IS NULL THEN '' ELSE Q.QUESTION END) LIKE ? AND \r\n"
-						+ "      (CASE WHEN Q.ANSWER IS NULL THEN '' ELSE Q.ANSWER END) LIKE ? AND \r\n"
-						+ "      (CASE WHEN Q.REGISTRANT IS NULL THEN '' ELSE Q.REGISTRANT END) LIKE ? \r\n"
-						+ "      ORDER BY Q.PAGEVIEW;\r\n";
+				String sql = "select Q.QUESTION_ID, Q.DATE, Q.ANSWERER,  Q.CATEGORY_ID, CO.COURSE, U.UNIT, "
+						+ "CA.CATEGORY_ITEM, U.TEXTBOOK, Q.QUESTION, Q.ANSWER, Q.PAGEVIEW, Q.REGISTRANT from "
+						+ "((QA as Q inner join CATEGORY as CA on Q.CATEGORY_ID=CA.CATEGORY_ID) "
+						+ "inner join UNIT as U on CA.COURSE_ID=U.COURSE_ID and CA.UNIT_ID=U.UNIT_ID) "
+						+ "inner join COURSE as CO on CA.COURSE_ID=CO.COURSE_ID "
+						+ "WHERE (CASE WHEN Q.DATE IS NULL THEN 10001010 ELSE Q.DATE END) LIKE ? AND "
+						+ "      (CASE WHEN Q.ANSWERER IS NULL THEN '' ELSE Q.ANSWERER END) LIKE ? AND "
+						+ "      CAST((CASE WHEN Q.CATEGORY_ID IS NULL THEN '' ELSE Q.CATEGORY_ID END) AS VARCHAR) LIKE ? AND "
+						+ "      (CASE WHEN Q.QUESTION IS NULL THEN '' ELSE Q.QUESTION END) LIKE ? AND "
+						+ "      (CASE WHEN Q.ANSWER IS NULL THEN '' ELSE Q.ANSWER END) LIKE ? AND "
+						+ "      (CASE WHEN Q.REGISTRANT IS NULL THEN '' ELSE Q.REGISTRANT END) LIKE ? "
+						+ "      ORDER BY Q.PAGEVIEW";
 				PreparedStatement pStmt = conn.prepareStatement(sql);
 
 				// SQL文を完成させる
@@ -306,7 +306,7 @@ public class QaDao {
 					pStmt.setString(5, "%");
 				}
 				if (param.getRegistrant() != null && param.getRegistrant() != "") {
-					pStmt.setString(6, "%" + param.getAnswerer() + "%");
+					pStmt.setString(6, "%" + param.getRegistrant() + "%");
 				}
 				else {
 					pStmt.setString(6, "%");
@@ -323,7 +323,7 @@ public class QaDao {
 					rs.getString("COURSE"),
 					rs.getString("UNIT"),
 					rs.getString("CATEGORY_ITEM"),
-					rs.getString("textbook"),
+					rs.getString("TEXTBOOK"),
 					rs.getString("QUESTION"),
 					rs.getString("ANSWER"),
 					rs.getInt("PAGEVIEW"),
@@ -356,6 +356,112 @@ public class QaDao {
 			// 結果を返す
 			return cardListplus;
 		}
+
+		//事務局用検索2
+		// 引数paramで検索項目を指定し、検索結果のリストを返す
+		public List<Qaplus> select6(Qa param) {
+			Connection conn = null;
+			List<Qaplus> cardListplus = new ArrayList<Qaplus>();
+
+			try {
+				// JDBCドライバを読み込む
+				Class.forName("org.h2.Driver");
+
+				// データベースに接続する
+				conn = DriverManager.getConnection("jdbc:h2:file:C:/pleiades/workspace/D-6/Doraemonno4jigenpoketto/database", "sa", "sa");
+
+				// SQL文を準備する
+				String sql = "select Q.QUESTION_ID, Q.DATE, Q.ANSWERER,  Q.CATEGORY_ID, CO.COURSE, U.UNIT, "
+						+ "CA.CATEGORY_ITEM, U.TEXTBOOK, Q.QUESTION, Q.ANSWER, Q.PAGEVIEW, Q.REGISTRANT from "
+						+ "((QA as Q inner join CATEGORY as CA on Q.CATEGORY_ID=CA.CATEGORY_ID) "
+						+ "inner join UNIT as U on CA.COURSE_ID=U.COURSE_ID and CA.UNIT_ID=U.UNIT_ID) "
+						+ "inner join COURSE as CO on CA.COURSE_ID=CO.COURSE_ID "
+						+ "WHERE  "
+						+ "      (CASE WHEN Q.ANSWERER IS NULL THEN '' ELSE Q.ANSWERER END) LIKE ? AND "
+						+ "      CAST((CASE WHEN Q.CATEGORY_ID IS NULL THEN '' ELSE Q.CATEGORY_ID END) AS VARCHAR) LIKE ? AND "
+						+ "      (CASE WHEN Q.QUESTION IS NULL THEN '' ELSE Q.QUESTION END) LIKE ? AND "
+						+ "      (CASE WHEN Q.ANSWER IS NULL THEN '' ELSE Q.ANSWER END) LIKE ? AND "
+						+ "      (CASE WHEN Q.REGISTRANT IS NULL THEN '' ELSE Q.REGISTRANT END) LIKE ? "
+						+ "      ORDER BY Q.PAGEVIEW";
+				PreparedStatement pStmt = conn.prepareStatement(sql);
+
+				// SQL文を完成させる
+				if (param.getAnswerer() != null && param.getAnswerer() != "") {
+					pStmt.setString(1, "%" + param.getAnswerer() + "%");
+				}
+				else {
+					pStmt.setString(1, "%");
+				}
+				if (param.getCategory_id() != 0) {
+					pStmt.setString(2, Integer.toString(param.getCategory_id()));
+				}
+				else {
+					pStmt.setString(2, "%");
+				}
+				if (param.getQuestion() != null && param.getQuestion() != "") {
+					pStmt.setString(3, "%" + param.getQuestion() + "%");
+				}
+				else {
+					pStmt.setString(3, "%");
+				}
+				if (param.getAnswer() != null && param.getAnswer() != "") {
+					pStmt.setString(4, "%" + param.getAnswer() + "%");
+				}
+				else {
+					pStmt.setString(4, "%");
+				}
+				if (param.getRegistrant() != null && param.getRegistrant() != "") {
+					pStmt.setString(5, "%" + param.getRegistrant() + "%");
+				}
+				else {
+					pStmt.setString(5, "%");
+				}
+				// SQL文を実行し、結果表を取得する
+				ResultSet rs = pStmt.executeQuery();
+
+				// 結果表をコレクションにコピーする
+				while (rs.next()) {
+					Qaplus card = new Qaplus(
+					rs.getInt("QUESTION_ID"),
+					rs.getDate("DATE"),
+					rs.getString("ANSWERER"),
+					rs.getString("COURSE"),
+					rs.getString("UNIT"),
+					rs.getString("CATEGORY_ITEM"),
+					rs.getString("TEXTBOOK"),
+					rs.getString("QUESTION"),
+					rs.getString("ANSWER"),
+					rs.getInt("PAGEVIEW"),
+					rs.getString("REGISTRANT")
+					);
+					cardListplus.add(card);
+				}
+			}
+			catch (SQLException e) {
+				e.printStackTrace();
+				cardListplus = null;
+			}
+			catch (ClassNotFoundException e) {
+				e.printStackTrace();
+				cardListplus = null;
+			}
+			finally {
+				// データベースを切断
+				if (conn != null) {
+					try {
+						conn.close();
+					}
+					catch (SQLException e) {
+						e.printStackTrace();
+						cardListplus = null;
+					}
+				}
+			}
+
+			// 結果を返す
+			return cardListplus;
+		}
+
 
 
 		//遷移用検索
