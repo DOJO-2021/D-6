@@ -5,6 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+ <script src="js/udedit.js"></script>
 </head>
 <body>
 	<h1>DOJO Q&amp;A集</h1>
