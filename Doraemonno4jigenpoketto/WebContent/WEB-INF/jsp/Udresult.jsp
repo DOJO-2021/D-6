@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+        <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,7 +17,7 @@
 "e"件ヒットしました。</p>
 
 <!--質問文-->
-	<c:forEach var="e" items="${qa}">
+	<c:forEach var="e" items="${cardList}">
 		<form method="POST" action="/Doraemonno4jigenpoketto/UdresultServlet">
 		<ul>
 			<li>

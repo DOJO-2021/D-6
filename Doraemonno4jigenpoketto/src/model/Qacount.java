@@ -1,5 +1,5 @@
 package model;
 
-public class Qacount {
 
+public class Qacount {
 }

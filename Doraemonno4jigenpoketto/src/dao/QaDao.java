@@ -261,7 +261,7 @@ public class QaDao {
 
 				// SQL文を準備する
 				String sql = "select Q.QUESTION_ID, Q.DATE, Q.ANSWERER,  Q.CATEGORY_ID, CO.COURSE, U.UNIT, \r\n"
-						+ "CA.CATEGORY_ITEM, U.TEXTBOOK, Q.QUESTION, Q.ANSWER, Q.PAGEVIEW, Q.REGISTANT from \r\n"
+						+ "CA.CATEGORY_ITEM, U.TEXTBOOK, Q.QUESTION, Q.ANSWER, Q.PAGEVIEW, Q.REGISTRANT from \r\n"
 						+ "((QA as Q inner join CATEGORY as CA on Q.CATEGORY_ID=CA.CATEGORY_ID) \r\n"
 						+ "inner join UNIT as U on CA.COURSE_ID=U.COURSE_ID and CA.UNIT_ID=U.UNIT_ID) \r\n"
 						+ "inner join COURSE as CO on CA.COURSE_ID=CO.COURSE_ID \r\n"
@@ -276,12 +276,6 @@ public class QaDao {
 				PreparedStatement pStmt = conn.prepareStatement(sql);
 
 				// SQL文を完成させる
-				/*if (param.getNumber() != 0) {
-					pStmt.setInt(1,  param.getNumber() );
-				}
-				else {
-					pStmt.setString(1, "%");
-				}*/
 				if (param.getDate() != null) {
 					pStmt.setDate(1, (Date) param.getDate());
 				}
@@ -295,7 +289,7 @@ public class QaDao {
 					pStmt.setString(2, "%");
 				}
 				if (param.getCategory_id() != 0) {
-					pStmt.setInt(3, param.getCategory_id());
+					pStmt.setString(3, Integer.toString(param.getCategory_id()));
 				}
 				else {
 					pStmt.setString(3, "%");
