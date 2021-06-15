@@ -15,7 +15,7 @@
 
 <h2>編集内容検索</h2>
 <!--カテゴリ選択・回答者・質問した年月日・登録者についての登録-->
-<form method="GET" action="/Doraemonno4jigenpoketto/UdresultServlet">
+<form method="POST" action="/Doraemonno4jigenpoketto/UdsearchServlet">
  	<table>
     <tr>
       <td>						<!--単元選択-->
@@ -63,34 +63,34 @@
       </select>
      </td>
      <td>
-     	 <select name="category_item" id="category_item">
+     	 <select name="CATEGORY_ITEM" id="category_item">
            <option value="0">単元項目を選択してください</option>
 		   <option value="1">ビジネスメール・ビジネス文章</option>
            <option value="2">Word</option>
            <option value="3">Excel</option>
      </td>
      <td>							<!--回答者選択-- input typeに変更-->
-		<input type="text" name="answerer">
+		<input type="text" name="ANSWERER">
      </td>
   </tr>
   <tr>
      <td>							<!--年月日選択-->
-        <input type="date" name="calendar" max="9999-12-31">
+        <input type="date" name="CALENDAR" max="9999-12-31">
      </td>
      <td>							<!--登録者選択--input typeに変更-->
-        <input type="text" name="registant">
+        <input type="text" name="REGISTRANT">
      </td>
   </tr>
   <tr>
      <td>
-       <textarea name="question">質問文</textarea>
+       <textarea name="QUESTION">質問文</textarea>
      </td>
      <td>
-       <textarea name="answer">回答文</textarea>
+       <textarea name="ANSWER">回答文</textarea>
      </td>
   </tr>
  	</table>
-        <input type="submit" name="REGIST" value="検索">
+        <input type="submit" name="SUBMIT" value="検索">
 </form>
 </body>
 </html>

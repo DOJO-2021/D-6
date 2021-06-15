@@ -45,6 +45,7 @@
     }
 </script>
 
+<form method="POST" action="/Doraemonno4jigenpoketto/SearchServlet">
 <div id="menuA">
     <dl>
         <!-- menu1 -->
@@ -372,7 +373,7 @@
 <br
 >
 <!--name="search"-->
-<input type="submit" name="search" value="検索">
-
+<input type="submit" name="SUBMIT" value="検索">
+</form>
 </body>
 </html>
