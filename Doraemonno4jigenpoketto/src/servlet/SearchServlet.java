@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import dao.QaDao;
+import model.Qacount;
 import model.Qaplus;
 import model.Qas;
 
@@ -46,21 +47,37 @@ public class SearchServlet extends HttpServlet {
 			List<Qaplus> cardList = qDao.select1_1(new Qas(question1,question2,question3));
 			// 全項目をリクエストスコープに格納する
 			request.setAttribute("cardList", cardList);
+			//検索件数を数えます
+			List<Qacount> counter =  qDao.selectcount1_1(new Qas(question1,question2,question3));
+			// 検索件数をリクエストスコープに格納する
+			request.setAttribute("counter", counter.get(0));
 		}else if(request.getParameter("andor1").equals("and1") && request.getParameter("andor2").equals("or2")) {
 			// 検索処理を行う
 			List<Qaplus> cardList = qDao.select1_2(new Qas(question1,question2,question3));
 			// 全項目をリクエストスコープに格納する
 			request.setAttribute("cardList", cardList);
+			//検索件数を数えます
+			List<Qacount> counter =  qDao.selectcount1_2(new Qas(question1,question2,question3));
+			// 検索件数をリクエストスコープに格納する
+			request.setAttribute("counter", counter.get(0));
 		}else if(request.getParameter("andor1").equals("or1") && request.getParameter("andor2").equals("and2")) {
 			// 検索処理を行う
 			List<Qaplus> cardList = qDao.select1_3(new Qas(question1,question2,question3));
 			// 全項目をリクエストスコープに格納する
 			request.setAttribute("cardList", cardList);
+			//検索件数を数えます
+			List<Qacount> counter =  qDao.selectcount1_3(new Qas(question1,question2,question3));
+			// 検索件数をリクエストスコープに格納する
+			request.setAttribute("counter", counter.get(0));
 		}else {
 		// 検索処理を行う
 		List<Qaplus> cardList = qDao.select1_4(new Qas(question1,question2,question3));
 		// 全項目をリクエストスコープに格納する
 		request.setAttribute("cardList", cardList);
+		//検索件数を数えます
+		List<Qacount> counter =  qDao.selectcount1_4(new Qas(question1,question2,question3));
+		// 検索件数をリクエストスコープに格納する
+		request.setAttribute("counter", counter.get(0));
 		}
 
 

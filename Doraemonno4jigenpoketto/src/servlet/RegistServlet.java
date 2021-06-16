@@ -57,16 +57,27 @@ public class RegistServlet extends HttpServlet {
 
 				// リクエストパラメータを取得する
 				request.setCharacterEncoding("UTF-8");
-				SimpleDateFormat sdFormat = new SimpleDateFormat("yyyy/MM/dd");
+				SimpleDateFormat sdFormat = new SimpleDateFormat("yyyy-MM-dd");
 	            Date date;
-				try {
-					date = sdFormat.parse(request.getParameter("CALENDAR"));
-				} catch (ParseException e) {
-					date=null;
-					e.printStackTrace();
-				}
-				String answerer= request.getParameter("ANSWERER");
-				int category_id=Integer.parseInt(request.getParameter("category"));
+	            if(request.getParameter("CALENDAR")=="") {
+	            	date=null;
+	            }
+	            else {
+	    			try {date = sdFormat.parse(request.getParameter("CALENDAR"));
+	    			} catch (ParseException e) {
+	    				e.printStackTrace();
+	    				date=null;
+	    			}
+	            }
+	    		String answerer= request.getParameter("ANSWERER");
+	    		int category_id=0;
+	    		if(request.getParameter("CATEGORY_ITEM")==null) {
+	    		category_id=0;
+	    		}else {
+	    		category_id=Integer.parseInt(request.getParameter("CATEGORY_ITEM"));
+	    		}
+
+
 				String question=request.getParameter("QUESTION");
 				String answer=request.getParameter("ANSWER");
 				String registrant=request.getParameter("REGISTRANT");

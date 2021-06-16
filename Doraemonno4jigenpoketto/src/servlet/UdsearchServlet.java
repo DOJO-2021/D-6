@@ -56,7 +56,7 @@ public class UdsearchServlet extends HttpServlet {
 		// リクエストパラメータを取得する
 		request.setCharacterEncoding("UTF-8");
 
-		SimpleDateFormat sdFormat=new SimpleDateFormat("yyyy/MM/dd");
+		SimpleDateFormat sdFormat=new SimpleDateFormat("yyyy-MM-dd");
         Date date;
         /*DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd");
         if (dtf.format(LocalDate.parse(request.getParameter("CALENDAR"), dtf)) == null) {

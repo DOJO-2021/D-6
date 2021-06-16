@@ -15,7 +15,7 @@
 	<h2>検索結果画面</h2>
 
 <!--ヒット数表示-->
-"e"件ヒットしました。</p>
+<p><c:out value="${counter.count}"/>件ヒットしました。</p>
 
 <!--質問文-->
 	<c:forEach var="e" items="${cardList}">
@@ -25,8 +25,8 @@
 				<input type="hidden" name="QUESTION_ID" value="${e.question_id}">
 				<input type="hidden" name="QUESTION" value="${e.question}">
 				<div>
-				質問文：value="${e.question}"
-				閲覧数：value="${e.pageview}"
+				質問文：${e.question}
+				閲覧数：${e.pageview}
 				</div>
 				<input type="submit" name="SUBMIT" value=詳細検索>
 			</li>
