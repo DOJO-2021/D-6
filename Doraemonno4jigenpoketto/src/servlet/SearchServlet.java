@@ -41,11 +41,27 @@ public class SearchServlet extends HttpServlet {
 		String question3=request.getParameter("QUESTION3");
 		QaDao qDao = new QaDao();
 
-		request.getParameter("SUBMIT");
+		if(request.getParameter("andor1").equals("and1") && request.getParameter("andor2").equals("and2")) {
+			// 検索処理を行う
+			List<Qaplus> cardList = qDao.select1_1(new Qas(question1,question2,question3));
+			// 全項目をリクエストスコープに格納する
+			request.setAttribute("cardList", cardList);
+		}else if(request.getParameter("andor1").equals("and1") && request.getParameter("andor2").equals("or2")) {
+			// 検索処理を行う
+			List<Qaplus> cardList = qDao.select1_2(new Qas(question1,question2,question3));
+			// 全項目をリクエストスコープに格納する
+			request.setAttribute("cardList", cardList);
+		}else if(request.getParameter("andor1").equals("or1") && request.getParameter("andor2").equals("and2")) {
+			// 検索処理を行う
+			List<Qaplus> cardList = qDao.select1_3(new Qas(question1,question2,question3));
+			// 全項目をリクエストスコープに格納する
+			request.setAttribute("cardList", cardList);
+		}else {
 		// 検索処理を行う
-		List<Qaplus> cardList = qDao.select1(new Qas(question1,question2,question3));
+		List<Qaplus> cardList = qDao.select1_4(new Qas(question1,question2,question3));
 		// 全項目をリクエストスコープに格納する
 		request.setAttribute("cardList", cardList);
+		}
 
 
 

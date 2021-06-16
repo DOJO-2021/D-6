@@ -16,6 +16,7 @@ import javax.servlet.http.HttpSession;
 
 import dao.QaDao;
 import model.Qa;
+import model.Qacount;
 import model.Qaplus;
 
 /**
@@ -73,22 +74,29 @@ public class UdsearchServlet extends HttpServlet {
 			}
         }
 		String answerer= request.getParameter("ANSWERER");
-		int category_id=Integer.parseInt(request.getParameter("CATEGORY_ITEM"));
+		int category_id=0;
+		if(request.getParameter("CATEGORY_ITEM")==null) {
+		category_id=0;
+		}else {
+		category_id=Integer.parseInt(request.getParameter("CATEGORY_ITEM"));
+		}
 		String question=request.getParameter("QUESTION");
 		String answer=request.getParameter("ANSWER");
 		String registrant=request.getParameter("REGISTRANT");
 		QaDao qDao=new QaDao();
 
 		// 検索処理を行う
-		request.getParameter("SUBMIT").equals("検索");
 		List<Qaplus> cardList = qDao.select2(new Qa(0, date, answerer,  category_id, question, answer, 0, registrant));
 		// 全項目をリクエストスコープに格納する
 		request.setAttribute("cardList", cardList);
+
+		//検索件数を数えます
+		List<Qacount> counter = qDao.select4(new Qa(0, date, answerer,  category_id, question, answer, 0, registrant));
+		// 検索件数をリクエストスコープに格納する
+		request.setAttribute("counter", counter.get(0));
 
 		// 結果ページにフォワードする
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/Udresult.jsp");
 		dispatcher.forward(request, response);
 	}
-
-
 }
