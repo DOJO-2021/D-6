@@ -576,9 +576,9 @@ public class QaDao {
 		return cardListplus;
 	}
 
-		//研修生用検索ANDAND(コース付き)
-		// 引数paramで検索項目を指定し、検索結果のリストを返す
-		public List<Qaplus> selectcourse1_1(Qas param) {
+	//研修生用検索ANDAND(コース付き)
+	// 引数paramで検索項目を指定し、検索結果のリストを返す
+	public List<Qaplus> selectcourse1_1(Qas param) {
 			Connection conn = null;
 			List<Qaplus> cardListplus = new ArrayList<Qaplus>();
 
@@ -689,9 +689,9 @@ public class QaDao {
 		}
 
 
-		//研修生用検索ANDOR(コース付き)
-		// 引数paramで検索項目を指定し、検索結果のリストを返す
-		public List<Qaplus> selectcourse1_2(Qas param) {
+	//研修生用検索ANDOR(コース付き)
+	// 引数paramで検索項目を指定し、検索結果のリストを返す
+	public List<Qaplus> selectcourse1_2(Qas param) {
 			Connection conn = null;
 			List<Qaplus> cardListplus = new ArrayList<Qaplus>();
 
