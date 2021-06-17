@@ -5,10 +5,10 @@
 <link href="../../css/common.css" rel="stylesheet">
 <head>
 <meta charset="UTF-8">
-<<<<<<< HEAD
+
 <title>DOJO Q&A集</title>
-=======
-<title>Insert title here</title>
+
+
  <script src="js/udedit.js"></script>
 
  <script type="text/javascript">
@@ -30,63 +30,50 @@ function check(){
 }
 </script>
 
->>>>>>> 486a939cc3ed9b59d10a737bd1309ba3dbc5fa28
+
 </head>
 
 
 
 <body>
 <div class="titlebar">
-<h1><img src="../../image/Regist/帯.png" width="400" height="100"></h1>
+<h1><img src="../../image/帯.png" width="400" height="100"></h1>
         </div>
 
         <div class="logo">
-          <img src="../../image/Regist/ロゴ.png" alt="DOJO Q&A集" width="180" height="80"></a>
+          <img src="../../image/ロゴ.png" alt="DOJO Q&A集" width="180" height="80"></a>
         </div>
 
          <div class="logoutbutton">
-           <a href="../../src/servlet/MenuServlet.java"><img src="../../image/Regist/ログアウトボタン.png" alt="ログアウト" class="logoutbutton"></a>
+           <a href="../../src/servlet/MenuServlet.java"><img src="../../image/ログアウトボタン.png" alt="ログアウト" class="logoutbutton"></a>
          </div>
 
 
-<h2><img src="../../image/Regist/登録画面.png" alt="登録画面" class="h2"></h2>
+<h2><img src="../../image/登録画面.png" alt="登録画面" class="h2"></h2>
 
 
 
 
 	<nav>
-<<<<<<< HEAD
-		<form method="POST" action="/Doraemonno4jigenpoketto/RegistServlet">
+
+		<form method="POST" action="/Doraemonno4jigenpoketto/RegistServlet" onSubmit="return check()">
 
 		<div class="regist_blockA">
 
 				<p class="regist_ql">質問文</p><!--regist_ql=RegistQuestionLabel-->
 
-				<textarea class ="regist_qb" name="question" rows="7" cols="100" style="border:4px solid #4689FF" onMouseover="this.style.borderColor='#FFCC33'" onMouseout="this.style.borderColor='#4689FF'"></textarea>
+				<textarea class ="regist_qb" name="QUESTION" rows="7" cols="100" style="border:4px solid #4689FF" onMouseover="this.style.borderColor='#FFCC33'" onMouseout="this.style.borderColor='#4689FF'"></textarea>
 
 				<p class="regist_al">回答文</p><!--regist_al=RegistAnswerLabel-->
 
-				<textarea class="regist_ab" name="answer" rows="7" cols="100" style="border:4px solid #4689FF" onMouseover="this.style.borderColor='#FFCC33'" onMouseout="this.style.borderColor='#4689FF'"></textarea>
+				<textarea class="regist_ab" name="ANSWER" rows="7" cols="100" style="border:4px solid #4689FF" onMouseover="this.style.borderColor='#FFCC33'" onMouseout="this.style.borderColor='#4689FF'"></textarea>
 
 		</div>
 		<div class="regist_blockB" style="float:right;">
 
 
 					<select name="unit" id="unit" style="width:27em;">
-=======
-		<form method="POST" action="/Doraemonno4jigenpoketto/RegistServlet" onSubmit="return check()">
-		<table>
-			<tr>
-				<th>質問文</th><td><textarea name="QUESTION"></textarea></td>
-			</tr>
-			<tr>
-				<th>回答文</th><td><textarea name="ANSWER"></textarea></td>
-			</tr>
 
-			<tr>
-				<td>
-					<select name="unit" id="unit">
->>>>>>> 486a939cc3ed9b59d10a737bd1309ba3dbc5fa28
 					<option value="">単元を選択してください</option>
 					<optgroup label="パーソナルスキルコース">
 						<option value="0">ビジネス・コミュニケーション</option>
@@ -333,7 +320,7 @@ function check(){
 		</div>
 
 			<div class=registbutton>
-				 <input type="image" src="../../image/Regist/登録ボタン.png" alt="登録" width="140" height="45" name="login">
+				 <input type="image" src="../../image/登録ボタン.png" alt="登録" width="140" height="45" name="login">
 			</div>
 
 
