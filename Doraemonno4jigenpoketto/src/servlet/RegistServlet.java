@@ -49,54 +49,73 @@ public class RegistServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// もしもログインしていなかったらログインサーブレットにリダイレクトする
-				HttpSession session = request.getSession();
-				if (session.getAttribute("id") == null) {
-					response.sendRedirect("/Doraemonno4jigenpoketto/LoginServlet");
-					return;
-				}
+		HttpSession session = request.getSession();
+		if (session.getAttribute("id") == null) {
+			response.sendRedirect("/Doraemonno4jigenpoketto/LoginServlet");
+			return;
+		}
 
-				// リクエストパラメータを取得する
-				request.setCharacterEncoding("UTF-8");
-				SimpleDateFormat sdFormat = new SimpleDateFormat("yyyy-MM-dd");
-	            Date date;
-	            if(request.getParameter("CALENDAR")=="") {
-	            	date=null;
-	            }
-	            else {
-	    			try {date = sdFormat.parse(request.getParameter("CALENDAR"));
-	    			} catch (ParseException e) {
-	    				e.printStackTrace();
-	    				date=null;
-	    			}
-	            }
-	    		String answerer= request.getParameter("ANSWERER");
-	    		int category_id=0;
-	    		if(request.getParameter("CATEGORY_ITEM")==null) {
-	    		category_id=0;
-	    		}else {
-	    		category_id=Integer.parseInt(request.getParameter("CATEGORY_ITEM"));
-	    		}
+		// リクエストパラメータを取得する
+		request.setCharacterEncoding("UTF-8");
+		SimpleDateFormat sdFormat = new SimpleDateFormat("yyyy-MM-dd");
+		Date date;
+		if(request.getParameter("CALENDAR")=="") {
+			date=null;
+		}
+		else {
+	    	try {date = sdFormat.parse(request.getParameter("CALENDAR"));
+	   		}
+	    	catch (ParseException e) {
+	    		e.printStackTrace();
+	    		date=null;
+	    	}
+	    }
+	    String answerer= request.getParameter("ANSWERER");
+	    int category_id=0;
+	    if(request.getParameter("CATEGORY_ITEM")==null) {
+	    	category_id=0;
+		}else {
+			category_id=Integer.parseInt(request.getParameter("CATEGORY_ITEM"));
+	   	}
 
 
-				String question=request.getParameter("QUESTION");
-				String answer=request.getParameter("ANSWER");
-				String registrant=request.getParameter("REGISTRANT");
+		String question=request.getParameter("QUESTION");
+		String answer=request.getParameter("ANSWER");
+		String registrant=request.getParameter("REGISTRANT");
 
-				QaDao qDao=new QaDao();
+		QaDao qDao=new QaDao();
 
-				if(qDao.insert(new Qa(0, date, answerer,  category_id, question, answer, 0, registrant))) {
-					result="success";
-					request.setAttribute("result",new Result(result));}
-					else {
-						// 登録失敗
-						result="false";
-						request.setAttribute("result",
-						new Result(result));
-					}
-
-				// 結果ページにフォワードする
-				RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/Regist.jsp");
-				dispatcher.forward(request, response);
+		if(request.getParameter("SUBMIT").equals("登録")) {
+			//登録処理
+			if(qDao.insert(new Qa(0, date, answerer,  category_id, question, answer, 0, registrant))) {
+				result="success";
+				request.setAttribute("result",new Result(result));
+			}
+			else {
+				// 登録失敗
+				result="false";
+				request.setAttribute("result",new Result(result));
 			}
 
+			// 結果ページにフォワードする
+			RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/Regist.jsp");
+			dispatcher.forward(request, response);
+		}
+		else {
+			//保存処理
+			if(qDao.insertsave(new Qa(0, date, answerer,  category_id, question, answer, 0, registrant))) {
+				result="savesuccess";
+				request.setAttribute("result",new Result(result));
+			}
+			else {
+				// 保存失敗
+				result="savefalse";
+				request.setAttribute("result",new Result(result));
+			}
+
+			// 結果ページにフォワードする
+			RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/Regist.jsp");
+			dispatcher.forward(request, response);
+		}
+	}
 }

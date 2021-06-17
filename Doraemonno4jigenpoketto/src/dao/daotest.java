@@ -45,7 +45,7 @@ public class daotest {
 
 		// select()のテスト
 		System.out.println("---------- select()のテスト ----------");
-		List<Qaplus> cardList3 = dao.select1(new Qas("講師","",""));
+		List<Qaplus> cardList3 = dao.select1_1(new Qas("講師","",""));
 		for (Qaplus card : cardList3) {
 			System.out.println("NUMBER：" + card.getQuestion_id());
 			System.out.println("名前：" + card.getDate());

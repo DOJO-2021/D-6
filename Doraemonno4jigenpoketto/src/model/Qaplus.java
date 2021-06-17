@@ -7,10 +7,10 @@ public class Qaplus implements Serializable {
   private int question_id;  //質問ID
   private Date date;        //質問した日時
   private String answerer;    //回答者
-  private String course; //単元項目ID
-  private String unit;
-  private String category_item;
-  private String textbook;
+  private String course; //コース
+  private String unit; //単元
+  private String category_item; //単元項目
+  private String textbook; //教科書
   private String question; //質問内容
   private String answer;   //回答内容
   private int pageview;   //閲覧数

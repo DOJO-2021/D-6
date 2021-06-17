@@ -72,7 +72,7 @@
 
 			<tr>
 				<td>
-					<select name="category_item" id="category_item">
+					<select name="CATEGORY_ITEM" id="category_item">
 					<option value="">選択してください</option>
 					</select>
 
@@ -87,13 +87,14 @@
 				<td><input type="date" name="CALENDAR" max="9999-12-31"></td>
 			</tr>
 			<tr>
-			    <input type="text" name="ANSWERER" id="answerer">
+			    <td><input type="text" name="ANSWERER" id="answerer"></td>
 			</tr>
 			<tr>
-			    <input type="text" name="REGISTRANT" id="registant">
+				<td><input type="text" name="REGISTRANT" id="registant"></td>
 			</tr>
-			<input type="submit" name="REGIST" value="登録"><br>
-		</table>
+			</table>
+			<input type="submit" name="SUBMIT" value="登録"><br>
+			<input type="submit" name="SUBMIT" value="保存">
 		</form>
 	</nav>
 </body>

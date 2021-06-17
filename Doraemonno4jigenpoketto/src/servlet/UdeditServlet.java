@@ -53,7 +53,7 @@ public class UdeditServlet extends HttpServlet {
 		String question=request.getParameter("QUESTION");//質問内容
 		String answer=request.getParameter("ANSWER");//回答内容
 		int pageview=Integer.parseInt(request.getParameter("PAGEVIEW"));//閲覧数
-		String regestant=request.getParameter("REGESTANT");//登録者
+		String regestant=request.getParameter("REGESTRANT");//登録者
 
 		//更新を行う
 		QaDao QaDao=new QaDao();

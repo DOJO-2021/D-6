@@ -222,19 +222,19 @@ function setBCommuUnits() {
 
     {cd:"", label:"選択して下さい"},
 
-    {cd:"0", label:"敬語"},
+    {cd:"101001", label:"敬語"},
 
-    {cd:"1", label:"ビジネスマナー"},
+    {cd:"101002", label:"ビジネスマナー"},
 
-    {cd:"2", label:"挨拶"},
+    {cd:"101003", label:"挨拶"},
 
-    {cd:"3", label:"電話対応"},
+    {cd:"101004", label:"電話対応"},
 
-    {cd:"4", label:"名刺交換"},
+    {cd:"101005", label:"名刺交換"},
 
-    {cd:"5", label:"顧客先への訪問時と顧客の来社時のマナー"},
+    {cd:"101006", label:"顧客先への訪問時と顧客の来社時のマナー"},
 
-    {cd:"6", label:"その他"}
+    {cd:"101007", label:"その他"}
 
   ];
 
@@ -266,15 +266,15 @@ function setBMailUnits() {
 
     {cd:"", label:"選択して下さい"},
 
-    {cd:"7", label:"ビジネス文書とは"},
+    {cd:"102001", label:"ビジネス文書とは"},
 
-    {cd:"8", label:"文書の書き方"},
+    {cd:"102002", label:"文書の書き方"},
 
-    {cd:"9", label:"Wordの起動～文書の作成"},
+    {cd:"102003", label:"Wordの起動～文書の作成"},
 
-    {cd:"10", label:"報告書を書く時の注意点"},
+    {cd:"102004", label:"報告書を書く時の注意点"},
 
-    {cd:"11", label:"その他"}
+    {cd:"102005", label:"その他"}
 
   ];
 
@@ -305,7 +305,7 @@ function setWordUnits() {
 
     {cd:"", label:"選択して下さい"},
 
-    {cd:"12", label:"Word"}
+    {cd:"103001", label:"Word"}
 
   ];
 
@@ -336,7 +336,7 @@ function setExcelUnits() {
 
     {cd:"", label:"選択して下さい"},
 
-    {cd:"13", label:"Excel"}
+    {cd:"104001", label:"Excel"}
 
   ];
 
@@ -367,17 +367,17 @@ function setProUnits() {
 
     {cd:"", label:"選択して下さい"},
 
-    {cd:"14", label:"プログラミングの世界"},
+    {cd:"201001", label:"プログラミングの世界"},
 
-    {cd:"15", label:"コンピューターの仕組みと役割"},
+    {cd:"201002", label:"コンピューターの仕組みと役割"},
 
-    {cd:"16", label:"OSの仕組みと役割"},
+    {cd:"201003", label:"OSの仕組みと役割"},
 
-    {cd:"17", label:"プログラミング言語の基礎知識"},
+    {cd:"201004", label:"プログラミング言語の基礎知識"},
 
-    {cd:"18", label:"論理演算とプログラミング"},
+    {cd:"201005", label:"論理演算とプログラミング"},
 
-    {cd:"19", label:"その他"}
+    {cd:"201006", label:"その他"}
 
   ];
 
@@ -408,11 +408,11 @@ function setAlgorithmUnits() {
 
    {cd:"", label:"選択して下さい"},
 
-    {cd:"20", label:"アルゴリズム"},
+    {cd:"202001", label:"アルゴリズム"},
 
-    {cd:"21", label:"データ構造"},
+    {cd:"202002", label:"データ構造"},
 
-    {cd:"22", label:"その他"}
+    {cd:"202003", label:"その他"}
 
   ];
 
@@ -444,21 +444,21 @@ function setNetworkUnits() {
 
     {cd:"", label:"選択して下さい"},
 
-    {cd:"23", label:"IPアドレス"},
+    {cd:"203001", label:"IPアドレス"},
 
-    {cd:"24", label:"DNSサーバー"},
+    {cd:"203002", label:"DNSサーバー"},
 
-    {cd:"25", label:"ポート番号"},
+    {cd:"203003", label:"ポート番号"},
 
-    {cd:"26", label:"ルータ"},
+    {cd:"203004", label:"ルータ"},
 
-    {cd:"27", label:"WebページのソースとCookie"},
+    {cd:"203005", label:"WebページのソースとCookie"},
 
-    {cd:"28", label:"MacアドレスとARPテーブル"},
+    {cd:"203006", label:"MacアドレスとARPテーブル"},
 
-    {cd:"29", label:"Windowsとファイアウォール"},
+    {cd:"203007", label:"Windowsとファイアウォール"},
 
-    {cd:"30", label:"その他"}
+    {cd:"203008", label:"その他"}
   ];
 
   NetworkUnits.forEach(function(value) {
@@ -489,9 +489,15 @@ function setHtmlUnits() {
 
     {cd:"", label:"選択して下さい"},
 
-    {cd:"31", label:"2ページ目意向を効率的に作成する"},
+	{cd:"204001", label:"製作の準備と基本的なHTML"},
 
-    {cd:"32", label:"その他"}
+	{cd:"204002", label:"見出し・段落・リスト"},
+
+	{cd:"204003", label:"リンクと画像の挿入"},
+
+    {cd:"204004", label:"2ページ目意向を効率的に作成する"},
+
+    {cd:"204005", label:"その他"}
 
   ];
 
@@ -522,9 +528,13 @@ function setCssUnits() {
 
     {cd:"", label:"選択して下さい"},
 
-    {cd:"31", label:"2ページ目意向を効率的に作成する"},
+    {cd:"205001", label:"CSSでページのスタイルを調整"},
 
-    {cd:"32", label:"その他"}
+    {cd:"205002", label:"フロートとテーブルのスタイル"},
+
+    {cd:"205003", label:"フォームの作成"},
+
+    {cd:"205004", label:"その他"}
 
   ];
 
@@ -555,17 +565,17 @@ function setJSUnits(){
 
     {cd:"", label:"選択して下さい"},
 
-    {cd:"35", label:"アウトプットの基本"},
+    {cd:"206001", label:"アウトプットの基本"},
 
-    {cd:"36", label:"文法と基本的な機能"},
+    {cd:"206002", label:"文法と基本的な機能"},
 
-    {cd:"37", label:"インプットとデータの加工"},
+    {cd:"206003", label:"インプットとデータの加工"},
 
-    {cd:"38", label:"一歩進んだテクニック"},
+    {cd:"206004", label:"一歩進んだテクニック"},
 
-    {cd:"39", label:"WebページにJavascriptを追加"},
+    {cd:"206005", label:"WebページにJavascriptを追加"},
 
-    {cd:"40", label:"その他"}
+    {cd:"206006", label:"その他"}
 
   ];
 
@@ -597,23 +607,23 @@ function setDBUnits(){
 
     {cd:"", label:"選択して下さい"},
 
-    {cd:"41", label:"用途と役割"},
+    {cd:"207001", label:"用途と役割"},
 
-    {cd:"42", label:"リレーショナルデータベース"},
+    {cd:"207002", label:"リレーショナルデータベース"},
 
-    {cd:"43", label:"データベースとアーキテクチャ構成"},
+    {cd:"207003", label:"データベースとアーキテクチャ構成"},
 
-    {cd:"44", label:"DBMSを操作する際の基礎知識"},
+    {cd:"207004", label:"DBMSを操作する際の基礎知識"},
 
-    {cd:"45", label:"SQL文の基本"},
+    {cd:"207005", label:"SQL文の基本"},
 
-    {cd:"46", label:"トランザクションと同時実行制御"},
+    {cd:"207006", label:"トランザクションと同時実行制御"},
 
-    {cd:"47", label:"テーブル"},
+    {cd:"207007", label:"テーブル"},
 
-    {cd:"48", label:"バックアップとリカバリー"},
+    {cd:"207008", label:"バックアップとリカバリー"},
 
-    {cd:"49", label:"その他"}
+    {cd:"207009", label:"その他"}
 
   ];
 
@@ -645,33 +655,33 @@ function setJavaProUnits(){
 
  		{cd:"", label:"選択して下さい"},
 
-    {cd:"50", label:"Javaプログラムの書き方"},
+    {cd:"301001", label:"Javaプログラムの書き方"},
 
-    {cd:"51", label:"式と演算子"},
+    {cd:"301002", label:"式と演算子"},
 
-    {cd:"52", label:"条件分岐と繰り返し"},
+    {cd:"301003", label:"条件分岐と繰り返し"},
 
-    {cd:"53", label:"配列"},
+    {cd:"301004", label:"配列"},
 
-    {cd:"54", label:"メソッド"},
+    {cd:"301005", label:"メソッド"},
 
-    {cd:"55", label:"複数クラスを用いた開発"},
+    {cd:"301006", label:"複数クラスを用いた開発"},
 
-    {cd:"56", label:"クラスとインスタンス"},
+    {cd:"301007", label:"クラスとインスタンス"},
 
-    {cd:"57", label:"カプセル化"},
+    {cd:"301008", label:"カプセル化"},
 
-    {cd:"58", label:"継承"},
+    {cd:"301009", label:"継承"},
 
-    {cd:"59", label:"多態性"},
+    {cd:"301010", label:"多態性"},
 
-    {cd:"60", label:"例外処理"},
+    {cd:"301011", label:"例外処理"},
 
-    {cd:"61", label:"文字列を操作するAPI"},
+    {cd:"301012", label:"文字列を操作するAPI"},
 
-    {cd:"62", label:"コレクションを提供するAPI"},
+    {cd:"301013", label:"コレクションを提供するAPI"},
 
-    {cd:"63", label:"その他"}
+    {cd:"301014", label:"その他"}
 
   ];
 
@@ -703,35 +713,35 @@ function setSSJavaUnits(){
 
     {cd:"", label:"選択して下さい"},
 
-    {cd:"64", label:"サーブレットの基礎"},
+    {cd:"302001", label:"サーブレットの基礎"},
 
-    {cd:"65", label:"JSPの基礎"},
+    {cd:"302002", label:"JSPの基礎"},
 
-    {cd:"66", label:"リクエストパラメータの取得"},
+    {cd:"302003", label:"リクエストパラメータの取得"},
 
-    {cd:"67", label:"MVCモデル"},
+    {cd:"302004", label:"MVCモデル"},
 
-    {cd:"68", label:"JavaBeans"},
+    {cd:"302005", label:"JavaBeans"},
 
-    {cd:"69", label:"リクエストスコープ"},
+    {cd:"302006", label:"リクエストスコープ"},
 
-    {cd:"70", label:"セッションスコープ"},
+    {cd:"302007", label:"セッションスコープ"},
 
-    {cd:"71", label:"アプリケーションスコープ"},
+    {cd:"302008", label:"アプリケーションスコープ"},
 
-    {cd:"72", label:"Webアプリケーションの画面と機能"},
+    {cd:"302009", label:"Webアプリケーションの画面と機能"},
 
-    {cd:"73", label:"フィルタ"},
+    {cd:"302010", label:"フィルタ"},
 
-    {cd:"74", label:"アクションタグとEL"},
+    {cd:"302011", label:"アクションタグとEL"},
 
-    {cd:"75", label:"JDBCとDAOのパターン"},
+    {cd:"302012", label:"JDBCとDAOのパターン"},
 
-    {cd:"76", label:"Webアプリケーションの設計"},
+    {cd:"302013", label:"Webアプリケーションの設計"},
 
-    {cd:"77", label:"JSTL"},
+    {cd:"302014", label:"JSTL"},
 
-    {cd:"78", label:"その他"}
+    {cd:"302015", label:"その他"}
 
   ];
 
@@ -762,15 +772,15 @@ function setQualityUnits(){
 
    {cd:"", label:"選択して下さい"},
 
-    {cd:"79", label:"品質管理の基礎知識"},
+    {cd:"303001", label:"品質管理の基礎知識"},
 
-    {cd:"80", label:"ホワイトボックス・ブラックボックス・オートテスト"},
+    {cd:"303002", label:"ホワイトボックス・ブラックボックス・オートテスト"},
 
-    {cd:"81", label:"品質管理"},
+    {cd:"303003", label:"品質管理"},
 
-    {cd:"82", label:"単体テスト・結合テスト・システムテスト"},
+    {cd:"303004", label:"単体テスト・結合テスト・システムテスト"},
 
-    {cd:"83", label:"その他"}
+    {cd:"303005", label:"その他"}
 
   ];
 
@@ -801,13 +811,13 @@ function setQualityUnits(){
 
  		{cd:"", label:"選択して下さい"},
 
-    {cd:"84", label:"脅威の存在を知る"},
+    {cd:"304001", label:"脅威の存在を知る"},
 
-    {cd:"85", label:"暗号化とディジタル署名"},
+    {cd:"304002", label:"暗号化とディジタル署名"},
 
-    {cd:"86", label:"Webアプリの脆弱性と対策"},
+    {cd:"304003", label:"Webアプリの脆弱性と対策"},
 
-    {cd:"87", label:"その他"}
+    {cd:"304004", label:"その他"}
   ];
 
    SecurityUnits.forEach(function(value) {
@@ -837,15 +847,15 @@ function setIntroUnits(){
 
  	  {cd:"", label:"選択して下さい"},
 
-    {cd:"88", label:"Webアプリケーションの構成要素"},
+    {cd:"401001", label:"Webアプリケーションの構成要素"},
 
-    {cd:"89", label:"Webアプリケーションフレームワーク"},
+    {cd:"401002", label:"Webアプリケーションフレームワーク"},
 
-    {cd:"90", label:"構成管理"},
+    {cd:"401003", label:"構成管理"},
 
-    {cd:"91", label:"進め方について"},
+    {cd:"401004", label:"進め方について"},
 
-    {cd:"92", label:"その他"}
+    {cd:"401005", label:"その他"}
   ];
 
   IntroUnits.forEach(function(value) {
@@ -875,19 +885,19 @@ function  setRDUnits(){
 
  	 {cd:"", label:"選択して下さい"},
 
-    {cd:"93", label:"プロジェクトについて"},
+    {cd:"402001", label:"プロジェクトについて"},
 
-    {cd:"94", label:"ヒアリング"},
+    {cd:"402002", label:"ヒアリング"},
 
-    {cd:"95", label:"業務分析・業務知識"},
+    {cd:"402003", label:"業務分析・業務知識"},
 
-    {cd:"96", label:"要件の種類（機能/非機能要件）"},
+    {cd:"402004", label:"要件の種類（機能/非機能要件）"},
 
-    {cd:"97", label:"見積もり手法"},
+    {cd:"402005", label:"見積もり手法"},
 
-    {cd:"98", label:"スケジュール策定"},
+    {cd:"402006", label:"スケジュール策定"},
 
-    {cd:"99", label:"その他"}
+    {cd:"402007", label:"その他"}
   ];
 
  RDUnits.forEach(function(value) {
@@ -917,7 +927,7 @@ function  setEDUnits(){
 
  	 {cd:"", label:"選択して下さい"},
 
-    {cd:"100", label:"外部設計書"}
+    {cd:"403001", label:"外部設計書"}
   ];
 
  EDUnits.forEach(function(value) {
@@ -948,7 +958,7 @@ function  setIDUnits() {
 
     {cd:"", label:"選択して下さい"},
 
-    {cd:"101", label:"内部設計書"}
+    {cd:"404001", label:"内部設計書"}
   ];
 
 IDUnits .forEach(function(value) {
@@ -979,11 +989,11 @@ function setImpleUnits() {
 
    {cd:"", label:"選択して下さい"},
 
-    {cd:"102", label:"コーディング規約"},
+    {cd:"405001", label:"コーディング規約"},
 
-    {cd:"103", label:"命名規則"},
+    {cd:"405002", label:"命名規則"},
 
-    {cd:"104", label:"その他"}
+    {cd:"405003", label:"その他"}
   ];
 
 ImpleUnits.forEach(function(value) {
@@ -1014,17 +1024,15 @@ function setTestUnits(){
 
      {cd:"", label:"選択して下さい"},
 
-    {cd:"105", label:"テストの工程"},
+    {cd:"406001", label:"テストの工程"},
 
-    {cd:"106", label:"テストの種類と方法"},
+    {cd:"406002", label:"テストの種類と方法"},
 
-    {cd:"107", label:"影響範囲と修正方法"},
+    {cd:"406003", label:"影響範囲と修正方法"},,
 
-    {cd:"108", label:"影響範囲と修正方法"},
+    {cd:"406004", label:"テスト仕様書"},
 
-    {cd:"109", label:"テスト仕様書"},
-
-    {cd:"110", label:"その他"}
+    {cd:"406005", label:"その他"}
   ];
 
 TestUnits.forEach(function(value) {
@@ -1056,11 +1064,11 @@ function setPresentationUnits() {
 
    {cd:"", label:"選択して下さい"},
 
-    {cd:"111", label:"プレゼンの基礎"},
+    {cd:"407001", label:"プレゼンの基礎"},
 
-    {cd:"112", label:"パワーポイント基礎"},
+    {cd:"407002", label:"パワーポイント基礎"},
 
-    {cd:"113", label:"その他"}
+    {cd:"407003", label:"その他"}
   ];
 
  PresentationUnits.forEach(function(value) {
@@ -1091,7 +1099,7 @@ function  setAnnnounceUnits() {
 
    {cd:"", label:"選択して下さい"},
 
-    {cd:"114", label:"発表"}
+    {cd:"408001", label:"発表"}
   ];
 
   AnnnounceUnits.forEach(function(value) {
@@ -1122,7 +1130,7 @@ function   setAlgorithmDUnits() {
 
   {cd:"", label:"選択して下さい"},
 
-    {cd:"115", label:"アルゴリズムドリル"}
+    {cd:"501001", label:"アルゴリズムドリル"}
   ];
 
   AlgorithmDUnits.forEach(function(value) {
@@ -1153,7 +1161,7 @@ function   setSqlDUnits() {
 
    {cd:"", label:"選択して下さい"},
 
-       {cd:"116", label:"SQLドリル"}
+       {cd:"502001", label:"SQLドリル"}
   ];
 
   SqlDUnits.forEach(function(value) {
@@ -1184,7 +1192,7 @@ function   setJavaDUnits() {
 
    {cd:"", label:"選択して下さい"},
 
-   {cd:"117", label:"Javaドリル"}
+   {cd:"503001", label:"Javaドリル"}
   ];
 
   JavaDUnits.forEach(function(value) {
@@ -1215,7 +1223,7 @@ function  setOtherUnits()  {
 
    {cd:"", label:"選択して下さい"},
 
-   {cd:"118", label:"その他"}
+   {cd:"601001", label:"その他"}
   ];
 
   OtherUnits.forEach(function(value) {

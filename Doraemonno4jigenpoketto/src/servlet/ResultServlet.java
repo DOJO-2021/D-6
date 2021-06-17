@@ -28,10 +28,14 @@ public class ResultServlet extends HttpServlet {
 		// リクエストパラメータを取得する
 		request.setCharacterEncoding("UTF-8");
 		int question_id=Integer.parseInt(request.getParameter("QUESTION_ID"));
+		//遷移処理
 		QaDao qDao=new QaDao();
 		List<Qaplus> cardList = qDao.select3(new Qa(question_id,null, "", 0, "", "",0,""));
 		// 全項目をリクエストスコープに格納する
 		request.setAttribute("cardList", cardList);
+
+		//閲覧数のカウントを１増やす
+		qDao.updatecount(new Qa(question_id,null, "", 0, "", "",0,""));
 
 		// 結果ページにフォワードする
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/Detail.jsp");
