@@ -18,15 +18,15 @@
 <hr><!--リンク先注意-->
 
   <div class="searchpage">
-   <p><a href="/Doraemonno4jigenpoketto/MenuServlet"><img src="../../image/Menu/検索.png" alt="検索" width="300" height="280"></a></p>
+   <p><a href="/Doraemonno4jigenpoketto/MenuServlet"><img src="../../image/検索.png" alt="検索" width="300" height="280"></a></p>
   </div>
 
   <div class ="titlepage">
-   <p><a href="/Doraemonno4jigenpoketto/LoginServlet"><img src="../../image/Menu/DOJOQ&A集.png" alt="DOJO Q&A集" width="400" height="380"></a></p>
+   <p><a href="/Doraemonno4jigenpoketto/LoginServlet"><img src="../../image/DOJOQ&A集.png" alt="DOJO Q&A集" width="400" height="380"></a></p>
   </div>
 
   <div class="editpage">
-   <p><a href="/Doraemonno4jigenpoketto/SearchServlet"><img src="../../image/Menu/編集(事務局用).png" alt="編集(事務局用)" width="300" height="280"></a></p>
+   <p><a href="/Doraemonno4jigenpoketto/SearchServlet"><img src="../../image/編集(事務局用).png" alt="編集(事務局用)" width="300" height="280"></a></p>
   </div>
 
 
