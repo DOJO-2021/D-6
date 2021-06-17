@@ -12,14 +12,14 @@
 </head>
 <body>
 <div class="titlebar">
-<img src="../../image/Udsearch/帯.png" class="titlebar">
-<h1><a href="../../src/servlet/Doraemonno4jigenpoketto/MenuServlet"><img src="../../image/Udsearch/ロゴ.png" alt="DOJO Q&A集" class="logo"></a></h1>
+<img src="../../image/帯.png" class="titlebar">
+<h1><a href="../../src/servlet/Doraemonno4jigenpoketto/MenuServlet"><img src="../../image/ロゴ.png" alt="DOJO Q&A集" class="logo"></a></h1>
 
          <div class="logoutbutton">
-           <a href="../../src/servlet/MenuServlet.java"><img src="../../image/Udsearch/ログアウトボタン.png" alt="ログアウト" class="logoutbutton"></a>
+           <a href="../../src/servlet/MenuServlet.java"><img src="../../image/ログアウトボタン.png" alt="ログアウト" class="logoutbutton"></a>
          </div>
 
-<h2><img src="../../image/Udsearch/更新・削除用検索画面.png" alt="更新・削除用検索画面" class="h2"></h2>
+<h2><img src="../../image/更新・削除用検索画面.png" alt="更新・削除用検索画面" class="h2"></h2>
 
 
 <!--カテゴリ選択・回答者・質問した年月日・登録者についての登録-->
@@ -274,109 +274,20 @@
 
      	 </select><br><br>
 
-		<input type="date" name="calendar" max="9999-12-31" style="width:27em;"><br><br>
+		<input type="date" name="CALENDAR" max="9999-12-31" style="width:27em;"><br><br>
 
-		<input type="text" placeholder="回答者" name="answerer" id="answerer" style="width:26em;"> <br><br>
+		<input type="text" placeholder="回答者" name="ANSWERER" id="answerer" style="width:26em;"> <br><br>
 
-		<input type="text" placeholder="登録者" name="registant" id="registant" style="width:26em;">
+		<input type="text" placeholder="登録者" name="REGISTANT" id="registant" style="width:26em;">
 
 		</div>
 
 			<div class=button>
-				 <input type="image" src="../../image/Udsearch/検索ボタン.png" alt="検索" width="140" height="45" name="login">
+				 <input type="image" src="../../image/検索ボタン.png" alt="検索" width="140" height="45" name="login">
 			</div>
 
 
 </form>
 </body>
-=======
-	<head>
-		<meta charset="UTF-8">
-		<title>DOJO Q&amp;A集</title>
-		<script src="udedit.js"></script>
-	</head>
-	<body>
-									<!--h1は左より-->
-		<h1><a href="/Doraemonno4jigenpoketto/MenuServlet">DOJO Q&amp;A集</a></h1>
-													<!--h2は中央揃え-->
-			<p><a href="/Doraemonno4jigenpoketto/LoginServlet">ログアウト</a> </p>
 
-			<h2>編集内容検索</h2>
-			<!--カテゴリ選択・回答者・質問した年月日・登録者についての登録-->
-			<form method="POST" action="/Doraemonno4jigenpoketto/UdsearchServlet">
-				<table>
-					<tr>
-						<td><!--単元選択-->
-						<select name="unit" id="unit">
-							<option value="">単元を選択してください</option>
-							<optgroup label="パーソナルスキルコース">
-								<option value="0">ビジネス・コミュニケーション</option>
-								<option value="1">ビジネスメール・ビジネス文章</option>
-								<option value="2">Word</option>
-								<option value="3">Excel</option>
-							</optgroup>
-							<optgroup label="IT基礎コース">
-								<option value="4">プログラミング</option>
-								<option value="5">アルゴリズム</option>
-								<option value="6">ネットワーク</option>
-								<option value="7">HTML</option>
-								<option value="8">CSS</option>
-								<option value="9">JavaScript</option>
-								<option value="10">データベース(SQL)</option>
-							</optgroup>
-							<optgroup label="Java基礎コース">
-								<option value="11">Javaプログラミング</option>
-								<option value="12">サーバーサイドJava</option>
-								<option value="13">品質管理</option>
-								<option value="14">セキュリティ</option>
-							</optgroup>
-							<optgroup label="Web開発演習コース">
-								<option value="15">導入</option>
-								<option value="16">要件定義</option>
-								<option value="17">外部設計</option>
-								<option value="18">内部設計</option>
-								<option value="19">実装</option>
-								<option value="20">テスト</option>
-								<option value="21">プレゼン作成</option>
-								<option value="22">発表</option>
-							</optgroup>
-							<optgroup label="ドリル">
-								<option value="23">アルゴリズムドリル</option>
-								<option value="24">SQLドリル</option>
-								<option value="25">Javaドリル</option>
-							</optgroup>
-							<optgroup label="その他">
-								<option value="26">その他</option>
-							</optgroup>
-						</select>
-						</td>
-						<td>
-						<select name="category_item" id="category_item">
-						</select>
-						</td>
-						<td><!--回答者選択-- input typeに変更-->
-						回答者<input type="text" name="ANSWERER">
-						</td>
-					</tr>
-					<tr>
-						<td><!--年月日選択-->
-						<input type="date" name="CALENDAR" max="9999-12-31">
-						</td>
-						<td><!--登録者選択--input typeに変更-->
-						登録者<input type="text" name="REGISTRANT">
-						</td>
-					</tr>
-					<tr>
-						<td>
-						質問文<textarea name="QUESTION"></textarea>
-						</td>
-						<td>
-						回答文<textarea name="ANSWER"></textarea>
-						</td>
-					</tr>
-				</table>
-				<input type="submit" name="SUBMIT" value="検索">
-			</form>
-	</body>
->>>>>>> 486a939cc3ed9b59d10a737bd1309ba3dbc5fa28
 </html>
