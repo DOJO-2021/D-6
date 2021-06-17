@@ -2,19 +2,19 @@
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-<link href='../../css/common.css' rel='stylesheet'>
+<link href='/Doraemonno4jigenpoketto/css/common.css' rel='stylesheet'>
 <head>
 <meta charset="UTF-8">
 <title>DOJO Q&amp;A集</title>
 </head>
 <body>
 
-<img src="../../image/帯.png" class="titlebar">
-<h1><a href="../../src/servlet/Doraemonno4jigenpoketto/MenuServlet"><img src="../../image/ロゴ.png" alt="DOJO Q&A集" class="logo"></a></h1>
-<a href="../../src/servlet/Doraemonno4jigenpoketto/LoginServlet" class="edit">編集</a>
-<a href="../../src/servlet/Doraemonno4jigenpoketto/SearchServlet" class="search">検索</a>
+<img src="/Doraemonno4jigenpoketto/image/帯.png" class="titlebar">
+<!-- <h1><a href="/Doraemonno4jigenpoketto/MenuServlet"><img src="/Doraemonno4jigenpoketto/image/ロゴ.png" alt="DOJO Q&A集" class="logo"></a></h1>-->
+<a href="/Doraemonno4jigenpoketto/LoginServlet" class="edit">編集</a>
+<a href="/Doraemonno4jigenpoketto/SearchServlet" class="search">検索</a>
 
-<h2><img src="../../image/検索画面.png" alt="検索画面" class="h2"></h2>
+<h2><img src="/Doraemonno4jigenpoketto/image/検索画面.png" alt="検索画面" class="h2"></h2>
 
 
 <script type="text/javascript">
@@ -56,7 +56,7 @@
     <dl>
         <!-- menu1 -->
         <dt>
-            <a href="javascript:void(0)" id="closer_1" onclick="openchild('opener_1', 'closer_1')"><img src="../../image/パーソナルスキルコース.png" alt="パーソナルスキルコース" class="navigation"></a>
+            <a href="javascript:void(0)" id="closer_1" onclick="openchild('opener_1', 'closer_1')"><img src="/Doraemonno4jigenpoketto/image/パーソナルスキルコース.png" alt="パーソナルスキルコース" class="navigation"></a>
 
         </dt>
         <ul id="opener_1" style="display:none;">
@@ -98,7 +98,7 @@
 
         <!-- menu2 -->
         <dt>
-            <a href="javascript:void(0)" id="closer_2" onclick="openchild('opener_2', 'closer_2')"><img src="../../image/IT基礎コース.png" alt="IT基礎コース" class="navigation"></a>
+            <a href="javascript:void(0)" id="closer_2" onclick="openchild('opener_2', 'closer_2')"><img src="/Doraemonno4jigenpoketto/image/IT基礎コース.png" alt="IT基礎コース" class="navigation"></a>
         </dt>
         <ul id="opener_2" style="display:none;">
          <li><a href="javascript:void(0)" class="line" id="closer_201" onclick="openchild('opener_201', 'closer_201')">プログラミング</a>
@@ -181,7 +181,7 @@
 
         <!-- menu3 -->
         <dt>
-            <a href="javascript:void(0)" id="closer_3" onclick="openchild('opener_3', 'closer_3')"><img src="../../image/Java基礎コース.png" alt="Java基礎コース" class="navigation"></a>
+            <a href="javascript:void(0)" id="closer_3" onclick="openchild('opener_3', 'closer_3')"><img src="/Doraemonno4jigenpoketto/image/Java基礎コース.png" alt="Java基礎コース" class="navigation"></a>
         </dt>
         <ul id="opener_3" style="display:none;">
          <li><a href="javascript:void(0)" class="line" id="closer_301" onclick="openchild('opener_301', 'closer_301')">Javaプログラミング</a>
@@ -246,7 +246,7 @@
 
         <!-- menu4 -->
         <dt>
-            <a href="javascript:void(0)" id="closer_4" onclick="openchild('opener_4', 'closer_4')"><img src="../../image/Webアプリ開発演習コース.png" alt="Webアプリ開発演習コース" class="navigation"></a>
+            <a href="javascript:void(0)" id="closer_4" onclick="openchild('opener_4', 'closer_4')"><img src="/Doraemonno4jigenpoketto/image/Webアプリ開発演習コース.png" alt="Webアプリ開発演習コース" class="navigation"></a>
         </dt>
         <ul id="opener_4" style="display:none;">
          <li><a href="javascript:void(0)" class="line" id="closer_401" onclick="openchild('opener_401', 'closer_401')">導入</a>
@@ -319,7 +319,7 @@
 
         <!-- menu5 -->
         <dt>
-            <a href="javascript:void(0)" id="closer_5" onclick="openchild('opener_5', 'closer_5')"><img src="../../image/ドリル.png" alt="ドリル" class="navigation"></a>
+            <a href="javascript:void(0)" id="closer_5" onclick="openchild('opener_5', 'closer_5')"><img src="/Doraemonno4jigenpoketto/image/ドリル.png" alt="ドリル" class="navigation"></a>
         </dt>
         <ul id="opener_5" style="display:none;">
          <li><a href="javascript:void(0)" class="line" id="closer_501" onclick="openchild('opener_501', 'closer_501')">アルゴリズムドリル</a>
@@ -344,7 +344,7 @@
 
         <!-- menu6 -->
         <dt>
-            <a href="javascript:void(0)" id="closer_6" onclick="openchild('opener_6', 'closer_6')"><img src="../../image/その他.png" alt="その他" class="navigation"></a>
+            <a href="javascript:void(0)" id="closer_6" onclick="openchild('opener_6', 'closer_6')"><img src="/Doraemonno4jigenpoketto/image/その他.png" alt="その他" class="navigation"></a>
         </dt>
         <ul id="opener_6" style="display:none;">
          <li><a href="javascript:void(0)" class="line" id="closer_601" onclick="openchild('opener_601', 'closer_601')">その他</a>
@@ -387,8 +387,9 @@
 <br>
 <div class="button">
   <!--name="search"-->
-  <input type="image" src="../../image/検索ボタン.png" name="search" alt="検索" class="buttonsize">
+  <input type="image" src="/Doraemonno4jigenpoketto/image/検索ボタン.png" name="search" alt="検索" class="buttonsize">
 </div>
+</form>
 
 </body>
 </html>

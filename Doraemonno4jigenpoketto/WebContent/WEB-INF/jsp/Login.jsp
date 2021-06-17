@@ -2,10 +2,10 @@
     pageEncoding="UTF-8"%>
 <!DOCTYPE html><!--Login.jsp-->
 <html>
-<link href='../../css/common.css' rel='stylesheet'>
+<link href='/Doraemonno4jigenpoketto/css/common.css' rel='stylesheet'>
 <head>
 <meta charset="UTF-8">
-<title>DOJO Q&A集</title>
+<title>DOJO Q&amp;A集</title>
 
 
 </head>
@@ -13,19 +13,19 @@
 
 <body>
 
-<img src="../../image/帯.png" class="titlebar">
-<h1><a href="../../src/servlet/Doraemonno4jigenpoketto/MenuServlet"><img src="../../image/ロゴ.png" alt="DOJO Q&A集" class="logo"></a></h1>
-<a href="../../src/servlet/Doraemonno4jigenpoketto/LoginServlet" class="edit">編集</a>
-<a href="../../src/servlet/Doraemonno4jigenpoketto/SearchServlet" class="search">検索</a>
+<img src="/Doraemonno4jigenpoketto/image/帯.png" class="titlebar">
+<!--  <h1><a href="/Doraemonno4jigenpoketto/MenuServlet"><img src="/Doraemonno4jigenpoketto/image/ロゴ.png" alt="DOJO Q&A集" class="logo"></a></h1>-->
+<a href="/Doraemonno4jigenpoketto/LoginServlet" class="edit">編集</a>
+<a href="/Doraemonno4jigenpoketto/SearchServlet" class="search">検索</a>
 
 
 
 
-<h2><img src="../../image/ログイン画面.png" alt="ログイン" class="h2"></h2>
+<h2><img src="/Doraemonno4jigenpoketto/image/ログイン画面.png" alt="ログイン" class="h2"></h2>
 
 
 <!--リンク先注意-->
-<form method="GET" action="Edit.jsp" id="form">
+<form method="POST" action="/Doraemonno4jigenpoketto/LoginServlet" id="form">
 
   <div class=logintext>
    <input type="text"placeholder="ID" name="ID"> <br><br>
@@ -34,8 +34,9 @@
 
 <!--name="LOGIN"-->
   <div class=button>
-   <input type="image" src="../../image/ログインボタン.png" alt="ログイン" width="160" height="50" name="login">
+   <input type="image" src="/Doraemonno4jigenpoketto/image/ログインボタン.png" alt="ログイン" width="160" height="50" name="login">
   </div>
+  </form>
 
 </body>
 </html>

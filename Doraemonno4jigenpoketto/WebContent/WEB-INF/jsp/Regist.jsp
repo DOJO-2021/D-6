@@ -2,11 +2,11 @@
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-<link href="../../css/common.css" rel="stylesheet">
+<link href="/Doraemonno4jigenpoketto/css/common.css" rel="stylesheet">
 <head>
 <meta charset="UTF-8">
 
-<title>DOJO Q&A集</title>
+<title>DOJO Q&amp;A集</title>
 
 
  <script src="js/udedit.js"></script>
@@ -37,19 +37,19 @@ function check(){
 
 <body>
 <div class="titlebar">
-<h1><img src="../../image/帯.png" width="400" height="100"></h1>
+<h1><img src="/Doraemonno4jigenpoketto/image/帯.png" width="400" height="100"></h1>
         </div>
 
         <div class="logo">
-          <img src="../../image/ロゴ.png" alt="DOJO Q&A集" width="180" height="80"></a>
+          <img src="/Doraemonno4jigenpoketto/image/ロゴ.png" alt="DOJO Q&A集" width="180" height="80"></a>
         </div>
 
          <div class="logoutbutton">
-           <a href="../../src/servlet/MenuServlet.java"><img src="../../image/ログアウトボタン.png" alt="ログアウト" class="logoutbutton"></a>
+           <a href="/Doraemonno4jigenpoketto/LoginServlet"><img src="/Doraemonno4jigenpoketto/image/ログアウトボタン.png" alt="ログアウト" class="logoutbutton"></a>
          </div>
 
 
-<h2><img src="../../image/登録画面.png" alt="登録画面" class="h2"></h2>
+<h2><img src="/Doraemonno4jigenpoketto/image/登録画面.png" alt="登録画面" class="h2"></h2>
 
 
 
@@ -320,7 +320,7 @@ function check(){
 		</div>
 
 			<div class=registbutton>
-				 <input type="image" src="../../image/登録ボタン.png" alt="登録" width="140" height="45" name="login">
+				 <input type="image" src="/Doraemonno4jigenpoketto/image/登録ボタン.png" alt="登録" width="140" height="45" name="login">
 			</div>
 
 

@@ -3,13 +3,13 @@
    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
-<link href="../../css/common.css" rel="stylesheet">
+<link href="/Doraemonno4jigenpoketto/css/common.css" rel="stylesheet">
 <head>
 <meta charset="UTF-8">
 <title>DOJO Q&amp;A集</title>
 
 
-	
+
 		<script src="js/common.js"></script>
 		<script src="js/udedit.js"></script>
 
@@ -35,18 +35,18 @@ function check(){
 <body>
 
 <div class="titlebar">
-<h1><img src="../../image/帯.png" class="titlebar"></h1>
+<h1><img src="/Doraemonno4jigenpoketto/image/帯.png" class="titlebar"></h1>
         </div>
 
 
-          <img src="../../image/ロゴ.png" alt="DOJO Q&A集" class="logo">
+          <img src="/Doraemonno4jigenpoketto/image/ロゴ.png" alt="DOJO Q&A集" class="logo">
 
 
          <div class="logoutbutton">
-           <a href="../../src/servlet/MenuServlet.java"><img src="../../image/ログアウトボタン.png" alt="ログアウト" class="logoutbutton"></a>
+           <a href="/Doraemonno4jigenpoketto/MenuServlet"><img src="/Doraemonno4jigenpoketto/image/ログアウトボタン.png" alt="ログアウト" class="logoutbutton"></a>
          </div>
 
-<h2><img src="../../image/更新・削除画面.png" alt="更新・削除画面" class="h2"></h2>
+<h2><img src="/Doraemonno4jigenpoketto/image/更新・削除画面.png" alt="更新・削除画面" class="h2"></h2>
 
 <!--閲覧数・質問日・回答者・質問した年月日・登録者についての更新・削除-->
 
@@ -312,10 +312,10 @@ function check(){
 
  	</table>
 			<div class=koushinbutton>
-				 <input type="image" src="../../image/更新ボタン.png" alt="更新" width="140" height="45" name="login">
+				 <input type="image" src="/Doraemonno4jigenpoketto/image/更新ボタン.png" alt="更新" width="140" height="45" name="login">
 			</div>
 			<div class=sakujyobutton>
-				 <input type="image" src="../../image/削除ボタン.png" alt="削除" width="140" height="45" name="login">
+				 <input type="image" src="/Doraemonno4jigenpoketto/image/削除ボタン.png" alt="削除" width="140" height="45" name="login">
 			</div>
     </form>
 </c:forEach>

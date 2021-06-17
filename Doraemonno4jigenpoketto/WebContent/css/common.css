@@ -18,16 +18,16 @@
 	z-index: 1;
 }
 
-.edit{
+/*.edit{
 	margin-left:250px;
-	margin-top;-200px;
+	margin-top:-200px;
 	position:absolute;
 	z-index: 1;
 }
 
 .search{
-
-}
+	margin-top:30px;
+}*/
 
 h2{
 	text-align:center;
