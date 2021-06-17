@@ -8,6 +8,25 @@
 		<title>DOJO Q&amp;A集</title>
 		<script src="script.js"></script>
 		<script src="udedit.js"></script>
+
+		 <script type="text/javascript">
+
+ <!-- 更新・削除時の確認をダイアログボックスで行う-->
+function check(){
+
+	if(window.confirm('実行してよろしいですか？')){ // 確認ダイアログを表示
+		return true; // 「OK」時は送信を実行
+
+	}
+	else{ // 「キャンセル」時の処理
+
+		window.alert('キャンセルされました'); // 警告ダイアログを表示
+		return false; // 送信を中止
+
+	}
+
+}
+</script>
 	</head>
 	<body>
 												<!--h1は左より-->
@@ -17,7 +36,7 @@
 		<!--閲覧数・質問日・回答者・質問した年月日・登録者についての更新・削除-->
 
 		<c:forEach var="e" items="${result}">
-		<form method="POST" action="/Doraemonno4jigenpoketto/UdeditServlet">
+		<form method="POST" action="/Doraemonno4jigenpoketto/UdeditServlet" onSubmit="return check()">
 			質問文<input type="text" name="QUESTION" value="${e.question}"><br>    <!--質問文-->
 			回答<input type="text" name="ANSWER" value="${e.answer}"><br>    <!--回答-->
 			<table>

@@ -6,6 +6,26 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
  <script src="js/udedit.js"></script>
+
+ <script type="text/javascript">
+
+ <!-- 更新・削除時の確認をダイアログボックスで行う-->
+function check(){
+
+	if(window.confirm('実行してよろしいですか？')){ // 確認ダイアログを表示
+		return true; // 「OK」時は送信を実行
+
+	}
+	else{ // 「キャンセル」時の処理
+
+		window.alert('キャンセルされました'); // 警告ダイアログを表示
+		return false; // 送信を中止
+
+	}
+
+}
+</script>
+
 </head>
 <body>
 	<h1>DOJO Q&amp;A集</h1>
@@ -14,7 +34,7 @@
 	<h2>登録</h2>
 
 	<nav>
-		<form method="POST" action="/Doraemonno4jigenpoketto/RegistServlet">
+		<form method="POST" action="/Doraemonno4jigenpoketto/RegistServlet" onSubmit="return check()">
 		<table>
 			<tr>
 				<th>質問文</th><td><textarea name="QUESTION"></textarea></td>
