@@ -63,7 +63,7 @@ public class SaveServlet extends HttpServlet {
 		request.setAttribute("cardList", cardList);
 
 		// 結果ページにフォワードする
-		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/Saveedit.jsp");
+		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/SaveEdit.jsp");
 		dispatcher.forward(request, response);
 	}
 }
