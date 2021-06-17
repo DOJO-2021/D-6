@@ -9,12 +9,12 @@
 </head>
 <body>
 
-<img src="../../image/Detail/帯.png" class="titlebar">
-<h1><a href="../../src/servlet/Doraemonno4jigenpoketto/MenuServlet"><img src="../../image/Detail/ロゴ.png" alt="DOJO Q&A集" class="logo"></a></h1>
+<img src="../../image/帯.png" class="titlebar">
+<h1><a href="../../src/servlet/Doraemonno4jigenpoketto/MenuServlet"><img src="../../image/ロゴ.png" alt="DOJO Q&A集" class="logo"></a></h1>
 <a href="../../src/servlet/Doraemonno4jigenpoketto/LoginServlet" class="edit">編集</a>
 <a href="../../src/servlet/Doraemonno4jigenpoketto/SearchServlet" class="search">検索</a>
 
-<h2><img src="../../image/Search/検索画面.png" alt="検索画面" class="h2"></h2>
+<h2><img src="../../image/検索画面.png" alt="検索画面" class="h2"></h2>
 
 
 <script type="text/javascript">
@@ -46,20 +46,17 @@
     }
 </script>
 
-<<<<<<< HEAD
 
-<div class="blockA">
-  <div id="menuA">
-=======
 <script src="search.js"></script>
 
 <form method="POST" action="/Doraemonno4jigenpoketto/SearchServlet">
-<div id="menuA">
->>>>>>> 486a939cc3ed9b59d10a737bd1309ba3dbc5fa28
+<div class="blockA">
+  <div id="menuA">
+
     <dl>
         <!-- menu1 -->
         <dt>
-            <a href="javascript:void(0)" id="closer_1" onclick="openchild('opener_1', 'closer_1')"><img src="../../image/Search/パーソナルスキルコース.png" alt="パーソナルスキルコース" class="navigation"></a>
+            <a href="javascript:void(0)" id="closer_1" onclick="openchild('opener_1', 'closer_1')"><img src="../../image/パーソナルスキルコース.png" alt="パーソナルスキルコース" class="navigation"></a>
 
         </dt>
         <ul id="opener_1" style="display:none;">
@@ -101,7 +98,7 @@
 
         <!-- menu2 -->
         <dt>
-            <a href="javascript:void(0)" id="closer_2" onclick="openchild('opener_2', 'closer_2')"><img src="../../image/Search/IT基礎コース.png" alt="IT基礎コース" class="navigation"></a>
+            <a href="javascript:void(0)" id="closer_2" onclick="openchild('opener_2', 'closer_2')"><img src="../../image/IT基礎コース.png" alt="IT基礎コース" class="navigation"></a>
         </dt>
         <ul id="opener_2" style="display:none;">
          <li><a href="javascript:void(0)" class="line" id="closer_201" onclick="openchild('opener_201', 'closer_201')">プログラミング</a>
@@ -184,7 +181,7 @@
 
         <!-- menu3 -->
         <dt>
-            <a href="javascript:void(0)" id="closer_3" onclick="openchild('opener_3', 'closer_3')"><img src="../../image/Search/Java基礎コース.png" alt="Java基礎コース" class="navigation"></a>
+            <a href="javascript:void(0)" id="closer_3" onclick="openchild('opener_3', 'closer_3')"><img src="../../image/Java基礎コース.png" alt="Java基礎コース" class="navigation"></a>
         </dt>
         <ul id="opener_3" style="display:none;">
          <li><a href="javascript:void(0)" class="line" id="closer_301" onclick="openchild('opener_301', 'closer_301')">Javaプログラミング</a>
@@ -249,7 +246,7 @@
 
         <!-- menu4 -->
         <dt>
-            <a href="javascript:void(0)" id="closer_4" onclick="openchild('opener_4', 'closer_4')"><img src="../../image/Search/Webアプリ開発演習コース.png" alt="Webアプリ開発演習コース" class="navigation"></a>
+            <a href="javascript:void(0)" id="closer_4" onclick="openchild('opener_4', 'closer_4')"><img src="../../image/Webアプリ開発演習コース.png" alt="Webアプリ開発演習コース" class="navigation"></a>
         </dt>
         <ul id="opener_4" style="display:none;">
          <li><a href="javascript:void(0)" class="line" id="closer_401" onclick="openchild('opener_401', 'closer_401')">導入</a>
@@ -322,7 +319,7 @@
 
         <!-- menu5 -->
         <dt>
-            <a href="javascript:void(0)" id="closer_5" onclick="openchild('opener_5', 'closer_5')"><img src="../../image/Search/ドリル.png" alt="ドリル" class="navigation"></a>
+            <a href="javascript:void(0)" id="closer_5" onclick="openchild('opener_5', 'closer_5')"><img src="../../image/ドリル.png" alt="ドリル" class="navigation"></a>
         </dt>
         <ul id="opener_5" style="display:none;">
          <li><a href="javascript:void(0)" class="line" id="closer_501" onclick="openchild('opener_501', 'closer_501')">アルゴリズムドリル</a>
@@ -347,7 +344,7 @@
 
         <!-- menu6 -->
         <dt>
-            <a href="javascript:void(0)" id="closer_6" onclick="openchild('opener_6', 'closer_6')"><img src="../../image/Search/その他.png" alt="その他" class="navigation"></a>
+            <a href="javascript:void(0)" id="closer_6" onclick="openchild('opener_6', 'closer_6')"><img src="../../image/その他.png" alt="その他" class="navigation"></a>
         </dt>
         <ul id="opener_6" style="display:none;">
          <li><a href="javascript:void(0)" class="line" id="closer_601" onclick="openchild('opener_601', 'closer_601')">その他</a>
@@ -390,7 +387,7 @@
 <br>
 <div class="button">
   <!--name="search"-->
-  <input type="image" src="../../image/Search/検索ボタン.png" name="search" alt="検索" class="buttonsize">
+  <input type="image" src="../../image/検索ボタン.png" name="search" alt="検索" class="buttonsize">
 </div>
 
 </body>
