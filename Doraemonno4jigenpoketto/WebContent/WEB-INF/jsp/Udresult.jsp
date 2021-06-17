@@ -10,14 +10,14 @@
 </head>
 <body>
 <div class="titlebar">
-<img src="../../image/Udresult/帯.png" class="titlebar">
-<h1><a href="../../src/servlet/Doraemonno4jigenpoketto/MenuServlet"><img src="../../image/Udresult/ロゴ.png" alt="DOJO Q&A集" class="logo"></a></h1>
+<img src="../../image/帯.png" class="titlebar">
+<h1><a href="../../src/servlet/Doraemonno4jigenpoketto/MenuServlet"><img src="../../image/ロゴ.png" alt="DOJO Q&A集" class="logo"></a></h1>
 
          <div class="logoutbutton">
-           <a href="../../src/servlet/MenuServlet.java"><img src="../../image/Udresult/ログアウトボタン.png" alt="ログアウト" class="logoutbutton"></a>
+           <a href="../../src/servlet/MenuServlet.java"><img src="../../image/ログアウトボタン.png" alt="ログアウト" class="logoutbutton"></a>
          </div>
 
-<h2><img src="../../image/Udresult/更新・削除用検索結果画面.png" alt="更新・削除用検索結果画面" class="h2"></h2>
+<h2><img src="../../image/更新・削除用検索結果画面.png" alt="更新・削除用検索結果画面" class="h2"></h2>
 
 <!--ヒット数表示-->
 <p class="hitnumber"><b>"e"件ヒットしました。</b></p>
@@ -26,7 +26,7 @@
 	<c:forEach var="e" items="${quastion}">
 		<form method="POST" action="UdeditServlet.java">
 		<div class="searchresult">
-				<input type="image" src="../../image/Udresult/検索結果の枠.png" class="Udresult_qb">
+				<input type="image" src="../../image/検索結果の枠.png" class="Udresult_qb">
 				<input type="text" name="question" value=${e.question} class="Udresult_question" readonly>
 				<input type="text" name="pageview" value="閲覧数："+${e.pageview}; class="Udresult_pageview" readonly>
 
