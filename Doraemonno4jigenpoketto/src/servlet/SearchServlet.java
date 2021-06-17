@@ -41,43 +41,162 @@ public class SearchServlet extends HttpServlet {
 		String question2= request.getParameter("QUESTION2");
 		String question3=request.getParameter("QUESTION3");
 		QaDao qDao = new QaDao();
+		String course=request.getParameter("COURSE");
+		String unit=request.getParameter("UNIT");
+		String category_item=request.getParameter("CATEGORY_ITEM");
 
-		if(request.getParameter("andor1").equals("and1") && request.getParameter("andor2").equals("and2")) {
-			// 検索処理を行う
-			List<Qaplus> cardList = qDao.select1_1(new Qas(question1,question2,question3));
-			// 全項目をリクエストスコープに格納する
-			request.setAttribute("cardList", cardList);
-			//検索件数を数えます
-			List<Qacount> counter =  qDao.selectcount1_1(new Qas(question1,question2,question3));
-			// 検索件数をリクエストスコープに格納する
-			request.setAttribute("counter", counter.get(0));
-		}else if(request.getParameter("andor1").equals("and1") && request.getParameter("andor2").equals("or2")) {
-			// 検索処理を行う
-			List<Qaplus> cardList = qDao.select1_2(new Qas(question1,question2,question3));
-			// 全項目をリクエストスコープに格納する
-			request.setAttribute("cardList", cardList);
-			//検索件数を数えます
-			List<Qacount> counter =  qDao.selectcount1_2(new Qas(question1,question2,question3));
-			// 検索件数をリクエストスコープに格納する
-			request.setAttribute("counter", counter.get(0));
-		}else if(request.getParameter("andor1").equals("or1") && request.getParameter("andor2").equals("and2")) {
-			// 検索処理を行う
-			List<Qaplus> cardList = qDao.select1_3(new Qas(question1,question2,question3));
-			// 全項目をリクエストスコープに格納する
-			request.setAttribute("cardList", cardList);
-			//検索件数を数えます
-			List<Qacount> counter =  qDao.selectcount1_3(new Qas(question1,question2,question3));
-			// 検索件数をリクエストスコープに格納する
-			request.setAttribute("counter", counter.get(0));
+		if(course=="") {
+			if(request.getParameter("andor1").equals("and1") && request.getParameter("andor2").equals("and2")) {
+				// 検索処理を行う
+				List<Qaplus> cardList = qDao.select1_1(new Qas(question1,question2,question3));
+				// 全項目をリクエストスコープに格納する
+				request.setAttribute("cardList", cardList);
+				//検索件数を数えます
+				List<Qacount> counter =  qDao.selectcount1_1(new Qas(question1,question2,question3));
+				// 検索件数をリクエストスコープに格納する
+				request.setAttribute("counter", counter.get(0));
+			}else if(request.getParameter("andor1").equals("and1") && request.getParameter("andor2").equals("or2")) {
+				// 検索処理を行う
+				List<Qaplus> cardList = qDao.select1_2(new Qas(question1,question2,question3));
+				// 全項目をリクエストスコープに格納する
+				request.setAttribute("cardList", cardList);
+				//検索件数を数えます
+				List<Qacount> counter =  qDao.selectcount1_2(new Qas(question1,question2,question3));
+				// 検索件数をリクエストスコープに格納する
+				request.setAttribute("counter", counter.get(0));
+			}else if(request.getParameter("andor1").equals("or1") && request.getParameter("andor2").equals("and2")) {
+				// 検索処理を行う
+				List<Qaplus> cardList = qDao.select1_3(new Qas(question1,question2,question3));
+				// 全項目をリクエストスコープに格納する
+				request.setAttribute("cardList", cardList);
+				//検索件数を数えます
+				List<Qacount> counter =  qDao.selectcount1_3(new Qas(question1,question2,question3));
+				// 検索件数をリクエストスコープに格納する
+				request.setAttribute("counter", counter.get(0));
+			}else {
+				// 検索処理を行う
+				List<Qaplus> cardList = qDao.select1_4(new Qas(question1,question2,question3));
+				// 全項目をリクエストスコープに格納する
+				request.setAttribute("cardList", cardList);
+				//検索件数を数えます
+				List<Qacount> counter =  qDao.selectcount1_4(new Qas(question1,question2,question3));
+				// 検索件数をリクエストスコープに格納する
+				request.setAttribute("counter", counter.get(0));
+			}
+		}else if(unit=="") {
+			if(request.getParameter("andor1").equals("and1") && request.getParameter("andor2").equals("and2")) {
+				// 検索処理を行う
+				List<Qaplus> cardList = qDao.select1_1(new Qas(question1,question2,question3));
+				// 全項目をリクエストスコープに格納する
+				request.setAttribute("cardList", cardList);
+				//検索件数を数えます
+				List<Qacount> counter =  qDao.selectcount1_1(new Qas(question1,question2,question3));
+				// 検索件数をリクエストスコープに格納する
+				request.setAttribute("counter", counter.get(0));
+			}else if(request.getParameter("andor1").equals("and1") && request.getParameter("andor2").equals("or2")) {
+				// 検索処理を行う
+				List<Qaplus> cardList = qDao.select1_2(new Qas(question1,question2,question3));
+				// 全項目をリクエストスコープに格納する
+				request.setAttribute("cardList", cardList);
+				//検索件数を数えます
+				List<Qacount> counter =  qDao.selectcount1_2(new Qas(question1,question2,question3));
+				// 検索件数をリクエストスコープに格納する
+				request.setAttribute("counter", counter.get(0));
+			}else if(request.getParameter("andor1").equals("or1") && request.getParameter("andor2").equals("and2")) {
+				// 検索処理を行う
+				List<Qaplus> cardList = qDao.select1_3(new Qas(question1,question2,question3));
+				// 全項目をリクエストスコープに格納する
+				request.setAttribute("cardList", cardList);
+				//検索件数を数えます
+				List<Qacount> counter =  qDao.selectcount1_3(new Qas(question1,question2,question3));
+				// 検索件数をリクエストスコープに格納する
+				request.setAttribute("counter", counter.get(0));
+			}else {
+				// 検索処理を行う
+				List<Qaplus> cardList = qDao.select1_4(new Qas(question1,question2,question3));
+				// 全項目をリクエストスコープに格納する
+				request.setAttribute("cardList", cardList);
+				//検索件数を数えます
+				List<Qacount> counter =  qDao.selectcount1_4(new Qas(question1,question2,question3));
+				// 検索件数をリクエストスコープに格納する
+				request.setAttribute("counter", counter.get(0));
+			}
+		}else if(category_item==""){
+			if(request.getParameter("andor1").equals("and1") && request.getParameter("andor2").equals("and2")) {
+				// 検索処理を行う
+				List<Qaplus> cardList = qDao.select1_1(new Qas(question1,question2,question3));
+				// 全項目をリクエストスコープに格納する
+				request.setAttribute("cardList", cardList);
+				//検索件数を数えます
+				List<Qacount> counter =  qDao.selectcount1_1(new Qas(question1,question2,question3));
+				// 検索件数をリクエストスコープに格納する
+				request.setAttribute("counter", counter.get(0));
+			}else if(request.getParameter("andor1").equals("and1") && request.getParameter("andor2").equals("or2")) {
+				// 検索処理を行う
+				List<Qaplus> cardList = qDao.select1_2(new Qas(question1,question2,question3));
+				// 全項目をリクエストスコープに格納する
+				request.setAttribute("cardList", cardList);
+				//検索件数を数えます
+				List<Qacount> counter =  qDao.selectcount1_2(new Qas(question1,question2,question3));
+				// 検索件数をリクエストスコープに格納する
+				request.setAttribute("counter", counter.get(0));
+			}else if(request.getParameter("andor1").equals("or1") && request.getParameter("andor2").equals("and2")) {
+				// 検索処理を行う
+				List<Qaplus> cardList = qDao.select1_3(new Qas(question1,question2,question3));
+				// 全項目をリクエストスコープに格納する
+				request.setAttribute("cardList", cardList);
+				//検索件数を数えます
+				List<Qacount> counter =  qDao.selectcount1_3(new Qas(question1,question2,question3));
+				// 検索件数をリクエストスコープに格納する
+				request.setAttribute("counter", counter.get(0));
+			}else {
+				// 検索処理を行う
+				List<Qaplus> cardList = qDao.select1_4(new Qas(question1,question2,question3));
+				// 全項目をリクエストスコープに格納する
+				request.setAttribute("cardList", cardList);
+				//検索件数を数えます
+				List<Qacount> counter =  qDao.selectcount1_4(new Qas(question1,question2,question3));
+				// 検索件数をリクエストスコープに格納する
+				request.setAttribute("counter", counter.get(0));
+			}
 		}else {
-		// 検索処理を行う
-		List<Qaplus> cardList = qDao.select1_4(new Qas(question1,question2,question3));
-		// 全項目をリクエストスコープに格納する
-		request.setAttribute("cardList", cardList);
-		//検索件数を数えます
-		List<Qacount> counter =  qDao.selectcount1_4(new Qas(question1,question2,question3));
-		// 検索件数をリクエストスコープに格納する
-		request.setAttribute("counter", counter.get(0));
+			if(request.getParameter("andor1").equals("and1") && request.getParameter("andor2").equals("and2")) {
+				// 検索処理を行う
+				List<Qaplus> cardList = qDao.select1_1(new Qas(question1,question2,question3));
+				// 全項目をリクエストスコープに格納する
+				request.setAttribute("cardList", cardList);
+				//検索件数を数えます
+				List<Qacount> counter =  qDao.selectcount1_1(new Qas(question1,question2,question3));
+				// 検索件数をリクエストスコープに格納する
+				request.setAttribute("counter", counter.get(0));
+			}else if(request.getParameter("andor1").equals("and1") && request.getParameter("andor2").equals("or2")) {
+				// 検索処理を行う
+				List<Qaplus> cardList = qDao.select1_2(new Qas(question1,question2,question3));
+				// 全項目をリクエストスコープに格納する
+				request.setAttribute("cardList", cardList);
+				//検索件数を数えます
+				List<Qacount> counter =  qDao.selectcount1_2(new Qas(question1,question2,question3));
+				// 検索件数をリクエストスコープに格納する
+				request.setAttribute("counter", counter.get(0));
+			}else if(request.getParameter("andor1").equals("or1") && request.getParameter("andor2").equals("and2")) {
+				// 検索処理を行う
+				List<Qaplus> cardList = qDao.select1_3(new Qas(question1,question2,question3));
+				// 全項目をリクエストスコープに格納する
+				request.setAttribute("cardList", cardList);
+				//検索件数を数えます
+				List<Qacount> counter =  qDao.selectcount1_3(new Qas(question1,question2,question3));
+				// 検索件数をリクエストスコープに格納する
+				request.setAttribute("counter", counter.get(0));
+			}else {
+				// 検索処理を行う
+				List<Qaplus> cardList = qDao.select1_4(new Qas(question1,question2,question3));
+				// 全項目をリクエストスコープに格納する
+				request.setAttribute("cardList", cardList);
+				//検索件数を数えます
+				List<Qacount> counter =  qDao.selectcount1_4(new Qas(question1,question2,question3));
+				// 検索件数をリクエストスコープに格納する
+				request.setAttribute("counter", counter.get(0));
+			}
 		}
 
 

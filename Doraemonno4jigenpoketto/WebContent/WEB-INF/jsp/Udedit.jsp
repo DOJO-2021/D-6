@@ -6,12 +6,12 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>DOJO Q&amp;A集</title>
-		<script src="script.js"></script>
-		<script src="udedit.js"></script>
+		<script src="js/common.js"></script>
+		<script src="js/udedit.js"></script>
 
 		 <script type="text/javascript">
 
- <!-- 更新・削除時の確認をダイアログボックスで行う-->
+ <!-- 更新・削除時の確認をダイアログボックスで行う
 function check(){
 
 	if(window.confirm('実行してよろしいですか？')){ // 確認ダイアログを表示
@@ -25,7 +25,7 @@ function check(){
 
 	}
 
-}
+}-->
 </script>
 	</head>
 	<body>

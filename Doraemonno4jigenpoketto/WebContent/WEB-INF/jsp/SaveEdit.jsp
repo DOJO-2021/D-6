@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -34,13 +35,14 @@ function check(){
 	<h2>登録</h2>
 
 	<nav>
+		<c:forEach var="e" items="${cardList}">
 		<form method="POST" action="/Doraemonno4jigenpoketto/RegistServlet" onSubmit="return check()">
 		<table>
 			<tr>
-				<th>質問文</th><td><textarea name="QUESTION"></textarea></td>
+				<th>質問文</th><td><textarea name="QUESTION">${e.question}</textarea></td>
 			</tr>
 			<tr>
-				<th>回答文</th><td><textarea name="ANSWER"></textarea></td>
+				<th>回答文</th><td><textarea name="ANSWER">${e.answer}</textarea></td>
 			</tr>
 
 			<tr>
@@ -93,7 +95,7 @@ function check(){
 			<tr>
 				<td>
 					<select name="CATEGORY_ITEM" id="category_item">
-					<option value="">選択してください</option>
+					<option value="${e.category_item}">選択してください</option>
 					</select>
 
 				</td>
@@ -104,18 +106,19 @@ function check(){
 				</div>
 			-->
 			<tr>
-				<td><input type="date" name="CALENDAR" max="9999-12-31"></td>
+				<td><input type="date" name="CALENDAR" max="9999-12-31" value="${e.date}"></td>
 			</tr>
 			<tr>
-			    <td><input type="text" name="ANSWERER" id="answerer"></td>
+			    <td><input type="text" name="ANSWERER" id="answerer" value="${e.answerer}"></td>
 			</tr>
 			<tr>
-				<td><input type="text" name="REGISTRANT" id="registant"></td>
+				<td><input type="text" name="REGISTRANT" id="registrant" value="${e.registrant}"></td>
 			</tr>
 			</table>
 			<input type="submit" name="SUBMIT" value="登録"><br>
 			<input type="submit" name="SUBMIT" value="保存">
 		</form>
+		</c:forEach>
 	</nav>
 </body>
 </html>
