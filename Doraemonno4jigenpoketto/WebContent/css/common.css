@@ -1,1 +1,485 @@
 @charset "UTF-8";
+
+/*common*/
+
+.logo{
+	margin-top:-85px;
+	margin-left:0px;
+	position: absolute;
+	height:110px;
+	z-index: 2;
+}
+
+.titlebar{
+	margin-top:10px;
+	position:relative;
+	height:80px;
+	width:600px;
+	z-index: 1;
+}
+
+.edit{
+	margin-left:250px;
+	margin-top;-200px;
+	position:absolute;
+	z-index: 1;
+}
+
+.search{
+
+}
+
+h2{
+	text-align:center;
+}
+
+.h2{
+	position:relative;
+	width:200px;
+	z-index: 1;
+}
+
+.background {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+p{
+	color:#00BFFF;
+}
+
+.button{
+	width:0%;
+	text-align:center;
+	margin-left:600px;
+	position:relative;
+}
+
+.buttonsize{
+	width:130px;
+	margin-top:50px;
+}
+
+.logoutbutton{
+	position:relative;
+	z-index: 1;
+	width:150px;
+	height:50px;
+}
+
+
+
+/*Menu*/
+	*{
+		/* 初期化 */
+		margin:0px;padding:0px;
+	}
+
+.searchpage{
+	width: 300px;
+	height: 300px;
+	position:relative;
+	top:50px;
+	left:50px;
+	z-index: 1;
+}
+
+.titlepage{
+	width: 300px;
+	height: 300px;
+	position:relative;
+	bottom:150px;
+	left:490px;
+	z-index: 1;
+}
+
+.editpage{
+	width: 300px;
+	height: 300px;
+	position:absolute;
+	bottom:0px;
+	right:10px;
+	z-index: 1;
+}
+
+/*Search*/
+.navigation{
+	margin-left:30px;
+	margin-bottom:10px;
+	width:300px;
+}
+
+div.blockA{
+	float:left;
+	width:40%;
+	margin:0 0 0 0;
+}
+
+div.blockB{
+	text-align:center;
+	width:0%;
+	margin-top:100px;
+}
+
+div.blockC{
+	width:0%;
+	margin-top:-80px;
+	margin-left:810px;
+}
+
+.line{
+	/*display:inline;*/
+}
+
+a:link{
+	color:#1E90FF;
+}
+
+a:visited{
+	color:#1E90FF;
+}
+
+a:hover{
+	color:#1E90FF;
+}
+a:active{
+	color:#1E90FF;
+}
+
+.wordsearch{
+	margin-bottom:10px;
+	width:20em;
+}
+
+.andor{
+	margin-top:10px;
+}
+
+
+
+/*Result*/
+.searchresult{
+	 position:relative;
+}
+
+.r_qb{
+	position:relative;
+	width:1000px;
+	margin-left:170px;
+	margin-bottom:0px;
+}
+
+.r_question{
+	position: absolute;
+	margin-left:-850px;
+	margin-top:25px;
+	font-size:18px;
+	border:none;
+}
+
+.r_pageview{
+	position: absolute;
+	margin-left:-190px;
+	margin-top:100px;
+	font-size:18px;
+	color:#FFFFFF;
+	background-color:transparent;
+	border:none;
+}
+
+.hitnumber{
+	position:relative;
+	margin-left:170px;
+}
+
+
+
+/*Detail*/
+.d_qb{
+	position:relative;
+	width:1000px;
+}
+
+.d_ab{
+	position:relative;
+	width:1000px;
+}
+
+.d_question{
+	position: absolute;
+	margin-left:150px;
+	margin-top:30px;
+	font-size:18px;
+	border:none;
+}
+
+.d_pageview{
+	position: absolute;
+	font-size:18px;
+	font-weight:bold;
+	color:#00BFFF;
+	background-color:transparent;
+	border:none;
+	margin-left:250px;
+	margin-top:-30px;
+}
+
+.d_date{
+	position: absolute;
+	background-color:transparent;
+	border:none;
+	font-size:18px;
+	font-weight:bold;
+	color:#00BFFF;
+	margin-left:950px;
+	margin-top:-45px;
+}
+
+.d_answer{
+	position: absolute;
+	margin-left:150px;
+	margin-top:30px;
+	font-size:18px;
+	border:none;
+}
+
+.d_answerer{
+	position: absolute;
+	background-color:transparent;
+	border:none;
+	font-size:18px;
+	font-weight:bold;
+	color:#00BFFF;
+	margin-left:950px;
+	margin-top:-45px;
+}
+
+
+
+/*Login*/
+.login{
+	width: 300px;
+	height:100px;
+	position:relative;
+	left:600px;
+	top:20px
+}
+
+.logintext{
+	width: 300px;
+	height:100px;
+	position:relative;
+	left:580px;
+	top:50px
+}
+
+
+
+/*Edit*/
+.henshu{
+	width: 300px;
+	height:100px;
+	position:relative;
+	left:625px;
+	top:20px
+	z-index: 1;
+}
+
+.registpage{
+	width: 100px;
+	height: 100px;
+	position:relative;
+	top:100px;
+	left:270px;
+	z-index: 1;
+}
+
+.udsearchpage{
+	width: 100px;
+	height: 0px;
+	position:relative;
+	top:0px;
+	left:850px;
+	z-index: 1;
+}
+
+
+
+
+/*Regist*/
+
+.registbutton{
+	width: 300px;
+	height:100px;
+	position:relative;
+	left:650px;
+	top:20px;
+}
+
+input[type="text"] {
+  border: 1px solid #4689FF;
+}
+
+.regist_qb{
+    border: 2px solid #0a0;  /* 枠線 */
+    border-radius: 0.67em;   /* 角丸 */
+    padding: 0.5em;          /* 内側の余白量 */
+    background-color: snow;  /* 背景色 */
+    font-size: 1em;          /* 文字サイズ */
+    line-height: 1.2;        /* 行の高さ */
+
+	position:relative;
+	left:100px;
+	top:-20px
+}
+
+.regist_ab{
+    border: 2px solid #0a0;  /* 枠線 */
+    border-radius: 0.67em;   /* 角丸 */
+    padding: 0.5em;          /* 内側の余白量 */
+    background-color: snow;  /* 背景色 */
+    font-size: 1em;          /* 文字サイズ */
+    line-height: 1.2;        /* 行の高さ */
+
+	position:relative;
+	left:100px;
+	top:-15px
+}
+
+.regist_ql{
+	margin-left:100px;
+	margin-top:-43px;
+}
+
+
+.regist_al{
+	margin-left:100px;
+	margin-top:0px;
+}
+
+.regist_blockA{
+	float:left;
+	margin-top:-30px;
+}
+
+.regist_blockB{
+	text-align:right;
+	margin-top:-180px;
+	margin-right:80px;
+}
+
+/*Udsearch*/
+.udsearch_blockA{
+
+}
+
+.
+
+/*Udresult*/
+.Udresult_qb{
+	position:relative;
+	width:1000px;
+	margin-left:170px;
+	margin-bottom:0px;
+}
+
+.Udresult_question{
+	position: absolute;
+	margin-left:150px;
+	margin-top:30px;
+	font-size:18px;
+	border:none;
+}
+
+.Udresult_pageview{
+	position: absolute;
+	font-size:18px;
+	font-weight:bold;
+	color:#00BFFF;
+	background-color:transparent;
+	border:none;
+	margin-left:250px;
+	margin-top:-30px;
+}
+
+
+
+/*Udedit*/
+.ud{
+	width: 300px;
+	height:100px;
+	position:relative;
+	left:580px;
+	top:-20px
+}
+
+.koushinbutton{
+	width: 300px;
+	height:100px;
+	position:relative;
+	left:470px;
+	top:20px;
+}
+
+.sakujyobutton{
+	width: 300px;
+	height:100px;
+	position:relative;
+	left:810px;
+	top:-79px;
+}
+
+input[type="text"] {
+  border: 1px solid #4689FF;
+}
+
+.box{
+    border: 2px solid #0a0;  /* 枠線 */
+    border-radius: 0.67em;   /* 角丸 */
+    padding: 0.5em;          /* 内側の余白量 */
+    background-color: snow;  /* 背景色 */
+    font-size: 1em;          /* 文字サイズ */
+    line-height: 1.2;        /* 行の高さ */
+
+	position:relative;
+	left:100px;
+	top:-20px
+}
+
+.bx{
+    border: 2px solid #0a0;  /* 枠線 */
+    border-radius: 0.67em;   /* 角丸 */
+    padding: 0.5em;          /* 内側の余白量 */
+    background-color: snow;  /* 背景色 */
+    font-size: 1em;          /* 文字サイズ */
+    line-height: 1.2;        /* 行の高さ */
+
+	position:relative;
+	left:100px;
+	top:-15px
+}
+
+.bun{
+	margin-left:100px;
+	margin-top:-43px;
+}
+
+
+.bn{
+	margin-left:100px;
+	margin-top:0px;
+}
+
+.regist_blockA{
+	float:left;
+	margin-top:-30px;
+}
+
+.regist_blockB{
+	text-align:right;
+	margin-top:-180px;
+	margin-right:80px;
+}
