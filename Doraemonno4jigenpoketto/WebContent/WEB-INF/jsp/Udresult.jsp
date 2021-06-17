@@ -3,36 +3,35 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8">
-		<title>DOJO Q&amp;A集</title>
-	</head>
-	<body>
-		<h1>DOJO Q&amp;A集</h1>
-			<p><a href="/Doraemonno4jigenpoketto/LoginServlet">ログアウト</a></p>
+<link href='../../css/common.css' rel='stylesheet'>
+<head>
+<meta charset="UTF-8">
+<title>DOJO Q&amp;A集</title>
+</head>
+<body>
+<div class="titlebar">
+<img src="../../image/Udresult/帯.png" class="titlebar">
+<h1><a href="../../src/servlet/Doraemonno4jigenpoketto/MenuServlet"><img src="../../image/Udresult/ロゴ.png" alt="DOJO Q&A集" class="logo"></a></h1>
 
-		<h2>更新・削除用検索結果画面</h2>
+         <div class="logoutbutton">
+           <a href="../../src/servlet/MenuServlet.java"><img src="../../image/Udresult/ログアウトボタン.png" alt="ログアウト" class="logoutbutton"></a>
+         </div>
 
-		<!--ヒット数表示-->
-		<p><c:out value="${counter.count}"/>件ヒットしました。</p>
+<h2><img src="../../image/Udresult/更新・削除用検索結果画面.png" alt="更新・削除用検索結果画面" class="h2"></h2>
 
-		<!--質問文-->
-		<c:forEach var="e" items="${cardList}">
-			<form method="POST" action="/Doraemonno4jigenpoketto/UdresultServlet">
-				<ul>
-					<li>
-						<input type="hidden" name="QUESTION_ID" value="${e.question_id}">
-						<input type="hidden" name="QUESTION" value="${e.question}">
-						<div>
-						質問文："${e.question}"
-						閲覧数："${e.pageview}"
-						</div>
-						<input type="submit" name="SUBMIT" value="更新・削除">
-					</li>
+<!--ヒット数表示-->
+<p class="hitnumber"><b>"e"件ヒットしました。</b></p>
 
-				</ul>
-			</form>
-		</c:forEach>
+<!--質問文-->
+	<c:forEach var="e" items="${quastion}">
+		<form method="POST" action="UdeditServlet.java">
+		<div class="searchresult">
+				<input type="image" src="../../image/Udresult/検索結果の枠.png" class="Udresult_qb">
+				<input type="text" name="question" value=${e.question} class="Udresult_question" readonly>
+				<input type="text" name="pageview" value="閲覧数："+${e.pageview}; class="Udresult_pageview" readonly>
 
-	</body>
+		</form>
+	</c:forEach>
+
+</body>
 </html>

@@ -2,18 +2,19 @@
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
+<link href='../../css/common.css' rel='stylesheet'>
 <head>
 <meta charset="UTF-8">
 <title>DOJO Q&amp;A集</title>
 </head>
 <body>
 
-<hr><!--リンク先注意-->
-<p><a href="/Doraemonno4jigenpoketto/MenuServlet">DOJO Q &nbsp; A集</a></p>
-<p><a href="/Doraemonno4jigenpoketto/LoginServlet">編集(事務局用)</a></p>
-<p><a href="/Doraemonno4jigenpoketto/SearchServlet">検索</a></p>
+<img src="../../image/Detail/帯.png" class="titlebar">
+<h1><a href="../../src/servlet/Doraemonno4jigenpoketto/MenuServlet"><img src="../../image/Detail/ロゴ.png" alt="DOJO Q&A集" class="logo"></a></h1>
+<a href="../../src/servlet/Doraemonno4jigenpoketto/LoginServlet" class="edit">編集</a>
+<a href="../../src/servlet/Doraemonno4jigenpoketto/SearchServlet" class="search">検索</a>
 
-<h1>検索</h1>
+<h2><img src="../../image/Search/検索画面.png" alt="検索画面" class="h2"></h2>
 
 
 <script type="text/javascript">
@@ -45,17 +46,24 @@
     }
 </script>
 
+<<<<<<< HEAD
+
+<div class="blockA">
+  <div id="menuA">
+=======
 <script src="search.js"></script>
 
 <form method="POST" action="/Doraemonno4jigenpoketto/SearchServlet">
 <div id="menuA">
+>>>>>>> 486a939cc3ed9b59d10a737bd1309ba3dbc5fa28
     <dl>
         <!-- menu1 -->
         <dt>
-            <a href="javascript:void(0)" id="closer_1" onclick="openchild('opener_1', 'closer_1')">&nbsp;パーソナルスキルコース</a>
+            <a href="javascript:void(0)" id="closer_1" onclick="openchild('opener_1', 'closer_1')"><img src="../../image/Search/パーソナルスキルコース.png" alt="パーソナルスキルコース" class="navigation"></a>
+
         </dt>
         <ul id="opener_1" style="display:none;">
-         <li><a href="javascript:void(0)" class="line" id="closer_101" onclick="openchild('opener_101', 'closer_101')">ビジネスマナー・コミュニケーション</a>
+         <li><div class="line"><a href="javascript:void(0)" class="line" id="closer_101" onclick="openchild('opener_101', 'closer_101')">ビジネスマナー・コミュニケーション</a></div>
            <ul id="opener_101" style="display:none;">
             <li><div id = "keigo"><a href="javascript:void(0)" class="line">敬語</a></div></li>
             <li><a href="javascript:void(0)" class="line">ビジネスマナー</a></li>
@@ -93,7 +101,7 @@
 
         <!-- menu2 -->
         <dt>
-            <a href="javascript:void(0)" id="closer_2" onclick="openchild('opener_2', 'closer_2')">&nbsp;IT基礎コース</a>
+            <a href="javascript:void(0)" id="closer_2" onclick="openchild('opener_2', 'closer_2')"><img src="../../image/Search/IT基礎コース.png" alt="IT基礎コース" class="navigation"></a>
         </dt>
         <ul id="opener_2" style="display:none;">
          <li><a href="javascript:void(0)" class="line" id="closer_201" onclick="openchild('opener_201', 'closer_201')">プログラミング</a>
@@ -176,7 +184,7 @@
 
         <!-- menu3 -->
         <dt>
-            <a href="javascript:void(0)" id="closer_3" onclick="openchild('opener_3', 'closer_3')">&nbsp;Java基礎コース</a>
+            <a href="javascript:void(0)" id="closer_3" onclick="openchild('opener_3', 'closer_3')"><img src="../../image/Search/Java基礎コース.png" alt="Java基礎コース" class="navigation"></a>
         </dt>
         <ul id="opener_3" style="display:none;">
          <li><a href="javascript:void(0)" class="line" id="closer_301" onclick="openchild('opener_301', 'closer_301')">Javaプログラミング</a>
@@ -241,7 +249,7 @@
 
         <!-- menu4 -->
         <dt>
-            <a href="javascript:void(0)" id="closer_4" onclick="openchild('opener_4', 'closer_4')">&nbsp;Webアプリ開発演習コース</a>
+            <a href="javascript:void(0)" id="closer_4" onclick="openchild('opener_4', 'closer_4')"><img src="../../image/Search/Webアプリ開発演習コース.png" alt="Webアプリ開発演習コース" class="navigation"></a>
         </dt>
         <ul id="opener_4" style="display:none;">
          <li><a href="javascript:void(0)" class="line" id="closer_401" onclick="openchild('opener_401', 'closer_401')">導入</a>
@@ -314,7 +322,7 @@
 
         <!-- menu5 -->
         <dt>
-            <a href="javascript:void(0)" id="closer_5" onclick="openchild('opener_5', 'closer_5')">&nbsp;ドリル</a>
+            <a href="javascript:void(0)" id="closer_5" onclick="openchild('opener_5', 'closer_5')"><img src="../../image/Search/ドリル.png" alt="ドリル" class="navigation"></a>
         </dt>
         <ul id="opener_5" style="display:none;">
          <li><a href="javascript:void(0)" class="line" id="closer_501" onclick="openchild('opener_501', 'closer_501')">アルゴリズムドリル</a>
@@ -339,7 +347,7 @@
 
         <!-- menu6 -->
         <dt>
-            <a href="javascript:void(0)" id="closer_6" onclick="openchild('opener_6', 'closer_6')">&nbsp;その他</a>
+            <a href="javascript:void(0)" id="closer_6" onclick="openchild('opener_6', 'closer_6')"><img src="../../image/Search/その他.png" alt="その他" class="navigation"></a>
         </dt>
         <ul id="opener_6" style="display:none;">
          <li><a href="javascript:void(0)" class="line" id="closer_601" onclick="openchild('opener_601', 'closer_601')">その他</a>
@@ -350,32 +358,40 @@
        </ul>
 
     </dl>
+  </div>
 </div>
 
 
 
-<input type="text"placeholder="検索したいワード" name="QUESTION1"> <br>
-<input type="text" name="QUESTION2"> <br>
-<input type="text" name="QUESTION3"> <br><br>
+<div class="blockB">
+    <input type="text"placeholder="検索したいワード" name="QUESTION1" class="wordsearch"> <br>
+    <input type="text" name="QUESTION2" class="wordsearch"> <br>
+    <input type="text" name="QUESTION3" class="wordsearch"> <br>
+</div>
 
+
+<div class="blockC">
 <!--プルダウンメニュー name= "andor" "and1" "or1"-->
-<select name= "andor1">
- <option value="and1">AND</option>
- <option value="or1">OR</option>
-</select>
+ <select name= "andor1" class="andor">
+  <option value="and1">AND</option>
+  <option value="or1">OR</option>
+ </select>
 
 <br>
 
-<select name= "andor2">
- <option value="and2">AND</option>
- <option value="or2">OR</option>
-</select>
+ <select name= "andor2" class="andor">
+  <option value="and2">AND</option>
+  <option value="or2">OR</option>
+ </select>
+</div>
+
 
 <br>
-<br
->
-<!--name="search"-->
-<input type="submit" name="SUBMIT" value="検索">
-</form>
+<br>
+<div class="button">
+  <!--name="search"-->
+  <input type="image" src="../../image/Search/検索ボタン.png" name="search" alt="検索" class="buttonsize">
+</div>
+
 </body>
 </html>

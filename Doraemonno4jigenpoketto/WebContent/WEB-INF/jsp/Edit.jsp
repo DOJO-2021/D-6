@@ -2,27 +2,58 @@
     pageEncoding="UTF-8"%>
 <!DOCTYPE html><!--Edit.jsp-->
 <html>
-
+<link href="../../css/common.css" rel="stylesheet">
 <head>
 <meta charset="UTF-8">
-<title>DOJO Q &nbsp; A集</title>
-</head>
+<title>DOJO Q&A集</title>
 
+
+
+</head>
 
 <body>
 
-<hr><!--リンク先注意-->
 
-<p>DOJO Q &nbsp; A集  <!--タイトルをクリックしても、メニュー画面に遷移しない--></p>
-<p><a href="/Doraemonno4jigenpoketto/LoginServlet">ログアウト</a> </p>
 
-<h1>編集</h1>
+<img src="../../image/Edit/帯.png" class="titlebar">
+<h1><a href="../../src/servlet/Doraemonno4jigenpoketto/MenuServlet"><img src="../../image/Edit/ロゴ.png" alt="DOJO Q&A集" class="logo"></a></h1>
 
-<!--リンク先注意！ 登録画面と更新・削除検索画面に遷移-->
-<ul class="">
-	<li><a href="/Doraemonno4jigenpoketto/RegistServlet">登録 </a></li>
-	<li><a href="/Doraemonno4jigenpoketto/UdsearchServlet">更新・削除</a> </li>
-</ul>
+  <div>
+   <a href="../../src/servlet/MenuServlet.java"><img src="../../image/Edit/ログアウトボタン.png" alt="ログアウト" width="150" height="50" class="logoutbutton"></a>
+  </div>
 
+<h2><img src="../../image/Edit/編集画面.png" alt="編集画面" class="h2"></h2>
+
+
+
+
+<!--name="regist" name="ud" -->
+
+  <div class="registpage">
+   <a href="/Doraemonno4jigenpoketto/RegistServlet"><input type="image" src="../../image/Edit/登録.png" alt="登録" width="300" height="280" name="regist">
+  </div>
+
+  <div class="udsearchpage">
+   <a href="/Doraemonno4jigenpoketto/UdsearchServlet"><input type="image" src="../../image/Edit/更新削除.png" alt="更新・削除" width="300" height="280" name="ud">
+  </div>
+
+
+
+<canvas class="background"></canvas>
+<script src="../../js/menu.js"></script>
+
+<script>
+'use strict';
+
+window.onload = function() {
+  Particles.init({
+    selector: '.background',
+    sizeVariations: 200,
+    color: [
+      '#FF0000', '#00BFFF', '#FFFF00',
+    ]
+  });
+};
+</script>
 </body>
 </html>

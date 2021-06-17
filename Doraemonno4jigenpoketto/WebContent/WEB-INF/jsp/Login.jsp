@@ -2,28 +2,40 @@
     pageEncoding="UTF-8"%>
 <!DOCTYPE html><!--Login.jsp-->
 <html>
-
+<link href='../../css/common.css' rel='stylesheet'>
 <head>
 <meta charset="UTF-8">
-<title>DOJO Q &nbsp; A集</title>
+<title>DOJO Q&A集</title>
+
+
 </head>
 
 
 <body>
 
-<hr><!--リンク先注意-->
-<p><a href="/Doraemonno4jigenpoketto/MenuServlet">DOJO Q &nbsp; A集</a></p>
-<p><a href="/Doraemonno4jigenpoketto/LoginServlet">編集(事務局用)</a></p>
-<p><a href="/Doraemonno4jigenpoketto/SearchServlet">検索</a></p>
+<img src="../../image/Detail/帯.png" class="titlebar">
+<h1><a href="../../src/servlet/Doraemonno4jigenpoketto/MenuServlet"><img src="../../image/Detail/ロゴ.png" alt="DOJO Q&A集" class="logo"></a></h1>
+<a href="../../src/servlet/Doraemonno4jigenpoketto/LoginServlet" class="edit">編集</a>
+<a href="../../src/servlet/Doraemonno4jigenpoketto/SearchServlet" class="search">検索</a>
 
-<h1>ログイン</h1>
+
+
+
+<h2><img src="../../image/Login/ログイン画面.png" alt="ログイン" class="h2"></h2>
+
 
 <!--リンク先注意-->
-<form method="POST" action="/Doraemonno4jigenpoketto/LoginServlet" id="form">
-<input type="text"placeholder="ID" name="ID" required> <br>
-<input type="password"placeholder="Password" name="PW" required> <br><br>
+<form method="GET" action="Edit.jsp" id="form">
+
+  <div class=logintext>
+   <input type="text"placeholder="ID" name="ID"> <br><br>
+   <input type="password"placeholder="Password" name="PW"> <br><br>
+  </div>
+
 <!--name="LOGIN"-->
-<input type="submit" name="LOGIN" value="ログイン">
-</form>
+  <div class=button>
+   <input type="image" src="../../image/Login/ログインボタン.png" alt="ログイン" width="160" height="50" name="login">
+  </div>
+
 </body>
 </html>
