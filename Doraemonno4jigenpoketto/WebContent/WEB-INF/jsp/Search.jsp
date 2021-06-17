@@ -45,6 +45,8 @@
     }
 </script>
 
+<script src="search.js"></script>
+
 <form method="POST" action="/Doraemonno4jigenpoketto/SearchServlet">
 <div id="menuA">
     <dl>
@@ -55,7 +57,7 @@
         <ul id="opener_1" style="display:none;">
          <li><a href="javascript:void(0)" class="line" id="closer_101" onclick="openchild('opener_101', 'closer_101')">ビジネスマナー・コミュニケーション</a>
            <ul id="opener_101" style="display:none;">
-            <li><a href="javascript:void(0)" class="line">敬語</a></li>
+            <li><div id = "keigo"><a href="javascript:void(0)" class="line">敬語</a></div></li>
             <li><a href="javascript:void(0)" class="line">ビジネスマナー</a></li>
             <li><a href="javascript:void(0)" class="line">挨拶</a></li>
             <li><a href="javascript:void(0)" class="line">電話対応</a></li>

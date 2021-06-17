@@ -1,5 +1,9 @@
  'use strict';
+
 /*
-研修生用検索画面用のsearch.js
-Search.jspで大枠が出来ているので何かあれば追記していきます。
+リストメニュークリック時に検索カテゴリーにクリックされた項目が追加される機能
  */
+
+document.getElementById("keigo").onclick = function() {
+  document.getElementById("quest").innerHTML = "敬語" ;
+};
