@@ -13,15 +13,15 @@
 
 <body>
 
-<img src="../../image/Detail/帯.png" class="titlebar">
-<h1><a href="../../src/servlet/Doraemonno4jigenpoketto/MenuServlet"><img src="../../image/Detail/ロゴ.png" alt="DOJO Q&A集" class="logo"></a></h1>
+<img src="../../image/帯.png" class="titlebar">
+<h1><a href="../../src/servlet/Doraemonno4jigenpoketto/MenuServlet"><img src="../../image/ロゴ.png" alt="DOJO Q&A集" class="logo"></a></h1>
 <a href="../../src/servlet/Doraemonno4jigenpoketto/LoginServlet" class="edit">編集</a>
 <a href="../../src/servlet/Doraemonno4jigenpoketto/SearchServlet" class="search">検索</a>
 
 
 
 
-<h2><img src="../../image/Login/ログイン画面.png" alt="ログイン" class="h2"></h2>
+<h2><img src="../../image/ログイン画面.png" alt="ログイン" class="h2"></h2>
 
 
 <!--リンク先注意-->
@@ -34,7 +34,7 @@
 
 <!--name="LOGIN"-->
   <div class=button>
-   <input type="image" src="../../image/Login/ログインボタン.png" alt="ログイン" width="160" height="50" name="login">
+   <input type="image" src="../../image/ログインボタン.png" alt="ログイン" width="160" height="50" name="login">
   </div>
 
 </body>
