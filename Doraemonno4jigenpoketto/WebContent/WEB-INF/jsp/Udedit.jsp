@@ -10,8 +10,8 @@
 
 
 
-		<script src="js/common.js"></script>
-		<script src="js/udedit.js"></script>
+		<script src="/Doraemonno4jigenpoketto/js/common.js"></script>
+		<script src="/Doraemonno4jigenpoketto/js/udedit.js"></script>
 
 		 <script type="text/javascript">
 
@@ -50,19 +50,19 @@ function check(){
 
 <!--閲覧数・質問日・回答者・質問した年月日・登録者についての更新・削除-->
 
-<c:forEach var="e" items="${result}">
+<c:forEach var="e" items="${cardList}">
 	  <form method="POST" action="/Doraemonno4jigenpoketto/UdeditServlet">
  	<table>
 		<div class="regist_blockA">
 			<tr>
 				<p class="udedit_ql">質問文</p>
 
-				<textarea class ="udedit_qb" name="question" value="${e.question}" rows="7" cols="100" style="border:4px solid #4689FF" onMouseover="this.style.borderColor='#FFCC33'" onMouseout="this.style.borderColor='#4689FF'"></textarea>
+				<textarea class ="udedit_qb" name="QUESTION" value="${e.question}" rows="7" cols="100" style="border:4px solid #4689FF" onMouseover="this.style.borderColor='#FFCC33'" onMouseout="this.style.borderColor='#4689FF'">${e.question}</textarea>
 			</tr>
 			<tr>
 				<p class="udedit_al">回答文</p>
 
-				<textarea class="udedit_ab" name="answer" value="${e.answer}" rows="7" cols="100" style="border:4px solid #4689FF" onMouseover="this.style.borderColor='#FFCC33'" onMouseout="this.style.borderColor='#4689FF'"></textarea>
+				<textarea class="udedit_ab" name="ANSWER" value="${e.answer}" rows="7" cols="100" style="border:4px solid #4689FF" onMouseover="this.style.borderColor='#FFCC33'" onMouseout="this.style.borderColor='#4689FF'">${e.answer}</textarea>
 			</tr>
 		</div>
 
@@ -110,8 +110,10 @@ function check(){
         </optgroup>
       </select><br><br>
 
-     	 <select name="category_item" id="category_item" style="width:27em;">
-		<option value="">単元項目を選択してください</option>
+     	 <select name="CATEGORY_ITEM" id="category_item" style="width:27em;">
+     	 <c:forEach var="t" items="${tangen}">
+		<option value="${t.category_id}">${e.category_item}</option>
+		</c:forEach>
 						<!--パーソナルコース-->
 						<optgroup label="ビジネスマナー・コミュニケーション">
 							<option value="0101001">敬語</option>
@@ -305,17 +307,17 @@ function check(){
      	 </select><br><br>
 
 
-	閲覧数<input type="text" name="pageview" value="${e.pageview}" style="width:23em;"><br><br>
-	質問日<input type="text" name="date" value="${e.date}" style="width:23em;"><br><br>
-	回答者<input type="text" name="answerer" value="${e.answerer}" style="width:23em;"><br><br>
-	登録者<input type="text" name="registrant" value="${e.registrant}" style="width:23em;">
+	閲覧数<input type="text" name="PAGEVIEW" value="${e.pageview}" style="width:23em;"><br><br>
+	質問日<input type="text" name="DATE" value="${e.date}" style="width:23em;"><br><br>
+	回答者<input type="text" name="ANSWERER" value="${e.answerer}" style="width:23em;"><br><br>
+	登録者<input type="text" name="REGISTRANT" value="${e.registrant}" style="width:23em;">
 
- 	</table>
+ 	</table><input type="hidden" name="QUESTION_ID" value="${e.question_id}">
 			<div class=koushinbutton>
-				 <input type="image" src="/Doraemonno4jigenpoketto/image/更新ボタン.png" alt="更新" width="140" height="45" name="login">
+				 <input type="image" src="/Doraemonno4jigenpoketto/image/更新ボタン.png" alt="更新" width="140" height="45" name="SUBMIT" value="更新">
 			</div>
 			<div class=sakujyobutton>
-				 <input type="image" src="/Doraemonno4jigenpoketto/image/削除ボタン.png" alt="削除" width="140" height="45" name="login">
+				 <input type="image" src="/Doraemonno4jigenpoketto/image/削除ボタン.png" alt="削除" width="140" height="45" name="SUBMIT" value="削除">
 			</div>
     </form>
 </c:forEach>

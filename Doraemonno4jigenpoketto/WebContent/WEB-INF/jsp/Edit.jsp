@@ -30,11 +30,11 @@
 <!--name="regist" name="ud" -->
 
   <div class="registpage">
-   <a href="/Doraemonno4jigenpoketto/RegistServlet"><input type="image" src="/Doraemonno4jigenpoketto/image/登録.png" alt="登録" width="300" height="280" name="regist">
+   <a href="/Doraemonno4jigenpoketto/RegistServlet"><input type="image" src="/Doraemonno4jigenpoketto/image/登録.png" alt="登録" width="300" height="280" name="regist"></a>
   </div>
 
   <div class="udsearchpage">
-   <a href="/Doraemonno4jigenpoketto/UdsearchServlet"><input type="image" src="/Doraemonno4jigenpoketto/image/更新削除.png" alt="更新・削除" width="300" height="280" name="ud">
+   <a href="/Doraemonno4jigenpoketto/UdsearchServlet"><input type="image" src="/Doraemonno4jigenpoketto/image/更新削除.png" alt="更新・削除" width="300" height="280" name="ud"></a>
   </div>
 
 

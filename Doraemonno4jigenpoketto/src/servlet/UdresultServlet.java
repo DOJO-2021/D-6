@@ -11,7 +11,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import dao.CategoryDao;
 import dao.QaDao;
+import model.Category;
 import model.Qa;
 import model.Qaplus;
 
@@ -40,6 +42,12 @@ public class UdresultServlet extends HttpServlet {
 		List<Qaplus> cardList = qDao.select3(new Qa(question_id,null, "", 0, "", "",0,""));
 		// 全項目をリクエストスコープに格納する
 		request.setAttribute("cardList", cardList);
+
+		//カテゴリーidの取得
+		String category_item=request.getParameter("CATEGORY_ITEM");
+		CategoryDao cDao=new CategoryDao();
+		List<Category> tangen=cDao.select(new Category(0,0,0,category_item));
+		request.setAttribute("tangen", tangen);
 
 		// 結果ページにフォワードする
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/Udedit.jsp");

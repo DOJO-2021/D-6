@@ -20,7 +20,7 @@ public Category() {
 
 
 //引数のあるCategoryのコンストラクタ
-public Category(int course_id,int unit_id, int category_id,String category_item) {
+public Category(int course_id,int unit_id, int category_id, String category_item) {
 super();
 this.course_id=course_id;
 this.unit_id=unit_id;

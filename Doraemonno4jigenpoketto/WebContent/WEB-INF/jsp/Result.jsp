@@ -21,16 +21,17 @@
 <h2><img src="/Doraemonno4jigenpoketto/image/検索結果画面.png" alt="検索結果画面" class="h2"></h2>
 
 <!--ヒット数表示-->
-<p class="hitnumber"><b>"e"件ヒットしました。</b></p>
+<p class="hitnumber"><b><c:out value="${counter.count}"/>件ヒットしました。</b></p>
 
 <!--質問文-->
-	<c:forEach var="e" items="${quastion}">
-		<form method="POST" action="DetailServlet.java">
+	<c:forEach var="e" items="${cardList}">
+		<form method="GET" action="/Doraemonno4jigenpoketto/DetailServlet">
 
 			<div class="searchresult">
 				<input type="image" src="/Doraemonno4jigenpoketto/image/検索結果の枠.png" class="r_qb"><!--r_qb=ResultQuestionBox-->
-				<input type="text" name="question" value=${e.question} class="r_question" readonly>
-				<input type="text" name="pageview" value="閲覧数："+${e.pageview}; class="r_pageview" readonly>
+				<input type="text" name="QUESTION" value="${e.question}" class="r_question" readonly>
+				<input type="text" name="PAGEVIEW" value="閲覧数：${e.pageview}" class="r_pageview" readonly>
+				<input type="hidden" name="QUESTION_ID" value="${e.question_id}">
 
 
 			</div>
