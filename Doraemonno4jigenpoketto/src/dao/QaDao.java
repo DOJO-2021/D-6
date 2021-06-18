@@ -1,7 +1,6 @@
 package dao;
 
 import java.sql.Connection;
-import java.sql.Date;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -3549,7 +3548,9 @@ public class QaDao {
 
 				// SQL文を完成させる
 				if (param.getDate() != null) {
-					pStmt.setDate(1, (Date) param.getDate());
+					long timeInMilliSeconds = param.getDate().getTime();
+			        java.sql.Date date1 = new java.sql.Date(timeInMilliSeconds);
+					pStmt.setDate(1,date1);
 				}
 				else {
 					pStmt.setString(1, "%");
@@ -3650,7 +3651,9 @@ public class QaDao {
 
 						// SQL文を完成させる
 						if (param.getDate() != null) {
-							pStmt.setDate(1, (Date) param.getDate());
+							long timeInMilliSeconds = param.getDate().getTime();
+					        java.sql.Date date1 = new java.sql.Date(timeInMilliSeconds);
+							pStmt.setDate(1,date1);
 						}
 						else {
 							pStmt.setString(1, "%");

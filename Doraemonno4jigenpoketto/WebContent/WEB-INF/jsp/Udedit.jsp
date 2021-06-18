@@ -51,7 +51,7 @@ function check(){
 <!--閲覧数・質問日・回答者・質問した年月日・登録者についての更新・削除-->
 
 <c:forEach var="e" items="${cardList}">
-	  <form method="POST" action="/Doraemonno4jigenpoketto/UdeditServlet">
+	  <form name="frm" method="POST" action="/Doraemonno4jigenpoketto/UdeditServlet">
  	<table>
 		<div class="regist_blockA">
 			<tr>
@@ -314,10 +314,11 @@ function check(){
 
  	</table><input type="hidden" name="QUESTION_ID" value="${e.question_id}">
 			<div class=koushinbutton>
-				 <input type="image" src="/Doraemonno4jigenpoketto/image/更新ボタン.png" alt="更新" width="140" height="45" name="SUBMIT" value="更新">
+				<input type="hidden" name="clickAction" id="sendSubmit">
+				 <img src="/Doraemonno4jigenpoketto/image/更新ボタン.png" onclick="document.getElementById('sendSubmit').value = '更新';document.frm.submit();" alt="更新" width="140" height="45" >
 			</div>
 			<div class=sakujyobutton>
-				 <input type="image" src="/Doraemonno4jigenpoketto/image/削除ボタン.png" alt="削除" width="140" height="45" name="SUBMIT" value="削除">
+				 <img src="/Doraemonno4jigenpoketto/image/削除ボタン.png" onclick="document.getElementById('sendSubmit').value = '削除';document.frm.submit();" alt="削除" width="140" height="45" >
 			</div>
     </form>
 </c:forEach>

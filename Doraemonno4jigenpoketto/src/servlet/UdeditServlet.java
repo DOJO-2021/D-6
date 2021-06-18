@@ -62,7 +62,7 @@ public class UdeditServlet extends HttpServlet {
 
 		//更新を行う
 		QaDao QaDao=new QaDao();
-		if(request.getParameter("SUBMIT").equals("更新")) {
+		if(request.getParameter("clickAction").equals("更新")) {
 			if (QaDao.update(new Qa(question_id, date,answerer , category_id,question ,answer , pageview,regestant ))) {	// 更新成功
 				String result="updatesuccess";
 				request.setAttribute("result", new Result(result));
