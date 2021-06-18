@@ -3,7 +3,7 @@
 /*common*/
 
 .logo{
-	margin-top:-85px;
+	margin-top:-90px;
 	margin-left:0px;
 	position: absolute;
 	height:110px;
@@ -18,16 +18,18 @@
 	z-index: 1;
 }
 
-/*.edit{
+.edit{
+
 	margin-left:250px;
-	margin-top:-200px;
+	margin-top:-30px;
 	position:absolute;
-	z-index: 1;
+	z-index: 2;
 }
 
 .search{
 	margin-top:30px;
-}*/
+	z-index: 2;
+}
 
 h2{
 	text-align:center;
