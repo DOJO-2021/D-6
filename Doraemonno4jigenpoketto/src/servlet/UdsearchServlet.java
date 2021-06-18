@@ -75,7 +75,7 @@ public class UdsearchServlet extends HttpServlet {
         }
 		String answerer= request.getParameter("ANSWERER");
 		int category_id=0;
-		if(request.getParameter("CATEGORY_ITEM")==null) {
+		if(request.getParameter("CATEGORY_ITEM")==null || request.getParameter("CATEGORY_ITEM")=="") {
 		category_id=0;
 		}else {
 		category_id=Integer.parseInt(request.getParameter("CATEGORY_ITEM"));

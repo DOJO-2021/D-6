@@ -47,7 +47,7 @@
 </script>
 
 
-<script src="search.js"></script>
+<script src="/Doraemonno4jigenpoketto/js/search.js"></script>
 
 <form method="POST" action="/Doraemonno4jigenpoketto/SearchServlet">
 <div class="blockA">

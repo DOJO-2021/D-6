@@ -20,15 +20,17 @@
 <h2><img src="/Doraemonno4jigenpoketto/image/更新・削除用検索結果画面.png" alt="更新・削除用検索結果画面" class="h2"></h2>
 
 <!--ヒット数表示-->
-<p class="hitnumber"><b>"e"件ヒットしました。</b></p>
+<p class="hitnumber"><b><c:out value="${counter.count}"/>件ヒットしました。</b></p>
 
 <!--質問文-->
-	<c:forEach var="e" items="${quastion}">
-		<form method="POST" action="UdeditServlet.java">
+	<c:forEach var="e" items="${cardList}">
+		<form method="POST" action="/Doraemonno4jigenpoketto/UdresultServlet">
 		<div class="searchresult">
 				<input type="image" src="/Doraemonno4jigenpoketto/image/検索結果の枠.png" class="Udresult_qb">
-				<input type="text" name="question" value=${e.question}; class="Udresult_question" readonly>
-				<input type="text" name="pageview" value="閲覧数："+${e.pageview}; class="Udresult_pageview" readonly>
+				<input type="text" name="QUESTION" value="${e.question}" class="Udresult_question" readonly>
+				<input type="text" name="PAGEVIEW" value="閲覧数：${e.pageview}" class="Udresult_pageview" readonly>
+				<input type="hidden" name="QUESTION_ID" value="${e.question_id}">
+				<input type="hidden" name="CATEGORY_ITEM" value="${e.category_item}">
 		</div>
 		</form>
 	</c:forEach>

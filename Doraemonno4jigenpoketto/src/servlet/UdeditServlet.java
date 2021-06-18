@@ -40,16 +40,21 @@ public class UdeditServlet extends HttpServlet {
 		request.setCharacterEncoding("UTF-8");
 		int question_id=Integer.parseInt(request.getParameter("QUESTION_ID"));//質問ID
 		//質問日（49行まで）
-		SimpleDateFormat sdFormat = new SimpleDateFormat("yyyy/MM/dd");
-        Date date;
-		try {
-			date = sdFormat.parse(request.getParameter("DATE"));
-		} catch (ParseException e) {
+		SimpleDateFormat sdFormat = new SimpleDateFormat("yyyy-MM-dd");
+		Date date;
+		if(request.getParameter("DATE")=="" || request.getParameter("DATE")==null) {
 			date=null;
-			e.printStackTrace();
 		}
+		else {
+	    	try {date = sdFormat.parse(request.getParameter("DATE"));
+	   		}
+	    	catch (ParseException e) {
+	    		e.printStackTrace();
+	    		date=null;
+	    	}
+	    }
 		String answerer=request.getParameter("ANSWERER");//回答者
-		int category_id=Integer.parseInt(request.getParameter("CATEGORY_ID"));//単元項目ID
+		int category_id=Integer.parseInt(request.getParameter("CATEGORY_ITEM"));//単元項目ID
 		String question=request.getParameter("QUESTION");//質問内容
 		String answer=request.getParameter("ANSWER");//回答内容
 		int pageview=Integer.parseInt(request.getParameter("PAGEVIEW"));//閲覧数

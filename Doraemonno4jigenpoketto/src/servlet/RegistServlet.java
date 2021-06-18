@@ -29,7 +29,7 @@ public class RegistServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 
-	String result;
+
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// もしもログインしていなかったらログインサーブレットにリダイレクトする
 				HttpSession session = request.getSession();
@@ -39,8 +39,6 @@ public class RegistServlet extends HttpServlet {
 				}
 
 				// 登録ページにフォワードする
-				result="start";
-				request.setAttribute("result",new Result(result));
 				RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/Regist.jsp");
 				dispatcher.forward(request, response);
 			}
@@ -82,6 +80,7 @@ public class RegistServlet extends HttpServlet {
 		String question=request.getParameter("QUESTION");
 		String answer=request.getParameter("ANSWER");
 		String registrant=request.getParameter("REGISTRANT");
+		String result;
 
 		QaDao qDao=new QaDao();
 

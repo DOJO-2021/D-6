@@ -8,7 +8,7 @@
 <title>DOJO Q&amp;A集</title>
 <link href="/Doraemonno4jigenpoketto/css/common.css" rel="stylesheet">
 
-<script src="Udedit.js"></script>
+<script src="/Doraemonno4jigenpoketto/js/udedit.js"></script>
 </head>
 <body>
 
@@ -29,11 +29,11 @@
 
 				<p class="udsearch_ql">質問文</p><!--udsearch_ql=UdsearchQuestionLabel-->
 
-				<textarea class ="udsearch_qb" name="question" rows="7" cols="100" style="border:4px solid #4689FF" onMouseover="this.style.borderColor='#FFCC33'" onMouseout="this.style.borderColor='#4689FF'"></textarea><!--udsearch_qb=UdsearchQuestionBox-->
+				<textarea class ="udsearch_qb" name="QUESTION" rows="7" cols="100" style="border:4px solid #4689FF" onMouseover="this.style.borderColor='#FFCC33'" onMouseout="this.style.borderColor='#4689FF'"></textarea><!--udsearch_qb=UdsearchQuestionBox-->
 
 				<p class="udsearch_al">回答文</p><!--udsearch_al=UdsearchAnswerLabel-->
 
-				<textarea class="udsearch_ab" name="answer" rows="7" cols="100" style="border:4px solid #4689FF" onMouseover="this.style.borderColor='#FFCC33'" onMouseout="this.style.borderColor='#4689FF'"></textarea><!--udsearch_al=UdsearchAnswerBox-->
+				<textarea class="udsearch_ab" name="ANSWER" rows="7" cols="100" style="border:4px solid #4689FF" onMouseover="this.style.borderColor='#FFCC33'" onMouseout="this.style.borderColor='#4689FF'"></textarea><!--udsearch_al=UdsearchAnswerBox-->
 
 		</div>
 		<div class="udsearch_blockB" style="float:right;">
@@ -80,8 +80,10 @@
         </optgroup>
       </select><br><br>
 
-     	 <select name="category_item" id="category_item" style="width:27em;">
-		<option value="">単元項目を選択してください</option>
+
+
+     	 <select name="CATEGORY_ITEM" id="category_item" style="width:27em;">
+		<option value="0">単元項目を選択してください</option>
 						<!--パーソナルコース-->
 						<optgroup label="ビジネスマナー・コミュニケーション">
 							<option value="0101001">敬語</option>
@@ -278,7 +280,7 @@
 
 		<input type="text" placeholder="回答者" name="ANSWERER" id="answerer" style="width:26em;"> <br><br>
 
-		<input type="text" placeholder="登録者" name="REGISTANT" id="registant" style="width:26em;">
+		<input type="text" placeholder="登録者" name="REGISTRANT" id="registant" style="width:26em;">
 
 		</div>
 

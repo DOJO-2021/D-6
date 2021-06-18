@@ -9,7 +9,7 @@
 <title>DOJO Q&amp;A集</title>
 
 
- <script src="js/udedit.js"></script>
+ <script src="/Doraemonno4jigenpoketto/js/udedit.js"></script>
 
  <script type="text/javascript">
 
@@ -41,7 +41,7 @@ function check(){
         </div>
 
         <div class="logo">
-          <img src="/Doraemonno4jigenpoketto/image/ロゴ.png" alt="DOJO Q&A集" width="180" height="80"></a>
+          <img src="/Doraemonno4jigenpoketto/image/ロゴ.png" alt="DOJO Q&A集" width="180" height="80">
         </div>
 
          <div class="logoutbutton">
@@ -117,8 +117,7 @@ function check(){
 					</select><br><br>
 
 
-
-					<select name="category" id="category" style="width:27em;">
+					<select name="CATEGORY_ITEM" id="category_item" style="width:27em;">
 						<option value="">単元項目を選択してください</option>
 						<!--パーソナルコース-->
 						<optgroup label="ビジネスマナー・コミュニケーション">
@@ -311,16 +310,18 @@ function check(){
 						</optgroup>
 					</select><br><br>
 
-				<input type="date" name="calendar" max="9999-12-31" style="width:27em;"><br><br>
+				<input type="date" name="CALENDAR" max="9999-12-31" style="width:27em;"><br><br>
 
-			    <input type="text" placeholder="回答者" name="answerer" id="answerer" style="width:26em;"> <br><br>
+			    <input type="text" placeholder="回答者" name="ANSWERER" id="answerer" style="width:26em;"> <br><br>
 
-			    <input type="text" placeholder="登録者" name="registant" id="registant" style="width:26em;">
+			    <input type="text" placeholder="登録者" name="REGISTRANT" id="registant" style="width:26em;">
 
 		</div>
 
 			<div class=registbutton>
-				 <input type="image" src="/Doraemonno4jigenpoketto/image/登録ボタン.png" alt="登録" width="140" height="45" name="login">
+				 <input type="image" src="/Doraemonno4jigenpoketto/image/登録ボタン.png" alt="登録" width="140" height="45" name="SUBMIT" value="登録">
+				 <input type="submit" name="SUBMIT" value="保存">
+				 <input type="submit" name="SUBMIT" value="保存編集">
 			</div>
 
 
