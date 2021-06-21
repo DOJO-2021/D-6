@@ -11,10 +11,10 @@
 	</head>
 	<body>
 
-		<img src="/Doraemonno4jigenpoketto/image/帯.png" class="titlebar">
-		<!-- <h1><a href="/Doraemonno4jigenpoketto/MenuServlet"><img src="/Doraemonno4jigenpoketto/image/ロゴ.png" alt="DOJO Q&A集" class="logo"></a></h1>-->
-		<a href="/Doraemonno4jigenpoketto/LoginServlet" class="edit">編集</a>
-		<a href="/Doraemonno4jigenpoketto/SearchServlet" class="search">検索</a>
+		<div><img src="/Doraemonno4jigenpoketto/image/帯.png" class="titlebar"></div>
+<div><a href="/Doraemonno4jigenpoketto/MenuServlet"><img src="/Doraemonno4jigenpoketto/image/ロゴ.png" alt="DOJO Q&A集" class="logo"></a></div>
+<div><a href="/Doraemonno4jigenpoketto/LoginServlet" class="edit">編集</a></div>
+<div><a href="/Doraemonno4jigenpoketto/SearchServlet" class="search">検索</a></div>
 
 
 		<h2><img src="/Doraemonno4jigenpoketto/image/詳細画面.png" alt="詳細画面" class="h2"></h2>

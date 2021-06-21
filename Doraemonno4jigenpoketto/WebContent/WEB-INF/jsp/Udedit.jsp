@@ -34,12 +34,9 @@ function check(){
 </head>
 <body>
 
-<div class="titlebar">
-<h1><img src="/Doraemonno4jigenpoketto/image/帯.png" class="titlebar"></h1>
-        </div>
+<div><img src="/Doraemonno4jigenpoketto/image/帯.png" class="titlebar"></div>
+<div><img src="/Doraemonno4jigenpoketto/image/ロゴ.png" alt="DOJO Q&A集" class="logo"></div>
 
-
-          <img src="/Doraemonno4jigenpoketto/image/ロゴ.png" alt="DOJO Q&A集" class="logo">
 
 
          <div class="logoutbutton">

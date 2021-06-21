@@ -14,6 +14,8 @@
 <div><a href="/Doraemonno4jigenpoketto/LoginServlet" class="edit">編集</a></div>
 <div><a href="/Doraemonno4jigenpoketto/SearchServlet" class="search">検索</a></div>
 
+
+
 <h2><img src="/Doraemonno4jigenpoketto/image/検索画面.png" alt="検索画面" class="h2"></h2>
 
 
@@ -34,13 +36,13 @@
             parent=ns6 ? document.getElementById(parentObj).style : document.all(parentObj).style;
             if (child.display=="none") {
                 child.display="block";
-                child.backgroundColor="white";
-                parent.backgroundColor="orange";
-                parent.color="white";
+                child.backgroundColor="";
+                parent.backgroundColor="";
+                parent.color="#00BFFF";
             } else {
                 child.display="none";
-                parent.backgroundColor="#eeeeee";
-                parent.color="black";
+                parent.backgroundColor="";
+                parent.color="#00BFFF";
             }
         }
     }
@@ -60,7 +62,7 @@
 
         </dt>
         <ul id="opener_1" style="display:none;">
-         <li><div class="line"><a href="javascript:void(0)" class="line" id="closer_101" onclick="openchild('opener_101', 'closer_101')">ビジネスマナー・コミュニケーション</a></div>
+         <li id="opener_1" style="display:none;"><div class="line"><a href="javascript:void(0)" class="line" id="closer_101" onclick="openchild('opener_101', 'closer_101')">ビジネスマナー・コミュニケーション</a></div>
            <ul id="opener_101" style="display:none;">
             <li><a href="javascript:void(0)" onclick="add(this.innerHTML);" class="line">敬語</a></li>
             <li><a href="javascript:void(0)" onclick="add(this.innerHTML);" class="line">ビジネスマナー</a></li>
