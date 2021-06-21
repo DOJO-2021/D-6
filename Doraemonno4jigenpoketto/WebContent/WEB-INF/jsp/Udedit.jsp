@@ -15,7 +15,7 @@
 
 		 <script type="text/javascript">
 
- <!-- 更新・削除時の確認をダイアログボックスで行う
+ 更新・削除時の確認をダイアログボックスで行う
 function check(){
 
 	if(window.confirm('実行してよろしいですか？')){ // 確認ダイアログを表示
@@ -29,7 +29,7 @@ function check(){
 
 	}
 
-}-->
+}
 </script>
 </head>
 <body>
@@ -323,8 +323,37 @@ function check(){
 			</div>
     </form>
 </c:forEach>
-
+ <c:choose>
+    <c:when test="${result.result != null}">
+//更新の成功・失敗判定
+	<c:choose>
+	 <c:when test="${result.result == 'updatesuccess'}">
+	 	<script type="text/javascript">if(window.confirm("更新成功です!検索画面に戻りますか？"){
+	 		window.location.href="http://localhost:8080/Doraemonno4jigenpoketto/UdsearchServlet";
+	 	}else{
+	 		window.alert("続けます");
+	 	}
+	 	</script>
+	 </c:when>
+	 <c:otherwise>
+ 	  <script type="text/javascript">window.alert("更新失敗です"); </script>
+	 </c:otherwise>
+	</c:choose>
+//更新の成功・失敗判定
+    <c:choose>
+	 <c:when test="${result.result == 'deletesuccess'}">
+	 	<script type="text/javascript">if(window.confirm("削除成功です!検索画面に戻りますか？"){
+	 		window.location.href="http://localhost:8080/Doraemonno4jigenpoketto/UdsearchServlet";
+	 	}else{
+	 		window.alert("続けます");
+	 	}
+	 	</script>
+	 </c:when>
+	 <c:otherwise>
+ 	  <script type="text/javascript">window.alert("削除失敗です"); </script>
+	 </c:otherwise>
+	</c:choose>
+	</c:when>
+  </c:choose>
 </body>
-
-
 </html>

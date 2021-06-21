@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <link href="/Doraemonno4jigenpoketto/css/common.css" rel="stylesheet">
@@ -325,9 +326,20 @@ function check(){
 				 <input type="submit" name="SUBMIT" value="保存">
 				 <input type="submit" name="SUBMIT" value="保存編集">
 			</div>
-
-
 		</form>
 	</nav>
+	 <c:choose>
+    <c:when test="${result.result != null}">
+
+	<c:choose>
+	 <c:when test="${result.result == 'success'}">
+	 	<script type="text/javascript">window.alert("登録成功です");</script>
+	 </c:when>
+	 <c:otherwise>
+ 	  <script type="text/javascript">window.alert("登録失敗です"); </script>
+	 </c:otherwise>
+	</c:choose>
+	</c:when>
+  </c:choose>
 </body>
 </html>
