@@ -4105,7 +4105,7 @@ public class QaDao {
 
 				// SQL文を準備する
 				String sql = "select Q.QUESTION_ID, Q.DATE, Q.ANSWERER,  Q.CATEGORY_ID, CO.COURSE, U.UNIT, \r\n"
-						+ "CA.CATEGORY_ITEM, U.TEXTBOOK, Q.QUESTION, Q.ANSWER, Q.PAGEVIEW, Q_FILENAME, Q.REGISTRANT from \r\n"
+						+ "CA.CATEGORY_ITEM, U.TEXTBOOK, Q.QUESTION, Q.ANSWER, Q.PAGEVIEW, Q.FILENAME, Q.REGISTRANT from \r\n"
 						+ "((QASAVE1 as Q inner join CATEGORY as CA on Q.CATEGORY_ID=CA.CATEGORY_ID) \r\n"
 						+ "inner join UNIT as U on CA.COURSE_ID=U.COURSE_ID and CA.UNIT_ID=U.UNIT_ID) \r\n"
 						+ "inner join COURSE as CO on CA.COURSE_ID=CO.COURSE_ID \r\n"
@@ -4159,6 +4159,66 @@ public class QaDao {
 			// 結果を返す
 			return cardListplus;
 		}
+
+
+		//保存編集用カウント
+		// 引数paramで検索項目を指定し、検索結果のリストを返す
+		public List<Qacount> selectsavecount(Qaall param) {
+			Connection conn = null;
+			List<Qacount> cardListplus = new ArrayList<Qacount>();
+
+			try {
+				// JDBCドライバを読み込む
+				Class.forName("org.h2.Driver");
+
+				// データベースに接続する
+				conn = DriverManager.getConnection("jdbc:h2:file:C:/pleiades/workspace/D-6/Doraemonno4jigenpoketto/database", "sa", "sa");
+
+				// SQL文を準備する
+				String sql = "select COUNT(Q.QUESTION_ID) AS COUNTER from "
+						+ "((QA1 as Q inner join CATEGORY as CA on Q.CATEGORY_ID=CA.CATEGORY_ID) "
+						+ "inner join UNIT as U on CA.COURSE_ID=U.COURSE_ID and CA.UNIT_ID=U.UNIT_ID) "
+						+ "inner join COURSE as CO on CA.COURSE_ID=CO.COURSE_ID ";
+				PreparedStatement pStmt = conn.prepareStatement(sql);
+
+				// SQL文を完成させる
+				// SQL文を実行し、結果表を取得する
+				ResultSet rs = pStmt.executeQuery();
+
+				// 結果表をコレクションにコピーする
+				while (rs.next()) {
+					Qacount card = new Qacount(
+					rs.getInt("COUNTER")
+					);
+					cardListplus.add(card);
+				}
+			}
+			catch (SQLException e) {
+				e.printStackTrace();
+				cardListplus = null;
+			}
+			catch (ClassNotFoundException e) {
+				e.printStackTrace();
+				cardListplus = null;
+			}
+			finally {
+				// データベースを切断
+				if (conn != null) {
+					try {
+						conn.close();
+					}
+					catch (SQLException e) {
+						e.printStackTrace();
+						cardListplus = null;
+					}
+				}
+			}
+
+			// 結果を返す
+			return cardListplus;
+		}
+
+
 
 	//更新処理
 	// 引数cardで指定されたレコードを更新し、成功したらtrueを返す

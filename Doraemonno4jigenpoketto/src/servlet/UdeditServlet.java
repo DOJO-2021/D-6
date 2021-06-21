@@ -76,7 +76,7 @@ public class UdeditServlet extends HttpServlet {
 		System.out.println(filename);
 
 		if (part.getSize()!=0) {
-			String path="C:/pleiades/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/simpleBC/upload";
+			String path="C:/pleiades/workspace/D-6/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/Doraemonno4jigenpoketto/upload";
 			//実際にファイルが保存されている場所の確認、ターミナルから確認
 			System.out.println(path);
 			//写真の登録処理
@@ -161,6 +161,45 @@ public class UdeditServlet extends HttpServlet {
 						request.getRequestDispatcher("/WEB-INF/jsp/Udedit.jsp");
 				dispatcher.forward(request, response);
 			}
+		}else {
+			//更新を行う
+			QaDao qDao=new QaDao();
+			CategoryDao cDao=new CategoryDao();
+			if(request.getParameter("clickAction").equals("更新")) {
+				if (qDao.update(new Qaall(question_id, date,answerer , category_id,question ,answer , pageview,filename,registrant ))) {	// 更新成功
+					String result="updatesuccess";
+					request.setAttribute("result", new Result(result));
+					List<Qaplus> cardList1 = qDao.select3(new Qaall(question_id,null, "", 0, "", "",0,"",""));
+					// 全項目をリクエストスコープに格納する
+					request.setAttribute("cardList", cardList1);
+					List<Category> tangen1=cDao.select1(new Category(0,0,category_id,""));
+					request.setAttribute("tangen", tangen1);
+				}
+				else {			// 更新失敗
+					String result="updatefault";
+					request.setAttribute("result",new Result(result));
+					List<Qaplus> cardList1 = qDao.select3(new Qaall(question_id,null, "", 0, "", "",0,"",""));
+					// 全項目をリクエストスコープに格納する
+					request.setAttribute("cardList", cardList1);
+					List<Category> tangen1=cDao.select1(new Category(0,0,category_id,""));
+					request.setAttribute("tangen", tangen1);
+				}
+			}
+			//削除を行う
+			else {
+				if (qDao.delete(question_id)) {	// 削除成功
+					String result="deletesuccess";
+					request.setAttribute("result",new Result(result));
+				}
+				else {						// 削除失敗
+					String result="deletefault";
+					request.setAttribute("result", new Result(result));
+				}
+			}
+			//フォワード
+			RequestDispatcher dispatcher =
+					request.getRequestDispatcher("/WEB-INF/jsp/Udedit.jsp");
+			dispatcher.forward(request, response);
 		}
 	}
 }

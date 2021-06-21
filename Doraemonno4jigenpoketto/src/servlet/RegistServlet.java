@@ -20,6 +20,7 @@ import javax.servlet.http.Part;
 
 import dao.QaDao;
 import model.Qaall;
+import model.Qacount;
 import model.Qaplus;
 import model.Result;
 
@@ -64,7 +65,7 @@ public class RegistServlet extends HttpServlet {
 		request.setCharacterEncoding("UTF-8");
 		SimpleDateFormat sdFormat = new SimpleDateFormat("yyyy-MM-dd");
 		Date date;
-		if(request.getParameter("CALENDAR")=="") {
+		if(request.getParameter("CALENDAR")=="" || request.getParameter("CALENDAR")==null) {
 			date=null;
 		}
 		else {
@@ -77,7 +78,7 @@ public class RegistServlet extends HttpServlet {
 	    }
 	    String answerer= request.getParameter("ANSWERER");
 	    int category_id=0;
-	    if(request.getParameter("CATEGORY_ITEM")==null) {
+	    if(request.getParameter("CATEGORY_ITEM")==null || request.getParameter("CATEGORY_ITEM")=="") {
 	    	category_id=0;
 		}else {
 			category_id=Integer.parseInt(request.getParameter("CATEGORY_ITEM"));
@@ -94,11 +95,9 @@ public class RegistServlet extends HttpServlet {
 
 		Part part=request.getPart("photo");
 
-		System.out.println(part);
-
 		String filename=Paths.get(part.getSubmittedFileName()).getFileName().toString();
 		//アップロードするフォルダ
-		String path="C:/pleiades/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/simpleBC/upload";
+		String path="C:/pleiades/workspace/D-6/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/Doraemonno4jigenpoketto/upload";
 		//実際にファイルが保存されている場所の確認、ターミナルから確認
 		System.out.println(path);
 		//写真の登録処理
@@ -140,6 +139,10 @@ public class RegistServlet extends HttpServlet {
 			List<Qaplus> cardList = qDao.selectsave(new Qaall(0, date, answerer,  category_id, question, answer, 0,filename, registrant));
 			// 全項目をリクエストスコープに格納する
 			request.setAttribute("cardList", cardList);
+			//検索件数を数えます
+			List<Qacount> counter =  qDao.selectsavecount(new Qaall(0,null, "", 0, "", "",0,"",""));
+			// 検索件数をリクエストスコープに格納する
+			request.setAttribute("counter", counter.get(0));
 			RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/Save.jsp");
 			dispatcher.forward(request, response);
 			}
@@ -180,6 +183,10 @@ public class RegistServlet extends HttpServlet {
 			List<Qaplus> cardList = qDao.selectsave(new Qaall(0, date, answerer,  category_id, question, answer, 0,filename, registrant));
 			// 全項目をリクエストスコープに格納する
 			request.setAttribute("cardList", cardList);
+			//検索件数を数えます
+			List<Qacount> counter =  qDao.selectsavecount(new Qaall(0,null, "", 0, "", "",0,"",""));
+			// 検索件数をリクエストスコープに格納する
+			request.setAttribute("counter", counter.get(0));
 			RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/Save.jsp");
 			dispatcher.forward(request, response);
 			}

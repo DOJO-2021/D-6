@@ -44,9 +44,7 @@
       	  category:"${e.question_id}"
         },
      </c:forEach>
-        { title:"0",
-  	  link:"0",
-  	  category:"0"}
+
 
       // ...以下略
     ]

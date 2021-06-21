@@ -35,6 +35,7 @@
 			<div style="text-align:center;">
 			<input type="text" name="answer" value="${e.answer}" class="d_answer" readonly>
 				<img src="/Doraemonno4jigenpoketto/image/回答文の枠.png" class="d_ab"><!--d_ab=DerailAnswerBox-->
+			<img src="/Doraemonno4jigenpoketto/upload/${e.filename}" width=250px height=150px alt='NO IMAGES' name="FILENAME">
 			</div>
 
 			<input type="text" name="answerer" value="回答者：${e.answerer}" class="d_answerer" readonly>

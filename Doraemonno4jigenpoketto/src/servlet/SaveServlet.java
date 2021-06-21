@@ -58,6 +58,7 @@ public class SaveServlet extends HttpServlet {
 		// 全項目をリクエストスコープに格納する
 		request.setAttribute("cardList", cardList);
 
+
 		// 結果ページにフォワードする
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/SaveEdit.jsp");
 		dispatcher.forward(request, response);

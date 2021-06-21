@@ -311,7 +311,7 @@ function check(){
 	質問日<input type="text" name="DATE" value="${e.date}" style="width:23em;"><br><br>
 	回答者<input type="text" name="ANSWERER" value="${e.answerer}" style="width:23em;"><br><br>
 	登録者<input type="text" name="REGISTRANT" value="${e.registrant}" style="width:23em;">
-	画像<input type="file" name="photo" style="width:23em;">
+	画像<img src="/Doraemonno4jigenpoketto/upload/${e.filename}" width=250px height=150px alt='NO IMAGES' name="FILENAME"><input type="file" name="photo" style="width:23em;">
 
  	</table><input type="hidden" name="QUESTION_ID" value="${e.question_id}">
 			<div class=koushinbutton>
@@ -335,12 +335,9 @@ function check(){
 	 	}
 	 	</script>
 	 </c:when>
-	 <c:otherwise>
+	 <c:when test="${result.result == 'updatefault'}">
  	  <script type="text/javascript">window.alert("更新失敗です"); </script>
-	 </c:otherwise>
-	</c:choose>
-//更新の成功・失敗判定
-    <c:choose>
+	 </c:when>
 	 <c:when test="${result.result == 'deletesuccess'}">
 	 	<script type="text/javascript">if(window.confirm("削除成功です!検索画面に戻りますか？"){
 	 		window.location.href="http://localhost:8080/Doraemonno4jigenpoketto/UdsearchServlet";

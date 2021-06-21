@@ -57,7 +57,7 @@ function check(){
 
 	<nav>
 
-		<form method="POST" action="/Doraemonno4jigenpoketto/RegistServlet" onSubmit="return check()" enctype="multipart/form-data">
+		<form name="frm" method="POST" action="/Doraemonno4jigenpoketto/RegistServlet" onSubmit="return check()" enctype="multipart/form-data">
 
 		<div class="regist_blockA">
 
@@ -119,7 +119,7 @@ function check(){
 
 
 					<select name="CATEGORY_ITEM" id="category_item" style="width:27em;">
-						<option value="">単元項目を選択してください</option>
+						<option value="0">単元項目を選択してください</option>
 						<!--パーソナルコース-->
 						<optgroup label="ビジネスマナー・コミュニケーション">
 							<option value="0101001">敬語</option>
@@ -317,12 +317,13 @@ function check(){
 
 			    <input type="text" placeholder="登録者" name="REGISTRANT" id="registant" style="width:26em;"><br><br>
 
-			    <input type="file" name="photo" style="width:26em;">
+			    <input type="file" placeholder="画像" name="photo" style="width:26em;">
 
 		</div>
 
 			<div class=registbutton>
-				 <input type="image" src="/Doraemonno4jigenpoketto/image/登録ボタン.png" alt="登録" width="140" height="45" name="SUBMIT" value="登録">
+				<input type="hidden" name="SUBMIT" id="sendSubmit">
+				 <input type="image" src="/Doraemonno4jigenpoketto/image/登録ボタン.png" onclick="document.getElementById('sendSubmit').value = '登録';document.frm.submit();" alt="登録" width="140" height="45" name="SUBMIT" value="登録">
 				 <input type="submit" name="SUBMIT" value="保存">
 				 <input type="submit" name="SUBMIT" value="保存編集">
 			</div>
