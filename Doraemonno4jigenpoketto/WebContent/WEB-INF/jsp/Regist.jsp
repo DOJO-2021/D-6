@@ -56,7 +56,7 @@ function check(){
 
 	<nav>
 
-		<form method="POST" action="/Doraemonno4jigenpoketto/RegistServlet" onSubmit="return check()">
+		<form method="POST" action="/Doraemonno4jigenpoketto/RegistServlet" onSubmit="return check()" enctype="multipart/form-data">
 
 		<div class="regist_blockA">
 
@@ -314,7 +314,9 @@ function check(){
 
 			    <input type="text" placeholder="回答者" name="ANSWERER" id="answerer" style="width:26em;"> <br><br>
 
-			    <input type="text" placeholder="登録者" name="REGISTRANT" id="registant" style="width:26em;">
+			    <input type="text" placeholder="登録者" name="REGISTRANT" id="registant" style="width:26em;"><br><br>
+
+			    <input type="file" name="photo" style="width:26em;">
 
 		</div>
 

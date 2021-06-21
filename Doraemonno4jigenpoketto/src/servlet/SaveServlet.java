@@ -14,7 +14,6 @@ import javax.servlet.http.HttpSession;
 import dao.QaDao;
 import model.Qa;
 import model.Qaplus;
-import model.Result;
 
 
 /**
@@ -28,7 +27,6 @@ public class SaveServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 
-	String result;
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// もしもログインしていなかったらログインサーブレットにリダイレクトする
 				HttpSession session = request.getSession();
@@ -38,8 +36,6 @@ public class SaveServlet extends HttpServlet {
 				}
 
 				// 登録ページにフォワードする
-				result="start";
-				request.setAttribute("result",new Result(result));
 				RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/Save.jsp");
 				dispatcher.forward(request, response);
 			}

@@ -15,9 +15,7 @@
   <script src="./pagination.js"></script>
   <script>
     // [1] 配列のデータを用意
-
-
-    var diary = [
+   var diary = [
  	<c:forEach var="e" items="${cardList}">
       {
         ${e.question},

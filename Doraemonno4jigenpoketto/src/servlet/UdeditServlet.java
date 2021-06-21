@@ -1,20 +1,28 @@
 package servlet;
 
+import java.io.File;
 import java.io.IOException;
+import java.nio.file.Paths;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import javax.servlet.http.Part;
 
+import dao.CategoryDao;
 import dao.QaDao;
+import model.Category;
 import model.Qa;
+import model.Qaplus;
 import model.Result;
 
 									//更新と削除用の編集画面用
@@ -22,6 +30,7 @@ import model.Result;
  * Servlet implementation class UdeditServlet
  */
 @WebServlet("/UdeditServlet")
+@MultipartConfig
 public class UdeditServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -58,35 +67,100 @@ public class UdeditServlet extends HttpServlet {
 		String question=request.getParameter("QUESTION");//質問内容
 		String answer=request.getParameter("ANSWER");//回答内容
 		int pageview=Integer.parseInt(request.getParameter("PAGEVIEW"));//閲覧数
-		String regestant=request.getParameter("REGESTRANT");//登録者
+		String registrant=request.getParameter("REGISTRANT");//登録者
 
-		//更新を行う
-		QaDao QaDao=new QaDao();
-		if(request.getParameter("clickAction").equals("更新")) {
-			if (QaDao.update(new Qa(question_id, date,answerer , category_id,question ,answer , pageview,regestant ))) {	// 更新成功
-				String result="updatesuccess";
-				request.setAttribute("result", new Result(result));
+		Part part=request.getPart("photo");
+		//filename作成
+		String filename=Paths.get(part.getSubmittedFileName()).getFileName().toString();
+		//アップロードするフォルダの確認
+		System.out.println(filename);
+
+		if (part.getSize()!=0) {
+			String path="C:/pleiades/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/simpleBC/upload";
+			//実際にファイルが保存されている場所の確認、ターミナルから確認
+			System.out.println(path);
+			//写真の登録処理
+			try{part.write(path+File.separator+filename);
+			//request.setAttribute("filename", filename);
+
+			//更新を行う
+			QaDao qDao=new QaDao();
+			CategoryDao cDao=new CategoryDao();
+			if(request.getParameter("clickAction").equals("更新")) {
+				if (qDao.update(new Qa(question_id, date,answerer , category_id,question ,answer , pageview,registrant ))) {	// 更新成功
+					String result="updatesuccess";
+					request.setAttribute("result", new Result(result));
+					List<Qaplus> cardList1 = qDao.select3(new Qa(question_id,null, "", 0, "", "",0,""));
+					// 全項目をリクエストスコープに格納する
+					request.setAttribute("cardList", cardList1);
+					List<Category> tangen1=cDao.select1(new Category(0,0,category_id,""));
+					request.setAttribute("tangen", tangen1);
+				}
+				else {			// 更新失敗
+					String result="updatefault";
+					request.setAttribute("result",new Result(result));
+					List<Qaplus> cardList1 = qDao.select3(new Qa(question_id,null, "", 0, "", "",0,""));
+					// 全項目をリクエストスコープに格納する
+					request.setAttribute("cardList", cardList1);
+					List<Category> tangen1=cDao.select1(new Category(0,0,category_id,""));
+					request.setAttribute("tangen", tangen1);
+				}
 			}
-			else {			// 更新失敗
-				String result="updatefault";
-				request.setAttribute("result",new Result(result) );
+			//削除を行う
+			else {
+				if (qDao.delete(question_id)) {	// 削除成功
+					String result="deletesuccess";
+					request.setAttribute("result",new Result(result));
+				}
+				else {						// 削除失敗
+					String result="deletefault";
+					request.setAttribute("result", new Result(result));
+				}
+			}
+			//フォワード
+			RequestDispatcher dispatcher =
+					request.getRequestDispatcher("/WEB-INF/jsp/Udedit.jsp");
+			dispatcher.forward(request, response);
+			}catch(Exception e) {
+				//更新を行う
+				QaDao qDao=new QaDao();
+				CategoryDao cDao=new CategoryDao();
+				if(request.getParameter("clickAction").equals("更新")) {
+					if (qDao.update(new Qa(question_id, date,answerer , category_id,question ,answer , pageview,registrant ))) {	// 更新成功
+						String result="updatesuccess";
+						request.setAttribute("result", new Result(result));
+						List<Qaplus> cardList1 = qDao.select3(new Qa(question_id,null, "", 0, "", "",0,""));
+						// 全項目をリクエストスコープに格納する
+						request.setAttribute("cardList", cardList1);
+						List<Category> tangen1=cDao.select1(new Category(0,0,category_id,""));
+						request.setAttribute("tangen", tangen1);
+					}
+					else {			// 更新失敗
+						String result="updatefault";
+						request.setAttribute("result",new Result(result));
+						List<Qaplus> cardList1 = qDao.select3(new Qa(question_id,null, "", 0, "", "",0,""));
+						// 全項目をリクエストスコープに格納する
+						request.setAttribute("cardList", cardList1);
+						List<Category> tangen1=cDao.select1(new Category(0,0,category_id,""));
+						request.setAttribute("tangen", tangen1);
+					}
+				}
+				//削除を行う
+				else {
+					if (qDao.delete(question_id)) {	// 削除成功
+						String result="deletesuccess";
+						request.setAttribute("result",new Result(result));
+					}
+					else {						// 削除失敗
+						String result="deletefault";
+						request.setAttribute("result", new Result(result));
+					}
+				}
+				//フォワード
+				RequestDispatcher dispatcher =
+						request.getRequestDispatcher("/WEB-INF/jsp/Udedit.jsp");
+				dispatcher.forward(request, response);
 			}
 		}
-		//削除を行う
-		else {
-			if (QaDao.delete(question_id)) {	// 削除成功
-				String result="deletesuccess";
-				request.setAttribute("result",new Result(result) );
-			}
-			else {						// 削除失敗
-				String result="deletefault";
-				request.setAttribute("result", new Result(result));
-			}
-		}
-		//フォワード
-		RequestDispatcher dispatcher =
-				request.getRequestDispatcher("/WEB-INF/jsp/Udedit.jsp");
-		dispatcher.forward(request, response);
 	}
-
 }

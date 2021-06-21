@@ -1,20 +1,26 @@
 package servlet;
 
+import java.io.File;
 import java.io.IOException;
+import java.nio.file.Paths;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import javax.servlet.http.Part;
 
 import dao.QaDao;
 import model.Qa;
+import model.Qaplus;
 import model.Result;
 
 
@@ -22,6 +28,7 @@ import model.Result;
  * Servlet implementation class RegistServlet
  */
 @WebServlet("/RegistServlet")
+@MultipartConfig
 public class RegistServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -84,37 +91,98 @@ public class RegistServlet extends HttpServlet {
 
 		QaDao qDao=new QaDao();
 
-		if(request.getParameter("SUBMIT").equals("登録")) {
-			//登録処理
-			if(qDao.insert(new Qa(0, date, answerer,  category_id, question, answer, 0, registrant))) {
-				result="success";
-				request.setAttribute("result",new Result(result));
+
+		Part part=request.getPart("photo");
+
+		System.out.println(part);
+
+		String filename=Paths.get(part.getSubmittedFileName()).getFileName().toString();
+		//アップロードするフォルダ
+		String path="C:/pleiades/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/simpleBC/upload";
+		//実際にファイルが保存されている場所の確認、ターミナルから確認
+		System.out.println(path);
+		//写真の登録処理
+		try{part.write(path+File.separator+filename);
+			//request.setAttribute("filename", filename);
+			if(request.getParameter("SUBMIT").equals("登録")) {
+				//登録処理
+				if(qDao.insert(new Qa(0, date, answerer,  category_id, question, answer, 0, registrant))) {
+					result="success";
+					request.setAttribute("result",new Result(result));
+				}
+				else {
+					// 登録失敗
+					result="false";
+					request.setAttribute("result",new Result(result));
+				}
+
+				// 結果ページにフォワードする
+				RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/Regist.jsp");
+				dispatcher.forward(request, response);
 			}
-			else {
-				// 登録失敗
-				result="false";
-				request.setAttribute("result",new Result(result));
-			}
+			else if(request.getParameter("SUBMIT").equals("保存")){
+				//保存処理
+				if(qDao.insertsave(new Qa(0, date, answerer,  category_id, question, answer, 0, registrant))) {
+					result="savesuccess";
+					request.setAttribute("result",new Result(result));
+				}
+				else {
+					// 保存失敗
+					result="savefalse";
+					request.setAttribute("result",new Result(result));
+				}
 
 			// 結果ページにフォワードする
 			RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/Regist.jsp");
 			dispatcher.forward(request, response);
-		}
-		else {
-			//保存処理
-			if(qDao.insertsave(new Qa(0, date, answerer,  category_id, question, answer, 0, registrant))) {
-				result="savesuccess";
-				request.setAttribute("result",new Result(result));
 			}
 			else {
-				// 保存失敗
-				result="savefalse";
-				request.setAttribute("result",new Result(result));
+			List<Qaplus> cardList = qDao.selectsave(new Qa(0, date, answerer,  category_id, question, answer, 0, registrant));
+			// 全項目をリクエストスコープに格納する
+			request.setAttribute("cardList", cardList);
+			RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/Save.jsp");
+			dispatcher.forward(request, response);
 			}
+		}catch(Exception e) {
+			if(request.getParameter("SUBMIT").equals("登録")) {
+				//登録処理
+				if(qDao.insert(new Qa(0, date, answerer,  category_id, question, answer, 0, registrant))) {
+					result="success";
+					request.setAttribute("result",new Result(result));
+				}
+				else {
+					// 登録失敗
+					result="false";
+					request.setAttribute("result",new Result(result));
+				}
+
+				// 結果ページにフォワードする
+				RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/Regist.jsp");
+				dispatcher.forward(request, response);
+			}
+			else if(request.getParameter("SUBMIT").equals("保存")){
+				//保存処理
+				if(qDao.insertsave(new Qa(0, date, answerer,  category_id, question, answer, 0, registrant))) {
+					result="savesuccess";
+					request.setAttribute("result",new Result(result));
+				}
+				else {
+					// 保存失敗
+					result="savefalse";
+					request.setAttribute("result",new Result(result));
+				}
 
 			// 結果ページにフォワードする
 			RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/Regist.jsp");
 			dispatcher.forward(request, response);
+			}
+			else {
+			List<Qaplus> cardList = qDao.selectsave(new Qa(0, date, answerer,  category_id, question, answer, 0, registrant));
+			// 全項目をリクエストスコープに格納する
+			request.setAttribute("cardList", cardList);
+			RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/Save.jsp");
+			dispatcher.forward(request, response);
+			}
 		}
 	}
 }

@@ -51,18 +51,18 @@ function check(){
 <!--閲覧数・質問日・回答者・質問した年月日・登録者についての更新・削除-->
 
 <c:forEach var="e" items="${cardList}">
-	  <form name="frm" method="POST" action="/Doraemonno4jigenpoketto/UdeditServlet">
+	  <form name="frm" method="POST" action="/Doraemonno4jigenpoketto/UdeditServlet" enctype="multipart/form-data">
  	<table>
 		<div class="regist_blockA">
 			<tr>
 				<p class="udedit_ql">質問文</p>
 
-				<textarea class ="udedit_qb" name="QUESTION" value="${e.question}" rows="7" cols="100" style="border:4px solid #4689FF" onMouseover="this.style.borderColor='#FFCC33'" onMouseout="this.style.borderColor='#4689FF'">${e.question}</textarea>
+				<textarea class ="udedit_qb" name="QUESTION"  rows="7" cols="100" style="border:4px solid #4689FF" onMouseover="this.style.borderColor='#FFCC33'" onMouseout="this.style.borderColor='#4689FF'">${e.question}</textarea>
 			</tr>
 			<tr>
 				<p class="udedit_al">回答文</p>
 
-				<textarea class="udedit_ab" name="ANSWER" value="${e.answer}" rows="7" cols="100" style="border:4px solid #4689FF" onMouseover="this.style.borderColor='#FFCC33'" onMouseout="this.style.borderColor='#4689FF'">${e.answer}</textarea>
+				<textarea class="udedit_ab" name="ANSWER"  rows="7" cols="100" style="border:4px solid #4689FF" onMouseover="this.style.borderColor='#FFCC33'" onMouseout="this.style.borderColor='#4689FF'">${e.answer}</textarea>
 			</tr>
 		</div>
 
@@ -311,6 +311,7 @@ function check(){
 	質問日<input type="text" name="DATE" value="${e.date}" style="width:23em;"><br><br>
 	回答者<input type="text" name="ANSWERER" value="${e.answerer}" style="width:23em;"><br><br>
 	登録者<input type="text" name="REGISTRANT" value="${e.registrant}" style="width:23em;">
+	画像<input type="file" name="photo" style="width:23em;">
 
  	</table><input type="hidden" name="QUESTION_ID" value="${e.question_id}">
 			<div class=koushinbutton>

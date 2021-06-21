@@ -27,63 +27,63 @@
 
 		<div class="udsearch_blockA">
 
-				<p class="udsearch_ql">質問文</p><!--udsearch_ql=UdsearchQuestionLabel-->
+			<p class="udsearch_ql">質問文</p><!--udsearch_ql=UdsearchQuestionLabel-->
 
-				<textarea class ="udsearch_qb" name="QUESTION" rows="7" cols="100" style="border:4px solid #4689FF" onMouseover="this.style.borderColor='#FFCC33'" onMouseout="this.style.borderColor='#4689FF'"></textarea><!--udsearch_qb=UdsearchQuestionBox-->
+			<textarea class ="udsearch_qb" name="QUESTION" rows="7" cols="100" style="border:4px solid #4689FF" onMouseover="this.style.borderColor='#FFCC33'" onMouseout="this.style.borderColor='#4689FF'"></textarea><!--udsearch_qb=UdsearchQuestionBox-->
 
-				<p class="udsearch_al">回答文</p><!--udsearch_al=UdsearchAnswerLabel-->
+			<p class="udsearch_al">回答文</p><!--udsearch_al=UdsearchAnswerLabel-->
 
-				<textarea class="udsearch_ab" name="ANSWER" rows="7" cols="100" style="border:4px solid #4689FF" onMouseover="this.style.borderColor='#FFCC33'" onMouseout="this.style.borderColor='#4689FF'"></textarea><!--udsearch_al=UdsearchAnswerBox-->
+			<textarea class="udsearch_ab" name="ANSWER" rows="7" cols="100" style="border:4px solid #4689FF" onMouseover="this.style.borderColor='#FFCC33'" onMouseout="this.style.borderColor='#4689FF'"></textarea><!--udsearch_al=UdsearchAnswerBox-->
 
 		</div>
 		<div class="udsearch_blockB" style="float:right;">
-       <select name="unit" id="unit" style="width:27em;">
-        <option value="">単元を選択してください</option>
-        <optgroup label="パーソナルスキルコース">
-         <option value="0">ビジネス・コミュニケーション</option>
-		     <option value="1">ビジネスメール・ビジネス文章</option>
-         <option value="2">Word</option>
-         <option value="3">Excel</option>
-        </optgroup>
-        <optgroup label="IT基礎コース">
-		     <option value="4">プログラミング</option>
-         <option value="5">アルゴリズム</option>
-         <option value="6">ネットワーク</option>
-		     <option value="7">HTML</option>
-         <option value="8">CSS</option>
-         <option value="9">JavaScript</option>
-         <option value="10">データベース(SQL)</option>
-        </optgroup>
-        <optgroup label="Java基礎コース">
-		     <option value="11">Javaプログラミング</option>
-         <option value="12">サーバーサイドJava</option>
-         <option value="13">品質管理</option>
-		     <option value="14">セキュリティ</option>
-        </optgroup>
-        <optgroup label="Web開発演習コース">
-         <option value="15">導入</option>
-         <option value="16">要件定義</option>
-		     <option value="17">外部設計</option>
-         <option value="18">内部設計</option>
-         <option value="19">実装</option>
-         <option value="20">テスト</option>
-		     <option value="21">プレゼン作成</option>
-         <option value="22">発表</option>
-        </optgroup>
-        <optgroup label="ドリル">
-         <option value="23">アルゴリズムドリル</option>
-		     <option value="24">SQLドリル</option>
-         <option value="25">Javaドリル</option>
-        </optgroup>
-         <optgroup label="その他">
-		     <option value="26">その他</option>
-        </optgroup>
-      </select><br><br>
+			<select name="unit" id="unit" style="width:27em;">
+				<option value="">単元を選択してください</option>
+				<optgroup label="パーソナルスキルコース">
+				<option value="0">ビジネス・コミュニケーション</option>
+				<option value="1">ビジネスメール・ビジネス文章</option>
+				<option value="2">Word</option>
+				<option value="3">Excel</option>
+				</optgroup>
+				<optgroup label="IT基礎コース">
+				<option value="4">プログラミング</option>
+				<option value="5">アルゴリズム</option>
+				<option value="6">ネットワーク</option>
+				<option value="7">HTML</option>
+				<option value="8">CSS</option>
+				<option value="9">JavaScript</option>
+				<option value="10">データベース(SQL)</option>
+				</optgroup>
+				<optgroup label="Java基礎コース">
+				<option value="11">Javaプログラミング</option>
+				<option value="12">サーバーサイドJava</option>
+				<option value="13">品質管理</option>
+				<option value="14">セキュリティ</option>
+				</optgroup>
+				<optgroup label="Web開発演習コース">
+				<option value="15">導入</option>
+				<option value="16">要件定義</option>
+				<option value="17">外部設計</option>
+				<option value="18">内部設計</option>
+				<option value="19">実装</option>
+				<option value="20">テスト</option>
+				<option value="21">プレゼン作成</option>
+				<option value="22">発表</option>
+				</optgroup>
+				<optgroup label="ドリル">
+				<option value="23">アルゴリズムドリル</option>
+				<option value="24">SQLドリル</option>
+				<option value="25">Javaドリル</option>
+				</optgroup>
+				<optgroup label="その他">
+				<option value="26">その他</option>
+				</optgroup>
+			</select><br><br>
 
 
 
-     	 <select name="CATEGORY_ITEM" id="category_item" style="width:27em;">
-		<option value="0">単元項目を選択してください</option>
+			<select name="CATEGORY_ITEM" id="category_item" style="width:27em;">
+				<option value="0">単元項目を選択してください</option>
 						<!--パーソナルコース-->
 						<optgroup label="ビジネスマナー・コミュニケーション">
 							<option value="0101001">敬語</option>
@@ -274,15 +274,15 @@
 							<option value="0601001">その他</option>
 						</optgroup>
 
-     	 </select><br><br>
+     	 	</select><br><br>
 
-		<input type="date" name="CALENDAR" max="9999-12-31" style="width:27em;"><br><br>
+			<input type="date" name="CALENDAR" max="9999-12-31" style="width:27em;"><br><br>
 
-		<input type="text" placeholder="回答者" name="ANSWERER" id="answerer" style="width:26em;"> <br><br>
+			<input type="text" placeholder="回答者" name="ANSWERER" id="answerer" style="width:26em;"> <br><br>
 
-		<input type="text" placeholder="登録者" name="REGISTRANT" id="registant" style="width:26em;">
+			<input type="text" placeholder="登録者" name="REGISTRANT" id="registant" style="width:26em;">
 
-		</div>
+			</div>
 
 			<div class=button>
 				 <input type="image" src="/Doraemonno4jigenpoketto/image/検索ボタン.png" alt="検索" width="140" height="45" name="login">

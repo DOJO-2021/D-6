@@ -46,7 +46,7 @@ public class UdresultServlet extends HttpServlet {
 		//カテゴリーidの取得
 		String category_item=request.getParameter("CATEGORY_ITEM");
 		CategoryDao cDao=new CategoryDao();
-		List<Category> tangen=cDao.select(new Category(0,0,0,category_item));
+		List<Category> tangen=cDao.select1(new Category(0,0,0,category_item));
 		request.setAttribute("tangen", tangen);
 
 		// 結果ページにフォワードする
