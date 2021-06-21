@@ -19,7 +19,7 @@ import javax.servlet.http.HttpSession;
 import javax.servlet.http.Part;
 
 import dao.QaDao;
-import model.Qa;
+import model.Qaall;
 import model.Qaplus;
 import model.Result;
 
@@ -106,7 +106,7 @@ public class RegistServlet extends HttpServlet {
 			//request.setAttribute("filename", filename);
 			if(request.getParameter("SUBMIT").equals("登録")) {
 				//登録処理
-				if(qDao.insert(new Qa(0, date, answerer,  category_id, question, answer, 0, registrant))) {
+				if(qDao.insert(new Qaall(0, date, answerer,  category_id, question, answer, 0, filename,registrant))) {
 					result="success";
 					request.setAttribute("result",new Result(result));
 				}
@@ -122,7 +122,7 @@ public class RegistServlet extends HttpServlet {
 			}
 			else if(request.getParameter("SUBMIT").equals("保存")){
 				//保存処理
-				if(qDao.insertsave(new Qa(0, date, answerer,  category_id, question, answer, 0, registrant))) {
+				if(qDao.insertsave(new Qaall(0, date, answerer,  category_id, question, answer, 0, filename,registrant))) {
 					result="savesuccess";
 					request.setAttribute("result",new Result(result));
 				}
@@ -137,7 +137,7 @@ public class RegistServlet extends HttpServlet {
 			dispatcher.forward(request, response);
 			}
 			else {
-			List<Qaplus> cardList = qDao.selectsave(new Qa(0, date, answerer,  category_id, question, answer, 0, registrant));
+			List<Qaplus> cardList = qDao.selectsave(new Qaall(0, date, answerer,  category_id, question, answer, 0,filename, registrant));
 			// 全項目をリクエストスコープに格納する
 			request.setAttribute("cardList", cardList);
 			RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/Save.jsp");
@@ -146,7 +146,7 @@ public class RegistServlet extends HttpServlet {
 		}catch(Exception e) {
 			if(request.getParameter("SUBMIT").equals("登録")) {
 				//登録処理
-				if(qDao.insert(new Qa(0, date, answerer,  category_id, question, answer, 0, registrant))) {
+				if(qDao.insert(new Qaall(0, date, answerer,  category_id, question, answer, 0, filename,registrant))) {
 					result="success";
 					request.setAttribute("result",new Result(result));
 				}
@@ -162,7 +162,7 @@ public class RegistServlet extends HttpServlet {
 			}
 			else if(request.getParameter("SUBMIT").equals("保存")){
 				//保存処理
-				if(qDao.insertsave(new Qa(0, date, answerer,  category_id, question, answer, 0, registrant))) {
+				if(qDao.insertsave(new Qaall(0, date, answerer,  category_id, question, answer, 0,filename, registrant))) {
 					result="savesuccess";
 					request.setAttribute("result",new Result(result));
 				}
@@ -177,7 +177,7 @@ public class RegistServlet extends HttpServlet {
 			dispatcher.forward(request, response);
 			}
 			else {
-			List<Qaplus> cardList = qDao.selectsave(new Qa(0, date, answerer,  category_id, question, answer, 0, registrant));
+			List<Qaplus> cardList = qDao.selectsave(new Qaall(0, date, answerer,  category_id, question, answer, 0,filename, registrant));
 			// 全項目をリクエストスコープに格納する
 			request.setAttribute("cardList", cardList);
 			RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/Save.jsp");

@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import dao.QaDao;
-import model.Qa;
+import model.Qaall;
 import model.Qaplus;
 
 /**
@@ -29,7 +29,7 @@ public class DetailServlet extends HttpServlet {
 		request.setCharacterEncoding("UTF-8");
 		int question_id=Integer.parseInt(request.getParameter("QUESTION_ID"));
 		QaDao qDao=new QaDao();
-		List<Qaplus> cardList1 = qDao.select3(new Qa(question_id,null, "", 0, "", "",0,""));
+		List<Qaplus> cardList1 = qDao.select3(new Qaall(question_id,null, "", 0, "", "",0,"",""));
 		// 全項目をリクエストスコープに格納する
 		request.setAttribute("cardList1", cardList1);
 

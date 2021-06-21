@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import dao.QaDao;
-import model.Qa;
+import model.Qaall;
 import model.Qacount;
 import model.Qaplus;
 
@@ -86,12 +86,12 @@ public class UdsearchServlet extends HttpServlet {
 		QaDao qDao=new QaDao();
 
 		// 検索処理を行う
-		List<Qaplus> cardList = qDao.select2(new Qa(0, date, answerer,  category_id, question, answer, 0, registrant));
+		List<Qaplus> cardList = qDao.select2(new Qaall(0, date, answerer,  category_id, question, answer, 0, "",registrant));
 		// 全項目をリクエストスコープに格納する
 		request.setAttribute("cardList", cardList);
 
 		//検索件数を数えます
-		List<Qacount> counter = qDao.select4(new Qa(0, date, answerer,  category_id, question, answer, 0, registrant));
+		List<Qacount> counter = qDao.select4(new Qaall(0, date, answerer,  category_id, question, answer, 0,"", registrant));
 		// 検索件数をリクエストスコープに格納する
 		request.setAttribute("counter", counter.get(0));
 

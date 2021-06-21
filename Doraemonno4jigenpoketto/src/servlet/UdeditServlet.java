@@ -21,7 +21,7 @@ import javax.servlet.http.Part;
 import dao.CategoryDao;
 import dao.QaDao;
 import model.Category;
-import model.Qa;
+import model.Qaall;
 import model.Qaplus;
 import model.Result;
 
@@ -87,10 +87,10 @@ public class UdeditServlet extends HttpServlet {
 			QaDao qDao=new QaDao();
 			CategoryDao cDao=new CategoryDao();
 			if(request.getParameter("clickAction").equals("更新")) {
-				if (qDao.update(new Qa(question_id, date,answerer , category_id,question ,answer , pageview,registrant ))) {	// 更新成功
+				if (qDao.update(new Qaall(question_id, date,answerer , category_id,question ,answer , pageview,filename,registrant ))) {	// 更新成功
 					String result="updatesuccess";
 					request.setAttribute("result", new Result(result));
-					List<Qaplus> cardList1 = qDao.select3(new Qa(question_id,null, "", 0, "", "",0,""));
+					List<Qaplus> cardList1 = qDao.select3(new Qaall(question_id,null, "", 0, "", "",0,"",""));
 					// 全項目をリクエストスコープに格納する
 					request.setAttribute("cardList", cardList1);
 					List<Category> tangen1=cDao.select1(new Category(0,0,category_id,""));
@@ -99,7 +99,7 @@ public class UdeditServlet extends HttpServlet {
 				else {			// 更新失敗
 					String result="updatefault";
 					request.setAttribute("result",new Result(result));
-					List<Qaplus> cardList1 = qDao.select3(new Qa(question_id,null, "", 0, "", "",0,""));
+					List<Qaplus> cardList1 = qDao.select3(new Qaall(question_id,null, "", 0, "", "",0,"",""));
 					// 全項目をリクエストスコープに格納する
 					request.setAttribute("cardList", cardList1);
 					List<Category> tangen1=cDao.select1(new Category(0,0,category_id,""));
@@ -126,10 +126,10 @@ public class UdeditServlet extends HttpServlet {
 				QaDao qDao=new QaDao();
 				CategoryDao cDao=new CategoryDao();
 				if(request.getParameter("clickAction").equals("更新")) {
-					if (qDao.update(new Qa(question_id, date,answerer , category_id,question ,answer , pageview,registrant ))) {	// 更新成功
+					if (qDao.update(new Qaall(question_id, date,answerer , category_id,question ,answer , pageview,filename,registrant ))) {	// 更新成功
 						String result="updatesuccess";
 						request.setAttribute("result", new Result(result));
-						List<Qaplus> cardList1 = qDao.select3(new Qa(question_id,null, "", 0, "", "",0,""));
+						List<Qaplus> cardList1 = qDao.select3(new Qaall(question_id,null, "", 0, "", "",0,"",""));
 						// 全項目をリクエストスコープに格納する
 						request.setAttribute("cardList", cardList1);
 						List<Category> tangen1=cDao.select1(new Category(0,0,category_id,""));
@@ -138,7 +138,7 @@ public class UdeditServlet extends HttpServlet {
 					else {			// 更新失敗
 						String result="updatefault";
 						request.setAttribute("result",new Result(result));
-						List<Qaplus> cardList1 = qDao.select3(new Qa(question_id,null, "", 0, "", "",0,""));
+						List<Qaplus> cardList1 = qDao.select3(new Qaall(question_id,null, "", 0, "", "",0,"",""));
 						// 全項目をリクエストスコープに格納する
 						request.setAttribute("cardList", cardList1);
 						List<Category> tangen1=cDao.select1(new Category(0,0,category_id,""));

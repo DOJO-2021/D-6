@@ -60,7 +60,7 @@ public class daotest {
 			System.out.println("郵便番号:"+card.getRegistrant());
 			System.out.println();
 		}
-		// insert()のテスト
+/*		// insert()のテスト
 		System.out.println("---------- insert()のテスト ----------");
 		Qa insRec = new Qa(8, null, "女性",103001,"あれは何","何だろう",0,"男性");
 		if (dao.insert(insRec)) {
@@ -111,6 +111,8 @@ public class daotest {
 		else {
 			System.out.println("削除失敗！");
 		}
+	}*/
 	}
+
 }
 

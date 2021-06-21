@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import dao.QaDao;
-import model.Qa;
+import model.Qaall;
 import model.Qaplus;
 
 /**
@@ -31,9 +31,9 @@ public class ResultServlet extends HttpServlet {
 		//遷移処理
 		QaDao qDao=new QaDao();
 		//閲覧数のカウントを１増やす
-		qDao.updatecount(new Qa(question_id,null, "", 0, "", "",0,""));
+		qDao.updatecount(new Qaall(question_id,null, "", 0, "", "",0,"",""));
 
-		List<Qaplus> cardList = qDao.select3(new Qa(question_id,null, "", 0, "", "",0,""));
+		List<Qaplus> cardList = qDao.select3(new Qaall(question_id,null, "", 0, "", "",0,"",""));
 		// 全項目をリクエストスコープに格納する
 		request.setAttribute("cardList", cardList);
 
