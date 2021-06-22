@@ -390,9 +390,8 @@
 
 <br>
 <br>
-<div class="button">
-  <!--name="search"-->
-  <input type="image" src="/Doraemonno4jigenpoketto/image/検索ボタン.png" name="search" alt="検索" class="buttonsize">
+<div >
+  <input type="image" src="/Doraemonno4jigenpoketto/image/検索ボタン.png" name="search" alt="検索" class="buttonsize"class="button">
 </div>
 </form>
 

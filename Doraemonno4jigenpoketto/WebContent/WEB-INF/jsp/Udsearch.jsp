@@ -16,9 +16,9 @@
 <div><img src="/Doraemonno4jigenpoketto/image/ロゴ.png" alt="DOJO Q&A集" class="logo"></div>
 
 
-         <div class="logoutbutton">
-           <a href="/Doraemonno4jigenpoketto/LoginServlet"><img src="/Doraemonno4jigenpoketto/image/ログアウトボタン.png" alt="ログアウト" class="logoutbutton"></a>
-         </div>
+   		<div class="logoutbutton">
+			<a href="/Doraemonno4jigenpoketto/LoginServlet"><img src="/Doraemonno4jigenpoketto/image/ログアウトボタン.png" alt="ログアウト" class="buttonsize"></a>
+		</div>
 
 <h2><img src="/Doraemonno4jigenpoketto/image/更新・削除用検索画面.png" alt="更新・削除用検索画面" class="h2"></h2>
 
@@ -37,7 +37,7 @@
 			<textarea class="udsearch_ab" name="ANSWER" rows="7" cols="100" style="border:4px solid #4689FF" onMouseover="this.style.borderColor='#FFCC33'" onMouseout="this.style.borderColor='#4689FF'"></textarea><!--udsearch_al=UdsearchAnswerBox-->
 
 		</div>
-		<div class="udsearch_blockB" style="float:right;">
+		<div class="udsearch_blockB">
 			<select name="unit" id="unit" style="width:27em;">
 				<option value="">単元を選択してください</option>
 				<optgroup label="パーソナルスキルコース">
@@ -285,10 +285,10 @@
 
 			</div>
 
-			<div class=button>
-				 <input type="image" src="/Doraemonno4jigenpoketto/image/検索ボタン.png" alt="検索" width="140" height="45" name="login">
-			</div>
 
+<div class="button">
+  <input type="image" src="/Doraemonno4jigenpoketto/image/検索ボタン.png" name="login" alt="検索" class="buttonsize" style="margin-top:380px; margin-left:-300px;;">
+</div>
 
 </form>
 </body>

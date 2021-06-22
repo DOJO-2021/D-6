@@ -39,31 +39,27 @@ function check(){
 
 
 
-         <div class="logoutbutton">
-           <a href="/Doraemonno4jigenpoketto/MenuServlet"><img src="/Doraemonno4jigenpoketto/image/ログアウトボタン.png" alt="ログアウト" class="logoutbutton"></a>
-         </div>
+ 		<div class="logoutbutton">
+			<a href="/Doraemonno4jigenpoketto/LoginServlet"><img src="/Doraemonno4jigenpoketto/image/ログアウトボタン.png" alt="ログアウト" class="buttonsize"></a>
+		</div>
 
 <h2><img src="/Doraemonno4jigenpoketto/image/更新・削除画面.png" alt="更新・削除画面" class="h2"></h2>
 
 <!--閲覧数・質問日・回答者・質問した年月日・登録者についての更新・削除-->
 
+<nav>
 <c:forEach var="e" items="${cardList}">
 	  <form name="frm" method="POST" action="/Doraemonno4jigenpoketto/UdeditServlet" onSubmit="return check()"  enctype="multipart/form-data">
- 	<table>
-		<div class="regist_blockA">
-			<tr>
+		<div class="udedit_blockA">
 				<p class="udedit_ql">質問文</p>
 
 				<textarea class ="udedit_qb" name="QUESTION"  rows="7" cols="100" style="border:4px solid #4689FF" onMouseover="this.style.borderColor='#FFCC33'" onMouseout="this.style.borderColor='#4689FF'">${e.question}</textarea>
-			</tr>
-			<tr>
 				<p class="udedit_al">回答文</p>
 
 				<textarea class="udedit_ab" name="ANSWER"  rows="7" cols="100" style="border:4px solid #4689FF" onMouseover="this.style.borderColor='#FFCC33'" onMouseout="this.style.borderColor='#4689FF'">${e.answer}</textarea>
-			</tr>
 		</div>
 
-		<div class="regist_blockB" style="float:right;">
+		<div class="udedit_blockB" style="float:right;">
        <select name="unit" id="unit" style="width:27em;">
         <option value="">単元を選択してください</option>
         <optgroup label="パーソナルスキルコース">
@@ -310,16 +306,19 @@ function check(){
 	登録者<input type="text" name="REGISTRANT" value="${e.registrant}" style="width:23em;">
 	画像<img src="/Doraemonno4jigenpoketto/upload/${e.filename}" width=250px height=150px alt='NO IMAGES' name="FILENAME"><input type="file" name="photo" style="width:23em;">
 
- 	</table><input type="hidden" name="QUESTION_ID" value="${e.question_id}">
-			<div class=koushinbutton>
+	</div>
+ 	<input type="hidden" name="QUESTION_ID" value="${e.question_id}">
+			<div class="koushinbutton">
 				<input type="hidden" name="clickAction" id="sendSubmit">
-				<input type="image" src="/Doraemonno4jigenpoketto/image/更新ボタン.png" onclick="document.getElementById('sendSubmit').value = '更新';document.frm.submit();" alt="更新" width="140" height="45" name="SUBMIT" value="更新">
+				<input type="image" src="/Doraemonno4jigenpoketto/image/更新ボタン.png" onclick="document.getElementById('sendSubmit').value = '更新';document.frm.submit();" alt="更新" class="buttonsize" name="SUBMIT" value="更新">
 			</div>
-			<div class=sakujyobutton>
-				 <img src="/Doraemonno4jigenpoketto/image/削除ボタン.png" onclick="document.getElementById('sendSubmit').value = '削除';document.frm.submit();" alt="削除" width="140" height="45" >
+			<div class="sakujyobutton">
+				 <img src="/Doraemonno4jigenpoketto/image/削除ボタン.png" onclick="document.getElementById('sendSubmit').value = '削除';document.frm.submit();" alt="削除" class="buttonsize" >
 			</div>
     </form>
+
 </c:forEach>
+ </nav>
  <c:choose>
     <c:when test="${result.result != null}">
 //更新の成功・失敗判定

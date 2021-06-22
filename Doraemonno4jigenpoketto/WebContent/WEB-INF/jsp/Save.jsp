@@ -10,13 +10,19 @@
 		<title>DOJO Q&amp;A集</title>
 	</head>
 	<body>
-		<h1>DOJO Q&amp;A集</h1>
-			<p><a href="/Doraemonno4jigenpoketto/LoginServlet">ログアウト</a></p>
+<div><img src="/Doraemonno4jigenpoketto/image/帯.png" class="titlebar"></div>
+<div><img src="/Doraemonno4jigenpoketto/image/ロゴ.png" alt="DOJO Q&A集" class="logo"></div>
 
-		<h2>保存検索画面</h2>
+
+   		<div class="logoutbutton">
+			<a href="/Doraemonno4jigenpoketto/LoginServlet"><img src="/Doraemonno4jigenpoketto/image/ログアウトボタン.png" alt="ログアウト" class="buttonsize"></a>
+		</div>
+
+
+<h2><img src="/Doraemonno4jigenpoketto/image/保存一覧画面.png" alt="保存一覧画面" class="h2"></h2>
 
 		<!--ヒット数表示-->
-		<p><c:out value="${counter.count}"/>件ヒットしました。</p>
+		<p class="hitnumber"><b><c:out value="${counter.count}"/>件ヒットしました。</b></p>
 
 <div id="diary-all-contents"></div>
 

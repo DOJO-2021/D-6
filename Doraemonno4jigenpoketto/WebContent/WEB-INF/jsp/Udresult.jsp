@@ -15,9 +15,9 @@
 <div><img src="/Doraemonno4jigenpoketto/image/ロゴ.png" alt="DOJO Q&A集" class="logo"></div>
 
 
-         <div class="logoutbutton">
-           <a href="/Doraemonno4jigenpoketto/MenuServlet"><img src="/Doraemonno4jigenpoketto/image/ログアウトボタン.png" alt="ログアウト" class="logoutbutton"></a>
-         </div>
+		<div class="logoutbutton">
+			<a href="/Doraemonno4jigenpoketto/LoginServlet"><img src="/Doraemonno4jigenpoketto/image/ログアウトボタン.png" alt="ログアウト" class="buttonsize"></a>
+		</div>
 
 <h2><img src="/Doraemonno4jigenpoketto/image/更新・削除用検索結果画面.png" alt="更新・削除用検索結果画面" class="h2"></h2>
 

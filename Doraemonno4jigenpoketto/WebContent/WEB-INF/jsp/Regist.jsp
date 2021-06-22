@@ -41,9 +41,9 @@ function check(){
 <div><img src="/Doraemonno4jigenpoketto/image/ロゴ.png" alt="DOJO Q&A集" class="logo"></div>
 
 
-         <div class="logoutbutton">
-           <a href="/Doraemonno4jigenpoketto/LoginServlet"><img src="/Doraemonno4jigenpoketto/image/ログアウトボタン.png" alt="ログアウト" class="logoutbutton"></a>
-         </div>
+   		<div class="logoutbutton">
+			<a href="/Doraemonno4jigenpoketto/LoginServlet"><img src="/Doraemonno4jigenpoketto/image/ログアウトボタン.png" alt="ログアウト" class="buttonsize"></a>
+		</div>
 
 
 <h2><img src="/Doraemonno4jigenpoketto/image/登録画面.png" alt="登録画面" class="h2"></h2>
@@ -66,7 +66,7 @@ function check(){
 				<textarea class="regist_ab" name="ANSWER" rows="7" cols="100" style="border:4px solid #4689FF" onMouseover="this.style.borderColor='#FFCC33'" onMouseout="this.style.borderColor='#4689FF'"></textarea>
 
 		</div>
-		<div class="regist_blockB" style="float:right;">
+		<div class="regist_blockB" style="margin-bottom:0;">
 
 
 					<select name="unit" id="unit" style="width:27em;">
@@ -317,11 +317,11 @@ function check(){
 
 		</div>
 
-			<div class=registbutton>
+			<div class="button" style="desplay:inline;">
 				<input type="hidden" name="SUBMIT" id="sendSubmit">
-				 <input type="image" src="/Doraemonno4jigenpoketto/image/登録ボタン.png" onclick="document.getElementById('sendSubmit').value = '登録';document.frm.submit();" alt="登録" width="140" height="45" name="SUBMIT" value="登録">
-				 <input type="submit" name="SUBMIT" value="保存">
-				 <input type="submit" name="SUBMIT" value="保存編集">
+				 <input type="image" src="/Doraemonno4jigenpoketto/image/登録ボタン.png" onclick="document.getElementById('sendSubmit').value = '登録';document.frm.submit();" alt="登録" name="SUBMIT" value="登録" class="buttonsize" style="margin-top:350px; margin-left:-500px; margin-right:0; ">
+				 <input type="image" src="/Doraemonno4jigenpoketto/image/保存ボタン.png" onclick="document.getElementById('sendSubmit').value = '保存';document.frm.submit();" alt="保存" name="SUBMIT" value="保存" class="buttonsize" style="margin-top:350px; margin-left:80px;">
+				 <input type="image" src="/Doraemonno4jigenpoketto/image/保存編集ボタン.png" onclick="document.getElementById('sendSubmit').value = '保存編集';document.frm.submit();" alt="保存編集" name="SUBMIT" value="保存編集" class="buttonsize" style="margin-top:350px; margin-left:90px; position:absolute;">
 			</div>
 		</form>
 	</nav>

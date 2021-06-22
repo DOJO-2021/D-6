@@ -59,7 +59,7 @@
     // [3] データ1つ1つをhtml要素に変換する
     function template(dataArray) {
       return dataArray.map(function(data) {
-        return '<form method="GET" action="/Doraemonno4jigenpoketto/ResultServlet"><div class="searchresult"><input type="image" src="/Doraemonno4jigenpoketto/image/検索結果の枠.png" class="r_qb"><p class="r_question">'+ data.title +'</p>'
+        return  '<form method="GET" action="/Doraemonno4jigenpoketto/ResultServlet"><div class="searchresult"><input type="image" src="/Doraemonno4jigenpoketto/image/検索結果の枠.png" class="r_qb"><input type="text" name="QUESTION" value="' + data.title + '" class="r_question" readonly>'
 		+'<input type="text" name="PAGEVIEW" value="閲覧数：' + data.link + '" class="r_pageview" readonly>'
 		+'<input type="hidden" name="QUESTION_ID" value="' + data.category + '"></form>'
       })

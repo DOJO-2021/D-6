@@ -27,14 +27,14 @@
 <!--リンク先注意-->
 <form method="POST" action="/Doraemonno4jigenpoketto/LoginServlet" id="form">
 
-  <div class=logintext>
-   <input type="text"placeholder="ID" name="ID"> <br><br>
+  <div class="logintext">
+   <input type="text"placeholder="ID"  name="ID"> <br>
    <input type="password"placeholder="Password" name="PW"> <br><br>
   </div>
 
 <!--name="LOGIN"-->
   <div class=button>
-   <input type="image" src="/Doraemonno4jigenpoketto/image/ログインボタン.png" alt="ログイン" width="160" height="50" name="login">
+   <input type="image" src="/Doraemonno4jigenpoketto/image/ログインボタン.png" alt="ログイン" class="buttonsize" name="login">
   </div>
   </form>
 

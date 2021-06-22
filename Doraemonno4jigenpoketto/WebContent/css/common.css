@@ -2,6 +2,10 @@
 
 /*common*/
 
+html{
+	flex:1 1 auto;
+}
+
 .logo{
 	margin-top:-90px;
 	margin-left:0px;
@@ -66,6 +70,7 @@ a.edit:active{
 
 h2{
 	text-align:center;
+	margin-top:30px;
 }
 
 .h2{
@@ -87,10 +92,8 @@ p{
 }
 
 .button{
-	width:0%;
 	text-align:center;
-	margin-left:600px;
-	position:relative;
+	margin-top:20px;
 }
 
 .buttonsize{
@@ -101,8 +104,8 @@ p{
 .logoutbutton{
 	position:relative;
 	z-index: 1;
-	width:150px;
-	height:50px;
+	margin-top:-100px;
+	margin-left:1150px;
 }
 
 
@@ -304,11 +307,8 @@ a:active{
 }
 
 .logintext{
-	width: 300px;
-	height:100px;
-	position:relative;
-	left:580px;
-	top:50px
+	text-align:center;
+	margin-top:20px;
 }
 
 
@@ -319,7 +319,7 @@ a:active{
 	height:100px;
 	position:relative;
 	left:625px;
-	top:20px
+	top:20px;
 	z-index: 1;
 }
 
@@ -362,31 +362,29 @@ input[type="text"] {
     border: 2px solid #0a0;  /* 枠線 */
     border-radius: 0.67em;   /* 角丸 */
     padding: 0.5em;          /* 内側の余白量 */
-    background-color: snow;  /* 背景色 */
+    background-color: none;  /* 背景色 */
     font-size: 1em;          /* 文字サイズ */
     line-height: 1.2;        /* 行の高さ */
 
 	position:relative;
 	left:100px;
-	top:-20px
 }
 
 .regist_ab{
     border: 2px solid #0a0;  /* 枠線 */
     border-radius: 0.67em;   /* 角丸 */
     padding: 0.5em;          /* 内側の余白量 */
-    background-color: snow;  /* 背景色 */
+    background-color: none;  /* 背景色 */
     font-size: 1em;          /* 文字サイズ */
     line-height: 1.2;        /* 行の高さ */
 
 	position:relative;
 	left:100px;
-	top:-15px
 }
 
 .regist_ql{
 	margin-left:100px;
-	margin-top:-43px;
+	margin-top:20px;
 }
 
 
@@ -397,21 +395,65 @@ input[type="text"] {
 
 .regist_blockA{
 	float:left;
-	margin-top:-30px;
 }
 
 .regist_blockB{
-	text-align:right;
-	margin-top:-180px;
+	float:right;
+	margin-top:50px;
 	margin-right:80px;
+	margin-bottom:0;
 }
 
 /*Udsearch*/
-.udsearch_blockA{
-
+input[type="text"] {
+  border: 1px solid #4689FF;
 }
 
-.
+.udsearch_qb{
+    border: 2px solid #0a0;  /* 枠線 */
+    border-radius: 0.67em;   /* 角丸 */
+    padding: 0.5em;          /* 内側の余白量 */
+    background-color: none;  /* 背景色 */
+    font-size: 1em;          /* 文字サイズ */
+    line-height: 1.2;        /* 行の高さ */
+
+	position:relative;
+	left:100px;
+}
+
+.udsearch_ab{
+    border: 2px solid #0a0;  /* 枠線 */
+    border-radius: 0.67em;   /* 角丸 */
+    padding: 0.5em;          /* 内側の余白量 */
+    background-color: none;  /* 背景色 */
+    font-size: 1em;          /* 文字サイズ */
+    line-height: 1.2;        /* 行の高さ */
+
+	position:relative;
+	left:100px;
+}
+
+.udsearch_ql{
+	margin-left:100px;
+	margin-top:20px;
+}
+
+
+.udsearch_al{
+	margin-left:100px;
+	margin-top:0px;
+}
+
+.udsearch_blockA{
+	float:left;
+}
+
+.udsearch_blockB{
+	float:right;
+	margin-top:50px;
+	margin-right:80px;
+	margin-bottom:0;
+}
 
 /*Udresult*/
 .Udresult_qb{
@@ -443,13 +485,7 @@ input[type="text"] {
 
 
 /*Udedit*/
-.ud{
-	width: 300px;
-	height:100px;
-	position:relative;
-	left:580px;
-	top:-20px
-}
+
 
 .koushinbutton{
 	width: 300px;
@@ -471,50 +507,48 @@ input[type="text"] {
   border: 1px solid #4689FF;
 }
 
-.box{
+.udedit_qb{
     border: 2px solid #0a0;  /* 枠線 */
     border-radius: 0.67em;   /* 角丸 */
     padding: 0.5em;          /* 内側の余白量 */
-    background-color: snow;  /* 背景色 */
+    background-color: none;  /* 背景色 */
     font-size: 1em;          /* 文字サイズ */
     line-height: 1.2;        /* 行の高さ */
 
 	position:relative;
 	left:100px;
-	top:-20px
 }
 
-.bx{
+.udedit_ab{
     border: 2px solid #0a0;  /* 枠線 */
     border-radius: 0.67em;   /* 角丸 */
     padding: 0.5em;          /* 内側の余白量 */
-    background-color: snow;  /* 背景色 */
+    background-color: none;  /* 背景色 */
     font-size: 1em;          /* 文字サイズ */
     line-height: 1.2;        /* 行の高さ */
 
 	position:relative;
 	left:100px;
-	top:-15px
 }
 
-.bun{
+.udedit_ql{
 	margin-left:100px;
-	margin-top:-43px;
+	margin-top:20px;
 }
 
 
-.bn{
+.udedit_al{
 	margin-left:100px;
 	margin-top:0px;
 }
 
-.regist_blockA{
+.udedit_blockA{
 	float:left;
-	margin-top:-30px;
 }
 
-.regist_blockB{
-	text-align:right;
-	margin-top:-180px;
+.udedit_blockB{
+	float:right;
+	margin-top:200px;
 	margin-right:80px;
+	margin-bottom:0;
 }
