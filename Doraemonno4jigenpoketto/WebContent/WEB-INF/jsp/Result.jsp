@@ -29,20 +29,15 @@
   <script src="/Doraemonno4jigenpoketto/js/jquery-3.6.0.min.js"></script>
   <script src="/Doraemonno4jigenpoketto/js/pagination.js"></script>
   <script>
-    // [1] 配列のデータを用意
+  var diary = [
 
-
-    var diary = [
-
-    	<c:forEach var="e" items="${cardList}">
-        {
-      	 title:" ${e.question}",
-      	  link:"${e.pageview}",
-      	  category:"${e.question_id}"
-        },
-     </c:forEach>
-
-
+	  <c:forEach var="e" items="${cardList}">
+      {
+    	 title:" ${e.question}",
+    	  link:"${e.pageview}",
+    	  category:"${e.question_id}"
+      },
+   </c:forEach>
       // ...以下略
     ]
 
@@ -50,7 +45,7 @@
     $(function() {
       $('#diary-all-pager').pagination({ // diary-all-pagerにページャーを埋め込む
         dataSource: diary,
-        pageSize: 10, // 1ページあたりの表示数
+        pageSize: 20, // 1ページあたりの表示数
         prevText: '&lt; 前へ',
         nextText: '次へ &gt;',
         // ページがめくられた時に呼ばれる
@@ -63,14 +58,9 @@
     // [3] データ1つ1つをhtml要素に変換する
     function template(dataArray) {
       return dataArray.map(function(data) {
-        return
-        	'<form method="GET" action="/Doraemonno4jigenpoketto/ResultServlet">
-        	<div class="searchresult">
-        		<input type="image" src="/Doraemonno4jigenpoketto/image/検索結果の枠.png" class="r_qb">
-        		<p class="r_question">'+ data.title +'</p>'
-				+'<input type="text" name="PAGEVIEW" value="閲覧数：' + data.link + '" class="r_pageview" readonly>'
-				+'<input type="hidden" name="QUESTION_ID" value="' + data.category + '">
-			</form>'
+        return '<form method="GET" action="/Doraemonno4jigenpoketto/ResultServlet"><div class="searchresult"><input type="image" src="/Doraemonno4jigenpoketto/image/検索結果の枠.png" class="r_qb"><p class="r_question">'+ data.title +'</p>'
+		+'<input type="text" name="PAGEVIEW" value="閲覧数：' + data.link + '" class="r_pageview" readonly>'
+		+'<input type="hidden" name="QUESTION_ID" value="' + data.category + '"></form>'
       })
     }
   </script>
