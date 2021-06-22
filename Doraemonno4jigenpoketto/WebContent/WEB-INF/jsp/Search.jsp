@@ -62,7 +62,7 @@
 
         </dt>
         <ul id="opener_1" style="display:none;">
-         <li id="opener_1" style="display:none;"><div class="line"><a href="javascript:void(0)" class="line" id="closer_101" onclick="openchild('opener_101', 'closer_101')">ビジネスマナー・コミュニケーション</a></div>
+         <li><a href="#" class="line" id="closer_101" onclick="openchild('opener_101', 'closer_101')">ビジネスマナー・コミュニケーション</a>
            <ul id="opener_101" style="display:none;">
             <li><a href="javascript:void(0)" onclick="add(this.innerHTML);" class="line">敬語</a></li>
             <li><a href="javascript:void(0)" onclick="add(this.innerHTML);" class="line">ビジネスマナー</a></li>
@@ -390,8 +390,8 @@
 
 <br>
 <br>
-<div >
-  <input type="image" src="/Doraemonno4jigenpoketto/image/検索ボタン.png" name="search" alt="検索" class="buttonsize"class="button">
+<div class="button">
+  <input type="image" src="/Doraemonno4jigenpoketto/image/検索ボタン.png" name="search" alt="検索" class="buttonsize" style="margin-left:-550px;">
 </div>
 </form>
 
