@@ -15,9 +15,9 @@
 
 		 <script type="text/javascript">
 
- 更新・削除時の確認をダイアログボックスで行う
+// 更新・削除時の確認をダイアログボックスで行う
 function check(){
-
+	console.log("ああああ");
 	if(window.confirm('実行してよろしいですか？')){ // 確認ダイアログを表示
 		return true; // 「OK」時は送信を実行
 
@@ -48,7 +48,7 @@ function check(){
 <!--閲覧数・質問日・回答者・質問した年月日・登録者についての更新・削除-->
 
 <c:forEach var="e" items="${cardList}">
-	  <form name="frm" method="POST" action="/Doraemonno4jigenpoketto/UdeditServlet" enctype="multipart/form-data">
+	  <form name="frm" method="POST" action="/Doraemonno4jigenpoketto/UdeditServlet" onSubmit="return check()"  enctype="multipart/form-data">
  	<table>
 		<div class="regist_blockA">
 			<tr>
@@ -313,7 +313,7 @@ function check(){
  	</table><input type="hidden" name="QUESTION_ID" value="${e.question_id}">
 			<div class=koushinbutton>
 				<input type="hidden" name="clickAction" id="sendSubmit">
-				 <img src="/Doraemonno4jigenpoketto/image/更新ボタン.png" onclick="document.getElementById('sendSubmit').value = '更新';document.frm.submit();" alt="更新" width="140" height="45" >
+				<input type="image" src="/Doraemonno4jigenpoketto/image/更新ボタン.png" onclick="document.getElementById('sendSubmit').value = '更新';document.frm.submit();" alt="更新" width="140" height="45" name="SUBMIT" value="更新">
 			</div>
 			<div class=sakujyobutton>
 				 <img src="/Doraemonno4jigenpoketto/image/削除ボタン.png" onclick="document.getElementById('sendSubmit').value = '削除';document.frm.submit();" alt="削除" width="140" height="45" >
@@ -325,7 +325,8 @@ function check(){
 //更新の成功・失敗判定
 	<c:choose>
 	 <c:when test="${result.result == 'updatesuccess'}">
-	 	<script type="text/javascript">if(window.confirm("更新成功です!検索画面に戻りますか？"){
+	 	<script type="text/javascript">
+	 	if(window.confirm("更新成功です!検索画面に戻りますか？")){
 	 		window.location.href="http://localhost:8080/Doraemonno4jigenpoketto/UdsearchServlet";
 	 	}else{
 	 		window.alert("続けます");
@@ -336,7 +337,8 @@ function check(){
  	  <script type="text/javascript">window.alert("更新失敗です"); </script>
 	 </c:when>
 	 <c:when test="${result.result == 'deletesuccess'}">
-	 	<script type="text/javascript">if(window.confirm("削除成功です!検索画面に戻りますか？"){
+	 	<script type="text/javascript">
+	 	if(window.confirm("削除成功です!検索画面に戻りますか？")){
 	 		window.location.href="http://localhost:8080/Doraemonno4jigenpoketto/UdsearchServlet";
 	 	}else{
 	 		window.alert("続けます");
