@@ -3,9 +3,7 @@
   padding: 0;
   border: 0;
 }
-ul {
-  list-style: none;
-}
+
 .list {
   line-height: 1;
   border-bottom: 1px solid #d8d8d8;
@@ -14,18 +12,7 @@ ul {
 .list a {
   display: flex;
   align-items: center;
-  text-decoration: none;
-}
-.list .date {
-  color: darkblue;
-  margin: 0 15px 0 auto;
-}
-.list .category {
-  margin: 0 15px 0;
-  padding: 4px;
-  display: flex;
-  align-items: center;
-  color: white;
+
 }
  /* カテゴリによって違う背景色に */
 .list .category-Qiita {

@@ -13,6 +13,7 @@ import model.Qaall;
 import model.Qacount;
 import model.Qaplus;
 import model.Qas;
+import model.Qasplus;
 
 public class QaDao {
 	//今回は使わない予定
@@ -1481,7 +1482,7 @@ public class QaDao {
 
 	//研修生用検索ANDAND(単元項目付き)
 		// 引数paramで検索項目を指定し、検索結果のリストを返す
-		public List<Qaplus> selectcategory1_1(Qas param) {
+		public List<Qaplus> selectcategory1_1(Qasplus param) {
 			Connection conn = null;
 			List<Qaplus> cardListplus = new ArrayList<Qaplus>();
 
@@ -1544,6 +1545,12 @@ public class QaDao {
 				}
 				else {
 					pStmt.setString(3, "%");
+				}
+				if (param.getCategory_item() != null && param.getCategory_item() != "") {
+					pStmt.setString(4, param.getCategory_item());
+				}
+				else {
+					pStmt.setString(4, "%");
 				}
 				// SQL文を実行し、結果表を取得する
 				ResultSet rs = pStmt.executeQuery();
@@ -1594,7 +1601,7 @@ public class QaDao {
 
 		//研修生用検索ANDOR(単元項目付き)
 		// 引数paramで検索項目を指定し、検索結果のリストを返す
-		public List<Qaplus> selectcategory1_2(Qas param) {
+		public List<Qaplus> selectcategory1_2(Qasplus param) {
 			Connection conn = null;
 			List<Qaplus> cardListplus = new ArrayList<Qaplus>();
 
@@ -1657,6 +1664,12 @@ public class QaDao {
 				}
 				else {
 					pStmt.setString(3, "%");
+				}
+				if (param.getCategory_item() != null && param.getCategory_item() != "") {
+					pStmt.setString(4, param.getCategory_item());
+				}
+				else {
+					pStmt.setString(4, "%");
 				}
 				// SQL文を実行し、結果表を取得する
 				ResultSet rs = pStmt.executeQuery();
@@ -1707,7 +1720,7 @@ public class QaDao {
 
 		//研修生用検索ORAND(単元項目付き)
 		// 引数paramで検索項目を指定し、検索結果のリストを返す
-		public List<Qaplus> selectcategory1_3(Qas param) {
+		public List<Qaplus> selectcategory1_3(Qasplus param) {
 			Connection conn = null;
 			List<Qaplus> cardListplus = new ArrayList<Qaplus>();
 
@@ -1771,6 +1784,12 @@ public class QaDao {
 				else {
 					pStmt.setString(3, "%");
 				}
+				if (param.getCategory_item() != null && param.getCategory_item() != "") {
+					pStmt.setString(4, param.getCategory_item());
+				}
+				else {
+					pStmt.setString(4, "%");
+				}
 				// SQL文を実行し、結果表を取得する
 				ResultSet rs = pStmt.executeQuery();
 
@@ -1820,7 +1839,7 @@ public class QaDao {
 
 		//研修生用検索OROR(単元項目付き)
 		// 引数paramで検索項目を指定し、検索結果のリストを返す
-		public List<Qaplus> selectcategory1_4(Qas param) {
+		public List<Qaplus> selectcategory1_4(Qasplus param) {
 			Connection conn = null;
 			List<Qaplus> cardListplus = new ArrayList<Qaplus>();
 
@@ -1883,6 +1902,12 @@ public class QaDao {
 				}
 				else {
 					pStmt.setString(3, "%");
+				}
+				if (param.getCategory_item() != null && param.getCategory_item() != "") {
+					pStmt.setString(4, param.getCategory_item());
+				}
+				else {
+					pStmt.setString(4, "%");
 				}
 				// SQL文を実行し、結果表を取得する
 				ResultSet rs = pStmt.executeQuery();
@@ -3135,7 +3160,7 @@ public class QaDao {
 
 	//研修生用検索ANDANDカウント（単元項目付き）
 	// 引数paramで検索項目を指定し、検索結果のリストを返す
-	public List<Qacount> selectcategorycount1_1(Qas param) {
+	public List<Qacount> selectcategorycount1_1(Qasplus param) {
 		Connection conn = null;
 		List<Qacount> cardListplus = new ArrayList<Qacount>();
 
@@ -3196,6 +3221,12 @@ public class QaDao {
 			}
 			else {
 				pStmt.setString(3, "%");
+			}
+			if (param.getCategory_item() != null && param.getCategory_item() != "") {
+				pStmt.setString(4, param.getCategory_item());
+			}
+			else {
+				pStmt.setString(4, "%");
 			}
 			// SQL文を実行し、結果表を取得する
 			ResultSet rs = pStmt.executeQuery();
@@ -3235,7 +3266,7 @@ public class QaDao {
 
 	//研修生用検索ANDORカウント（単元項目付き）
 	// 引数paramで検索項目を指定し、検索結果のリストを返す
-	public List<Qacount> selectcategorycount1_2(Qas param) {
+	public List<Qacount> selectcategorycount1_2(Qasplus param) {
 		Connection conn = null;
 		List<Qacount> cardListplus = new ArrayList<Qacount>();
 
@@ -3296,6 +3327,12 @@ public class QaDao {
 			}
 			else {
 				pStmt.setString(3, "%");
+			}
+			if (param.getCategory_item() != null && param.getCategory_item() != "") {
+				pStmt.setString(4, param.getCategory_item());
+			}
+			else {
+				pStmt.setString(4, "%");
 			}
 			// SQL文を実行し、結果表を取得する
 			ResultSet rs = pStmt.executeQuery();
@@ -3335,7 +3372,7 @@ public class QaDao {
 
 	//研修生用検索ORANDカウント（単元項目付き）
 	// 引数paramで検索項目を指定し、検索結果のリストを返す
-	public List<Qacount> selectcategorycount1_3(Qas param) {
+	public List<Qacount> selectcategorycount1_3(Qasplus param) {
 		Connection conn = null;
 		List<Qacount> cardListplus = new ArrayList<Qacount>();
 
@@ -3397,6 +3434,12 @@ public class QaDao {
 			else {
 				pStmt.setString(3, "%");
 			}
+			if (param.getCategory_item() != null && param.getCategory_item() != "") {
+				pStmt.setString(4, param.getCategory_item());
+			}
+			else {
+				pStmt.setString(4, "%");
+			}
 			// SQL文を実行し、結果表を取得する
 			ResultSet rs = pStmt.executeQuery();
 
@@ -3435,7 +3478,7 @@ public class QaDao {
 
 	//研修生用検索ORORカウント（単元項目付き）
 	// 引数paramで検索項目を指定し、検索結果のリストを返す
-	public List<Qacount> selectcategorycount1_4(Qas param) {
+	public List<Qacount> selectcategorycount1_4(Qasplus param) {
 		Connection conn = null;
 		List<Qacount> cardListplus = new ArrayList<Qacount>();
 
@@ -3496,6 +3539,12 @@ public class QaDao {
 			}
 			else {
 				pStmt.setString(3, "%");
+			}
+			if (param.getCategory_item() != null && param.getCategory_item() != "") {
+				pStmt.setString(4, param.getCategory_item());
+			}
+			else {
+				pStmt.setString(4, "%");
 			}
 			// SQL文を実行し、結果表を取得する
 			ResultSet rs = pStmt.executeQuery();
