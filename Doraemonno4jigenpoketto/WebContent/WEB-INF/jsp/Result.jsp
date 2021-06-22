@@ -22,6 +22,7 @@
 
 <!--ヒット数表示-->
 <p class="hitnumber"><b><c:out value="${counter.count}"/>件ヒットしました。</b></p>
+<div class="pager" id="diary-all-pager"></div>
 <div id="diary-all-contents"></div>
 
 	<div class="pager" id="diary-all-pager"></div>
@@ -43,7 +44,7 @@
 
     // [2] pagination.jsの設定
     $(function() {
-      $('#diary-all-pager').pagination({ // diary-all-pagerにページャーを埋め込む
+      $('.pager').pagination({ // diary-all-pagerにページャーを埋め込む
         dataSource: diary,
         pageSize: 20, // 1ページあたりの表示数
         prevText: '&lt; 前へ',
