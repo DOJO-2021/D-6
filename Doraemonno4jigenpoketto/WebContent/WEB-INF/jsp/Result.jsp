@@ -16,7 +16,9 @@
 <div><a href="/Doraemonno4jigenpoketto/LoginServlet" class="edit">編集</a></div>
 <div><a href="/Doraemonno4jigenpoketto/SearchServlet" class="search">検索</a></div>
 
-
+   <a href="#" class="ScrollTop">
+    ▲
+  </a>
 
 <h2><img src="/Doraemonno4jigenpoketto/image/検索結果画面.png" alt="検索結果画面" class="h2"></h2>
 
@@ -67,5 +69,6 @@
 
 
   </script>
+
 </body>
 </html>

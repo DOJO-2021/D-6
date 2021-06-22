@@ -35,3 +35,38 @@
   margin: 0 4px;
   padding: 0;
 }
+.Page {
+  position: relative;
+}
+.ScrollTop {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #00FFFF;
+  color: #fff;
+  text-decoration: none;
+  opacity: 0;
+  transition: all 0.65s;
+}
+.ScrollTop-button {
+  border-radius: 50%; /*丸くする*/
+  width: 60px; /*横幅*/
+  height: 60px; /*高さ*/
+  font-size: 30px; /*アイコンフォントのサイズ*/
+  opacity:0.9; /*透明度*/
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, .2); /*影*/
+}
+
+.ScrollTop.isActive {
+  opacity: 1;
+  transition: all 0.65s;
+}
+.ScrollTop:hover{
+    color: #333; /*アイコンフォントの色*/
+  background-color:#0066FF; /*背景色*/
+}
