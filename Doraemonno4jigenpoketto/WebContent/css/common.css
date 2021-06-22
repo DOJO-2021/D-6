@@ -168,10 +168,20 @@ div.blockC{
 	margin-left:840px;
 }
 
+
 .line{
-	list-style-type:circle;
+  line-height: 1.5;
+  padding: 0.5em 30;
+  list-style-type: none!important;
 }
 
+.line:before {
+
+  font-family: "Font Awesome 5 Free";
+  content: "\025b6";/*アイコンの種類*/
+  left : 0em;/*左端からのアイコンまでの距離*/
+  color: skyblue;/*アイコン色*/
+}
 a:link{
 	color:#1E90FF;
 }

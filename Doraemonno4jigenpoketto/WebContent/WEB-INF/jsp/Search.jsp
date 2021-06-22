@@ -62,8 +62,8 @@
 
         </dt>
         <ul id="opener_1" style="display:none;">
-         <li><a href="#" class="line" id="closer_101" onclick="openchild('opener_101', 'closer_101')">ビジネスマナー・コミュニケーション</a>
-           <ul id="opener_101" style="display:none;">
+         <li><a href="#" class="line1" id="closer_101" onclick="openchild('opener_101', 'closer_101')">ビジネスマナー・コミュニケーション</a>
+           <ul id="opener_101" style="display:none;" >
             <li><a href="javascript:void(0)" onclick="add(this.innerHTML);" class="line">敬語</a></li>
             <li><a href="javascript:void(0)" onclick="add(this.innerHTML);" class="line">ビジネスマナー</a></li>
             <li><a href="javascript:void(0)" onclick="add(this.innerHTML);" class="line">挨拶</a></li>
