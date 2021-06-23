@@ -326,16 +326,26 @@ function check(){
 			</div>
 		</form>
 	</nav>
-	 <c:choose>
+	<c:choose>
     <c:when test="${result.result != null}">
 
 	<c:choose>
 	 <c:when test="${result.result == 'success'}">
 	 	<script type="text/javascript">window.alert("登録成功です");</script>
 	 </c:when>
-	 <c:otherwise>
+
+	 <c:when test="${result.result == 'false'}">
  	  <script type="text/javascript">window.alert("登録失敗です"); </script>
+	 </c:when>
+
+	 <c:when test="${result.result == 'savesuccess'}">
+	 	<script type="text/javascript">window.alert("保存成功です");</script>
+	 </c:when>
+
+	 <c:otherwise>
+ 	  <script type="text/javascript">window.alert("保存失敗です"); </script>
 	 </c:otherwise>
+
 	</c:choose>
 	</c:when>
   </c:choose>
