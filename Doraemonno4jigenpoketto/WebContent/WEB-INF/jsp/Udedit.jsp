@@ -19,7 +19,7 @@
 function check(){
 
 	if(window.confirm('実行してよろしいですか？')){ // 確認ダイアログを表示
-		document.frm.submit();
+
 		return true; // 「OK」時は送信を実行
 
 	}
@@ -317,8 +317,8 @@ function check(){
 
 		<div class="button" style="desplay:inline;">
 				<input type="hidden" name="clickAction" id="sendSubmit">
-				<input type="image" src="/Doraemonno4jigenpoketto/image/更新ボタン.png" onclick="document.getElementById('sendSubmit').value = '更新';check();" alt="更新" class="buttonsize" name="SUBMIT" value="更新" style="margin-top:400px; margin-left:-600px; position:absolute;">
- 				<input type="image" src="/Doraemonno4jigenpoketto/image/削除ボタン.png" onclick="document.getElementById('sendSubmit').value = '削除';check();" alt="削除" class="buttonsize" style="margin-top:400px; margin-left:-300px; position:absolute;">
+				<input type="image" src="/Doraemonno4jigenpoketto/image/更新ボタン.png" onclick="document.getElementById('sendSubmit').value = '更新';" alt="更新" class="buttonsize" name="SUBMIT" value="更新" style="margin-top:400px; margin-left:-600px; position:absolute;">
+ 				<input type="image" src="/Doraemonno4jigenpoketto/image/削除ボタン.png" onclick="document.getElementById('sendSubmit').value = '削除';" alt="削除" class="buttonsize" style="margin-top:400px; margin-left:-300px; position:absolute;">
 		</div>
 
     </form>
