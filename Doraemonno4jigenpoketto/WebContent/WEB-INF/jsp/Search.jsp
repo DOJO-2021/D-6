@@ -75,7 +75,7 @@
          </li>
 
 
-         <li> <a href="#" class="line" id="closer_102" onclick="openchild('opener_102', 'closer_102')">ビジネスメール・ビジネス文章</a>
+         <li> <a href="#" class="line1" id="closer_102" onclick="openchild('opener_102', 'closer_102')">ビジネスメール・ビジネス文章</a>
             <ul id="opener_102" style="display:none;">
              <li><a href="javascript:void(0)" onclick="add(this.innerHTML);" class="line">ビジネス文書とは</a></li>
              <li><a href="javascript:void(0)" onclick="add(this.innerHTML);" class="line">文書の書き方</a></li>
@@ -85,13 +85,13 @@
             </ul>
          </li>
 
-         <li> <a href="#" class="line" id="closer_103" onclick="openchild('opener_103', 'closer_103')">Word</a>
+         <li> <a href="#" class="line1" id="closer_103" onclick="openchild('opener_103', 'closer_103')">Word</a>
             <ul id="opener_103" style="display:none;">
              <li><a href="javascript:void(0)" onclick="add(this.innerHTML);" class="line">Word</a></li>
             </ul>
          </li>
 
-         <li> <a href="#" class="line" id="closer_104" onclick="openchild('opener_104', 'closer_104')">Excel</a>
+         <li> <a href="#" class="line1" id="closer_104" onclick="openchild('opener_104', 'closer_104')">Excel</a>
             <ul id="opener_104" style="display:none;">
              <li><a href="javascript:void(0)" onclick="add(this.innerHTML);" class="line">Excel</a></li>
             </ul>
@@ -104,7 +104,7 @@
             <a href="javascript:void(0)" id="closer_2" onclick="openchild('opener_2', 'closer_2')"><img src="/Doraemonno4jigenpoketto/image/IT基礎コース.png" alt="IT基礎コース" class="navigation"></a>
         </dt>
         <ul id="opener_2" style="display:none;">
-         <li><a href="javascript:void(0)" class="line" id="closer_201" onclick="openchild('opener_201', 'closer_201')">プログラミング</a>
+         <li><a href="javascript:void(0)" class="line1" id="closer_201" onclick="openchild('opener_201', 'closer_201')">プログラミング</a>
            <ul id="opener_201" style="display:none;">
             <li><a href="javascript:void(0)" onclick="add(this.innerHTML);" class="line">プログラミングの世界</a></li>
             <li><a href="javascript:void(0)" onclick="add(this.innerHTML);" class="line">コンピューターの仕組みと役割</a></li>
@@ -115,7 +115,7 @@
            </ul>
          </li>
 
-         <li> <a href="#" class="line" id="closer_202" onclick="openchild('opener_202', 'closer_202')">アルゴリズム</a>
+         <li> <a href="#" class="line1" id="closer_202" onclick="openchild('opener_202', 'closer_202')">アルゴリズム</a>
             <ul id="opener_202" style="display:none;">
              <li><a href="javascript:void(0)" onclick="add(this.innerHTML);" class="line">アルゴリズム</a></li>
              <li><a href="javascript:void(0)" onclick="add(this.innerHTML);" class="line">データ構造</a></li>
@@ -123,7 +123,7 @@
             </ul>
          </li>
 
-         <li> <a href="#" class="line" id="closer_203" onclick="openchild('opener_203', 'closer_203')">ネットワーク</a>
+         <li> <a href="#" class="line1" id="closer_203" onclick="openchild('opener_203', 'closer_203')">ネットワーク</a>
             <ul id="opener_203" style="display:none;">
              <li><a href="javascript:void(0)" onclick="add(this.innerHTML);" class="line">IPアドレス</a></li>
              <li><a href="javascript:void(0)" onclick="add(this.innerHTML);" class="line">DNSサーバー</a></li>
@@ -136,7 +136,7 @@
             </ul>
          </li>
 
-         <li> <a href="#" class="line" id="closer_204" onclick="openchild('opener_204', 'closer_204')">HTML</a>
+         <li> <a href="#" class="line1" id="closer_204" onclick="openchild('opener_204', 'closer_204')">HTML</a>
             <ul id="opener_204" style="display:none;">
              <li><a href="javascript:void(0)" onclick="add(this.innerHTML);" class="line">製作の準備と基本的なHTMＬ</a></li>
              <li><a href="javascript:void(0)" onclick="add(this.innerHTML);" class="line">見出し・段落・リスト</a></li>
@@ -146,7 +146,7 @@
             </ul>
          </li>
 
-         <li> <a href="#" class="line" id="closer_205" onclick="openchild('opener_205', 'closer_205')">CSS</a>
+         <li> <a href="#" class="line1" id="closer_205" onclick="openchild('opener_205', 'closer_205')">CSS</a>
             <ul id="opener_205" style="display:none;">
              <li><a href="javascript:void(0)" onclick="add(this.innerHTML);" class="line">CSSでページのスタイルを調整</a></li>
              <li><a href="javascript:void(0)" onclick="add(this.innerHTML);" class="line">フロートとテーブルのスタイル</a></li>
@@ -155,7 +155,7 @@
             </ul>
          </li>
 
-         <li> <a href="#" class="line" id="closer_206" onclick="openchild('opener_206', 'closer_206')">JavaScript</a>
+         <li> <a href="#" class="line1" id="closer_206" onclick="openchild('opener_206', 'closer_206')">JavaScript</a>
             <ul id="opener_206" style="display:none;">
              <li><a href="javascript:void(0)" onclick="add(this.innerHTML);" class="line">アウトプットの基本</a></li>
              <li><a href="javascript:void(0)" onclick="add(this.innerHTML);" class="line">文法と基本的な機能</a></li>
@@ -166,7 +166,7 @@
             </ul>
          </li>
 
-         <li> <a href="#" class="line" id="closer_207" onclick="openchild('opener_207', 'closer_207')">データベース(SQL)</a>
+         <li> <a href="#" class="line1" id="closer_207" onclick="openchild('opener_207', 'closer_207')">データベース(SQL)</a>
             <ul id="opener_207" style="display:none;">
              <li><a href="javascript:void(0)" onclick="add(this.innerHTML);" class="line">用途と役割</a></li>
              <li><a href="javascript:void(0)" onclick="add(this.innerHTML);" class="line">リレーショナルデータベース</a></li>
@@ -187,7 +187,7 @@
             <a href="javascript:void(0)" id="closer_3" onclick="openchild('opener_3', 'closer_3')"><img src="/Doraemonno4jigenpoketto/image/Java基礎コース.png" alt="Java基礎コース" class="navigation"></a>
         </dt>
         <ul id="opener_3" style="display:none;">
-         <li><a href="javascript:void(0)" class="line" id="closer_301" onclick="openchild('opener_301', 'closer_301')">Javaプログラミング</a>
+         <li><a href="javascript:void(0)" class="line1" id="closer_301" onclick="openchild('opener_301', 'closer_301')">Javaプログラミング</a>
            <ul id="opener_301" style="display:none;">
             <li><a href="javascript:void(0)" onclick="add(this.innerHTML);" class="line">Javaプログラムの書き方</a></li>
             <li><a href="javascript:void(0)" onclick="add(this.innerHTML);" class="line">式と演算子</a></li>
@@ -206,7 +206,7 @@
            </ul>
          </li>
 
-         <li> <a href="#" class="line" id="closer_302" onclick="openchild('opener_302', 'closer_302')">サーバサイドJava</a>
+         <li> <a href="#" class="line1" id="closer_302" onclick="openchild('opener_302', 'closer_302')">サーバサイドJava</a>
             <ul id="opener_302" style="display:none;">
              <li><a href="javascript:void(0)" onclick="add(this.innerHTML);" class="line">サーブレットの基礎</a></li>
              <li><a href="javascript:void(0)" onclick="add(this.innerHTML);" class="line">JSPの基礎</a></li>
@@ -226,7 +226,7 @@
             </ul>
          </li>
 
-         <li> <a href="#" class="line" id="closer_303" onclick="openchild('opener_303', 'closer_303')">品質管理</a>
+         <li> <a href="#" class="line1" id="closer_303" onclick="openchild('opener_303', 'closer_303')">品質管理</a>
             <ul id="opener_303" style="display:none;">
              <li><a href="javascript:void(0)" onclick="add(this.innerHTML);" class="line">品質管理の基礎知識</a></li>
              <li><a href="javascript:void(0)" onclick="add(this.innerHTML);" class="line">ホワイトボックス・ブラックボックス・オートテスト</a></li>
@@ -236,7 +236,7 @@
             </ul>
          </li>
 
-         <li> <a href="#" class="line" id="closer_304" onclick="openchild('opener_304', 'closer_304')">セキュリティ</a>
+         <li> <a href="#" class="line1" id="closer_304" onclick="openchild('opener_304', 'closer_304')">セキュリティ</a>
             <ul id="opener_304" style="display:none;">
              <li><a href="javascript:void(0)" onclick="add(this.innerHTML);" class="line">脅威の存在を知る</a></li>
              <li><a href="javascript:void(0)" onclick="add(this.innerHTML);" class="line">暗号化とディジタル署名</a></li>
@@ -252,7 +252,7 @@
             <a href="javascript:void(0)" id="closer_4" onclick="openchild('opener_4', 'closer_4')"><img src="/Doraemonno4jigenpoketto/image/Webアプリ開発演習コース.png" alt="Webアプリ開発演習コース" class="navigation"></a>
         </dt>
         <ul id="opener_4" style="display:none;">
-         <li><a href="javascript:void(0)" class="line" id="closer_401" onclick="openchild('opener_401', 'closer_401')">導入</a>
+         <li><a href="javascript:void(0)" class="line1" id="closer_401" onclick="openchild('opener_401', 'closer_401')">導入</a>
            <ul id="opener_401" style="display:none;">
             <li><a href="javascript:void(0)" onclick="add(this.innerHTML);" class="line">Webアプリケーションの構成要素</a></li>
             <li><a href="javascript:void(0)" onclick="add(this.innerHTML);" class="line">Webアプリケーションフレームワーク</a></li>
@@ -262,7 +262,7 @@
            </ul>
          </li>
 
-         <li> <a href="#" class="line" id="closer_402" onclick="openchild('opener_402', 'closer_402')">要件定義</a>
+         <li> <a href="#" class="line1" id="closer_402" onclick="openchild('opener_402', 'closer_402')">要件定義</a>
             <ul id="opener_402" style="display:none;">
              <li><a href="javascript:void(0)" onclick="add(this.innerHTML);" class="line">プロジェクトについて</a></li>
              <li><a href="javascript:void(0)" onclick="add(this.innerHTML);" class="line">ヒアリング</a></li>
@@ -274,19 +274,19 @@
             </ul>
          </li>
 
-         <li> <a href="#" class="line" id="closer_403" onclick="openchild('opener_403', 'closer_403')">外部設計</a>
+         <li> <a href="#" class="line1" id="closer_403" onclick="openchild('opener_403', 'closer_403')">外部設計</a>
             <ul id="opener_403" style="display:none;">
              <li><a href="javascript:void(0)" onclick="add(this.innerHTML);" class="line">外部設計書</a></li>
             </ul>
          </li>
 
-         <li> <a href="#" class="line" id="closer_404" onclick="openchild('opener_404', 'closer_404')">内部設計</a>
+         <li> <a href="#" class="line1" id="closer_404" onclick="openchild('opener_404', 'closer_404')">内部設計</a>
             <ul id="opener_404" style="display:none;">
              <li><a href="javascript:void(0)" onclick="add(this.innerHTML);" class="line">内部設計書</a></li>
             </ul>
          </li>
 
-         <li> <a href="#" class="line" id="closer_405" onclick="openchild('opener_405', 'closer_405')">実装</a>
+         <li> <a href="#" class="line1" id="closer_405" onclick="openchild('opener_405', 'closer_405')">実装</a>
             <ul id="opener_405" style="display:none;">
              <li><a href="javascript:void(0)" onclick="add(this.innerHTML);" class="line">コーディング規約</a></li>
              <li><a href="javascript:void(0)" onclick="add(this.innerHTML);" class="line">命名規則</a></li>
@@ -294,7 +294,7 @@
             </ul>
          </li>
 
-         <li> <a href="#" class="line" id="closer_406" onclick="openchild('opener_406', 'closer_406')">テスト</a>
+         <li> <a href="#" class="line1" id="closer_406" onclick="openchild('opener_406', 'closer_406')">テスト</a>
             <ul id="opener_406" style="display:none;">
              <li><a href="javascript:void(0)" onclick="add(this.innerHTML);" class="line">テストの工程</a></li>
              <li><a href="javascript:void(0)" onclick="add(this.innerHTML);" class="line">テストの種類と方法</a></li>
@@ -304,7 +304,7 @@
             </ul>
          </li>
 
-         <li> <a href="#" class="line" id="closer_407" onclick="openchild('opener_407', 'closer_407')">プレゼン作成</a>
+         <li> <a href="#" class="line1" id="closer_407" onclick="openchild('opener_407', 'closer_407')">プレゼン作成</a>
             <ul id="opener_407" style="display:none;">
              <li><a href="javascript:void(0)" onclick="add(this.innerHTML);" class="line">プレゼンの基礎</a></li>
              <li><a href="javascript:void(0)" onclick="add(this.innerHTML);" class="line">パワーポイント基礎</a></li>
@@ -312,7 +312,7 @@
             </ul>
          </li>
 
-         <li> <a href="#" class="line" id="closer_408" onclick="openchild('opener_408', 'closer_408')">発表</a>
+         <li> <a href="#" class="line1" id="closer_408" onclick="openchild('opener_408', 'closer_408')">発表</a>
             <ul id="opener_408" style="display:none;">
              <li><a href="javascript:void(0)" onclick="add(this.innerHTML);" class="line">発表</a></li>
             </ul>
@@ -325,19 +325,19 @@
             <a href="javascript:void(0)" id="closer_5" onclick="openchild('opener_5', 'closer_5')"><img src="/Doraemonno4jigenpoketto/image/ドリル.png" alt="ドリル" class="navigation"></a>
         </dt>
         <ul id="opener_5" style="display:none;">
-         <li><a href="javascript:void(0)" class="line" id="closer_501" onclick="openchild('opener_501', 'closer_501')">アルゴリズムドリル</a>
+         <li><a href="javascript:void(0)" class="line1" id="closer_501" onclick="openchild('opener_501', 'closer_501')">アルゴリズムドリル</a>
            <ul id="opener_501" style="display:none;">
             <li><a href="javascript:void(0)" onclick="add(this.innerHTML);" class="line">アルゴリズムドリル</a></li>
            </ul>
          </li>
 
-         <li> <a href="#" class="line" id="closer_502" onclick="openchild('opener_502', 'closer_502')">SQLドリル</a>
+         <li> <a href="#" class="line1" id="closer_502" onclick="openchild('opener_502', 'closer_502')">SQLドリル</a>
             <ul id="opener_502" style="display:none;">
              <li><a href="javascript:void(0)" onclick="add(this.innerHTML);" class="line">SQLドリル</a></li>
             </ul>
          </li>
 
-         <li> <a href="#" class="line" id="closer_503" onclick="openchild('opener_503', 'closer_503')">Javaドリル</a>
+         <li> <a href="#" class="line1" id="closer_503" onclick="openchild('opener_503', 'closer_503')">Javaドリル</a>
             <ul id="opener_503" style="display:none;">
              <li><a href="javascript:void(0)" onclick="add(this.innerHTML);" class="line">Javaドリル</a></li>
             </ul>
@@ -350,7 +350,7 @@
             <a href="javascript:void(0)" id="closer_6" onclick="openchild('opener_6', 'closer_6')"><img src="/Doraemonno4jigenpoketto/image/その他.png" alt="その他" class="navigation"></a>
         </dt>
         <ul id="opener_6" style="display:none;">
-         <li><a href="javascript:void(0)" class="line" id="closer_601" onclick="openchild('opener_601', 'closer_601')">その他</a>
+         <li><a href="javascript:void(0)" class="line1" id="closer_601" onclick="openchild('opener_601', 'closer_601')">その他</a>
            <ul id="opener_601" style="display:none;">
             <li><a href="javascript:void(0)" onclick="add(this.innerHTML);" class="line">その他</a></li>
            </ul>

@@ -21,12 +21,13 @@
 
 
 
-<h2><img src="/Doraemonno4jigenpoketto/image/ログイン画面.png" alt="ログイン" class="h2"></h2>
+<h2><img src="/Doraemonno4jigenpoketto/image/ログイン画面.png" alt="ログイン" class="h2" style="margin-bottom:20px;"></h2>
 
 
 <!--リンク先注意-->
 <form method="POST" action="/Doraemonno4jigenpoketto/LoginServlet" id="form">
 
+<p ID="output" class="loginerror">
   <div class="logintext">
    <input type="text"placeholder="ID"  name="ID"> <br>
    <input type="password"placeholder="Password" name="PW"> <br><br>
@@ -37,6 +38,15 @@
    <input type="image" src="/Doraemonno4jigenpoketto/image/ログインボタン.png" alt="ログイン" class="buttonsize" name="login">
   </div>
   </form>
-
+  <script>
+  document.getElementById('form').onsubmit=function(event){
+	  const id=document.getElementById('form').ID.value;
+	  const pw=document.getElementById('form').PW.value;
+	  if(id!=="aaa"||pw!=="a"){
+		  event.preventDefault();
+		  document.getElementById('output').textContent="PWかIDが違います。";
+	  }
+  };
+  </script>
 </body>
 </html>

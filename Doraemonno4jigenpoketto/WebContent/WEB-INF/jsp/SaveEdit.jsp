@@ -39,6 +39,7 @@ function check(){
 <body>
 <div><img src="/Doraemonno4jigenpoketto/image/帯.png" class="titlebar"></div>
 <div><img src="/Doraemonno4jigenpoketto/image/ロゴ.png" alt="DOJO Q&A集" class="logo"></div>
+<div><a href="/Doraemonno4jigenpoketto/EditServlet" class="edit">編集</a></div>
 
 
    		<div class="logoutbutton">
@@ -51,7 +52,7 @@ function check(){
 
 
 
-	<nav>
+
 
 		<c:forEach var="e" items="${cardList}">
 		<form name="frm" method="POST" action="/Doraemonno4jigenpoketto/RegistServlet" onSubmit="return check()" enctype="multipart/form-data">
@@ -328,6 +329,6 @@ function check(){
 
 		</form>
 		</c:forEach>
-	</nav>
+
 </body>
 </html>

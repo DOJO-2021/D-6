@@ -39,7 +39,7 @@ public class SaveServlet extends HttpServlet {
 		request.setCharacterEncoding("UTF-8");
 		int question_id=Integer.parseInt(request.getParameter("QUESTION_ID"));
 		QaDao qDao=new QaDao();
-		List<Qaplus> cardList = qDao.select3(new Qaall(question_id,null, "", 0, "", "",0,"",""));
+		List<Qaplus> cardList = qDao.selectsave3(new Qaall(question_id,null, "", 0, "", "",0,"",""));
 		// 全項目をリクエストスコープに格納する
 		request.setAttribute("cardList", cardList);
 

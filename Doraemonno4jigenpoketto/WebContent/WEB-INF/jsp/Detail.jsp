@@ -11,34 +11,37 @@
 	</head>
 	<body>
 
-		<img src="/Doraemonno4jigenpoketto/image/帯.png" class="titlebar">
-		<!-- <h1><a href="/Doraemonno4jigenpoketto/MenuServlet"><img src="/Doraemonno4jigenpoketto/image/ロゴ.png" alt="DOJO Q&A集" class="logo"></a></h1>-->
-		<a href="/Doraemonno4jigenpoketto/LoginServlet" class="edit">編集</a>
-		<a href="/Doraemonno4jigenpoketto/SearchServlet" class="search">検索</a>
+<div><img src="/Doraemonno4jigenpoketto/image/帯.png" class="titlebar"></div>
+<div><a href="/Doraemonno4jigenpoketto/MenuServlet"><img src="/Doraemonno4jigenpoketto/image/ロゴ.png" alt="DOJO Q&A集" class="logo"></a></div>
+<div><a href="/Doraemonno4jigenpoketto/LoginServlet" class="edit">編集</a></div>
+<div><a href="/Doraemonno4jigenpoketto/SearchServlet" class="search">検索</a></div>
 
 
 		<h2><img src="/Doraemonno4jigenpoketto/image/詳細画面.png" alt="詳細画面" class="h2"></h2>
 		<c:forEach var="e" items="${cardList}">
 
-			<input type="text" name="pageview" value="閲覧数：${e.pageview}" class="d_pageview" readonly>
+
+			<p name="pageview" class="d_pageview"> 閲覧数：${e.pageview} </p>
 
 			<div style="text-align:center;">
-			<input type="text" name="question" value="${e.question}" class="d_question" readonly>
+				<p name="question"class="d_question" style="color:black;">${e.question} </p>
 				<img src="/Doraemonno4jigenpoketto/image/質問文の枠.png" class="d_qb"><!--d_qb=DerailQuestionBox-->
 			</div>
 
 			<div>
-			<input type="text" name="date" value="質問日：${e.date}" class="d_date" readonly>
+			<p name="date" class="d_date"> 質問日：${e.date} </p>
 			</div>
 
 
 			<div style="text-align:center;">
-			<input type="text" name="answer" value="${e.answer}" class="d_answer" readonly>
+				<p name="answer" class="d_answer" style="color:black;">${e.answer} </p>
 				<img src="/Doraemonno4jigenpoketto/image/回答文の枠.png" class="d_ab"><!--d_ab=DerailAnswerBox-->
-			<img src="/Doraemonno4jigenpoketto/upload/${e.filename}" width=250px height=150px alt='NO IMAGES' name="FILENAME">
 			</div>
 
-			<input type="text" name="answerer" value="回答者：${e.answerer}" class="d_answerer" readonly>
+			<p name="answerer" class="d_answerer">回答者：${e.answerer} </p>
+
+			<img src="/Doraemonno4jigenpoketto/upload/${e.filename}" width=250px height=150px alt='NO IMAGES' name="FILENAME" class="pic">
 		</c:forEach>
+
 	</body>
 </html>

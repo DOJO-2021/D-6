@@ -36,6 +36,7 @@ function check(){
 
 <div><img src="/Doraemonno4jigenpoketto/image/帯.png" class="titlebar"></div>
 <div><img src="/Doraemonno4jigenpoketto/image/ロゴ.png" alt="DOJO Q&A集" class="logo"></div>
+<div><a href="/Doraemonno4jigenpoketto/EditServlet" class="edit">編集</a></div>
 
 
 
@@ -50,6 +51,8 @@ function check(){
 <nav>
 <c:forEach var="e" items="${cardList}">
 	  <form name="frm" method="POST" action="/Doraemonno4jigenpoketto/UdeditServlet" onSubmit="return check()"  enctype="multipart/form-data">
+
+
 		<div class="udedit_blockA">
 				<p class="udedit_ql">質問文</p>
 
@@ -59,7 +62,7 @@ function check(){
 				<textarea class="udedit_ab" name="ANSWER"  rows="7" cols="100" style="border:4px solid #4689FF" onMouseover="this.style.borderColor='#FFCC33'" onMouseout="this.style.borderColor='#4689FF'">${e.answer}</textarea>
 		</div>
 
-		<div class="udedit_blockB" style="float:right;">
+		<div class="udedit_blockB">
        <select name="unit" id="unit" style="width:27em;">
         <option value="">単元を選択してください</option>
         <optgroup label="パーソナルスキルコース">
@@ -303,18 +306,20 @@ function check(){
 	閲覧数<input type="text" name="PAGEVIEW" value="${e.pageview}" style="width:23em;"><br><br>
 	質問日<input type="text" name="DATE" value="${e.date}" style="width:23em;"><br><br>
 	回答者<input type="text" name="ANSWERER" value="${e.answerer}" style="width:23em;"><br><br>
-	登録者<input type="text" name="REGISTRANT" value="${e.registrant}" style="width:23em;">
+	登録者<input type="text" name="REGISTRANT" value="${e.registrant}" style="width:23em;"><br><br>
 	画像<img src="/Doraemonno4jigenpoketto/upload/${e.filename}" width=250px height=150px alt='NO IMAGES' name="FILENAME"><input type="file" name="photo" style="width:23em;">
+	<input type="hidden" name="QUESTION_ID" value="${e.question_id}">
+
 
 	</div>
- 	<input type="hidden" name="QUESTION_ID" value="${e.question_id}">
-			<div class="koushinbutton">
+
+
+		<div class="button" style="desplay:inline;">
 				<input type="hidden" name="clickAction" id="sendSubmit">
-				<input type="image" src="/Doraemonno4jigenpoketto/image/更新ボタン.png" onclick="document.getElementById('sendSubmit').value = '更新';document.frm.submit();" alt="更新" class="buttonsize" name="SUBMIT" value="更新">
-			</div>
-			<div class="sakujyobutton">
-				 <img src="/Doraemonno4jigenpoketto/image/削除ボタン.png" onclick="document.getElementById('sendSubmit').value = '削除';document.frm.submit();" alt="削除" class="buttonsize" >
-			</div>
+				<input type="image" src="/Doraemonno4jigenpoketto/image/更新ボタン.png" onclick="document.getElementById('sendSubmit').value = '更新';document.frm.submit();" alt="更新" class="buttonsize" name="SUBMIT" value="更新" style="margin-top:400px; margin-left:-600px; position:absolute;">
+ 				<input type="image" src="/Doraemonno4jigenpoketto/image/削除ボタン.png" onclick="document.getElementById('sendSubmit').value = '削除';document.frm.submit();" alt="削除" class="buttonsize" style="margin-top:400px; margin-left:-300px; position:absolute;">
+		</div>
+
     </form>
 
 </c:forEach>

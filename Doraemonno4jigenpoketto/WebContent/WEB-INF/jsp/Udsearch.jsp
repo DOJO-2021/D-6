@@ -14,13 +14,14 @@
 
 <div><img src="/Doraemonno4jigenpoketto/image/帯.png" class="titlebar"></div>
 <div><img src="/Doraemonno4jigenpoketto/image/ロゴ.png" alt="DOJO Q&A集" class="logo"></div>
+<div><a href="/Doraemonno4jigenpoketto/EditServlet" class="edit">編集</a></div>
 
 
    		<div class="logoutbutton">
 			<a href="/Doraemonno4jigenpoketto/LoginServlet"><img src="/Doraemonno4jigenpoketto/image/ログアウトボタン.png" alt="ログアウト" class="buttonsize"></a>
 		</div>
 
-<h2><img src="/Doraemonno4jigenpoketto/image/更新・削除用検索画面.png" alt="更新・削除用検索画面" class="h2"></h2>
+<h2><img src="/Doraemonno4jigenpoketto/image/更新・削除用検索画面.png" alt="更新・削除用検索画面" class="h2" style="width:25%;"></h2>
 
 
 <!--カテゴリ選択・回答者・質問した年月日・登録者についての登録-->

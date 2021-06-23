@@ -22,12 +22,20 @@
 
 <h2><img src="/Doraemonno4jigenpoketto/image/検索結果画面.png" alt="検索結果画面" class="h2"></h2>
 
+
+<div class="pager" id="diary-all-pager" style="text-align:center; margin-bottom:50px;"></div>
+
 <!--ヒット数表示-->
 <p class="hitnumber"><b><c:out value="${counter.count}"/>件ヒットしました。</b></p>
-<div class="pager" id="diary-all-pager"></div>
 <div id="diary-all-contents"></div>
 
-	<div class="pager" id="diary-all-pager"></div>
+<div class="pager" id="diary-all-pager" style="text-align:center; margin-top:50px;"></div>
+
+
+
+
+
+
 
   <script src="/Doraemonno4jigenpoketto/js/jquery-3.6.0.min.js"></script>
   <script src="/Doraemonno4jigenpoketto/js/pagination.js"></script>
@@ -61,7 +69,7 @@
     // [3] データ1つ1つをhtml要素に変換する
     function template(dataArray) {
       return dataArray.map(function(data) {
-        return  '<form method="GET" action="/Doraemonno4jigenpoketto/ResultServlet" id="frm"><div class="searchresult"><input type="image" src="/Doraemonno4jigenpoketto/image/検索結果の枠.png" class="r_qb"><div class="searchresult"><p class="r_question">' + data.title + '</p>'
+        return  '<form method="GET" action="/Doraemonno4jigenpoketto/ResultServlet" id="frm"><input type="image" src="/Doraemonno4jigenpoketto/image/検索結果の枠.png" class="r_qb"><p class="r_question" style="color:black;">' + data.title + '</p>'
 		+'<p class="r_pageview"> 閲覧数：' + data.link + '</p>'
 		+'<input type="hidden" name="QUESTION_ID" value="' + data.category + '"></form>'
       })
