@@ -366,8 +366,8 @@
 <div class="blockB">
 	<input type="text" placeholder="検索したいカテゴリー項目" name="Q_category" class="wordsearch" ><br>
     <input type="text"placeholder="検索したいワード" name="QUESTION1" class="wordsearch"> <br>
-    <input type="text"placeholder="検索したいワード" name="QUESTION1" class="wordsearch"> <br>
-    <input type="text"placeholder="検索したいワード" name="QUESTION1" class="wordsearch"> <br>
+    <input type="text"placeholder="検索したいワード" name="QUESTION2" class="wordsearch"> <br>
+    <input type="text"placeholder="検索したいワード" name="QUESTION3" class="wordsearch"> <br>
 
 </div>
 

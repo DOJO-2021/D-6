@@ -35,7 +35,7 @@ public class ResultServlet extends HttpServlet {
 
 		List<Qaplus> cardList = qDao.select3(new Qaall(question_id,null, "", 0, "", "",0,"",""));
 		// 全項目をリクエストスコープに格納する
-		request.setAttribute("cardList", cardList);
+		request.setAttribute("cardList1", cardList);
 
 		// 結果ページにフォワードする
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/Detail.jsp");

@@ -97,7 +97,7 @@ public class RegistServlet extends HttpServlet {
 
 		String filename=Paths.get(part.getSubmittedFileName()).getFileName().toString();
 		//アップロードするフォルダ
-		String path="C:/pleiades/workspace/D-6/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/Doraemonno4jigenpoketto/upload";
+		String path="C:/pleiades/workspace/D-6/Doraemonno4jigenpoketto/WebContent/upload";
 		//実際にファイルが保存されている場所の確認、ターミナルから確認
 		System.out.println(path);
 		//写真の登録処理

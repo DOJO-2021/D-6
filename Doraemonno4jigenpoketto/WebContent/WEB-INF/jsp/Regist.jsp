@@ -61,7 +61,7 @@ function check(){
 
 				<p class="regist_ql">質問文</p><!--regist_ql=RegistQuestionLabel-->
 
-				<textarea class ="regist_qb" name="QUESTION" rows="7" cols="100" style="border:4px solid #4689FF" onMouseover="this.style.borderColor='#FFCC33'" onMouseout="this.style.borderColor='#4689FF'" required></textarea>
+				<textarea class ="regist_qb" id="questionarea" name="QUESTION" rows="7" cols="100" style="border:4px solid #4689FF" onMouseover="this.style.borderColor='#FFCC33'" onMouseout="this.style.borderColor='#4689FF'" required></textarea>
 
 				<p class="regist_al">回答文</p><!--regist_al=RegistAnswerLabel-->
 
@@ -321,8 +321,8 @@ function check(){
 
 			<div class="button" style="desplay:inline;">
 				<input type="hidden" name="SUBMIT" id="sendSubmit">
-				 <input type="image" src="/Doraemonno4jigenpoketto/image/登録ボタン.png" onclick="document.getElementById('sendSubmit').value = '登録'; " alt="登録" name="SUBMIT" value="登録" class="buttonsize" style="margin-top:350px; margin-left:-500px; margin-right:0; ">
-				 <input type="image" src="/Doraemonno4jigenpoketto/image/保存ボタン.png" onclick="document.getElementById('sendSubmit').value = '保存'; ; " alt="保存" name="SUBMIT" value="保存" class="buttonsize" style="margin-top:350px; margin-left:80px;">
+				 <input type="image" src="/Doraemonno4jigenpoketto/image/登録ボタン.png" onclick="document.getElementById('sendSubmit').value = '登録'; " alt="登録" name="SUBMIT" value="登録" class="buttonsize" id="registbutton" style="margin-top:350px; margin-left:-500px; margin-right:0;">
+				 <input type="image" src="/Doraemonno4jigenpoketto/image/保存ボタン.png" onchange="change()" onclick="document.getElementById('sendSubmit').value = '保存'; ; " alt="保存" name="SUBMIT" value="保存" class="buttonsize" id="savebutton" style="margin-top:350px; margin-left:80px;">
 				 <input type="image" src="/Doraemonno4jigenpoketto/image/保存編集ボタン.png" onclick="document.getElementById('sendSubmit').value = '保存編集'; " alt="保存編集" name="SUBMIT" value="保存編集" class="buttonsize" style="margin-top:350px; margin-left:90px; position:absolute;">
 			</div>
 		</form>
@@ -350,5 +350,22 @@ function check(){
 	</c:choose>
 	</c:when>
   </c:choose>
+<script  type="text/javascript">
+'use strict'
+function change() {
+
+    var element;
+    if(document.getElementById("savebutton").onclick) {
+    	hannnou
+        element = document.getElementById("questionarea");
+        element.required = false;
+    }else {
+        element = document.getElementById("questionarea");
+        element.required = true;
+    }
+
+}
+
+</script>
 </body>
 </html>
