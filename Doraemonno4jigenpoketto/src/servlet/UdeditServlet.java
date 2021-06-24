@@ -76,7 +76,7 @@ public class UdeditServlet extends HttpServlet {
 		System.out.println(filename);
 
 		if (part.getSize()!=0) {
-			String path="C:/pleiades/workspace/D-6/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/Doraemonno4jigenpoketto/upload";
+			String path="C:/pleiades/workspace/D-6/Doraemonno4jigenpoketto/WebContent/upload";
 			//実際にファイルが保存されている場所の確認、ターミナルから確認
 			System.out.println(path);
 			//写真の登録処理
@@ -166,7 +166,7 @@ public class UdeditServlet extends HttpServlet {
 			QaDao qDao=new QaDao();
 			CategoryDao cDao=new CategoryDao();
 			if(request.getParameter("clickAction").equals("更新")) {
-				if (qDao.update(new Qaall(question_id, date,answerer , category_id,question ,answer , pageview,filename,registrant ))) {	// 更新成功
+				if (qDao.updatenophoto(new Qaall(question_id, date,answerer , category_id,question ,answer , pageview,filename,registrant ))) {	// 更新成功
 					String result="updatesuccess";
 					request.setAttribute("result", new Result(result));
 					List<Qaplus> cardList1 = qDao.select3(new Qaall(question_id,null, "", 0, "", "",0,"",""));
