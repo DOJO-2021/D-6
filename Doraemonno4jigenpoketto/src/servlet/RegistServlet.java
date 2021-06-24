@@ -78,13 +78,16 @@ public class RegistServlet extends HttpServlet {
 	    }
 	    String answerer= request.getParameter("ANSWERER");
 	    int category_id=0;
-	    if(request.getParameter("CATEGORY_ITEM")==null || request.getParameter("CATEGORY_ITEM")=="") {
-	    	category_id=0;
+	    if(request.getParameter("CATEGORY_ITEM")==null || request.getParameter("CATEGORY_ITEM")=="" || request.getParameter("CATEGORY_ITEM")=="0") {
+	    	category_id=601001;
 		}else {
 			try {category_id=Integer.parseInt(request.getParameter("CATEGORY_ITEM"));
+			if(category_id==0) {
+				category_id=601001;
+			}
 	   		}
 	    	catch (NumberFormatException e) {
-	    		category_id=0;
+	    		category_id=601001;
 	    	}
 	   	}
 		String question=request.getParameter("QUESTION");
