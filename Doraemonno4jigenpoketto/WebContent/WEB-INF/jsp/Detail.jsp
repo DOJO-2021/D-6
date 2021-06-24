@@ -39,9 +39,9 @@
 			</div>
 
 			<p name="answerer" class="d_answerer">回答者：${e.answerer} </p>
+			<p name="textbook" class="">教科書：${e.textbook}</p>
 
 			<img src="/Doraemonno4jigenpoketto/upload/${e.filename}" width=250px height=150px alt='NO IMAGES' name="FILENAME" class="pic">
 		</c:forEach>
-
 	</body>
 </html>

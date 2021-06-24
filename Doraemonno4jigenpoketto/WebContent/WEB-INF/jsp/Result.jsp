@@ -56,7 +56,7 @@
     $(function() {
       $('.pager').pagination({ // diary-all-pagerにページャーを埋め込む
         dataSource: diary,
-        pageSize: 20, // 1ページあたりの表示数
+        pageSize: 10, // 1ページあたりの表示数
         prevText: '&lt; 前へ',
         nextText: '次へ &gt;',
         // ページがめくられた時に呼ばれる
