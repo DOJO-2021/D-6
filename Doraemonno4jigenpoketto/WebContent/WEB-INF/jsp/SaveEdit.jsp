@@ -50,7 +50,9 @@ function check(){
 <h2><img src="/Doraemonno4jigenpoketto/image/保存編集画面.png" alt="保存編集画面" class="h2"></h2>
 
 
-
+		<div >
+				 <a href="/Doraemonno4jigenpoketto/SaveServlet"><input type="image" src="/Doraemonno4jigenpoketto/image/戻るボタン.png" class="buttonsize" style="margin-top:-50px; margin-left:30px; margin-bottom:0px;"></a>
+		</div>
 
 
 
@@ -67,7 +69,16 @@ function check(){
 
 				<textarea class="regist_ab" name="ANSWER" rows="7" cols="100" style="border:4px solid #4689FF" onMouseover="this.style.borderColor='#FFCC33'" onMouseout="this.style.borderColor='#4689FF'">${e.answer}</textarea>
 
+			<div style=" margin-top:30px; margin-left:100px; margin-bottom:0px;">
+				<c:set var="path" value="upload\\" />
+				<img src="${path}${e.filename}" width=250px height=150px alt='NO IMAGES' name="FILENAME"><input type="file" name="photo" value="${e.filename}" style="width:23em;" >
+			</div>
 		</div>
+
+
+
+
+
 		<div class="regist_blockB" style="float:right;">
 
 
@@ -318,16 +329,15 @@ function check(){
 			    <input type="text" placeholder="登録者" name="REGISTRANT" id="registant" value="${e.registrant}" style="width:26em;"><br><br>
 			    <input type="hidden" name="QUESTION_ID" value="${e.question_id}">
 
-			   	<c:set var="path" value="upload\\" />
-				<img src="${path}${e.filename}" width=250px height=150px alt='NO IMAGES' name="FILENAME"><input type="file" name="photo" value="${e.filename}" style="width:23em;">
+
 
 		</div>
 
-			<div class="button" style="desplay:inline;">
+			<br><br><br><div class="button" style="desplay:inline;">
 				<input type="hidden" name="SUBMIT" id="sendSubmit">
-				 <input type="image" src="/Doraemonno4jigenpoketto/image/登録ボタン.png" onclick="document.getElementById('sendSubmit').value = '登録1';document.frm.submit();" alt="登録" name="SUBMIT" value="登録" class="buttonsize" style="margin-top:350px; margin-left:-500px; margin-right:0; ">
-				 <input type="image" src="/Doraemonno4jigenpoketto/image/保存ボタン.png" onclick="document.getElementById('sendSubmit').value = '保存1';document.frm.submit();" alt="保存" name="SUBMIT" value="保存" class="buttonsize" style="margin-top:350px; margin-left:80px;">
-				 <input type="image" src="/Doraemonno4jigenpoketto/image/保存編集ボタン.png" onclick="document.getElementById('sendSubmit').value = '保存編集';document.frm.submit();" alt="保存編集" name="SUBMIT" value="保存編集" class="buttonsize" style="margin-top:350px; margin-left:90px; position:absolute;">
+				 <input type="image" src="/Doraemonno4jigenpoketto/image/登録ボタン.png" onclick="document.getElementById('sendSubmit').value = '登録1';document.frm.submit();" alt="登録" name="SUBMIT" value="登録" class="buttonsize" style="margin-top:450px; margin-left:-500px; margin-right:0; ">
+				 <input type="image" src="/Doraemonno4jigenpoketto/image/保存ボタン.png" onclick="document.getElementById('sendSubmit').value = '保存1';document.frm.submit();" alt="保存" name="SUBMIT" value="保存" class="buttonsize" style="margin-top:450px; margin-left:80px;">
+				 <input type="image" src="/Doraemonno4jigenpoketto/image/保存編集ボタン.png" onclick="document.getElementById('sendSubmit').value = '保存編集';document.frm.submit();" alt="保存編集" name="SUBMIT" value="保存編集" class="buttonsize" style="margin-top:450px; margin-left:90px; position:absolute;">
 			</div>
 
 

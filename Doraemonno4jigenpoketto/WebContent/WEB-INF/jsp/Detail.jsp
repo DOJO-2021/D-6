@@ -18,6 +18,14 @@
 
 
 		<h2><img src="/Doraemonno4jigenpoketto/image/詳細画面.png" alt="詳細画面" class="h2"></h2>
+
+
+		<div >
+			<a href="/Doraemonno4jigenpoketto/ResultServlet"><input type="image" src="/Doraemonno4jigenpoketto/image/戻るボタン.png" class="buttonsize" style="margin-top:-50px; margin-left:30px; margin-bottom:0px;"></a>
+		</div>
+
+
+
 		<c:forEach var="e" items="${cardList1}">
 
 
@@ -39,10 +47,14 @@
 			</div>
 
 			<p name="answerer" class="d_answerer">回答者：${e.answerer} </p>
-			<p name="textbook" class="">教科書：${e.textbook}</p>
-			<p name="category_item" class="">単元項目：${e.category_item}</p>
+
+
+			<p name="category_item" style="margin-top:-20px; margin-left:250px;"><b>単元項目：${e.category_item}</b></p>
+			<p name="textbook" class="text" style="margin-top:0px; margin-left:250px;"><b>教科書：${e.textbook}</b></p><br><br>
 			<c:set var="path" value="upload\\" />
 			<img src="${path}${e.filename}" width=250px height=150px alt='NO IMAGES' name="FILENAME" class="pic">
 		</c:forEach>
+
+
 	</body>
 </html>

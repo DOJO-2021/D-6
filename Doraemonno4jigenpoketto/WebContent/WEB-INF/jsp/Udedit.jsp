@@ -47,6 +47,15 @@ function check(){
 
 <h2><img src="/Doraemonno4jigenpoketto/image/更新・削除画面.png" alt="更新・削除画面" class="h2"></h2>
 
+
+
+		<div>
+				 <a href="/Doraemonno4jigenpoketto/UdresultServlet"><input type="image" src="/Doraemonno4jigenpoketto/image/戻るボタン.png" class="buttonsize" style="margin-top:-50px; margin-left:30px; margin-bottom:0px;"></a>
+		</div>
+
+
+
+
 <!--閲覧数・質問日・回答者・質問した年月日・登録者についての更新・削除-->
 
 <nav>
@@ -61,9 +70,19 @@ function check(){
 				<p class="udedit_al">回答文</p>
 
 				<textarea class="udedit_ab" name="ANSWER"  rows="7" cols="100" style="border:4px solid #4689FF" onMouseover="this.style.borderColor='#FFCC33'" onMouseout="this.style.borderColor='#4689FF'">${e.answer}</textarea>
-		</div>
 
-		<div class="udedit_blockB">
+			<div style=" margin-top:30px; margin-left:100px; margin-bottom:0px;">
+				<c:set var="path" value="upload\\" />
+				<img src="${path}${e.filename}" width=250px height=150px alt='NO IMAGES' name="FILENAME"><input type="file" name="photo" value="${e.filename}" style="width:23em;" >
+			</div>
+
+		</div><br><br><br>
+
+
+
+
+
+		<div class="udedit_blockB" style="margin-top:0px; margin-right:70px;">
        <select name="unit" id="unit" style="width:27em;">
         <option value="">単元を選択してください</option>
         <optgroup label="パーソナルスキルコース">
@@ -305,18 +324,16 @@ function check(){
 
 
 	閲覧数<input type="text" name="PAGEVIEW" value="${e.pageview}" style="width:23em;"><br><br>
-	質問日<input type="text" name="DATE" value="${e.date}" style="width:23em;"><br><br>
+	質問日<input type="date" name="DATE" value="${e.date}" style="width:23em;"><br><br>
 	回答者<input type="text" name="ANSWERER" value="${e.answerer}" style="width:23em;"><br><br>
 	登録者<input type="text" name="REGISTRANT" value="${e.registrant}" style="width:23em;"><br><br>
-	<c:set var="path" value="upload\\" />
-	画像<img src="${path}${e.filename}" width=250px height=150px alt='NO IMAGES' name="FILENAME"><input type="file" name="photo" value="${e.filename}" style="width:23em;">
 	<input type="hidden" name="QUESTION_ID" value="${e.question_id}">
 
 
 	</div>
 
 
-		<div class="button" style="desplay:inline;">
+		<br><br><br><div class="button" style="desplay:inline;">
 				<input type="hidden" name="clickAction" id="sendSubmit">
 				<input type="image" src="/Doraemonno4jigenpoketto/image/更新ボタン.png" onclick="document.getElementById('sendSubmit').value = '更新';" alt="更新" class="buttonsize" name="SUBMIT" value="更新" style="margin-top:400px; margin-left:-600px; position:absolute;">
  				<input type="image" src="/Doraemonno4jigenpoketto/image/削除ボタン.png" onclick="document.getElementById('sendSubmit').value = '削除';" alt="削除" class="buttonsize" style="margin-top:400px; margin-left:-300px; position:absolute;">
