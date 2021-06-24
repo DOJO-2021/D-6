@@ -1,8 +1,8 @@
 ﻿.paginationjs-pages > ul > li > a {
   padding: 6px 18px;
-  color: white;
-  background-color: lightgreen;
-  border: 1px solid darkcyan;
+  color: black;
+  background-color: lightblue;
+  border: 1px solid black;
 }
 .paginationjs-pages > ul > li > a:hover {
   color: black;
@@ -10,7 +10,7 @@
 }
 .paginationjs-pages > ul > li.active > a {
   color: black;
-  background-color: white;
+  background-color:blue;
 }
 .paginationjs-pages > ul > li.disabled > a {
   color: black;

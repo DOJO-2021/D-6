@@ -308,7 +308,8 @@ function check(){
 	質問日<input type="text" name="DATE" value="${e.date}" style="width:23em;"><br><br>
 	回答者<input type="text" name="ANSWERER" value="${e.answerer}" style="width:23em;"><br><br>
 	登録者<input type="text" name="REGISTRANT" value="${e.registrant}" style="width:23em;"><br><br>
-	画像<img src="/Doraemonno4jigenpoketto/upload/${e.filename}" width=250px height=150px alt='NO IMAGES' name="FILENAME"><input type="file" name="photo" style="width:23em;">
+	<c:set var="path" value="upload\\" />
+	画像<img src="${path}${e.filename}" width=250px height=150px alt='NO IMAGES' name="FILENAME"><input type="file" name="photo" value="${e.filename}" style="width:23em;">
 	<input type="hidden" name="QUESTION_ID" value="${e.question_id}">
 
 
