@@ -64,7 +64,19 @@ public class UdeditServlet extends HttpServlet {
 	    }
 		String answerer=request.getParameter("ANSWERER");//回答者
 		int category_id=Integer.parseInt(request.getParameter("CATEGORY_ITEM"));//単元項目ID
-		String question=request.getParameter("QUESTION");//質問内容
+		String question=request.getParameter("QUESTION");//質問内容int category_id=0;
+	    if(request.getParameter("CATEGORY_ITEM")==null || request.getParameter("CATEGORY_ITEM")=="" || request.getParameter("CATEGORY_ITEM")=="0") {
+	    	category_id=601001;
+		}else {
+			try {category_id=Integer.parseInt(request.getParameter("CATEGORY_ITEM"));
+			if(category_id==0) {
+				category_id=601001;
+			}
+	   		}
+	    	catch (NumberFormatException e) {
+	    		category_id=601001;
+	    	}
+	   	}
 		String answer=request.getParameter("ANSWER");//回答内容
 		int pageview=Integer.parseInt(request.getParameter("PAGEVIEW"));//閲覧数
 		String registrant=request.getParameter("REGISTRANT");//登録者
