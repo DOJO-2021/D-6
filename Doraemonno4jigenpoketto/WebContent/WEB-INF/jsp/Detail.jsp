@@ -40,6 +40,7 @@
 
 			<p name="answerer" class="d_answerer">回答者：${e.answerer} </p>
 			<p name="textbook" class="">教科書：${e.textbook}</p>
+			<p name="category_item" class="">単元項目：${e.category_item}</p>
 			<c:set var="path" value="upload\\" />
 			<img src="${path}${e.filename}" width=250px height=150px alt='NO IMAGES' name="FILENAME" class="pic">
 		</c:forEach>
