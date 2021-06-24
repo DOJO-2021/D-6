@@ -21,7 +21,7 @@
 
 
 		<div >
-			<a href="/Doraemonno4jigenpoketto/ResultServlet"><input type="image" src="/Doraemonno4jigenpoketto/image/戻るボタン.png" class="buttonsize" style="margin-top:-50px; margin-left:30px; margin-bottom:0px;"></a>
+			<a href="/Doraemonno4jigenpoketto/DetailServlet"><input type="image" src="/Doraemonno4jigenpoketto/image/戻るボタン.png" class="buttonsize" style="margin-top:-50px; margin-left:30px; margin-bottom:0px;"></a>
 		</div>
 
 
