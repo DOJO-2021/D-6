@@ -83,8 +83,6 @@ public class RegistServlet extends HttpServlet {
 		}else {
 			category_id=Integer.parseInt(request.getParameter("CATEGORY_ITEM"));
 	   	}
-
-
 		String question=request.getParameter("QUESTION");
 		String answer=request.getParameter("ANSWER");
 		String registrant=request.getParameter("REGISTRANT");

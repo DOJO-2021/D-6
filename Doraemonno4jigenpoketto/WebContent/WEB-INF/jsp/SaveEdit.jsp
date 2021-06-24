@@ -117,7 +117,9 @@ function check(){
 
 
 					<select name="CATEGORY_ITEM" id="category_item" style="width:27em;">
-						<option value="">単元項目を選択してください</option>
+						<c:forEach var="t" items="${tangen}">
+		<option value="${t.category_id}">${e.category_item}</option>
+		</c:forEach>
 						<!--パーソナルコース-->
 						<optgroup label="ビジネスマナー・コミュニケーション">
 							<option value="0101001">敬語</option>
@@ -314,6 +316,7 @@ function check(){
 			    <input type="text" placeholder="回答者" name="ANSWERER" id="answerer" value="${e.answerer}" style="width:26em;"> <br><br>
 
 			    <input type="text" placeholder="登録者" name="REGISTRANT" id="registant" value="${e.registrant}" style="width:26em;"><br><br>
+			    <input type="hidden" name="QUESTION_ID" value="${e.question_id}">
 
 			   	<c:set var="path" value="upload\\" />
 				<img src="${path}${e.filename}" width=250px height=150px alt='NO IMAGES' name="FILENAME"><input type="file" name="photo" value="${e.filename}" style="width:23em;">

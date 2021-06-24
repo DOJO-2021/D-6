@@ -11,7 +11,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import dao.CategoryDao;
 import dao.QaDao;
+import model.Category;
 import model.Qaall;
 import model.Qaplus;
 
@@ -42,6 +44,13 @@ public class SaveServlet extends HttpServlet {
 		List<Qaplus> cardList = qDao.selectsave3(new Qaall(question_id,null, "", 0, "", "",0,"",""));
 		// 全項目をリクエストスコープに格納する
 		request.setAttribute("cardList", cardList);
+
+		//カテゴリーidの取得
+				String category_item=request.getParameter("CATEGORY_ITEM");
+				CategoryDao cDao=new CategoryDao();
+				List<Category> tangen=cDao.select1(new Category(0,0,0,category_item));
+				request.setAttribute("tangen", tangen.get(0));
+
 
 
 		// 結果ページにフォワードする

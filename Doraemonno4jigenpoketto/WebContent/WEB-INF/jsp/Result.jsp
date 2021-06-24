@@ -23,7 +23,6 @@
 <h2><img src="/Doraemonno4jigenpoketto/image/検索結果画面.png" alt="検索結果画面" class="h2"></h2>
 
 
-<div class="pager" id="diary-all-pager" style="text-align:center; margin-bottom:50px;"></div>
 
 <!--ヒット数表示-->
 <p class="hitnumber"><b><c:out value="${counter.count}"/>件ヒットしました。</b></p>
@@ -54,7 +53,7 @@
 
     // [2] pagination.jsの設定
     $(function() {
-      $('.pager').pagination({ // diary-all-pagerにページャーを埋め込む
+      $('#diary-all-pager').pagination({ // diary-all-pagerにページャーを埋め込む
         dataSource: diary,
         pageSize: 10, // 1ページあたりの表示数
         prevText: '&lt; 前へ',
