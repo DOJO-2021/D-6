@@ -65,7 +65,7 @@ function check(){
 
 				<p class="regist_al">回答文</p><!--regist_al=RegistAnswerLabel-->
 
-				<textarea class="regist_ab" name="ANSWER" rows="7" cols="100" style="border:4px solid #4689FF" onMouseover="this.style.borderColor='#FFCC33'" onMouseout="this.style.borderColor='#4689FF'" required></textarea>
+				<textarea class="regist_ab" id="answerarea" name="ANSWER" rows="7" cols="100" style="border:4px solid #4689FF" onMouseover="this.style.borderColor='#FFCC33'" onMouseout="this.style.borderColor='#4689FF'" required></textarea>
 
 		</div>
 		<div class="regist_blockB" style="margin-bottom:0;" >
@@ -309,21 +309,21 @@ function check(){
 						</optgroup>
 					</select><br><br>
 
-				<input type="date" name="CALENDAR" max="9999-12-31" style="width:27em;" required><br><br>
+				<input type="date" id="calend" name="CALENDAR" max="9999-12-31" style="width:27em;" required><br><br>
 
 			    <input type="text" placeholder="回答者" name="ANSWERER" id="answerer" style="width:26em;" required> <br><br>
 
 			    <input type="text" placeholder="登録者" name="REGISTRANT" id="registant" style="width:26em;" required><br><br>
 
-			    <input type="file" placeholder="画像" name="photo" style="width:26em;">
+			    <input type="file" placeholder="画像" id="photo" name="photo" style="width:26em;">
 
 		</div>
 
 			<div class="button" style="desplay:inline;">
 				<input type="hidden" name="SUBMIT" id="sendSubmit">
-				 <input type="image" src="/Doraemonno4jigenpoketto/image/登録ボタン.png" onclick="document.getElementById('sendSubmit').value = '登録'; change2();" alt="登録" name="SUBMIT" value="登録" class="buttonsize" id="registbutton" style="margin-top:350px; margin-left:-500px; margin-right:0;">
-				 <input type="image" src="/Doraemonno4jigenpoketto/image/保存ボタン.png" onclick="document.getElementById('sendSubmit').value = '保存';change(); " alt="保存" name="SUBMIT" value="保存" class="buttonsize" id="savebutton" style="margin-top:350px; margin-left:80px;">
-				 <input type="image" src="/Doraemonno4jigenpoketto/image/保存編集ボタン.png" onclick="document.getElementById('sendSubmit').value = '保存編集';change1();  " alt="保存編集" name="SUBMIT" value="保存編集" class="buttonsize" style="margin-top:350px; margin-left:90px; position:absolute;">
+				 <input type="image" src="/Doraemonno4jigenpoketto/image/登録ボタン.png" onclick="changeinsert();document.getElementById('sendSubmit').value = '登録';" alt="登録" name="SUBMIT" value="登録" class="buttonsize" id="registbutton" style="margin-top:350px; margin-left:-500px; margin-right:0;">
+				 <input type="image" src="/Doraemonno4jigenpoketto/image/保存ボタン.png" onclick="changesave();document.getElementById('sendSubmit').value = '保存'; " alt="保存" name="SUBMIT" value="保存" class="buttonsize" id="savebutton" style="margin-top:350px; margin-left:80px;">
+				 <input type="image" src="/Doraemonno4jigenpoketto/image/保存編集ボタン.png" onclick="changesaveedit();document.getElementById('sendSubmit').value = '保存編集';" alt="保存編集" name="SUBMIT" value="保存編集" class="buttonsize" style="margin-top:350px; margin-left:90px; position:absolute;">
 			</div>
 		</form>
 	</nav>
@@ -352,23 +352,56 @@ function check(){
   </c:choose>
 <script  type="text/javascript">
 'use strict'
-function change() {
-
+function changesave() {
     var element;
     element = document.getElementById("questionarea");
     element.required = false;
-
+    element = document.getElementById("answerarea");
+    element.required = false;
+    element = document.getElementById("unit");
+    element.required = false;
+    element = document.getElementById("category_item");
+    element.required = false;
+    element = document.getElementById("calend");
+    element.required = false;
+    element = document.getElementById("answerer");
+    element.required = false;
+    element = document.getElementById("registant");
+    element.required = false;
 }
 
-function change1() {
-    var element1;
-    element1 = document.getElementById("questionarea");
-    element1.required = false;
-}
-
-function change2() {
+function changesaveedit() {
     var element;
     element = document.getElementById("questionarea");
+    element.required = false;
+    element = document.getElementById("answerarea");
+    element.required = false;
+    element = document.getElementById("unit");
+    element.required = false;
+    element = document.getElementById("category_item");
+    element.required = false;
+    element = document.getElementById("calend");
+    element.required = false;
+    element = document.getElementById("answerer");
+    element.required = false;
+    element = document.getElementById("registant");
+    element.required = false;
+}
+function changeinsert() {
+    var element;
+    element = document.getElementById("questionarea");
+    element.required = true;
+    element = document.getElementById("answerarea");
+    element.required = true;
+    element = document.getElementById("unit");
+    element.required = true;
+    element = document.getElementById("category_item");
+    element.required = true;
+    element = document.getElementById("calend");
+    element.required = true;
+    element = document.getElementById("answerer");
+    element.required = true;
+    element = document.getElementById("registant");
     element.required = true;
 }
 </script>

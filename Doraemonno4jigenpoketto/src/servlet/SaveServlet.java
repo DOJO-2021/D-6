@@ -49,7 +49,7 @@ public class SaveServlet extends HttpServlet {
 				String category_item=request.getParameter("CATEGORY_ITEM");
 				CategoryDao cDao=new CategoryDao();
 				List<Category> tangen=cDao.select1(new Category(0,0,0,category_item));
-				request.setAttribute("tangen", tangen.get(0));
+				request.setAttribute("tangen", tangen);
 
 
 

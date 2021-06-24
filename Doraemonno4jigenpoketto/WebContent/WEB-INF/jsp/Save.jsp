@@ -45,7 +45,8 @@
         {
       	 title:" ${e.question}",
       	  link:"${e.pageview}",
-      	  category:"${e.question_id}"
+      	  category:"${e.question_id}",
+      	  category_item:"${e.category_item}"
         },
      </c:forEach>
 
@@ -72,7 +73,8 @@
       return dataArray.map(function(data) {
         return         '<form method="GET" action="/Doraemonno4jigenpoketto/SaveServlet"><div class="searchresult"><input type="image" src="/Doraemonno4jigenpoketto/image/検索結果の枠.png" class="r_qb"><div class="searchresult"><p class="r_question" style="color:black;">' + data.title + '</p>'
 		+'<p class="r_pageview"> 閲覧数：' + data.link + '</p>'
-		+'<input type="hidden" name="QUESTION_ID" value="' + data.category + '"></form>'
+		+'<input type="hidden" name="QUESTION_ID" value="' + data.category + '">'
+		+'<input type="hidden" name="CATEGORY_ITEM" value="' + data.category_item + '"></form>'
       })
     }
   </script>	</body>

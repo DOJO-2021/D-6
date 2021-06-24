@@ -81,7 +81,11 @@ public class RegistServlet extends HttpServlet {
 	    if(request.getParameter("CATEGORY_ITEM")==null || request.getParameter("CATEGORY_ITEM")=="") {
 	    	category_id=0;
 		}else {
-			category_id=Integer.parseInt(request.getParameter("CATEGORY_ITEM"));
+			try {category_id=Integer.parseInt(request.getParameter("CATEGORY_ITEM"));
+	   		}
+	    	catch (NumberFormatException e) {
+	    		category_id=0;
+	    	}
 	   	}
 		String question=request.getParameter("QUESTION");
 		String answer=request.getParameter("ANSWER");
