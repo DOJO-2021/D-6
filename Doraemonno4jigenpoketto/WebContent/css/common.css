@@ -3,8 +3,8 @@
 /*common*/
 
 *{
- flex:1 1 auto;
-}
+flex:1 1 auto;
+ }
 
 .logo{
 	margin-top:-90px;
@@ -79,6 +79,7 @@ h2{
 	z-index: 1;
 }
 
+
 .background {
   position: absolute;
   display: block;
@@ -98,7 +99,6 @@ p{
 
 .buttonsize{
 	width:130px;
-	margin-top:50px;
 }
 
 .logoutbutton{
@@ -555,7 +555,7 @@ input[type="text"] {
 
 .udedit_blockB{
 	float:right;
-	margin-top:-300px;
-	margin-left:300px;
+	margin-top:50px;
+	margin-right:80px;
 	margin-bottom:0;
 }
