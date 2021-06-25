@@ -254,12 +254,14 @@ a:active{
 .d_qb{
 	position:relative;
 	width:1000px;
+	z-index:1;
 }
 
 .d_ab{
 	position:relative;
 	width:1000px;
 	margin-left:15px;
+	z-index:1;
 }
 
 .d_question{
@@ -267,6 +269,10 @@ a:active{
 	margin-left:350px;
 	margin-top:20px;
 	font-size:20px;
+	height:100px;
+	width: 800px;
+	overflow-y: scroll;
+	z-index:2;
 }
 
 .d_pageview{
@@ -292,6 +298,10 @@ a:active{
 	margin-left:350px;
 	margin-top:25px;
 	font-size:20px;
+	height:100px;
+	width: 800px;
+	overflow-y: scroll;
+	z-index:2;
 }
 
 .d_answerer{

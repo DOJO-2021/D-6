@@ -36,19 +36,15 @@
 
 			<div>
 				<p name="question"class="d_question" style="color:black;">
-				<script  style="text-align:left;">
+				<script style="text-align:left;">
+				'use strict';
 				var str1 = "${e.question}";
-				var result1 = str1.substring(0, 40);
-				var result2 = str1.substring(40, 80);
-				var result3 = str1.substring(80, 120);
-				var result4 = str1.substring(120, 160);
-				document.write(result1);
+				let i=0;
+				while(i<=str1.length){
+				var result= str1.substring(i, i+40);
+				document.write(result);
 				document.write("<br>");
-				document.write(result2);
-				document.write("<br>");
-				document.write(result3);
-				document.write("<br>");
-				document.write(result4);
+				i +=40;}
 				</script></p>
 				<img src="/Doraemonno4jigenpoketto/image/質問文の枠.png" class="d_qb" style="margin-left:200px;"><!--d_qb=DerailQuestionBox-->
 			</div>
@@ -61,18 +57,14 @@
 			<div>
 				<p name="answer" class="d_answer" style="color:black;">
 				<script>
-				var str1 = "${e.answer}";
-				var result1 = str1.substring(0, 40);
-				var result2 = str1.substring(40, 80);
-				var result3 = str1.substring(80, 120);
-				var result4 = str1.substring(120, 160);
+				'use strict';
+				var str2 = "${e.answer}";
+				let j=0;
+				while(j<=str1.length){
+				var result1= str2.substring(j, j+40);
 				document.write(result1);
 				document.write("<br>");
-				document.write(result2);
-				document.write("<br>");
-				document.write(result3);
-				document.write("<br>");
-				document.write(result4);
+				j +=40;}
 				</script>
 				</p>
 				<img src="/Doraemonno4jigenpoketto/image/回答文の枠.png" class="d_ab" style="margin-left:210px;"><!--d_ab=DerailAnswerBox-->

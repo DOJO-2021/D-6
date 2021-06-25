@@ -2198,7 +2198,7 @@ public class QaDao {
 			else {
 				pStmt.setDate(1, null);
 			}
-			if (card.getAnswerer() != null && card.getAnswerer() != "") {
+			if (!card.getAnswerer().equals(null) && !card.getAnswerer().equals("")) {
 				pStmt.setString(2, card.getAnswerer());
 			}
 			else {
@@ -2289,7 +2289,7 @@ public class QaDao {
 				else {
 					pStmt.setDate(1, null);
 				}
-				if (card.getAnswerer() != null && card.getAnswerer() != "") {
+				if (!card.getAnswerer().equals(null) && !card.getAnswerer().equals("")) {
 					pStmt.setString(2, card.getAnswerer());
 				}
 				else {
@@ -2301,25 +2301,25 @@ public class QaDao {
 				else {
 					pStmt.setInt(3, 0601001);
 				}
-				if (card.getQuestion() != null && card.getQuestion() != "") {
+				if (!card.getQuestion().equals(null) && !card.getQuestion().equals("")) {
 					pStmt.setString(4, card.getQuestion());
 				}
 				else {
 					pStmt.setString(4, null);
 				}
-				if (card.getAnswer() != null && card.getAnswer() != "") {
+				if (!card.getAnswer().equals(null) && !card.getAnswer().equals("")) {
 					pStmt.setString(5, card.getAnswer());
 				}
 				else {
 					pStmt.setString(5, null);
 				}
-				if (card.getFilename() != null && card.getFilename() != "") {
+				if (!card.getFilename().equals(null) && !card.getFilename().equals("")) {
 					pStmt.setString(6, card.getFilename());
 				}
 				else {
 					pStmt.setString(6, null);
 				}
-				if (card.getRegistrant() != null && card.getRegistrant() != "") {
+				if (!card.getRegistrant().equals(null) && !card.getRegistrant().equals("")) {
 					pStmt.setString(7, card.getRegistrant());
 				}
 				else {
