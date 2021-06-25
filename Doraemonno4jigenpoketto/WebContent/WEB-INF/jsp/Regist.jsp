@@ -48,7 +48,7 @@ function check(){
 		</div>
 
 
-<h2><img src="/Doraemonno4jigenpoketto/image/登録画面.png" alt="登録画面" class="h2"></h2>
+<h2><img src="/Doraemonno4jigenpoketto/image/登録画面.png" alt="登録画面" class="h2" style="margin-bottom:-20px;"></h2>
 
 
 

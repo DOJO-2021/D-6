@@ -31,9 +31,9 @@
 
 			<p name="pageview" class="d_pageview"> 閲覧数：${e.pageview} </p>
 
-			<div style="text-align:center;">
+			<div>
 				<p name="question"class="d_question" style="color:black;">
-				<script>
+				<script  style="text-align:left;">
 				var str1 = "${e.question}";
 				var result1 = str1.substring(0, 40);
 				var result2 = str1.substring(40, 80);
@@ -47,7 +47,7 @@
 				document.write("<br>");
 				document.write(result4);
 				</script></p>
-				<img src="/Doraemonno4jigenpoketto/image/質問文の枠.png" class="d_qb"><!--d_qb=DerailQuestionBox-->
+				<img src="/Doraemonno4jigenpoketto/image/質問文の枠.png" class="d_qb" style="margin-left:200px;"><!--d_qb=DerailQuestionBox-->
 			</div>
 
 			<div>
@@ -55,7 +55,7 @@
 			</div>
 
 
-			<div style="text-align:center;">
+			<div>
 				<p name="answer" class="d_answer" style="color:black;">
 				<script>
 				var str1 = "${e.answer}";
@@ -72,7 +72,7 @@
 				document.write(result4);
 				</script>
 				</p>
-				<img src="/Doraemonno4jigenpoketto/image/回答文の枠.png" class="d_ab"><!--d_ab=DerailAnswerBox-->
+				<img src="/Doraemonno4jigenpoketto/image/回答文の枠.png" class="d_ab" style="margin-left:210px;"><!--d_ab=DerailAnswerBox-->
 			</div>
 
 			<p name="answerer" class="d_answerer">回答者：${e.answerer} </p>

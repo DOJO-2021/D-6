@@ -1,7 +1,7 @@
 ﻿.paginationjs-pages > ul > li > a {
   padding: 6px 18px;
   color: black;
-  background-color: lightblue;
+  background-color: rgb(66, 202, 236);
   border: 1px solid black;
 }
 .paginationjs-pages > ul > li > a:hover {

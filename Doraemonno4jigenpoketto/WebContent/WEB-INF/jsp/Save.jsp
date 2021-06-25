@@ -32,7 +32,7 @@
 
 <div id="diary-all-contents"></div>
 
-<div class="pager" id="diary-all-pager" style="text-align:center; margin-top:50px;"></div>
+<div class="pager" id="diary-all-pager" style="text-align:center; margin-top:50px; margin-bottom:30px;"></div>
 
 
 
@@ -75,7 +75,7 @@
     // [3] データ1つ1つをhtml要素に変換する
     function template(dataArray) {
       return dataArray.map(function(data) {
-        return         '<form method="POST" action="/Doraemonno4jigenpoketto/SaveServlet"><div class="searchresult"><input type="image" src="/Doraemonno4jigenpoketto/image/検索結果の枠.png" class="r_qb"><div class="searchresult"><p class="r_question" style="color:black;">' + data.title + '</p>'
+        return         '<form method="POST" action="/Doraemonno4jigenpoketto/SaveServlet"><div class="searchresult"><input type="image" src="/Doraemonno4jigenpoketto/image/検索結果の枠.png" class="r_qb"><div class="searchresult"><p class="r_question" style="color:black;">' + data.title .substring(0,32)+ '<br>'+data.title .substring(32,64)+ '<br>'+data.title .substring(64,94)+'</p>'
 		+'<p class="r_pageview"> 閲覧数：' + data.link + '</p>'
 		+'<input type="hidden" name="QUESTION_ID" value="' + data.category + '">'
 		+'<input type="hidden" name="CATEGORY_ITEM" value="' + data.category_item + '"></form>'

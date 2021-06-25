@@ -32,7 +32,7 @@
 <p class="hitnumber"><b><c:out value="${counter.count}"/>件ヒットしました。</b></p>
 <div id="diary-all-contents"></div>
 
-<div class="pager" id="diary-all-pager" style="text-align:center; margin-top:50px;"></div>
+<div class="pager" id="diary-all-pager" style="text-align:center; margin-top:50px; margin-bottom:30px;"></div>
 
 
 
