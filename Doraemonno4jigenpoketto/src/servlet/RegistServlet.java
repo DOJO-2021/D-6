@@ -261,7 +261,7 @@ public class RegistServlet extends HttpServlet {
 				List<Qacount> counter =  qDao.selectsavecount(new Qaall(0,null, "", 0, "", "",0,"",""));
 				// 検索件数をリクエストスコープに格納する
 				session.setAttribute("counter", counter.get(0));
-				RequestDispatcher dispatcher = request.getRequestDispatcher("/Doraemonno4jigenpoketto/SaveServlet");
+				RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/Save.jsp");
 				dispatcher.forward(request, response);
 				}
 			}
@@ -340,7 +340,7 @@ public class RegistServlet extends HttpServlet {
 			List<Qacount> counter =  qDao.selectsavecount(new Qaall(0,null, "", 0, "", "",0,"",""));
 			// 検索件数をリクエストスコープに格納する
 			session.setAttribute("counter", counter.get(0));
-			RequestDispatcher dispatcher = request.getRequestDispatcher("/Doraemonno4jigenpoketto/SaveServlet");
+			RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/Save.jsp");
 			dispatcher.forward(request, response);
 			}
 		}

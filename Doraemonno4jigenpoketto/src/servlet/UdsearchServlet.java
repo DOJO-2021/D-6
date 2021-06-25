@@ -96,7 +96,7 @@ public class UdsearchServlet extends HttpServlet {
 		session.setAttribute("counter", counter.get(0));
 
 		// 結果ページにフォワードする
-		RequestDispatcher dispatcher = request.getRequestDispatcher("/Doraemonno4jigenpoketto/UdresultServlet");
+		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/Udresult.jsp");
 		dispatcher.forward(request, response);
 	}
 }
