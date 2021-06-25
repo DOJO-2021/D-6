@@ -32,7 +32,21 @@
 			<p name="pageview" class="d_pageview"> 閲覧数：${e.pageview} </p>
 
 			<div style="text-align:center;">
-				<p name="question"class="d_question" style="color:black;">${e.question} </p>
+				<p name="question"class="d_question" style="color:black;">
+				<script>
+				var str1 = "${e.question}";
+				var result1 = str1.substring(0, 40);
+				var result2 = str1.substring(40, 80);
+				var result3 = str1.substring(80, 120);
+				var result4 = str1.substring(120, 160);
+				document.write(result1);
+				document.write("<br>");
+				document.write(result2);
+				document.write("<br>");
+				document.write(result3);
+				document.write("<br>");
+				document.write(result4);
+				</script></p>
 				<img src="/Doraemonno4jigenpoketto/image/質問文の枠.png" class="d_qb"><!--d_qb=DerailQuestionBox-->
 			</div>
 
@@ -42,7 +56,22 @@
 
 
 			<div style="text-align:center;">
-				<p name="answer" class="d_answer" style="color:black;">${e.answer} </p>
+				<p name="answer" class="d_answer" style="color:black;">
+				<script>
+				var str1 = "${e.answer}";
+				var result1 = str1.substring(0, 40);
+				var result2 = str1.substring(40, 80);
+				var result3 = str1.substring(80, 120);
+				var result4 = str1.substring(120, 160);
+				document.write(result1);
+				document.write("<br>");
+				document.write(result2);
+				document.write("<br>");
+				document.write(result3);
+				document.write("<br>");
+				document.write(result4);
+				</script>
+				</p>
 				<img src="/Doraemonno4jigenpoketto/image/回答文の枠.png" class="d_ab"><!--d_ab=DerailAnswerBox-->
 			</div>
 
