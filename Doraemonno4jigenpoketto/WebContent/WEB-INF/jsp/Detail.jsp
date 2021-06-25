@@ -8,6 +8,9 @@
 		<meta charset="UTF-8">
 		<title>DOJO Q&amp;A集</title>
 		<script src="script.js"></script>
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css" rel="stylesheet">
+ <script src="/Doraemonno4jigenpoketto/js/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js" type="text/javascript"></script>
 	</head>
 	<body>
 
@@ -81,7 +84,9 @@
 			<p name="category_item" style="margin-top:-20px; margin-left:250px;"><b>単元項目：${e.category_item}</b></p>
 			<p name="textbook" class="text" style="margin-top:0px; margin-left:250px;"><b>教科書：${e.textbook}</b></p><br><br>
 			<c:set var="path" value="upload\\" />
+			<a href="${path}${e.filename}" data-lightbox="group">
 			<img src="${path}${e.filename}" width=250px height=150px alt='NO IMAGES' name="FILENAME" class="pic">
+			</a>
 		</c:forEach>
 
 

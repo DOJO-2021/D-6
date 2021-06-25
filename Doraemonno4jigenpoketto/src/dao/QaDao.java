@@ -2011,7 +2011,7 @@ public class QaDao {
 								+ "      UPPER((CASE WHEN Q.QUESTION IS NULL THEN '' ELSE Q.QUESTION END)) LIKE UPPER(?) AND "
 								+ "      UPPER((CASE WHEN Q.ANSWER IS NULL THEN '' ELSE Q.ANSWER END)) LIKE UPPER(?) AND "
 								+ "      UPPER((CASE WHEN Q.REGISTRANT IS NULL THEN '' ELSE Q.REGISTRANT END)) LIKE UPPER(?) "
-								+ "      ORDER BY Q.PAGEVIEW";
+								+ "      ORDER BY Q.PAGEVIEW DESC";
 						PreparedStatement pStmt = conn.prepareStatement(sql);
 
 						// SQL文を完成させる
@@ -2121,7 +2121,7 @@ public class QaDao {
 						+ "((QA1 as Q inner join CATEGORY as CA on Q.CATEGORY_ID=CA.CATEGORY_ID) \r\n"
 						+ "inner join UNIT as U on CA.COURSE_ID=U.COURSE_ID and CA.UNIT_ID=U.UNIT_ID) \r\n"
 						+ "inner join COURSE as CO on CA.COURSE_ID=CO.COURSE_ID \r\n"
-						+ "WHERE Q.QUESTION_ID = ? ORDER BY Q.PAGEVIEW;\r\n";
+						+ "WHERE Q.QUESTION_ID = ? ORDER BY Q.PAGEVIEW DESC;\r\n";
 				PreparedStatement pStmt = conn.prepareStatement(sql);
 
 				// SQL文を完成させる
@@ -2373,7 +2373,7 @@ public class QaDao {
 						+ "((QASAVE1 as Q inner join CATEGORY as CA on Q.CATEGORY_ID=CA.CATEGORY_ID) \r\n"
 						+ "inner join UNIT as U on CA.COURSE_ID=U.COURSE_ID and CA.UNIT_ID=U.UNIT_ID) \r\n"
 						+ "inner join COURSE as CO on CA.COURSE_ID=CO.COURSE_ID \r\n"
-						+ " ORDER BY Q.PAGEVIEW;\r\n";
+						+ " ORDER BY Q.PAGEVIEW DESC;\r\n";
 				PreparedStatement pStmt = conn.prepareStatement(sql);
 
 				// SQL文を完成させる
@@ -2424,7 +2424,7 @@ public class QaDao {
 			return cardListplus;
 		}
 
-		//保存遷移用検索
+		//保存編集遷移用検索
 		// 引数paramで検索項目を指定し、検索結果のリストを返す
 		public List<Qaplus> selectsave3(Qaall param) {
 			Connection conn = null;
@@ -2443,7 +2443,7 @@ public class QaDao {
 						+ "((QASAVE1 as Q inner join CATEGORY as CA on Q.CATEGORY_ID=CA.CATEGORY_ID) \r\n"
 						+ "inner join UNIT as U on CA.COURSE_ID=U.COURSE_ID and CA.UNIT_ID=U.UNIT_ID) \r\n"
 						+ "inner join COURSE as CO on CA.COURSE_ID=CO.COURSE_ID \r\n"
-						+ " WHERE Q.QUESTION_ID = ? ORDER BY Q.PAGEVIEW;\r\n";
+						+ " WHERE Q.QUESTION_ID = ? ORDER BY Q.PAGEVIEW DESC;\r\n";
 				PreparedStatement pStmt = conn.prepareStatement(sql);
 
 				// SQL文を完成させる
