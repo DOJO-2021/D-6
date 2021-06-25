@@ -39,15 +39,15 @@
    <input type="image" src="/Doraemonno4jigenpoketto/image/ログインボタン.png" alt="ログイン" class="buttonsize" name="login">
   </div>
   </form>
- <script>
-  document.getElementById('form').onsubmit=function(event){
-	  const id=document.getElementById('form').ID.value;
-	  const pw=document.getElementById('form').PW.value;
-	  if(id!=="aaa"||pw!=="a"){
-		  event.preventDefault();
-		  document.getElementById('output').textContent="PWかIDが違います。";
-	  }
-  };
-  </script>
+<c:choose>
+	<c:when test="${result.result != null}">
+		<c:choose>
+			<c:when test="${result.result == 'false'}">
+				<script type="text/javascript">window.alert("PWかIDが違います。");
+				</script>
+			</c:when>
+		</c:choose>
+	</c:when>
+</c:choose>
 </body>
 </html>
