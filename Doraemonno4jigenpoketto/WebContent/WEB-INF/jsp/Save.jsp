@@ -22,6 +22,10 @@
 
 <h2><img src="/Doraemonno4jigenpoketto/image/保存一覧画面.png" alt="保存一覧画面" class="h2"></h2>
 
+		<div >
+			<a href="/Doraemonno4jigenpoketto/RegistServlet"><input type="image" src="/Doraemonno4jigenpoketto/image/戻るボタン.png" class="buttonsize" style="margin-top:-50px; margin-left:30px; margin-bottom:0px;"></a>
+		</div>
+
 
 		<!--ヒット数表示-->
 		<p class="hitnumber"><b><c:out value="${counter.count}"/>件ヒットしました。</b></p>

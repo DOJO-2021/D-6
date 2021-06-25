@@ -22,7 +22,7 @@
 		<!--name="regist" name="ud" -->
 
 		<div class="registpage">
-			<a href="/Doraemonno4jigenpoketto/RegistServlet"><input type="image" src="/Doraemonno4jigenpoketto/image/登録.png" alt="登録" width="300" height="280" name="regist"></a>
+			<a href="/Doraemonno4jigenpoketto/RegistServlet"><input type="image" src="/Doraemonno4jigenpoketto/image/登録.png" alt="登録" width="300" height="280" name="regist" style></a>
 		</div>
 
 		<div class="udsearchpage">

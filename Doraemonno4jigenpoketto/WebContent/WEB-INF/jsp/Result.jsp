@@ -22,6 +22,10 @@
 
 <h2><img src="/Doraemonno4jigenpoketto/image/検索結果画面.png" alt="検索結果画面" class="h2"></h2>
 
+		<div >
+			<a href="/Doraemonno4jigenpoketto/SearchServlet"><input type="image" src="/Doraemonno4jigenpoketto/image/戻るボタン.png" class="buttonsize" style="margin-top:-50px; margin-left:30px; margin-bottom:0px;"></a>
+		</div>
+
 
 
 <!--ヒット数表示-->
@@ -68,7 +72,7 @@
     // [3] データ1つ1つをhtml要素に変換する
     function template(dataArray) {
       return dataArray.map(function(data) {
-        return  '<form method="GET" action="/Doraemonno4jigenpoketto/ResultServlet" id="frm"><input type="image" src="/Doraemonno4jigenpoketto/image/検索結果の枠.png" class="r_qb"><p class="r_question" style="color:black;">' + data.title .substring(0,32)+ '<br>'+data.title .substring(32,64)+ '<br>'+data.title .substring(64,96)+'</p>'
+        return  '<form method="GET" action="/Doraemonno4jigenpoketto/ResultServlet" id="frm"><input type="image" src="/Doraemonno4jigenpoketto/image/検索結果の枠.png" class="r_qb"><p class="r_question" style="color:black;">' + data.title .substring(0,32)+ '<br>'+data.title .substring(32,64)+ '<br>'+data.title .substring(64,94)+'</p>'
 		+'<p class="r_pageview"> 閲覧数：' + data.link .substring(0,6) + '</p>'
 		+'<input type="hidden" name="QUESTION_ID" value="' + data.category + '"></form>'
       })

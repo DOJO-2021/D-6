@@ -22,6 +22,9 @@
 
 <h2><img src="/Doraemonno4jigenpoketto/image/更新・削除用検索結果画面.png" alt="更新・削除用検索結果画面" class="h2" style="width:25%;"></h2>
 
+		<div >
+			<a href="/Doraemonno4jigenpoketto/UdsearchServlet"><input type="image" src="/Doraemonno4jigenpoketto/image/戻るボタン.png" class="buttonsize" style="margin-top:-50px; margin-left:30px; margin-bottom:0px;"></a>
+		</div>
 
 
 <!--ヒット数表示-->
