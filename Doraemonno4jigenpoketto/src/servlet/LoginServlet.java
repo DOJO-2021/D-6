@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import dao.UserDao;
-import model.User;
+import model.Result;
 //
 
 /**
@@ -42,16 +42,18 @@ public class LoginServlet extends HttpServlet {
 		//ログイン処理を行う
 		UserDao iDao =new UserDao() ;
 		if (iDao.isLoginOK(id,pass)) { //ログイン成功
+			String result="success";
 			//セッションスコープにIDを格納する
 			HttpSession session = request.getSession();
-			session.setAttribute("id", new User(id));
+			session.setAttribute("id", new Result(result));
 
 			// 編集サーブレットにリダイレクトする
 			response.sendRedirect("/Doraemonno4jigenpoketto/EditServlet");
 		}
 		else {// ログイン失敗
+			String result="false";
 			// リクエストスコープに、タイトル、メッセージ、戻り先を格納する
-			request.setAttribute("result",new User(id));
+			request.setAttribute("result",new Result(result));
 
 
 			// ログイン画面にフォワードする

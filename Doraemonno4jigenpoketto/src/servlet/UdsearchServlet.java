@@ -88,15 +88,15 @@ public class UdsearchServlet extends HttpServlet {
 		// 検索処理を行う
 		List<Qaplus> cardList = qDao.select2(new Qaall(0, date, answerer,  category_id, question, answer, 0, "",registrant));
 		// 全項目をリクエストスコープに格納する
-		request.setAttribute("cardList", cardList);
+		session.setAttribute("cardList", cardList);
 
 		//検索件数を数えます
 		List<Qacount> counter = qDao.select4(new Qaall(0, date, answerer,  category_id, question, answer, 0,"", registrant));
 		// 検索件数をリクエストスコープに格納する
-		request.setAttribute("counter", counter.get(0));
+		session.setAttribute("counter", counter.get(0));
 
 		// 結果ページにフォワードする
-		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/Udresult.jsp");
+		RequestDispatcher dispatcher = request.getRequestDispatcher("/Doraemonno4jigenpoketto/UdresultServlet");
 		dispatcher.forward(request, response);
 	}
 }

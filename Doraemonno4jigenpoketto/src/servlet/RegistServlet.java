@@ -256,12 +256,12 @@ public class RegistServlet extends HttpServlet {
 				else {
 				List<Qaplus> cardList = qDao.selectsave(new Qaall(0, date, answerer,  category_id, question, answer, 0,filename, registrant));
 				// 全項目をリクエストスコープに格納する
-				request.setAttribute("cardList", cardList);
+				session.setAttribute("cardList", cardList);
 				//検索件数を数えます
 				List<Qacount> counter =  qDao.selectsavecount(new Qaall(0,null, "", 0, "", "",0,"",""));
 				// 検索件数をリクエストスコープに格納する
-				request.setAttribute("counter", counter.get(0));
-				RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/Save.jsp");
+				session.setAttribute("counter", counter.get(0));
+				RequestDispatcher dispatcher = request.getRequestDispatcher("/Doraemonno4jigenpoketto/SaveServlet");
 				dispatcher.forward(request, response);
 				}
 			}
@@ -335,12 +335,12 @@ public class RegistServlet extends HttpServlet {
 			else {
 			List<Qaplus> cardList = qDao.selectsave(new Qaall(0, date, answerer,  category_id, question, answer, 0,filename, registrant));
 			// 全項目をリクエストスコープに格納する
-			request.setAttribute("cardList", cardList);
+			session.setAttribute("cardList", cardList);
 			//検索件数を数えます
 			List<Qacount> counter =  qDao.selectsavecount(new Qaall(0,null, "", 0, "", "",0,"",""));
 			// 検索件数をリクエストスコープに格納する
-			request.setAttribute("counter", counter.get(0));
-			RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/Save.jsp");
+			session.setAttribute("counter", counter.get(0));
+			RequestDispatcher dispatcher = request.getRequestDispatcher("/Doraemonno4jigenpoketto/SaveServlet");
 			dispatcher.forward(request, response);
 			}
 		}

@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html><!--Login.jsp-->
 <html>
 <link href='/Doraemonno4jigenpoketto/css/common.css' rel='stylesheet'>
@@ -38,7 +39,7 @@
    <input type="image" src="/Doraemonno4jigenpoketto/image/ログインボタン.png" alt="ログイン" class="buttonsize" name="login">
   </div>
   </form>
-  <script>
+ <script>
   document.getElementById('form').onsubmit=function(event){
 	  const id=document.getElementById('form').ID.value;
 	  const pw=document.getElementById('form').PW.value;
