@@ -5,8 +5,8 @@
 <html>
 <link href="/Doraemonno4jigenpoketto/css/common.css" rel="stylesheet">
 <head>
-<meta charset="UTF-8">
-<title>DOJO Q&amp;A集</title>
+	<meta charset="UTF-8">
+	<title>DOJO Q&amp;A集</title>
 
 
 
@@ -15,23 +15,26 @@
 
 		 <script type="text/javascript">
 
-// 更新・削除時の確認をダイアログボックスで行う
-function check(){
+		// 更新・削除時の確認をダイアログボックスで行う
+		function check(){
 
-	if(window.confirm('実行してよろしいですか？')){ // 確認ダイアログを表示
+			if(window.confirm('実行してよろしいですか？')){ // 確認ダイアログを表示
 
-		return true; // 「OK」時は送信を実行
+				return true; // 「OK」時は送信を実行
 
-	}
-	else{ // 「キャンセル」時の処理
+			}
+			else{ // 「キャンセル」時の処理
 
-		window.alert('キャンセルされました'); // 警告ダイアログを表示
-		return false; // 送信を中止
+				window.alert('キャンセルされました'); // 警告ダイアログを表示
+				return false; // 送信を中止
 
-	}
+			}
 
-}
-</script>
+		}
+		</script>
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css" rel="stylesheet">
+		<script src="/Doraemonno4jigenpoketto/js/jquery-3.6.0.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js" type="text/javascript"></script>
 </head>
 <body>
 
@@ -73,7 +76,9 @@ function check(){
 
 			<div style=" margin-top:30px; margin-left:100px; margin-bottom:0px;">
 				<c:set var="path" value="upload\\" />
+				<a href="${path}${e.filename}" data-lightbox="group">
 				<img src="${path}${e.filename}" width=250px height=150px alt='NO IMAGES' name="FILENAME"><input type="file" name="photo" value="${e.filename}" style="width:23em;" >
+				</a>
 			</div>
 
 		</div><br><br><br>
