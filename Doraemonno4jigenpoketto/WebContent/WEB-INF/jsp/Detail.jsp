@@ -41,10 +41,10 @@
 				var str1 = "${e.question}";
 				let i=0;
 				while(i<=str1.length){
-				var result= str1.substring(i, i+40);
+				var result= str1.substring(i, i+35);
 				document.write(result);
 				document.write("<br>");
-				i +=40;}
+				i +=35;}
 				</script></p>
 				<img src="/Doraemonno4jigenpoketto/image/質問文の枠.png" class="d_qb" style="margin-left:200px;"><!--d_qb=DerailQuestionBox-->
 			</div>
@@ -60,11 +60,11 @@
 				'use strict';
 				var str2 = "${e.answer}";
 				let j=0;
-				while(j<=str1.length){
-				var result1= str2.substring(j, j+40);
+				while(j<=str2.length){
+				var result1= str2.substring(j, j+35);
 				document.write(result1);
 				document.write("<br>");
-				j +=40;}
+				j +=35;}
 				</script>
 				</p>
 				<img src="/Doraemonno4jigenpoketto/image/回答文の枠.png" class="d_ab" style="margin-left:210px;"><!--d_ab=DerailAnswerBox-->
