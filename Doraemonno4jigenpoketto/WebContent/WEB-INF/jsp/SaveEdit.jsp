@@ -74,8 +74,9 @@ function check(){
 			<div style=" margin-top:30px; margin-left:100px; margin-bottom:0px;">
 				<c:set var="path" value="upload\\" />
 				<a href="${path}${e.filename}" data-lightbox="group">
-				<img src="${path}${e.filename}" width=250px height=150px alt='NO IMAGES' name="FILENAME"><input type="file" name="photo" value="${e.filename}" style="width:23em;" >
-				</a>
+				<img src="${path}${e.filename}" width=250px height=150px alt='NO IMAGES' name="FILENAME"></a>
+				<input type="file" name="photo" value="${e.filename}" style="width:23em;" >
+
 			</div>
 		</div>
 
