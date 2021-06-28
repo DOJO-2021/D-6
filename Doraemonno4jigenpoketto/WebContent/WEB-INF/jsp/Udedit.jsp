@@ -350,7 +350,6 @@
  </nav>
  <c:choose>
     <c:when test="${result.result != null}">
-//更新の成功・失敗判定
 	<c:choose>
 	 <c:when test="${result.result == 'updatesuccess'}">
 	 	<script type="text/javascript">
