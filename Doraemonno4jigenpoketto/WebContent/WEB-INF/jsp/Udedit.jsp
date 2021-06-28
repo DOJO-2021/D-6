@@ -364,12 +364,6 @@
 	 <c:when test="${result.result == 'updatefault'}">
  	  <script type="text/javascript">window.alert("更新失敗です"); </script>
 	 </c:when>
-	 <c:when test="${result.result == 'deletesuccess'}">
-	 	<script type="text/javascript">
-	 	window.alert("削除成功です!");
-	 	window.location.href="http://localhost:8080/Doraemonno4jigenpoketto/UdsearchServlet";
-	 	</script>
-	 </c:when>
 	 <c:otherwise>
  	  <script type="text/javascript">window.alert("削除失敗です"); </script>
 	 </c:otherwise>

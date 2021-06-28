@@ -93,46 +93,54 @@ public class UdeditServlet extends HttpServlet {
 			System.out.println(path);
 			//写真の登録処理
 			try{part.write(path+File.separator+filename);
-			//request.setAttribute("filename", filename);
+				//request.setAttribute("filename", filename);
 
-			//更新を行う
-			QaDao qDao=new QaDao();
-			CategoryDao cDao=new CategoryDao();
-			if(request.getParameter("clickAction").equals("更新")) {
-				if (qDao.update(new Qaall(question_id, date,answerer , category_id,question ,answer , pageview,filename,registrant ))) {	// 更新成功
-					String result="updatesuccess";
-					request.setAttribute("result", new Result(result));
-					List<Qaplus> cardList1 = qDao.select3(new Qaall(question_id,null, "", 0, "", "",0,"",""));
-					// 全項目をリクエストスコープに格納する
-					request.setAttribute("cardList", cardList1);
-					List<Category> tangen1=cDao.select1(new Category(0,0,category_id,""));
-					request.setAttribute("tangen", tangen1);
-				}
-				else {			// 更新失敗
-					String result="updatefault";
-					request.setAttribute("result",new Result(result));
-					List<Qaplus> cardList1 = qDao.select3(new Qaall(question_id,null, "", 0, "", "",0,"",""));
-					// 全項目をリクエストスコープに格納する
-					request.setAttribute("cardList", cardList1);
-					List<Category> tangen1=cDao.select1(new Category(0,0,category_id,""));
-					request.setAttribute("tangen", tangen1);
-				}
-			}
-			//削除を行う
-			else {
-				if (qDao.delete(question_id)) {	// 削除成功
-					String result="deletesuccess";
-					request.setAttribute("result",new Result(result));
-				}
-				else {						// 削除失敗
-					String result="deletefault";
-					request.setAttribute("result", new Result(result));
-				}
-			}
-			//フォワード
-			RequestDispatcher dispatcher =
+				//更新を行う
+				QaDao qDao=new QaDao();
+				CategoryDao cDao=new CategoryDao();
+				if(request.getParameter("clickAction").equals("更新")) {
+					if (qDao.update(new Qaall(question_id, date,answerer , category_id,question ,answer , pageview,filename,registrant ))) {	// 更新成功
+						String result="updatesuccess";
+						request.setAttribute("result", new Result(result));
+						List<Qaplus> cardList1 = qDao.select3(new Qaall(question_id,null, "", 0, "", "",0,"",""));
+						// 全項目をリクエストスコープに格納する
+						request.setAttribute("cardList", cardList1);
+						List<Category> tangen1=cDao.select1(new Category(0,0,category_id,""));
+						request.setAttribute("tangen", tangen1);
+					}
+					else {			// 更新失敗
+						String result="updatefault";
+						request.setAttribute("result",new Result(result));
+						List<Qaplus> cardList1 = qDao.select3(new Qaall(question_id,null, "", 0, "", "",0,"",""));
+						// 全項目をリクエストスコープに格納する
+						request.setAttribute("cardList", cardList1);
+						List<Category> tangen1=cDao.select1(new Category(0,0,category_id,""));
+						request.setAttribute("tangen", tangen1);
+					}
+					//フォワード
+					RequestDispatcher dispatcher =
 					request.getRequestDispatcher("/WEB-INF/jsp/Udedit.jsp");
-			dispatcher.forward(request, response);
+					dispatcher.forward(request, response);
+				}
+				//削除を行う
+				else {
+					if (qDao.delete(question_id)) {	// 削除成功
+						String result="deletesuccess";
+						request.setAttribute("result",new Result(result));
+						//フォワード
+						RequestDispatcher dispatcher =
+						request.getRequestDispatcher("/WEB-INF/jsp/Udsearch.jsp");
+						dispatcher.forward(request, response);
+					}
+					else {						// 削除失敗
+						String result="deletefault";
+						request.setAttribute("result", new Result(result));
+						//フォワード
+						RequestDispatcher dispatcher =
+						request.getRequestDispatcher("/WEB-INF/jsp/Udedit.jsp");
+						dispatcher.forward(request, response);
+					}
+				}
 			}catch(Exception e) {
 				//更新を行う
 				QaDao qDao=new QaDao();
@@ -156,22 +164,30 @@ public class UdeditServlet extends HttpServlet {
 						List<Category> tangen1=cDao.select1(new Category(0,0,category_id,""));
 						request.setAttribute("tangen", tangen1);
 					}
+					//フォワード
+					RequestDispatcher dispatcher =
+					request.getRequestDispatcher("/WEB-INF/jsp/Udedit.jsp");
+					dispatcher.forward(request, response);
 				}
 				//削除を行う
 				else {
 					if (qDao.delete(question_id)) {	// 削除成功
 						String result="deletesuccess";
 						request.setAttribute("result",new Result(result));
+						//フォワード
+						RequestDispatcher dispatcher =
+						request.getRequestDispatcher("/WEB-INF/jsp/Udsearch.jsp");
+						dispatcher.forward(request, response);
 					}
 					else {						// 削除失敗
 						String result="deletefault";
 						request.setAttribute("result", new Result(result));
+						//フォワード
+						RequestDispatcher dispatcher =
+						request.getRequestDispatcher("/WEB-INF/jsp/Udedit.jsp");
+						dispatcher.forward(request, response);
 					}
 				}
-				//フォワード
-				RequestDispatcher dispatcher =
-						request.getRequestDispatcher("/WEB-INF/jsp/Udedit.jsp");
-				dispatcher.forward(request, response);
 			}
 		}else {
 			//更新を行う
@@ -196,22 +212,30 @@ public class UdeditServlet extends HttpServlet {
 					List<Category> tangen1=cDao.select1(new Category(0,0,category_id,""));
 					request.setAttribute("tangen", tangen1);
 				}
+				//フォワード
+				RequestDispatcher dispatcher =
+				request.getRequestDispatcher("/WEB-INF/jsp/Udedit.jsp");
+				dispatcher.forward(request, response);
 			}
 			//削除を行う
 			else {
 				if (qDao.delete(question_id)) {	// 削除成功
 					String result="deletesuccess";
 					request.setAttribute("result",new Result(result));
+					//フォワード
+					RequestDispatcher dispatcher =
+					request.getRequestDispatcher("/WEB-INF/jsp/Udsearch.jsp");
+					dispatcher.forward(request, response);
 				}
 				else {						// 削除失敗
 					String result="deletefault";
 					request.setAttribute("result", new Result(result));
+					//フォワード
+					RequestDispatcher dispatcher =
+					request.getRequestDispatcher("/WEB-INF/jsp/Udedit.jsp");
+					dispatcher.forward(request, response);
 				}
 			}
-			//フォワード
-			RequestDispatcher dispatcher =
-					request.getRequestDispatcher("/WEB-INF/jsp/Udedit.jsp");
-			dispatcher.forward(request, response);
 		}
 	}
 }
