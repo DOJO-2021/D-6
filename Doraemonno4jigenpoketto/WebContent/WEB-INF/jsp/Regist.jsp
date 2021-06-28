@@ -354,8 +354,6 @@ function check(){
 'use strict'
 function changesave() {
     var element;
-    element = document.getElementById("questionarea");
-    element.required = false;
     element = document.getElementById("answerarea");
     element.required = false;
     element = document.getElementById("unit");

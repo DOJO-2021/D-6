@@ -365,11 +365,8 @@
 	 </c:when>
 	 <c:when test="${result.result == 'deletesuccess'}">
 	 	<script type="text/javascript">
-	 	if(window.confirm("削除成功です!検索画面に戻りますか？")){
-	 		window.location.href="http://localhost:8080/Doraemonno4jigenpoketto/UdsearchServlet";
-	 	}else{
-	 		window.alert("続けます");
-	 	}
+	 	window.alert("削除成功です!");
+	 	window.location.href="http://localhost:8080/Doraemonno4jigenpoketto/UdsearchServlet";
 	 	</script>
 	 </c:when>
 	 <c:otherwise>

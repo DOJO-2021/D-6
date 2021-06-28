@@ -99,8 +99,8 @@ public class RegistServlet extends HttpServlet {
 
 
 		Part part=request.getPart("photo");
+		String filename=Paths.get(part.getSubmittedFileName()).getFileName().toString();
 		if (part.getSize()!=0) {
-			String filename=Paths.get(part.getSubmittedFileName()).getFileName().toString();
 			//アップロードするフォルダ
 			String path="C:/pleiades/workspace/D-6/Doraemonno4jigenpoketto/WebContent/upload";
 			//実際にファイルが保存されている場所の確認、ターミナルから確認
@@ -219,6 +219,7 @@ public class RegistServlet extends HttpServlet {
 				dispatcher.forward(request, response);
 				}
 				else if(request.getParameter("SUBMIT").equals("登録1")) {
+					filename=request.getParameter("photos");
 					//登録処理
 					if(qDao.insert(new Qaall(0, date, answerer,  category_id, question, answer, 0, filename,registrant))) {
 						int question_id=Integer.parseInt(request.getParameter("QUESTION_ID"));//質問ID
@@ -237,6 +238,7 @@ public class RegistServlet extends HttpServlet {
 					dispatcher.forward(request, response);
 				}
 				else if(request.getParameter("SUBMIT").equals("保存1")){
+					filename=request.getParameter("photos");
 					int question_id=Integer.parseInt(request.getParameter("QUESTION_ID"));//質問ID
 					//保存処理
 					if(qDao.updatesave(new Qaall(question_id, date,answerer , category_id,question ,answer , 0,filename,registrant ))) {
@@ -265,7 +267,7 @@ public class RegistServlet extends HttpServlet {
 				}
 			}
 		}else {
-			String filename=request.getParameter("photos");
+			filename=request.getParameter("photos");
 			if(request.getParameter("SUBMIT").equals("登録")) {
 				//登録処理
 				if(qDao.insert(new Qaall(0, date, answerer,  category_id, question, answer, 0, filename,registrant))) {
@@ -299,6 +301,7 @@ public class RegistServlet extends HttpServlet {
 			dispatcher.forward(request, response);
 			}
 			else if(request.getParameter("SUBMIT").equals("登録1")) {
+				filename=request.getParameter("photos");
 				//登録処理
 				if(qDao.insert(new Qaall(0, date, answerer,  category_id, question, answer, 0, filename,registrant))) {
 					int question_id=Integer.parseInt(request.getParameter("QUESTION_ID"));//質問ID
@@ -317,6 +320,7 @@ public class RegistServlet extends HttpServlet {
 				dispatcher.forward(request, response);
 			}
 			else if(request.getParameter("SUBMIT").equals("保存1")){
+				filename=request.getParameter("photos");
 				int question_id=Integer.parseInt(request.getParameter("QUESTION_ID"));//質問ID
 				//保存処理
 				if(qDao.updatesavenophoto(new Qaall(question_id, date,answerer , category_id,question ,answer , 0,filename,registrant ))) {

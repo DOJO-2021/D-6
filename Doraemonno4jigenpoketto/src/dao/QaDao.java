@@ -2313,7 +2313,7 @@ public class QaDao {
 				else {
 					pStmt.setString(5, null);
 				}
-				if (!card.getFilename().equals(null) && !card.getFilename().equals("")) {
+				if (card.getFilename()!=null && card.getFilename()!="") {
 					pStmt.setString(6, card.getFilename());
 				}
 				else {
