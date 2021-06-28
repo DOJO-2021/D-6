@@ -81,7 +81,7 @@ function check(){
 
 
 
-
+		<input type="hidden" name="photos" value="${e.filename}">
 
 		<div class="regist_blockB" style="float:right;">
 
